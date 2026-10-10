@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tillman's Fix-It Co. home page</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&amp;family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..900,0..100,0..1&amp;family=VT323&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.d14{--cream:#FDF7E7;--paper:#F6ECD6;--teal:#12403A;--mint:#D3E8E3;--char:#3A3A3A;--wine:#7E0022;--bright:#2AD2C9;--fount:#008B70;--white:#FFFFFF;width:100%;background:var(--cream);color:var(--char);font-family:'DM Sans','Helvetica Neue',Arial,sans-serif;font-size:17px;line-height:1.6;padding:12px;box-sizing:border-box}
+.d14 *{box-sizing:border-box}
+:where(.d14) a{color:inherit}
+.d14 a:focus-visible{outline:3px solid var(--wine);outline-offset:3px}
+.d14-serif{font-family:Fraunces,'Cooper Black',Georgia,serif;font-variation-settings:'SOFT' 100,'WONK' 1;font-weight:900;color:var(--teal);letter-spacing:-0.01em}
+.d14-px{font-family:VT323,'Courier New',monospace;letter-spacing:0.02em;line-height:1.1}
+.d14-in{max-width:1200px;margin:0 auto}
+.d14-sec{padding:96px 28px}
+.d14-head{text-align:center;max-width:760px;margin:0 auto}
+.d14-head h2{margin:0;font-size:clamp(38px,4.6vw,56px);line-height:1;text-wrap:balance}
+.d14-head p{margin:16px 0 0;font-size:18px}
+.d14-label{display:inline-flex;align-items:center;gap:8px;background:var(--wine);color:var(--cream);border-radius:50px;padding:5px 14px 4px;font-family:VT323,monospace;font-size:20px;line-height:1.1;letter-spacing:0.04em}
+.d14-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 30px;border-radius:50px;background:var(--teal);color:var(--white);font-weight:700;font-size:17px;text-decoration:none;box-shadow:rgba(0,0,0,.12) 0 0 24px 0;transition:transform .15s ease,background-color .15s ease;white-space:nowrap}
+.d14-btn:hover{transform:translateY(-2px);background:#0B302B}
+.d14-tel{display:inline-flex;align-items:center;gap:10px;min-height:54px;font-weight:700;font-size:18px;color:var(--teal);text-decoration:none;border-bottom:2px solid var(--teal);padding-top:2px;white-space:nowrap}
+/* marquee + header */
+.d14-marquee{background:var(--teal);color:var(--cream);border-radius:50px;min-height:44px;display:flex;align-items:center;justify-content:center;gap:18px;padding:0 20px;font-family:VT323,monospace;font-size:21px;letter-spacing:0.06em;text-align:center}
+.d14-marquee a{text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
+.d14-marquee a span{border-bottom:1px solid rgba(253,247,231,.6)}
+.d14-header{margin-top:12px;border:1.5px solid var(--teal);border-radius:20px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;padding:10px 16px 10px 22px;background:var(--cream)}
+.d14-nav{display:flex;gap:2px}
+.d14-nav a{text-decoration:none;font-weight:600;font-size:15px;color:var(--teal);padding:0 12px;min-height:44px;display:inline-flex;align-items:center;border-radius:50px}
+.d14-nav a:hover{background:var(--mint)}
+.d14-mark{display:flex;flex-direction:column;align-items:center;text-decoration:none;line-height:1}
+.d14-mark svg{display:block}
+.d14-hdr{display:flex;justify-content:flex-end;align-items:center;gap:14px}
+.d14-hdr .d14-tel{font-size:16px;min-height:44px;border-bottom-width:1.5px}
+.d14-hdr .d14-btn{min-height:48px;padding:0 22px;font-size:16px}
+/* hero */
+.d14-hero{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.d14-panel{border-radius:24px;position:relative;overflow:hidden}
+.d14-copy{background:var(--mint);padding:64px 56px 56px}
+.d14-h1{margin:22px 0 0;font-size:clamp(46px,5.6vw,76px);line-height:0.98}
+.d14-lede{margin:24px 0 0;font-size:19px;line-height:1.55;max-width:500px}
+.d14-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin-top:34px}
+.d14-rating{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:30px;font-size:15px;font-weight:600;color:var(--teal)}
+.d14-checkp{background:#F3E5DF;min-height:620px;display:flex;flex-direction:column}
+.d14-stage{position:relative;flex:1;min-height:500px;overflow:hidden;border-bottom:1.5px solid var(--teal);perspective:300px;perspective-origin:50% 44%}
+.d14-haze{position:absolute;left:0;right:0;top:0;height:62%;background:linear-gradient(to bottom,#F3E5DF 0,#F3E5DF 70%,rgba(243,229,223,0) 100%);pointer-events:none}
+.d14-check{background-image:conic-gradient(var(--teal) 90deg,#F3E5DF 90deg 180deg,var(--teal) 180deg 270deg,#F3E5DF 270deg);background-size:96px 96px}
+.d14-floor{position:absolute;left:-150%;right:-150%;bottom:0;height:1200px;transform:rotateX(78deg);transform-origin:50% 100%}
+.d14-scan{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(18,64,58,.05) 0 1px,transparent 1px 3px);pointer-events:none}
+.d14-medal{position:absolute;left:50%;top:44px;transform:translateX(-50%);width:320px;height:320px;border-radius:50%;border:10px solid var(--cream);outline:2px solid var(--teal);overflow:hidden;background:var(--white);z-index:2}
+.d14-medal img{width:100%;height:100%;object-fit:cover;display:block}
+.d14-shadow{position:absolute;left:50%;top:402px;transform:translateX(-50%);width:270px;height:38px;border-radius:50%;background:#0C2B27;opacity:.85;z-index:1}
+.d14-badge{position:absolute;right:28px;top:26px;width:132px;height:132px;z-index:3}
+.d14-spec{padding:16px 20px 18px;display:flex;flex-direction:column;gap:6px;color:var(--teal)}
+.d14-spec-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-family:VT323,monospace;font-size:25px;line-height:1.05;letter-spacing:0.03em}
+.d14-spec-sub{font-family:VT323,monospace;font-size:19px;letter-spacing:0.05em;line-height:1.2;color:#2D5A53}
+/* lineup kiosk grid */
+.d14-grid{margin-top:48px;border:1.5px solid var(--teal);border-radius:20px;overflow:hidden;display:grid;grid-template-columns:repeat(4,1fr);background:var(--teal);gap:1.5px;position:relative}
+.d14-cell{background:var(--cream);display:flex;flex-direction:column;text-decoration:none;color:var(--teal);position:relative;min-height:440px}
+.d14-flav{position:relative;height:250px;display:grid;place-items:center;overflow:hidden}
+.d14-disc{position:absolute;width:196px;height:196px;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-46%)}
+.d14-ph{position:relative;width:172px;height:172px;border-radius:50%;overflow:hidden;border:6px solid var(--cream);transition:transform .25s ease}
+.d14-ph img{width:100%;height:100%;object-fit:cover;display:block}
+.d14-cell:hover .d14-ph{transform:rotate(-6deg) scale(1.04)}
+.d14-info{padding:16px 18px 0;flex:1}
+.d14-info h3{margin:0;font-size:24px;line-height:1.05}
+.d14-price{margin-top:8px;font-family:VT323,monospace;font-size:24px;letter-spacing:0.03em;line-height:1.1}
+.d14-desc{margin:6px 0 0;font-size:14.5px;line-height:1.5;color:var(--char)}
+.d14-bar{margin-top:14px;border-top:1.5px solid var(--teal);display:flex;justify-content:space-between;align-items:center;min-height:46px;padding:0 18px;font-family:VT323,monospace;font-size:20px;letter-spacing:0.04em;transition:background-color .15s ease,color .15s ease}
+.d14-cell:hover .d14-bar{background:var(--teal);color:var(--cream)}
+.d14-joint{position:absolute;width:11px;height:11px;background:var(--teal);transform:translate(-50%,-50%) rotate(45deg);z-index:2}
+/* menu board */
+.d14-board{background:var(--teal);color:var(--cream);border-radius:24px;overflow:hidden}
+.d14-strip{height:24px;background-image:conic-gradient(var(--cream) 90deg,var(--teal) 90deg 180deg,var(--cream) 180deg 270deg,var(--teal) 270deg);background-size:24px 24px}
+.d14-boardin{padding:64px 64px 56px}
+.d14-board h2{color:var(--cream);margin:0;font-size:clamp(40px,4.8vw,60px);line-height:1;text-align:center}
+.d14-menu{display:grid;grid-template-columns:1fr 1fr;gap:0 64px;margin:44px 0 0;padding:0;list-style:none}
+.d14-menu li{display:flex;align-items:baseline;gap:10px;padding:13px 0;border-bottom:1px dashed rgba(211,232,227,.35);font-size:17px}
+.d14-menu li span:first-child{flex:none;max-width:68%}
+.d14-menu .d14-dots{flex:1;border-bottom:2px dotted rgba(211,232,227,.55);transform:translateY(-5px);min-width:20px}
+.d14-menu b{font-family:VT323,monospace;font-weight:400;font-size:25px;letter-spacing:0.03em;color:#FBEFA8;white-space:nowrap}
+/* story + facts */
+.d14-story{display:grid;grid-template-columns:400px 1fr 340px;gap:48px;align-items:center}
+.d14-illo{width:100%;aspect-ratio:1/1;border-radius:50%;overflow:hidden;background:#FEC6CC}
+.d14-illo svg{display:block;width:100%;height:100%}
+.d14-facts{background:var(--white);border:2px solid var(--teal);padding:14px 16px 12px;color:var(--teal);font-size:15px;line-height:1.35}
+.d14-facts h3{margin:0;font-family:'DM Sans',Arial,sans-serif;font-weight:700;font-size:34px;letter-spacing:-0.03em;line-height:1}
+.d14-facts .d14-rule{height:10px;background:var(--teal);margin:8px 0 6px}
+.d14-facts .d14-thin{height:1px;background:var(--teal)}
+.d14-facts dl{margin:0}
+.d14-facts .d14-fr{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-top:1px solid var(--teal)}
+.d14-facts dt{font-weight:700}
+.d14-facts dd{margin:0;text-align:right}
+/* reviews */
+.d14-revs{display:grid;grid-template-columns:320px 1fr 1fr;gap:28px;align-items:center;margin-top:48px}
+.d14-cap{position:relative;width:100%;aspect-ratio:1/1}
+.d14-cap svg{display:block;width:100%;height:100%}
+.d14-capt{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--cream);padding:0 40px}
+.d14-rcard{margin:0;background:#F3E5DF;border:1.5px solid var(--teal);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;min-height:260px}
+.d14-rcard .d14-rtop{display:flex;justify-content:space-between;align-items:center;padding:8px 16px;border-bottom:1.5px solid var(--teal);font-family:VT323,monospace;font-size:20px;color:var(--teal);letter-spacing:0.04em}
+.d14-rcard blockquote{margin:0;padding:22px 22px 10px;font-family:Fraunces,Georgia,serif;font-variation-settings:'SOFT' 100,'WONK' 0;font-weight:500;font-size:22px;line-height:1.3;color:var(--teal);flex:1}
+.d14-rcard figcaption{padding:0 22px 20px;font-size:15px;font-weight:600}
+/* towns */
+.d14-route{display:grid;grid-template-columns:1.05fr 0.95fr;gap:48px;align-items:center;margin-top:48px}
+.d14-maptool{border:1.5px solid var(--teal);border-radius:20px;overflow:hidden;background:#F3E5DF}
+.d14-maptool svg{display:block;width:100%;height:auto}
+.d14-tl{list-style:none;margin:0;padding:0;border-top:1.5px solid var(--teal)}
+.d14-tl li{border-bottom:1.5px solid var(--teal)}
+.d14-tl a{display:grid;grid-template-columns:1fr auto 64px;align-items:baseline;gap:14px;min-height:56px;padding:10px 6px;text-decoration:none;color:var(--teal)}
+.d14-tl a:hover{background:var(--mint)}
+.d14-tl .d14-tn{font-family:Fraunces,Georgia,serif;font-variation-settings:'SOFT' 100,'WONK' 1;font-weight:800;font-size:25px;line-height:1.1}
+.d14-tl .d14-px{font-size:20px}
+.d14-tl .d14-mi{text-align:right}
+/* faq */
+.d14-faq{max-width:860px;margin:48px auto 0}
+.d14-qa{display:grid;grid-template-columns:64px 1fr;gap:22px;padding:28px 0;border-top:1.5px solid var(--teal)}
+.d14-qa:last-child{border-bottom:1.5px solid var(--teal)}
+.d14-qn{width:64px;height:64px;border-radius:50%;background:var(--teal);color:var(--cream);display:grid;place-items:center;font-family:VT323,monospace;font-size:26px;line-height:1}
+.d14-qa h3{margin:2px 0 8px;font-size:clamp(23px,2.4vw,28px);line-height:1.15}
+.d14-qa p{margin:0}
+/* footer */
+.d14-foot{background:var(--teal);color:var(--cream);border-radius:24px;overflow:hidden;text-align:center}
+.d14-footin{padding:64px 28px 36px}
+.d14-bigtel{display:inline-block;margin-top:18px;font-family:Fraunces,Georgia,serif;font-variation-settings:'SOFT' 100,'WONK' 1;font-weight:900;font-size:clamp(40px,6.4vw,84px);line-height:1;color:var(--cream);text-decoration:none;white-space:nowrap}
+.d14-fbtn{background:var(--bright);color:var(--teal)}
+.d14-fbtn:hover{background:#5BE0D8}
+.d14-flinks{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:40px auto 0;max-width:980px;padding:0;list-style:none}
+.d14-flinks a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border:1px solid rgba(253,247,231,.45);border-radius:50px;text-decoration:none;font-family:VT323,monospace;font-size:20px;letter-spacing:0.03em}
+.d14-flinks a:hover{background:var(--cream);color:var(--teal)}
+.d14-nap{margin:34px 0 0;font-size:15px;color:#D3E8E3}
+.d14-credit{margin:28px 0 0;font-size:12.5px;color:#A9C9C2}
+@media (max-width:1060px){
+.d14-story{grid-template-columns:1fr 1fr}
+.d14-illo{max-width:400px}
+.d14-facts{grid-column:1 / -1;max-width:440px}
+.d14-revs{grid-template-columns:1fr 1fr}
+.d14-cap{grid-column:1 / -1;max-width:300px;margin:0 auto}
+.d14-grid{grid-template-columns:repeat(2,1fr)}
+.d14-joint{display:none}
+}
+@media (max-width:860px){
+.d14-hero,.d14-route{grid-template-columns:1fr}
+.d14-nav{display:none}
+.d14-header{grid-template-columns:auto 1fr}
+.d14-hdr .d14-tel{display:none}
+.d14-menu{grid-template-columns:1fr}
+.d14-menu .d14-dots{display:none}
+.d14-menu li{justify-content:space-between}
+.d14-menu li span:first-child{flex:1;max-width:none}
+}
+@media (max-width:600px){
+.d14{padding:8px}
+.d14-sec{padding:64px 10px}
+.d14-marquee{font-size:18px;border-radius:16px;padding:4px 12px 0;flex-wrap:wrap;gap:0 10px}
+.d14-header{padding:8px 8px 8px 14px;gap:10px}
+.d14-mark svg{width:150px;height:auto}
+.d14-hdr .d14-btn{min-height:46px;padding:0 16px;font-size:15px}
+.d14-copy{padding:40px 22px 36px}
+.d14-lede{font-size:17px}
+.d14-checkp{min-height:0}
+.d14-stage{min-height:400px}
+.d14-medal{width:236px;height:236px;top:40px}
+.d14-shadow{top:286px;width:190px}
+.d14-badge{width:104px;height:104px;right:12px;top:14px}
+.d14-grid{grid-template-columns:1fr}
+.d14-cell{min-height:0;display:grid;grid-template-columns:118px 1fr;align-items:stretch}
+.d14-flav{height:auto;min-height:150px}
+.d14-disc{width:100px;height:100px}
+.d14-ph{width:88px;height:88px;border-width:4px}
+.d14-info{padding:14px 14px 0}
+.d14-info h3{font-size:21px}
+.d14-price{font-size:21px}
+.d14-desc{font-size:14px}
+.d14-bar{grid-column:1 / -1;margin-top:12px}
+.d14-cell-special .d14-flav{grid-column:1 / -1;min-height:130px}
+.d14-cell-special .d14-info{grid-column:1 / -1}
+.d14-cell-note{display:flex}
+.d14-boardin{padding:44px 20px 36px}
+.d14-story{grid-template-columns:1fr;gap:36px}
+.d14-illo{max-width:300px;margin:0 auto}
+.d14-revs{grid-template-columns:1fr}
+.d14-rcard{min-height:0}
+.d14-qa{grid-template-columns:48px 1fr;gap:16px}
+.d14-qn{width:48px;height:48px;font-size:22px}
+.d14-tl a{grid-template-columns:1fr 52px}
+.d14-tl .d14-slug{grid-column:1;grid-row:2;font-size:18px}
+.d14-tl .d14-mi{grid-column:2;grid-row:1}
+.d14-footin{padding:52px 18px 30px}
+}
+</style>
+</helmet>
+<div class="d14">
+
+  <!-- marquee bar -->
+  <p class="d14-marquee" style="margin:0;">
+    <span>★ FAMILY HANDYMAN SERVICE · OCALA, FL ★</span>
+    <a href="tel:+13525550154"><span>CALL (352) 555-0154</span></a>
+  </p>
+
+  <!-- header -->
+  <header class="d14-header">
+    <nav class="d14-nav" aria-label="Main">
+      <a href="#d14-lineup">The Lineup</a>
+      <a href="#d14-prices">Prices</a>
+      <a href="#d14-towns">Towns</a>
+      <a href="#d14-faq">Questions</a>
+    </nav>
+    <a class="d14-mark" href="/" aria-label="Tillman's Fix-It Co. home">
+      <svg width="236" height="74" viewBox="0 0 236 74" aria-hidden="true">
+        <defs><path id="d14arc" d="M14 56 Q118 6 222 56"></path></defs>
+        <text font-family="Fraunces, Georgia, serif" font-weight="900" font-size="40" fill="#12403A" text-anchor="middle" style="font-variation-settings:'SOFT' 100,'WONK' 1;"><textPath href="#d14arc" startOffset="50%">Tillman's</textPath></text>
+        <text x="118" y="70" font-family="VT323, monospace" font-size="17" fill="#7E0022" text-anchor="middle" letter-spacing="3">FIX-IT CO. · OCALA</text>
+      </svg>
+    </a>
+    <div class="d14-hdr">
+      <a class="d14-tel" href="tel:+13525550154">(352) 555-0154</a>
+      <a class="d14-btn" href="/book">Book a Visit</a>
+    </div>
+  </header>
+
+  <!-- hero: mint copy panel + checkerboard kiosk panel -->
+  <section class="d14-hero" aria-label="Family handyman service in Ocala">
+    <div class="d14-panel d14-copy">
+      <span class="d14-label">FAMILY-RUN SINCE [YEAR]</span>
+      <h1 class="d14-serif d14-h1">Family handyman service in Ocala, FL.</h1>
+      <p class="d14-lede">Drywall holes, sticking doors, dripping faucets, loose deck boards and the rest of the list. One family, one truck, [YEARS] years of Marion County homes. You get the price in writing before we pick up a tool.</p>
+      <div class="d14-ctas">
+        <a class="d14-btn" href="/book">Book a Visit</a>
+        <a class="d14-tel" href="tel:+13525550154">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" fill="none" stroke="#12403A" stroke-width="2" stroke-linejoin="round"></path></svg>
+          (352) 555-0154
+        </a>
+      </div>
+      <p class="d14-rating" style="margin-bottom:0;">
+        <span aria-hidden="true" style="display:inline-flex;gap:2px;">
+          <svg width="17" height="17" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.2l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z" fill="#12403A"></path></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.2l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z" fill="#12403A"></path></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.2l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z" fill="#12403A"></path></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.2l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z" fill="#12403A"></path></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.2l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z" fill="#12403A"></path></svg>
+        </span>
+        <span>[RATING] from [COUNT] Google reviews</span>
+        <span class="d14-px" style="font-size:19px;font-weight:400;">NEWEST REVIEW [DAYS] DAYS AGO</span>
+      </p>
+    </div>
+
+    <div class="d14-panel d14-checkp">
+      <div class="d14-stage">
+        <div class="d14-floor d14-check" aria-hidden="true"></div>
+        <div class="d14-haze" aria-hidden="true"></div>
+        <div class="d14-scan" aria-hidden="true"></div>
+        <div class="d14-shadow" aria-hidden="true"></div>
+        <div class="d14-medal">
+          <img src="img/handy/02.jpg" alt="Claw hammer, pliers, screwdriver, paint brush and a scatter of nails laid out on white" width="1000" height="1400" style="object-position:50% 40%;">
+        </div>
+        <svg class="d14-badge" viewBox="0 0 132 132" aria-hidden="true">
+          <defs><path id="d14ring" d="M66 66 m-46 0 a46 46 0 1 1 92 0 a46 46 0 1 1 -92 0"></path></defs>
+          <circle cx="66" cy="66" r="64" fill="#7E0022"></circle>
+          <circle cx="66" cy="66" r="58" fill="none" stroke="#FDF7E7" stroke-width="1.5" stroke-dasharray="2 4"></circle>
+          <text font-family="VT323, monospace" font-size="17" fill="#FDF7E7" letter-spacing="2.2"><textPath href="#d14ring">EST. [YEAR] · FAMILY OWNED · OCALA, FLA ·</textPath></text>
+          <circle cx="66" cy="66" r="25" fill="#FDF7E7"></circle>
+          <text x="66" y="78" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="900" font-size="34" fill="#7E0022" style="font-variation-settings:'SOFT' 100,'WONK' 1;">T</text>
+        </svg>
+      </div>
+      <div class="d14-spec">
+        <div class="d14-spec-row"><span>THE HONEY-DO HOUR</span><span>$[PRICE]/HR</span></div>
+        <div class="d14-spec-sub">1 TECH · YOUR LIST · TRUCK &amp; TOOLS INCLUDED · NO TRIP FEE IN OCALA</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- lineup: flavor cards in a kiosk grid -->
+  <section class="d14-sec" id="d14-lineup" aria-labelledby="d14-lineup-h">
+    <div class="d14-in">
+      <div class="d14-head">
+        <span class="d14-label">THE LINEUP</span>
+        <h2 class="d14-serif" id="d14-lineup-h" style="margin-top:18px;">Seven fixes we make every week.</h2>
+        <p>Each one has its own page with photos, what's included and the going rate in Ocala. Pick a flavor.</p>
+      </div>
+
+      <div class="d14-grid">
+        <span class="d14-joint" style="left:25%;top:50%;" aria-hidden="true"></span>
+        <span class="d14-joint" style="left:50%;top:50%;" aria-hidden="true"></span>
+        <span class="d14-joint" style="left:75%;top:50%;" aria-hidden="true"></span>
+
+        <a class="d14-cell" href="/drywall-repair">
+          <div class="d14-flav" style="background:#FBF0B0;"><span class="d14-disc" style="background:#F2CF55;"></span><span class="d14-ph"><img src="img/handy/07.jpg" alt="Paint can, cordless drill and stud finder on a floor by the wall" width="1000" height="1500" loading="lazy" style="object-position:50% 62%;"></span></div>
+          <div class="d14-info">
+            <h3 class="d14-serif">Drywall &amp; paint patches</h3>
+            <div class="d14-price">$[LOW]–$[HIGH] PER PATCH</div>
+            <p class="d14-desc">Doorknob holes, anchor holes, water stains. Textured and color-matched.</p>
+          </div>
+          <div class="d14-bar"><span>/drywall-repair</span><span aria-hidden="true">→</span></div>
+        </a>
+
+        <a class="d14-cell" href="/door-repair">
+          <div class="d14-flav" style="background:#F8D5C0;"><span class="d14-disc" style="background:#EE9C77;"></span><span class="d14-ph"><img src="img/handy/05.jpg" alt="Carpenter's square, tape measure, drill and adjustable wrench on a workbench" width="1600" height="1067" loading="lazy" style="object-position:40% 50%;"></span></div>
+          <div class="d14-info">
+            <h3 class="d14-serif">Doors, trim &amp; cabinets</h3>
+            <div class="d14-price">$[LOW]–$[HIGH]</div>
+            <p class="d14-desc">Sticking doors planed, latches lined up, hinges and cabinet fronts reset.</p>
+          </div>
+          <div class="d14-bar"><span>/door-repair</span><span aria-hidden="true">→</span></div>
+        </a>
+
+        <a class="d14-cell" href="/faucet-repair">
+          <div class="d14-flav" style="background:#CFE6F2;"><span class="d14-disc" style="background:#86BFDF;"></span><span class="d14-ph"><img src="img/handy/04.jpg" alt="Open-end wrenches and screwdrivers spread on a white surface" width="1600" height="1067" loading="lazy" style="object-position:55% 60%;"></span></div>
+          <div class="d14-info">
+            <h3 class="d14-serif">Faucets &amp; fixtures</h3>
+            <div class="d14-price">FROM $[PRICE]</div>
+            <p class="d14-desc">Drips, running toilets, shower heads and disposal swaps on existing lines.</p>
+          </div>
+          <div class="d14-bar"><span>/faucet-repair</span><span aria-hidden="true">→</span></div>
+        </a>
+
+        <a class="d14-cell" href="/tv-mounting">
+          <div class="d14-flav" style="background:#E3D2ED;"><span class="d14-disc" style="background:#BE9BD8;"></span><span class="d14-ph"><img src="img/handy/01.jpg" alt="Yellow cordless drill, screws, brush and hammer on a wooden board" width="1600" height="1067" loading="lazy" style="object-position:62% 40%;"></span></div>
+          <div class="d14-info">
+            <h3 class="d14-serif">TV mounts &amp; shelves</h3>
+            <div class="d14-price">$[LOW]–$[HIGH] PER MOUNT</div>
+            <p class="d14-desc">Into studs or block, cords hidden, level checked twice. Up to 85 in.</p>
+          </div>
+          <div class="d14-bar"><span>/tv-mounting</span><span aria-hidden="true">→</span></div>
+        </a>
+
+        <a class="d14-cell" href="/deck-repair">
+          <div class="d14-flav" style="background:#D6EBB0;"><span class="d14-disc" style="background:#A3CF68;"></span><span class="d14-ph"><img src="img/handy/06.jpg" alt="Hammer, pliers, hex keys and tape measure on weathered deck boards" width="1600" height="1038" loading="lazy" style="object-position:50% 50%;"></span></div>
+          <div class="d14-info">
+            <h3 class="d14-serif">Deck &amp; fence repair</h3>
+            <div class="d14-price">FROM $[PRICE] PER BOARD</div>
+            <p class="d14-desc">Rotten boards out, popped screws reset, gates that drag rehung.</p>
+          </div>
+          <div class="d14-bar"><span>/deck-repair</span><span aria-hidden="true">→</span></div>
+        </a>
+
+        <a class="d14-cell" href="/furniture-assembly">
+          <div class="d14-flav" style="background:#FEC6CC;"><span class="d14-disc" style="background:#F3889A;"></span><span class="d14-ph"><img src="img/handy/08.jpg" alt="Claw hammer and adjustable wrench on a dark wood tabletop" width="1600" height="1067" loading="lazy" style="object-position:38% 55%;"></span></div>
+          <div class="d14-info">
+            <h3 class="d14-serif">Furniture assembly</h3>
+            <div class="d14-price">FROM $[PRICE] PER PIECE</div>
+            <p class="d14-desc">Beds, desks, cribs and patio sets built, anchored and the boxes hauled.</p>
+          </div>
+          <div class="d14-bar"><span>/furniture-assembly</span><span aria-hidden="true">→</span></div>
+        </a>
+
+        <a class="d14-cell d14-cell-special" href="/hourly-handyman">
+          <div class="d14-flav d14-check" style="position:relative;">
+            <span class="d14-scan" aria-hidden="true"></span>
+            <span style="position:relative;background:var(--cream);border:1.5px solid var(--teal);border-radius:12px;padding:14px 18px;text-align:center;color:var(--teal);">
+              <span class="d14-px" style="display:block;font-size:20px;letter-spacing:0.06em;">TODAY'S SPECIAL</span>
+              <span class="d14-px" style="display:block;font-size:44px;line-height:1;margin-top:2px;">$[PRICE]/HR</span>
+            </span>
+          </div>
+          <div class="d14-info">
+            <h3 class="d14-serif">The Honey-Do Hour</h3>
+            <div class="d14-price">1-HOUR MINIMUM</div>
+            <p class="d14-desc">Hand us the whole list. Caulk, smoke detectors, blinds, grab bars, gutters.</p>
+          </div>
+          <div class="d14-bar"><span>/hourly-handyman</span><span aria-hidden="true">→</span></div>
+        </a>
+
+        <div class="d14-cell d14-cell-note" style="background:#F3E5DF;justify-content:center;align-items:center;text-align:center;padding:32px 24px;">
+          <span class="d14-label" style="background:var(--teal);">NOT ON THE MENU?</span>
+          <p class="d14-serif" style="margin:18px 0 0;font-size:30px;line-height:1.05;">Read us your list on the phone.</p>
+          <p style="margin:12px 0 0;font-size:15px;">Most quotes take under 5 minutes.</p>
+          <a class="d14-tel" href="tel:+13525550154" style="margin-top:14px;">(352) 555-0154</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- posted prices: soda fountain menu board -->
+  <section id="d14-prices" aria-labelledby="d14-prices-h">
+    <div class="d14-board">
+      <div class="d14-strip" aria-hidden="true"></div>
+      <div class="d14-boardin d14-in">
+        <p class="d14-px" style="margin:0;text-align:center;font-size:22px;letter-spacing:0.1em;color:#D3E8E3;">POSTED PRICES · OCALA &amp; MARION COUNTY</p>
+        <h2 class="d14-serif" id="d14-prices-h" style="margin-top:12px;">The price board.</h2>
+        <ul class="d14-menu">
+          <li><span>First hour, any mix of small fixes</span><span class="d14-dots"></span><b>$[PRICE]</b></li>
+          <li><span>Each added half hour</span><span class="d14-dots"></span><b>$[PRICE]</b></li>
+          <li><span>Drywall patch, up to 6 in.</span><span class="d14-dots"></span><b>$[LOW]–$[HIGH]</b></li>
+          <li><span>Drywall patch, 6 to 24 in.</span><span class="d14-dots"></span><b>$[LOW]–$[HIGH]</b></li>
+          <li><span>Interior door adjust or rehang</span><span class="d14-dots"></span><b>$[LOW]–$[HIGH]</b></li>
+          <li><span>Faucet swap, you pick the faucet</span><span class="d14-dots"></span><b>$[LOW]–$[HIGH]</b></li>
+          <li><span>TV mount, up to 65 in.</span><span class="d14-dots"></span><b>$[LOW]–$[HIGH]</b></li>
+          <li><span>Deck board, per board</span><span class="d14-dots"></span><b>from $[PRICE]</b></li>
+          <li><span>Re-caulk a tub or shower</span><span class="d14-dots"></span><b>$[LOW]–$[HIGH]</b></li>
+          <li><span>Furniture piece, flat-pack</span><span class="d14-dots"></span><b>from $[PRICE]</b></li>
+        </ul>
+        <p style="margin:32px 0 0;text-align:center;font-size:15px;color:#D3E8E3;">Every job gets a written price before work starts. Materials billed at cost, receipts on request.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- story + shop facts -->
+  <section class="d14-sec" aria-labelledby="d14-story-h">
+    <div class="d14-in d14-story">
+      <div class="d14-illo" aria-hidden="true">
+        <svg viewBox="0 0 400 400">
+          <rect width="400" height="400" fill="#FEC6CC"></rect>
+          <circle cx="292" cy="118" r="46" fill="#FBEFA8"></circle>
+          <path d="M0 262 C70 236 130 250 200 244 C280 238 330 226 400 240 V400 H0 Z" fill="#A3CF68"></path>
+          <rect x="0" y="300" width="400" height="100" fill="#12403A"></rect>
+          <rect x="40" y="346" width="44" height="6" rx="3" fill="#FDF7E7"></rect>
+          <rect x="128" y="346" width="44" height="6" rx="3" fill="#FDF7E7"></rect>
+          <rect x="216" y="346" width="44" height="6" rx="3" fill="#FDF7E7"></rect>
+          <rect x="304" y="346" width="44" height="6" rx="3" fill="#FDF7E7"></rect>
+          <rect x="58" y="176" width="190" height="10" rx="4" fill="#FDF7E7"></rect>
+          <rect x="70" y="176" width="8" height="38" fill="#FDF7E7"></rect>
+          <rect x="226" y="176" width="8" height="38" fill="#FDF7E7"></rect>
+          <rect x="94" y="162" width="6" height="24" fill="#FDF7E7"></rect><rect x="122" y="162" width="6" height="24" fill="#FDF7E7"></rect><rect x="150" y="162" width="6" height="24" fill="#FDF7E7"></rect><rect x="178" y="162" width="6" height="24" fill="#FDF7E7"></rect><rect x="206" y="162" width="6" height="24" fill="#FDF7E7"></rect>
+          <rect x="88" y="158" width="130" height="6" rx="3" fill="#FDF7E7"></rect>
+          <path d="M52 214 H244 V290 H52 Q44 290 44 282 V222 Q44 214 52 214 Z" fill="#7E0022"></path>
+          <path d="M244 290 V186 Q244 168 262 168 H300 Q316 168 324 184 L342 222 H358 Q372 222 372 236 V290 Z" fill="#7E0022"></path>
+          <path d="M262 214 V194 Q262 184 272 184 H298 Q306 184 310 194 L318 214 Z" fill="#CFE6F2"></path>
+          <rect x="244" y="238" width="128" height="6" fill="#FDF7E7"></rect>
+          <rect x="52" y="238" width="192" height="6" fill="#FDF7E7"></rect>
+          <circle cx="284" cy="262" r="15" fill="#FDF7E7"></circle>
+          <text x="284" y="270" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="900" font-size="22" fill="#7E0022">T</text>
+          <rect x="362" y="248" width="14" height="12" rx="3" fill="#FBEFA8"></rect>
+          <path d="M70 290 a34 34 0 0 1 68 0 Z" fill="#12403A"></path>
+          <path d="M290 290 a34 34 0 0 1 68 0 Z" fill="#12403A"></path>
+          <circle cx="104" cy="292" r="26" fill="#1E1E1E"></circle><circle cx="104" cy="292" r="10" fill="#FDF7E7"></circle>
+          <circle cx="324" cy="292" r="26" fill="#1E1E1E"></circle><circle cx="324" cy="292" r="10" fill="#FDF7E7"></circle>
+          <rect x="74" y="196" width="40" height="18" rx="3" fill="#F2CF55"></rect>
+        </svg>
+      </div>
+
+      <div>
+        <span class="d14-label">SINCE [YEAR]</span>
+        <h2 class="d14-serif" id="d14-story-h" style="margin:18px 0 0;font-size:clamp(36px,4vw,50px);line-height:1.02;">A family shop, not a call center.</h2>
+        <p style="margin:20px 0 0;font-size:18px;">When you call (352) 555-0154, [OWNER NAME] or someone in the family picks up. The same people come out, do the work and send the invoice. We keep a small list of Ocala homes so we can come back when the next thing breaks.</p>
+        <p style="margin:14px 0 0;font-size:18px;">We don't do work that needs a permit from a licensed plumber, electrician or roofer. If your job does, we tell you on the first call.</p>
+      </div>
+
+      <aside class="d14-facts" aria-label="Shop facts">
+        <h3>Shop Facts</h3>
+        <div style="margin-top:4px;">Serving size: 1 honey-do list</div>
+        <div class="d14-rule"></div>
+        <dl>
+          <div class="d14-fr" style="border-top:0;"><dt>Business</dt><dd>Tillman's Fix-It Co.</dd></div>
+          <div class="d14-fr"><dt>Location</dt><dd>Service-area business, Ocala, FL</dd></div>
+          <div class="d14-fr"><dt>Phone</dt><dd><a href="tel:+13525550154" style="font-weight:700;display:inline-flex;align-items:center;min-height:44px;margin:-12px 0;">(352) 555-0154</a></dd></div>
+          <div class="d14-fr"><dt>Hours</dt><dd>[HOURS]</dd></div>
+          <div class="d14-fr"><dt>License</dt><dd>[LICENSE NO.]</dd></div>
+          <div class="d14-fr"><dt>Insured</dt><dd>[CERTIFICATION]</dd></div>
+          <div class="d14-fr"><dt>Years in Ocala</dt><dd>[YEARS]</dd></div>
+        </dl>
+        <div class="d14-rule" style="height:6px;"></div>
+        <div style="font-size:13px;">* Written price before work starts. Owner: [OWNER NAME].</div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- reviews: bottle cap + order slips -->
+  <section class="d14-sec" style="background:var(--mint);border-radius:24px;" aria-labelledby="d14-rev-h">
+    <div class="d14-in">
+      <div class="d14-head">
+        <span class="d14-label">GOOGLE REVIEWS</span>
+        <h2 class="d14-serif" id="d14-rev-h" style="margin-top:18px;">What Ocala says after we leave.</h2>
+      </div>
+      <div class="d14-revs">
+        <div class="d14-cap">
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <g fill="#12403A"><circle cx="100" cy="100" r="90"></circle><circle cx="189.0" cy="100.0" r="9"></circle><circle cx="186.4" cy="121.3" r="9"></circle><circle cx="178.8" cy="141.4" r="9"></circle><circle cx="166.6" cy="159.0" r="9"></circle><circle cx="150.6" cy="173.2" r="9"></circle><circle cx="131.6" cy="183.2" r="9"></circle><circle cx="110.7" cy="188.4" r="9"></circle><circle cx="89.3" cy="188.4" r="9"></circle><circle cx="68.4" cy="183.2" r="9"></circle><circle cx="49.4" cy="173.2" r="9"></circle><circle cx="33.4" cy="159.0" r="9"></circle><circle cx="21.2" cy="141.4" r="9"></circle><circle cx="13.6" cy="121.3" r="9"></circle><circle cx="11.0" cy="100.0" r="9"></circle><circle cx="13.6" cy="78.7" r="9"></circle><circle cx="21.2" cy="58.6" r="9"></circle><circle cx="33.4" cy="41.0" r="9"></circle><circle cx="49.4" cy="26.8" r="9"></circle><circle cx="68.4" cy="16.8" r="9"></circle><circle cx="89.3" cy="11.6" r="9"></circle><circle cx="110.7" cy="11.6" r="9"></circle><circle cx="131.6" cy="16.8" r="9"></circle><circle cx="150.6" cy="26.8" r="9"></circle><circle cx="166.6" cy="41.0" r="9"></circle><circle cx="178.8" cy="58.6" r="9"></circle><circle cx="186.4" cy="78.7" r="9"></circle></g>
+            <circle cx="100" cy="100" r="76" fill="none" stroke="#FDF7E7" stroke-width="1.5" stroke-dasharray="3 4"></circle>
+          </svg>
+          <div class="d14-capt">
+            <span class="d14-serif" style="color:var(--cream);font-size:36px;line-height:1;">[RATING]</span>
+            <span aria-hidden="true" style="color:#FBEFA8;letter-spacing:4px;font-size:18px;margin-top:6px;">★★★★★</span>
+            <span style="font-size:14px;font-weight:600;margin-top:6px;line-height:1.3;">from [COUNT] Google reviews</span>
+            <span class="d14-px" style="font-size:17px;margin-top:6px;color:#D3E8E3;">NEWEST [DAYS] DAYS AGO</span>
+          </div>
+        </div>
+        <figure class="d14-rcard">
+          <div class="d14-rtop"><span>GOOGLE REVIEW</span><span aria-hidden="true">★★★★★</span></div>
+          <blockquote>[Google review, pulled at build time]</blockquote>
+          <figcaption>[Reviewer], [Town]</figcaption>
+        </figure>
+        <figure class="d14-rcard">
+          <div class="d14-rtop"><span>GOOGLE REVIEW</span><span aria-hidden="true">★★★★★</span></div>
+          <blockquote>[Google review, pulled at build time]</blockquote>
+          <figcaption>[Reviewer], [Town]</figcaption>
+        </figure>
+      </div>
+      <p style="margin:36px 0 0;text-align:center;"><a class="d14-tel" href="/reviews" style="font-size:17px;">Read all [COUNT] reviews</a></p>
+    </div>
+  </section>
+
+  <!-- towns: route map -->
+  <section class="d14-sec" id="d14-towns" aria-labelledby="d14-towns-h">
+    <div class="d14-in">
+      <div class="d14-head">
+        <span class="d14-label">THE ROUTE</span>
+        <h2 class="d14-serif" id="d14-towns-h" style="margin-top:18px;">Made in Ocala. Served across Marion County.</h2>
+        <p>Nine towns on our regular route. Each has its own page with local prices and recent fixes.</p>
+      </div>
+      <div class="d14-route">
+        <div class="d14-maptool">
+          <svg viewBox="0 0 560 480" role="img" aria-label="Route map of the towns served around Ocala">
+            <defs>
+              <pattern id="d14grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#12403A" stroke-opacity="0.12" stroke-width="1"></path></pattern>
+            </defs>
+            <rect width="560" height="480" fill="url(#d14grid)"></rect>
+            <g stroke="#12403A" stroke-width="3" fill="none" stroke-linecap="round">
+              <path d="M150 40 L230 160 L280 240 L330 330 L380 440"></path>
+              <path d="M280 240 L300 120 L320 60"></path>
+              <path d="M280 240 L400 230 L470 200"></path>
+              <path d="M280 240 L160 330 L90 370"></path>
+              <path d="M280 240 L350 330"></path>
+              <path d="M300 120 L410 110"></path>
+            </g>
+            <g font-family="VT323, monospace" font-size="15" fill="#12403A" letter-spacing="1">
+              <text x="110" y="38">I-75</text>
+              <text x="480" y="205">SR-40</text>
+            </g>
+            <circle cx="280" cy="240" r="44" fill="#12403A"></circle>
+            <text x="280" y="248" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="900" font-size="22" fill="#FDF7E7">Ocala</text>
+            <g font-family="DM Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#12403A">
+              <circle cx="320" cy="60" r="12" fill="#E3D2ED" stroke="#12403A" stroke-width="2"></circle><text x="340" y="66">Citra</text>
+              <circle cx="410" cy="110" r="12" fill="#CFE6F2" stroke="#12403A" stroke-width="2"></circle><text x="430" y="116">Anthony</text>
+              <circle cx="190" cy="100" r="12" fill="#D6EBB0" stroke="#12403A" stroke-width="2"></circle><text x="80" y="106">Reddick</text>
+              <circle cx="400" cy="230" r="12" fill="#FBF0B0" stroke="#12403A" stroke-width="2"></circle><text x="372" y="266">Silver Springs</text>
+              <circle cx="350" cy="330" r="12" fill="#F8D5C0" stroke="#12403A" stroke-width="2"></circle><text x="370" y="340">Belleview</text>
+              <circle cx="380" cy="440" r="12" fill="#FEC6CC" stroke="#12403A" stroke-width="2"></circle><text x="400" y="446">Summerfield</text>
+              <circle cx="160" cy="330" r="12" fill="#E3D2ED" stroke="#12403A" stroke-width="2"></circle><text x="176" y="360">Marion Oaks</text>
+              <circle cx="90" cy="370" r="12" fill="#CFE6F2" stroke="#12403A" stroke-width="2"></circle><text x="36" y="404">Dunnellon</text>
+            </g>
+          </svg>
+        </div>
+        <ul class="d14-tl">
+          <li><a href="/areas/ocala"><span class="d14-tn">Ocala</span><span class="d14-px d14-slug">/areas/ocala</span><span class="d14-px d14-mi">HOME</span></a></li>
+          <li><a href="/areas/silver-springs"><span class="d14-tn">Silver Springs</span><span class="d14-px d14-slug">/areas/silver-springs</span><span class="d14-px d14-mi">7 MI</span></a></li>
+          <li><a href="/areas/anthony"><span class="d14-tn">Anthony</span><span class="d14-px d14-slug">/areas/anthony</span><span class="d14-px d14-mi">9 MI</span></a></li>
+          <li><a href="/areas/belleview"><span class="d14-tn">Belleview</span><span class="d14-px d14-slug">/areas/belleview</span><span class="d14-px d14-mi">11 MI</span></a></li>
+          <li><a href="/areas/marion-oaks"><span class="d14-tn">Marion Oaks</span><span class="d14-px d14-slug">/areas/marion-oaks</span><span class="d14-px d14-mi">15 MI</span></a></li>
+          <li><a href="/areas/reddick"><span class="d14-tn">Reddick</span><span class="d14-px d14-slug">/areas/reddick</span><span class="d14-px d14-mi">16 MI</span></a></li>
+          <li><a href="/areas/citra"><span class="d14-tn">Citra</span><span class="d14-px d14-slug">/areas/citra</span><span class="d14-px d14-mi">17 MI</span></a></li>
+          <li><a href="/areas/summerfield"><span class="d14-tn">Summerfield</span><span class="d14-px d14-slug">/areas/summerfield</span><span class="d14-px d14-mi">17 MI</span></a></li>
+          <li><a href="/areas/dunnellon"><span class="d14-tn">Dunnellon</span><span class="d14-px d14-slug">/areas/dunnellon</span><span class="d14-px d14-mi">22 MI</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- faq: ask the counter -->
+  <section class="d14-sec" id="d14-faq" style="padding-top:24px;" aria-labelledby="d14-faq-h">
+    <div class="d14-in">
+      <div class="d14-head">
+        <span class="d14-label">ASK THE COUNTER</span>
+        <h2 class="d14-serif" id="d14-faq-h" style="margin-top:18px;">Questions we hear on the phone.</h2>
+      </div>
+      <div class="d14-faq">
+        <div class="d14-qa">
+          <span class="d14-qn" aria-hidden="true">No.1</span>
+          <div><h3 class="d14-serif">How much does a handyman cost in Ocala?</h3><p>Most single fixes run $[LOW]–$[HIGH]. Longer lists go by the Honey-Do Hour at $[PRICE] an hour with a 1-hour minimum. You see the number in writing before we start, and it doesn't change unless you add to the list.</p></div>
+        </div>
+        <div class="d14-qa">
+          <span class="d14-qn" aria-hidden="true">No.2</span>
+          <div><h3 class="d14-serif">Can a handyman replace a faucet or toilet parts in Florida?</h3><p>Yes for swaps on existing lines: faucets, fill valves, flappers, shower heads and disposals. Moving a drain, adding a line or a new water heater needs a licensed plumber and a permit, and we'll say so on the first call.</p></div>
+        </div>
+        <div class="d14-qa">
+          <span class="d14-qn" aria-hidden="true">No.3</span>
+          <div><h3 class="d14-serif">Do you take small jobs, like one door or one hole?</h3><p>Yes. One sticking door or a single drywall patch is a normal visit for us. If you have 3 or 4 small things, the Honey-Do Hour usually costs less than booking them one at a time.</p></div>
+        </div>
+        <div class="d14-qa">
+          <span class="d14-qn" aria-hidden="true">No.4</span>
+          <div><h3 class="d14-serif">How soon can a handyman come out?</h3><p>Most Ocala, Belleview and Silver Springs visits land within [LEAD TIME]. We call the day before with a 2-hour arrival window and text when we're 20 minutes out.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer bookend -->
+  <footer class="d14-foot" aria-label="Contact Tillman's Fix-It Co.">
+    <div class="d14-strip" aria-hidden="true" style="background-image:conic-gradient(#FDF7E7 90deg,#12403A 90deg 180deg,#FDF7E7 180deg 270deg,#12403A 270deg);"></div>
+    <div class="d14-footin">
+      <svg width="300" height="92" viewBox="0 0 236 74" aria-hidden="true" style="display:block;margin:0 auto;max-width:100%;">
+        <defs><path id="d14arc2" d="M14 56 Q118 6 222 56"></path></defs>
+        <text font-family="Fraunces, Georgia, serif" font-weight="900" font-size="40" fill="#FDF7E7" text-anchor="middle" style="font-variation-settings:'SOFT' 100,'WONK' 1;"><textPath href="#d14arc2" startOffset="50%">Tillman's</textPath></text>
+        <text x="118" y="70" font-family="VT323, monospace" font-size="17" fill="#2AD2C9" text-anchor="middle" letter-spacing="3">FIX-IT CO. · OCALA</text>
+      </svg>
+      <p class="d14-px" style="margin:22px 0 0;font-size:22px;letter-spacing:0.08em;color:#D3E8E3;">CALL OR TEXT · [HOURS]</p>
+      <a class="d14-bigtel" href="tel:+13525550154">(352) 555-0154</a>
+      <div style="margin-top:26px;"><a class="d14-btn d14-fbtn" href="/book">Book a Visit</a></div>
+      <ul class="d14-flinks" aria-label="Services">
+        <li><a href="/drywall-repair">Drywall</a></li>
+        <li><a href="/door-repair">Doors &amp; trim</a></li>
+        <li><a href="/faucet-repair">Faucets</a></li>
+        <li><a href="/tv-mounting">TV mounts</a></li>
+        <li><a href="/deck-repair">Decks &amp; fences</a></li>
+        <li><a href="/furniture-assembly">Assembly</a></li>
+        <li><a href="/hourly-handyman">Honey-Do Hour</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+      </ul>
+      <p class="d14-nap">Tillman's Fix-It Co. · Service-area business, Ocala, FL · (352) 555-0154 · [HOURS] · License [LICENSE NO.]</p>
+      <p class="d14-credit">Avenue Vision · D14 · Retro Soda Shop · style refs withheld</p>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":7200}}'>class Component extends DCLogic { renderVals() { return {}; } }</script>
+</body>
+</html>

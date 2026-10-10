@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Fair and Square Fence Co. home page</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&amp;family=Bagel+Fat+One&amp;family=Inter:wght@400;500;600;700&amp;family=Anonymous+Pro:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.e04{--cocoa:#3B2722;--cocoa2:#4A332C;--parch:#F2EBD0;--milk:#FBFAF2;--gold:#FFC94D;--red:#A0342A;--blue:#6AACC2;--sage:#6FA162;--tan:#E2B577;--manila:#EAD9A6;--muted:#D9CCAA;width:100%;background:var(--cocoa);color:var(--cocoa);font-family:Inter,'Helvetica Neue',Arial,sans-serif;font-size:17px;line-height:1.5;overflow-x:hidden}
+.e04 *{box-sizing:border-box}
+:where(.e04) a{color:inherit}
+.e04 a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+:where(.e04 h1,.e04 h2,.e04 h3,.e04 p){margin:0}
+.e04-in{max-width:1280px;margin:0 auto;padding:0 40px}
+.e04-serif{font-family:Gloock,'Playfair Display',Georgia,serif;font-weight:400;letter-spacing:-.01em;line-height:.82}
+.e04-fat{font-family:'Bagel Fat One','Cooper Black',Georgia,serif;font-weight:400;letter-spacing:-.02em}
+.e04-mono{font-family:'Anonymous Pro','Courier New',monospace;letter-spacing:.03em}
+.e04-kicker{font-family:'Anonymous Pro','Courier New',monospace;font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.e04-pill{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:1000px;background:var(--gold);color:var(--cocoa);font-family:Inter,Arial,sans-serif;font-weight:700;font-size:15px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;white-space:nowrap;border:2px solid var(--cocoa);transition:transform .15s ease}
+.e04-pill:hover{transform:translateY(-2px) rotate(-1deg)}
+.e04-pill--dark{background:var(--cocoa);color:var(--parch)}
+.e04-pill svg{width:16px;height:16px}
+.e04-tel{display:inline-flex;flex-direction:column;justify-content:center;min-height:54px;text-decoration:none}
+.e04-tel small{font-family:'Anonymous Pro',monospace;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+.e04-tel b{font-family:Gloock,Georgia,serif;font-weight:400;font-size:28px;line-height:1.05;letter-spacing:0}
+
+/* header */
+.e04-head{background:var(--cocoa);color:var(--parch);border-bottom:1px solid rgba(242,235,208,.18)}
+.e04-headin{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;max-width:1280px;margin:0 auto;padding:14px 40px}
+.e04-nav{display:flex;gap:6px}
+.e04-nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--parch)}
+.e04-nav a:hover{color:var(--gold)}
+.e04-mark{display:flex;flex-direction:column;align-items:center;background:var(--parch);color:var(--cocoa);padding:9px 26px 8px;border-radius:6px;box-shadow:inset 0 0 0 4px var(--parch),inset 0 0 0 6px var(--cocoa);transform:rotate(-2deg);text-decoration:none;min-height:44px}
+.e04-mark b{font-family:'Bagel Fat One',Georgia,serif;font-weight:400;font-size:28px;line-height:1;letter-spacing:-.01em}
+.e04-mark span{font-family:'Anonymous Pro',monospace;font-weight:700;font-size:11px;letter-spacing:.24em;text-transform:uppercase;margin-top:3px}
+.e04-headr{display:flex;justify-content:flex-end;align-items:center;gap:22px;color:var(--parch)}
+
+/* hero */
+.e04-hero{position:relative;background:var(--cocoa);color:var(--parch);padding-top:34px}
+.e04-h1{position:static}
+.e04-mega{display:block;text-align:center;font-size:113px;color:var(--parch);white-space:nowrap;text-transform:uppercase}
+.e04-city{position:absolute;left:max(40px,calc((100% - 1200px)/2));top:170px;width:380px;font-family:Gloock,Georgia,serif;font-weight:400;font-size:46px;line-height:1;color:var(--gold);letter-spacing:-.01em}
+.e04-herogrid{display:grid;grid-template-columns:minmax(0,1fr) 360px minmax(0,1fr);gap:48px;align-items:start;max-width:1280px;margin:0 auto;padding:0 40px}
+.e04-heroL{padding-top:150px;display:flex;flex-direction:column;gap:24px;padding-bottom:40px}
+.e04-heroL p{font-size:18px;line-height:1.55;color:var(--parch)}
+.e04-ctarow{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.e04-picket{position:relative;margin:-42px 0 0;width:360px;height:540px;z-index:2}
+.e04-picket .e04-pk-o{position:absolute;inset:0;background:var(--gold);-webkit-clip-path:url(#e04-pick);clip-path:url(#e04-pick)}
+.e04-picket img{position:absolute;left:9px;top:12px;width:342px;height:528px;object-fit:cover;-webkit-clip-path:url(#e04-pick);clip-path:url(#e04-pick)}
+.e04-picket figcaption{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);white-space:nowrap;background:var(--cocoa);color:var(--parch);font-size:12px;padding:7px 12px;border-radius:1000px}
+.e04-heroR{padding-top:150px;padding-bottom:40px;display:flex;flex-direction:column;gap:22px;align-items:flex-end;text-align:right}
+.e04-heroR .e04-kicker{color:var(--gold)}
+.e04-facts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;max-width:330px}
+.e04-facts li{font-size:16px;line-height:1.45;padding-top:14px;border-top:1px solid rgba(242,235,208,.3)}
+.e04-facts li span{display:block;font-family:'Anonymous Pro',monospace;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:2px}
+.e04-proof{font-size:15px;line-height:1.5}
+.e04-proof .e04-recent{display:block;font-family:'Anonymous Pro',monospace;font-size:13px;letter-spacing:.1em;text-transform:uppercase;opacity:.9}
+.e04-stars{color:var(--gold);letter-spacing:2px}
+.e04-sticker{position:absolute;left:calc(50% + 120px);top:150px;width:150px;height:150px;transform:rotate(10deg);z-index:3}
+
+/* marquee */
+.e04-marq{background:var(--blue);border-top:3px solid var(--cocoa);border-bottom:3px solid var(--cocoa);overflow:hidden;position:relative}
+.e04-marq::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:var(--sage);border-top:2px solid var(--cocoa)}
+.e04-track{display:flex;width:max-content;animation:e04-scroll 38s linear infinite;padding:12px 0 20px}
+.e04-track span{display:inline-flex;align-items:center;gap:22px;padding-right:22px;font-family:Gloock,Georgia,serif;font-size:27px;line-height:1;color:var(--cocoa);text-transform:uppercase;white-space:nowrap}
+.e04-track svg{width:16px;height:30px;flex:none}
+@keyframes e04-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.e04-track{animation:none}}
+
+/* pantry */
+.e04-pantry{background:var(--gold);padding:80px 0 88px}
+.e04-statement{position:relative;text-align:center;padding-top:40px}
+.e04-statement h2{position:relative;z-index:1;font-size:132px;line-height:.95;color:var(--cocoa)}
+.e04-mascot{position:absolute;left:calc(50% + 250px);top:-46px;width:128px;height:206px;transform:rotate(9deg);z-index:0}
+.e04 .e04-sub{max-width:860px;margin:22px auto 0;text-align:center;font-size:30px;line-height:1.18;letter-spacing:-.014em}
+.e04-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:50px 32px;margin-top:64px}
+.e04-card{position:relative;display:flex;flex-direction:column;gap:10px;background:var(--milk);border:2.5px solid var(--cocoa);border-radius:30px;padding:40px 26px 22px;text-decoration:none;color:var(--cocoa);transition:transform .2s ease}
+.e04-card:hover{transform:translateY(-4px) rotate(.6deg)}
+.e04-badge{position:absolute;left:50%;top:-20px;transform:translateX(-50%);background:var(--gold);border:2px solid var(--cocoa);border-radius:6px;padding:8px 18px;font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;line-height:1.2}
+.e04-label{display:block;margin:0 14px 6px;padding:10px 22px 6px;background:var(--parch);border:2px solid var(--cocoa);border-radius:50% / 46%;box-shadow:0 0 0 5px var(--milk),0 0 0 7px var(--cocoa)}
+.e04-label svg{display:block;width:100%;height:auto}
+.e04-card h3{font-family:Gloock,Georgia,serif;font-weight:400;font-size:32px;line-height:1;letter-spacing:-.01em;margin-top:6px}
+.e04-card p{font-size:15px;line-height:1.45}
+.e04-spec{font-family:'Anonymous Pro',monospace;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--red)}
+.e04-cardfoot{display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:2px dashed var(--cocoa);padding-top:14px;margin-top:auto;min-height:44px}
+.e04-price{font-family:'Bagel Fat One',Georgia,serif;font-size:22px;line-height:1.05}
+.e04-price small{display:block;font-family:Inter,sans-serif;font-size:12px;font-weight:500;letter-spacing:0}
+.e04-slug{font-family:'Anonymous Pro',monospace;font-size:13px;font-weight:700;text-align:right;line-height:1.25}
+
+/* by the foot */
+.e04-feet{background:var(--cocoa);color:var(--parch);padding:84px 0 84px;overflow:hidden}
+.e04-feethead{display:block}
+.e04-feethead .e04-kicker{color:var(--gold);margin-bottom:18px;display:block}
+.e04-feethead h2{font-size:156px;color:var(--parch);text-transform:uppercase;white-space:nowrap}
+.e04-feethead p{font-size:18px;line-height:1.55;max-width:600px;margin:18px 0 0 auto;text-align:left}
+.e04-tapewrap{position:relative;height:286px;margin-top:40px}
+.e04-case{position:absolute;left:0;top:0;width:156px;height:156px;z-index:2}
+.e04-tape{position:absolute;left:134px;right:-60px;top:30px;height:96px;background:linear-gradient(90deg,var(--cocoa) 0 3px,transparent 3px) 0 0/96px 46px repeat-x,linear-gradient(90deg,var(--cocoa) 0 2px,transparent 2px) 48px 0/96px 30px repeat-x,linear-gradient(90deg,var(--cocoa) 0 1.5px,transparent 1.5px) 0 0/12px 16px repeat-x,var(--gold);border-top:3px solid var(--cocoa);border-bottom:3px solid var(--cocoa)}
+.e04-tape i{position:absolute;bottom:8px;font-style:normal;font-family:'Bagel Fat One',Georgia,serif;font-size:26px;line-height:1;color:var(--red);transform:translateX(-50%)}
+.e04-flag{position:absolute;top:158px;width:220px;background:var(--parch);color:var(--cocoa);border:2px solid var(--parch);border-radius:16px;padding:14px 16px 14px}
+.e04-flag::before{content:"";position:absolute;left:22px;top:-34px;height:32px;border-left:2px dashed var(--parch)}
+.e04-flag::after{content:"";position:absolute;left:17px;top:-40px;width:12px;height:12px;border-radius:50%;background:var(--red);border:2px solid var(--cocoa)}
+.e04-flag b{display:block;font-family:'Anonymous Pro',monospace;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.e04-flag strong{display:block;font-family:'Bagel Fat One',Georgia,serif;font-weight:400;font-size:25px;line-height:1.1;margin-top:4px}
+.e04-flag span{font-size:13px}
+.e04-samples{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:56px;margin-top:20px;align-items:start}
+.e04-samples h3{font-family:Gloock,Georgia,serif;font-weight:400;font-size:34px;line-height:1.05;margin-bottom:16px}
+.e04-jobs{list-style:none;margin:0;padding:0}
+.e04-jobs li{display:flex;align-items:baseline;gap:12px;padding:14px 0;border-top:1px solid rgba(242,235,208,.28);font-size:16px}
+.e04-jobs li:last-child{border-bottom:1px solid rgba(242,235,208,.28)}
+.e04-jobs li i{flex:1;border-bottom:2px dotted rgba(242,235,208,.45);transform:translateY(-4px);min-width:20px}
+.e04-jobs li b{font-family:'Bagel Fat One',Georgia,serif;font-weight:400;font-size:22px;color:var(--gold);white-space:nowrap}
+.e04-incl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;font-size:16px}
+.e04-incl li{display:flex;gap:12px;align-items:flex-start}
+.e04-incl li svg{flex:none;width:20px;height:20px;margin-top:2px}
+
+/* lot tag */
+.e04-lot{background:var(--parch);padding:84px 0 88px}
+.e04-lotgrid{display:grid;grid-template-columns:minmax(0,480px) minmax(0,1fr);gap:72px;align-items:start}
+.e04-tagwrap{position:relative;padding:58px 0 40px 20px}
+.e04-string{position:absolute;left:150px;top:0;width:180px;height:120px;z-index:2}
+.e04-tag{position:relative;width:420px;transform:rotate(-4deg);padding:88px 38px 34px}
+.e04-tag>svg.e04-tagbg{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.e04-tag>*:not(.e04-tagbg){position:relative;z-index:1}
+.e04-tag>.e04-hole,.e04-tag>.e04-seal{position:absolute}
+.e04-hole{position:absolute;left:50%;top:26px;width:40px;height:40px;margin-left:-20px;border-radius:50%;background:var(--parch);border:6px solid var(--gold);box-shadow:0 0 0 2px var(--cocoa),inset 0 0 0 2px var(--cocoa)}
+.e04-tag .e04-kicker{font-size:13px;color:var(--red)}
+.e04-tag .e04-lotno{font-family:'Bagel Fat One',Georgia,serif;font-size:31px;line-height:1;margin:6px 0 16px;white-space:nowrap}
+.e04-tag dl{margin:0;display:grid;grid-template-columns:96px 1fr;gap:0;border-top:2px solid var(--cocoa)}
+.e04-tag dt,.e04-tag dd{padding:9px 0;border-bottom:1px dashed rgba(59,39,34,.5)}
+.e04-tag dt{font-family:'Anonymous Pro',monospace;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding-top:11px}
+.e04-tag dd{margin:0;font-size:15px;line-height:1.35}
+.e04-seal{left:-26px;top:-34px;width:116px;height:116px;transform:rotate(-10deg);z-index:3}
+.e04-bird{position:absolute;right:-44px;bottom:64px;width:150px;height:150px;border-radius:50%;object-fit:cover;border:6px solid var(--gold);box-shadow:0 0 0 2.5px var(--cocoa);z-index:3}
+.e04-birdcap{position:absolute;right:-56px;bottom:2px;width:180px;font-size:13px;line-height:1.35;text-align:center;transform:rotate(4deg);z-index:3}
+.e04-lotr .e04-kicker{color:var(--red)}
+.e04-lotr h2{font-size:76px;margin-top:16px}
+.e04-lotr>p{font-size:18px;line-height:1.55;margin-top:22px;max-width:560px}
+.e04-steps{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 30px}
+.e04-steps li{display:grid;grid-template-columns:56px 1fr;gap:16px;align-items:start}
+.e04-steps li>span{display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:var(--gold);border:2.5px solid var(--cocoa);font-family:'Bagel Fat One',Georgia,serif;font-size:26px;line-height:1}
+.e04-steps b{display:block;font-family:Gloock,Georgia,serif;font-weight:400;font-size:24px;line-height:1.1;margin-bottom:4px}
+.e04-steps p{font-size:15px;line-height:1.45}
+.e04-lotr .e04-pill{margin-top:36px}
+
+/* reviews */
+.e04-rev{background:var(--gold);padding:80px 0 84px;border-top:3px solid var(--cocoa)}
+.e04-revgrid{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;align-items:center}
+.e04-ros{position:relative;text-align:center}
+.e04-ros svg{width:240px;height:330px;display:block;margin:0 auto}
+.e04-ros p{font-size:15px;margin-top:8px}
+.e04-ros p span{display:block;font-family:'Anonymous Pro',monospace;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
+.e04-revr{position:relative}
+.e04-revr .e04-kicker{display:block}
+.e04-revr h2{font-size:72px;margin-top:12px}
+.e04-quote{position:relative;margin:34px 0 0;padding:0 0 0 70px}
+.e04-quote::before{content:"\201C";position:absolute;left:-6px;top:-30px;font-family:Gloock,Georgia,serif;font-size:170px;line-height:1;color:var(--cocoa)}
+.e04-quote blockquote{margin:0;font-size:42px;line-height:1.08;letter-spacing:-.015em}
+.e04-quote figcaption{margin-top:18px;font-family:'Anonymous Pro',monospace;font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase}
+.e04-minis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:34px;padding-left:70px}
+.e04-mini{background:var(--milk);border:2px solid var(--cocoa);border-radius:30px;padding:20px 22px}
+.e04-mini blockquote{margin:0;font-size:17px;line-height:1.4}
+.e04-mini figcaption{margin-top:10px;font-size:13px}
+.e04-revr .e04-pill{margin:28px 0 0 70px}
+
+/* towns */
+.e04-towns{background:var(--cocoa);color:var(--parch);padding:84px 0}
+.e04-townsgrid{display:grid;grid-template-columns:minmax(0,560px) minmax(0,1fr);gap:64px;align-items:center}
+.e04-map{border-radius:10px;overflow:hidden;border:3px solid var(--parch)}
+.e04-map svg{display:block;width:100%;height:auto}
+.e04-townsr .e04-kicker{color:var(--gold)}
+.e04-townsr h2{font-size:80px;margin-top:14px;color:var(--parch)}
+.e04-townsr>p{font-size:17px;margin-top:20px;max-width:520px}
+.e04-tlist{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px;border-top:2px solid var(--parch)}
+.e04-tlist a{display:flex;flex-direction:column;justify-content:center;min-height:62px;border-bottom:1px solid rgba(242,235,208,.28);text-decoration:none;padding:6px 0}
+.e04-tlist a:hover b{color:var(--gold)}
+.e04-tlist b{font-family:Gloock,Georgia,serif;font-weight:400;font-size:25px;line-height:1.1}
+.e04-tlist span{font-family:'Anonymous Pro',monospace;font-size:13px;color:var(--gold);letter-spacing:.04em}
+
+/* faq */
+.e04-faq{background:var(--parch);padding:84px 0 88px}
+.e04-faqgrid{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:72px;align-items:start}
+.e04-faqgrid h2{font-size:96px}
+.e04-arch{display:block;width:300px;height:330px;margin-top:36px;object-fit:cover;border-radius:160px 160px 26px 26px;border:3px solid var(--cocoa);box-shadow:10px 10px 0 var(--gold)}
+.e04-qa{border-top:3px solid var(--cocoa);padding:22px 0 24px;display:grid;grid-template-columns:62px 1fr;gap:18px}
+.e04-qa:last-child{border-bottom:3px solid var(--cocoa)}
+.e04-qa>span{font-family:'Bagel Fat One',Georgia,serif;font-size:34px;line-height:1;color:var(--red)}
+.e04-qa h3{font-family:Gloock,Georgia,serif;font-weight:400;font-size:31px;line-height:1.08;letter-spacing:-.01em}
+.e04-qa p{font-size:16.5px;line-height:1.6;margin-top:10px}
+
+/* footer */
+.e04-foot{background:var(--cocoa);color:var(--parch);padding:72px 0 32px;overflow:hidden}
+.e04-foot .e04-kicker{color:var(--gold);display:block;text-align:center}
+.e04-bigtel{display:block;text-align:center;font-family:Gloock,Georgia,serif;font-size:170px;line-height:.9;letter-spacing:-.015em;text-decoration:none;color:var(--parch);white-space:nowrap;margin-top:14px}
+.e04-bigtel:hover{color:var(--gold)}
+.e04-footgrid{display:grid;grid-template-columns:minmax(0,560px) minmax(0,1fr);gap:56px;align-items:center;margin-top:44px}
+.e04-barn{position:relative;background:var(--parch);color:var(--cocoa);padding:28px 34px 26px;border-radius:8px;box-shadow:inset 0 0 0 5px var(--parch),inset 0 0 0 8px var(--red);transform:rotate(-1.5deg)}
+.e04-barn b{display:block;font-family:'Bagel Fat One',Georgia,serif;font-weight:400;font-size:34px;line-height:1}
+.e04-barn dl{margin:14px 0 0;display:grid;grid-template-columns:92px 1fr;gap:6px 12px;font-size:15px}
+.e04-barn dt{font-family:'Anonymous Pro',monospace;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding-top:2px;color:var(--red)}
+.e04-barn dd{margin:0}
+.e04-barn dd a{display:inline-block;padding:12px 0;margin:-12px 0}
+.e04-footcta p{font-size:19px;line-height:1.5;max-width:520px;margin-bottom:26px}
+.e04-footlinks{display:flex;flex-wrap:wrap;gap:4px 18px;margin-top:52px;padding-top:22px;border-top:1px solid rgba(242,235,208,.3)}
+.e04-footlinks a{display:inline-flex;align-items:center;min-height:44px;font-family:'Anonymous Pro',monospace;font-size:14px;text-decoration:none;color:var(--parch)}
+.e04-footlinks a:hover{color:var(--gold)}
+.e04-nap{margin-top:10px;font-size:14px}
+.e04-credit{margin-top:12px;font-size:12px;color:var(--muted)}
+
+@media (max-width:860px){
+  .e04-in{padding:0 18px}
+  .e04-headin{grid-template-columns:1fr;justify-items:center;padding:14px 18px;gap:12px}
+  .e04-nav{display:none}
+  .e04-headr{justify-content:center;gap:14px;flex-wrap:wrap}
+  .e04-headr .e04-pill{min-height:48px;padding:0 18px;font-size:13px}
+  .e04-tel b{font-size:23px}
+  .e04-hero{padding-top:26px}
+  .e04-mega{white-space:normal;font-size:12.6vw;line-height:.86;padding:0 12px}
+  .e04-city{position:static;display:block;width:auto;text-align:center;font-size:8.6vw;margin-top:14px;padding:0 18px}
+  .e04-herogrid{grid-template-columns:1fr;padding:0 18px;gap:0}
+  .e04-heroL{padding-top:28px;align-items:center;text-align:center}
+  .e04-ctarow{justify-content:center}
+  .e04-picket{margin:8px auto 0;width:min(300px,78vw);height:min(450px,117vw)}
+  .e04-picket img{left:8px;top:10px;width:calc(100% - 16px);height:calc(100% - 10px)}
+  .e04-heroR{padding-top:34px;align-items:center;text-align:center}
+  .e04-sticker{left:auto;right:6px;top:auto;bottom:520px;width:104px;height:104px}
+  .e04-track span{font-size:22px}
+  .e04-pantry{padding:64px 0 72px}
+  .e04-statement h2{font-size:17vw}
+  .e04-mascot{left:auto;right:4px;top:-34px;width:74px;height:120px}
+  .e04-sub{font-size:21px}
+  .e04-cards{grid-template-columns:1fr;gap:48px;margin-top:56px}
+  .e04-feet{padding:64px 0}
+  .e04-feethead{grid-template-columns:1fr;gap:18px}
+  .e04-feethead h2{font-size:18vw;white-space:normal}
+  .e04-tapewrap{height:auto;margin-top:36px;padding-top:130px}
+  .e04-case{width:110px;height:110px}
+  .e04-tape{left:90px;top:20px;height:80px}
+  .e04-flag{position:relative;top:auto;left:auto !important;width:auto;margin-top:14px}
+  .e04-flag::before,.e04-flag::after{display:none}
+  .e04-flags{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+  .e04-samples{grid-template-columns:1fr;gap:36px;margin-top:40px}
+  .e04-jobs li{flex-wrap:wrap}
+  .e04-lot{padding:64px 0}
+  .e04-lotgrid{grid-template-columns:1fr;gap:56px}
+  .e04-tagwrap{padding:58px 0 0}
+  .e04-tag{width:100%;max-width:360px;padding:86px 24px 30px}
+  .e04-tag dl{grid-template-columns:82px 1fr}
+  .e04-bird{width:100px;height:100px;right:-4px;bottom:-10px}
+  .e04-birdcap{display:none}
+  .e04-seal{left:-12px;top:-30px;width:90px;height:90px}
+  .e04-lotr h2{font-size:54px}
+  .e04-steps{grid-template-columns:1fr}
+  .e04-rev{padding:64px 0}
+  .e04-revgrid{grid-template-columns:1fr;gap:28px}
+  .e04-revr h2{font-size:50px}
+  .e04-quote{padding-left:44px}
+  .e04-quote::before{font-size:110px;top:-18px}
+  .e04-quote blockquote{font-size:28px}
+  .e04-minis{grid-template-columns:1fr;padding-left:0}
+  .e04-revr .e04-pill{margin-left:0}
+  .e04-towns{padding:64px 0}
+  .e04-townsgrid{grid-template-columns:1fr;gap:36px}
+  .e04-townsr h2{font-size:54px}
+  .e04-tlist{grid-template-columns:1fr}
+  .e04-faq{padding:64px 0}
+  .e04-faqgrid{grid-template-columns:1fr;gap:36px}
+  .e04-faqgrid h2{font-size:60px}
+  .e04-arch{width:100%;max-width:300px;height:300px}
+  .e04-qa{grid-template-columns:44px 1fr;gap:12px}
+  .e04-qa h3{font-size:25px}
+  .e04-foot{padding-top:64px}
+  .e04-bigtel{font-size:13.4vw}
+  .e04-footgrid{grid-template-columns:1fr;gap:40px}
+  .e04-barn dl{grid-template-columns:80px 1fr}
+}
+</style>
+</helmet>
+<div class="e04">
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="e04-pick" clipPathUnits="objectBoundingBox"><path d="M0,0.17 L0.5,0 L1,0.17 L1,1 L0,1 Z"></path></clipPath>
+      <path id="e04-ring" d="M66,66 m-48,0 a48,48 0 1,1 96,0 a48,48 0 1,1 -96,0"></path>
+      <symbol id="e04-orn" viewBox="0 0 16 30"><path d="M2,29 V9 L8,2 L14,9 V29 Z" fill="#F2EBD0" stroke="#3B2722" stroke-width="2" stroke-linejoin="round"></path><circle cx="8" cy="13" r="1.4" fill="#3B2722"></circle><circle cx="8" cy="24" r="1.4" fill="#3B2722"></circle></symbol>
+      <symbol id="e04-check" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="#FFC94D" stroke="#F2EBD0" stroke-width="1.5"></circle><path d="M5.5,10.5 L8.6,13.4 L14.5,6.8" fill="none" stroke="#3B2722" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+    </defs>
+  </svg>
+
+  <header class="e04-head" aria-label="Header">
+    <div class="e04-headin">
+      <nav class="e04-nav" aria-label="Main">
+        <a href="#e04-fences">Fences</a>
+        <a href="#e04-prices">Prices</a>
+        <a href="#e04-towns">Towns</a>
+        <a href="#e04-faq">Questions</a>
+      </nav>
+      <a class="e04-mark" href="/" aria-label="Fair and Square Fence Co., home"><b>Fair &amp; Square</b><span>Fence Co. · Vero Beach</span></a>
+      <div class="e04-headr">
+        <a class="e04-tel" href="tel:+17725550164"><small>Call the yard</small><b>(772) 555-0164</b></a>
+        <a class="e04-pill" href="/quote">Price My Fence</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="e04-hero" aria-label="Hero">
+    <h1 class="e04-h1"><span class="e04-serif e04-mega">Fence installation</span> <span class="e04-city">in Vero Beach, Florida</span></h1>
+    <div class="e04-herogrid">
+      <div class="e04-heroL">
+        <p>Wood, vinyl and aluminum fences for Indian River County yards. We walk the line with you, write the price by the foot, file the permit and the HOA packet, then set every post in concrete. Most yards are done in one or two days.</p>
+        <div class="e04-ctarow">
+          <a class="e04-pill" href="/quote">Price My Fence <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8 H13 M9 4 L13 8 L9 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+          <a class="e04-tel" href="tel:+17725550164"><small>Or call</small><b>(772) 555-0164</b></a>
+        </div>
+        <p class="e04-proof"><span class="e04-stars" aria-hidden="true">★★★★★</span> [RATING] from [COUNT] Google reviews<span class="e04-recent">Newest review [DAYS] days ago</span></p>
+      </div>
+      <figure class="e04-picket">
+        <span class="e04-pk-o" aria-hidden="true"></span>
+        <img src="img/fence/05.jpg" alt="New wood privacy fence with a post and rails along a side yard" width="342" height="528" style="object-fit: cover; object-position: 35% 50%;">
+        <figcaption class="e04-mono">LOT VB-[JOB NO.] · 6 FT BOARD-ON-BOARD</figcaption>
+      </figure>
+      <div class="e04-heroR">
+        <span class="e04-kicker">Wood · Vinyl · Aluminum</span>
+        <ul class="e04-facts">
+          <li><span>Posts</span>Set [DEPTH] deep in concrete, 8 ft apart, checked with a string line.</li>
+          <li><span>Paperwork</span>County permit and HOA packet filed for you. You sign once.</li>
+          <li><span>Price</span>Written by the foot, every gate on its own line, before any digging.</li>
+        </ul>
+      </div>
+    </div>
+    <svg class="e04-sticker" viewBox="0 0 200 200" role="img" aria-label="Priced by the foot">
+      <path d="M100.0,4.0 L112.5,21.0 L129.7,8.7 L136.3,28.7 L156.4,22.3 L156.6,43.4 L177.7,43.6 L171.3,63.7 L191.3,70.3 L179.0,87.5 L196.0,100.0 L179.0,112.5 L191.3,129.7 L171.3,136.3 L177.7,156.4 L156.6,156.6 L156.4,177.7 L136.3,171.3 L129.7,191.3 L112.5,179.0 L100.0,196.0 L87.5,179.0 L70.3,191.3 L63.7,171.3 L43.6,177.7 L43.4,156.6 L22.3,156.4 L28.7,136.3 L8.7,129.7 L21.0,112.5 L4.0,100.0 L21.0,87.5 L8.7,70.3 L28.7,63.7 L22.3,43.6 L43.4,43.4 L43.6,22.3 L63.7,28.7 L70.3,8.7 L87.5,21.0Z" fill="#FFC94D" stroke="#3B2722" stroke-width="3" stroke-linejoin="round"></path>
+      <text x="100" y="86" text-anchor="middle" font-family="Anonymous Pro, monospace" font-weight="700" font-size="19" letter-spacing="1.5" fill="#3B2722">PRICED</text>
+      <text x="100" y="110" text-anchor="middle" font-family="Anonymous Pro, monospace" font-weight="700" font-size="19" letter-spacing="1.5" fill="#3B2722">BY THE</text>
+      <text x="100" y="138" text-anchor="middle" font-family="Bagel Fat One, serif" font-size="30" fill="#A0342A">FOOT</text>
+    </svg>
+  </section>
+
+  <div class="e04-marq" aria-hidden="true">
+    <div class="e04-track">
+      <span>Wood privacy<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Vinyl<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Aluminum pool fence<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Picket<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Gates<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Repairs<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Priced by the foot<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Wood privacy<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Vinyl<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Aluminum pool fence<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Picket<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Gates<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Repairs<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Priced by the foot<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span>
+    </div>
+  </div>
+
+  <section class="e04-pantry" id="e04-fences" aria-label="Services">
+    <div class="e04-in">
+      <div class="e04-statement">
+        <svg class="e04-mascot" viewBox="-10 -16 160 250" aria-hidden="true">
+          <path d="M30,4 L22,-8 M70,-4 V-14 M110,4 L118,-8" stroke="#3B2722" stroke-width="6" stroke-linecap="round"></path>
+          <path d="M22,232 V64 L70,14 L118,64 V232 Z" fill="#FBFAF2" stroke="#3B2722" stroke-width="6" stroke-linejoin="round"></path>
+          <path d="M40,74 Q54,62 66,72 M78,66 Q92,56 104,66" fill="none" stroke="#3B2722" stroke-width="6" stroke-linecap="round"></path>
+          <ellipse cx="54" cy="98" rx="12" ry="16" fill="#FFFFFF" stroke="#3B2722" stroke-width="5"></ellipse>
+          <ellipse cx="88" cy="94" rx="12" ry="16" fill="#FFFFFF" stroke="#3B2722" stroke-width="5"></ellipse>
+          <circle cx="58" cy="103" r="6" fill="#3B2722"></circle>
+          <circle cx="92" cy="99" r="6" fill="#3B2722"></circle>
+          <path d="M52,130 Q72,150 94,126" fill="#A0342A" stroke="#3B2722" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+          <circle cx="40" cy="160" r="4.5" fill="#3B2722"></circle><circle cx="100" cy="160" r="4.5" fill="#3B2722"></circle>
+          <path d="M48,184 Q58,200 50,218 M92,176 Q84,196 94,214" fill="none" stroke="#3B2722" stroke-width="3" stroke-linecap="round"></path>
+        </svg>
+        <h2 class="e04-fat">Pick your fence.</h2>
+      </div>
+      <p class="e04-sub">Six ways to fence a Vero Beach yard. Each has its own page, and each is priced by the foot and written down before we dig a single hole.</p>
+      <div class="e04-cards">
+        <a class="e04-card" href="/wood-fence-installation">
+          <span class="e04-badge">Wood</span>
+          <span class="e04-label"><svg viewBox="0 0 240 112" aria-hidden="true"><path d="M16,108 V30 L19,25 H29 L32,30 V108 Z M32,108 V30 L35,25 H45 L48,30 V108 Z M48,108 V30 L51,25 H61 L64,30 V108 Z M64,108 V30 L67,25 H77 L80,30 V108 Z M80,108 V30 L83,25 H93 L96,30 V108 Z M96,108 V30 L99,25 H109 L112,30 V108 Z M112,108 V30 L115,25 H125 L128,30 V108 Z M128,108 V30 L131,25 H141 L144,30 V108 Z M144,108 V30 L147,25 H157 L160,30 V108 Z M160,108 V30 L163,25 H173 L176,30 V108 Z M176,108 V30 L179,25 H189 L192,30 V108 Z M192,108 V30 L195,25 H205 L208,30 V108 Z M208,108 V30 L211,25 H221 L224,30 V108 Z" fill="#E2B577" stroke="#3B2722" stroke-width="2.5" stroke-linejoin="round"></path><path d="M0,108 H240" stroke="#3B2722" stroke-width="3"></path></svg></span>
+          <h3>Wood privacy fence</h3>
+          <p>Board-on-board or shadowbox in pressure-treated pine or cedar. The most fence for the money.</p>
+          <span class="e04-spec">4–8 ft · Pine or cedar</span>
+          <span class="e04-cardfoot"><span class="e04-price">from $[PRICE]<small>per foot, installed</small></span><span class="e04-slug">/wood-fence-<br>installation →</span></span>
+        </a>
+        <a class="e04-card" href="/vinyl-fence-installation">
+          <span class="e04-badge">Vinyl</span>
+          <span class="e04-label"><svg viewBox="0 0 240 112" aria-hidden="true"><rect x="26" y="40" width="188" height="66" fill="#FBFAF2" stroke="#3B2722" stroke-width="2.5"></rect><rect x="26" y="20" width="188" height="16" fill="#FBFAF2" stroke="#3B2722" stroke-width="2.5"></rect><path d="M26,20 L42,36 M42,20 L26,36 M38,20 L54,36 M54,20 L38,36 M50,20 L66,36 M66,20 L50,36 M62,20 L78,36 M78,20 L62,36 M74,20 L90,36 M90,20 L74,36 M86,20 L102,36 M102,20 L86,36 M98,20 L114,36 M114,20 L98,36 M110,20 L126,36 M126,20 L110,36 M122,20 L138,36 M138,20 L122,36 M134,20 L150,36 M150,20 L134,36 M146,20 L162,36 M162,20 L146,36 M158,20 L174,36 M174,20 L158,36 M170,20 L186,36 M186,20 L170,36 M182,20 L198,36 M198,20 L182,36 M194,20 L210,36 M210,20 L194,36 M206,20 L222,36 M222,20 L206,36" stroke="#3B2722" stroke-width="1.5"></path><path d="M73,40 V106 M120,40 V106 M167,40 V106" stroke="#3B2722" stroke-width="1.5" opacity=".5"></path><rect x="14" y="14" width="12" height="94" fill="#FBFAF2" stroke="#3B2722" stroke-width="2.5"></rect><rect x="11" y="8" width="18" height="8" rx="2" fill="#FBFAF2" stroke="#3B2722" stroke-width="2.5"></rect><rect x="114" y="14" width="12" height="94" fill="#FBFAF2" stroke="#3B2722" stroke-width="2.5"></rect><rect x="111" y="8" width="18" height="8" rx="2" fill="#FBFAF2" stroke="#3B2722" stroke-width="2.5"></rect><rect x="214" y="14" width="12" height="94" fill="#FBFAF2" stroke="#3B2722" stroke-width="2.5"></rect><rect x="211" y="8" width="18" height="8" rx="2" fill="#FBFAF2" stroke="#3B2722" stroke-width="2.5"></rect><path d="M0,108 H240" stroke="#3B2722" stroke-width="3"></path></svg></span>
+          <h3>Vinyl privacy fence</h3>
+          <p>White, tan or gray panels with lattice or flat tops. No paint, no rot, rinses clean with a hose.</p>
+          <span class="e04-spec">4–6 ft · [WIND RATING] wind rated</span>
+          <span class="e04-cardfoot"><span class="e04-price">from $[PRICE]<small>per foot, installed</small></span><span class="e04-slug">/vinyl-fence-<br>installation →</span></span>
+        </a>
+        <a class="e04-card" href="/aluminum-fence-installation">
+          <span class="e04-badge">Aluminum</span>
+          <span class="e04-label"><svg viewBox="0 0 240 112" aria-hidden="true"><path d="M20,32 H220 M20,40 H220 M20,96 H220" stroke="#3B2722" stroke-width="3"></path><path d="M30,24 V104 M42,24 V104 M54,24 V104 M66,24 V104 M78,24 V104 M90,24 V104 M102,24 V104 M114,24 V104 M126,24 V104 M138,24 V104 M150,24 V104 M162,24 V104 M174,24 V104 M186,24 V104 M198,24 V104 M210,24 V104" stroke="#3B2722" stroke-width="2.5"></path><path d="M27,25 L30,18 L33,25 Z" fill="#3B2722"></path><path d="M39,25 L42,18 L45,25 Z" fill="#3B2722"></path><path d="M51,25 L54,18 L57,25 Z" fill="#3B2722"></path><path d="M63,25 L66,18 L69,25 Z" fill="#3B2722"></path><path d="M75,25 L78,18 L81,25 Z" fill="#3B2722"></path><path d="M87,25 L90,18 L93,25 Z" fill="#3B2722"></path><path d="M99,25 L102,18 L105,25 Z" fill="#3B2722"></path><path d="M111,25 L114,18 L117,25 Z" fill="#3B2722"></path><path d="M123,25 L126,18 L129,25 Z" fill="#3B2722"></path><path d="M135,25 L138,18 L141,25 Z" fill="#3B2722"></path><path d="M147,25 L150,18 L153,25 Z" fill="#3B2722"></path><path d="M159,25 L162,18 L165,25 Z" fill="#3B2722"></path><path d="M171,25 L174,18 L177,25 Z" fill="#3B2722"></path><path d="M183,25 L186,18 L189,25 Z" fill="#3B2722"></path><path d="M195,25 L198,18 L201,25 Z" fill="#3B2722"></path><path d="M207,25 L210,18 L213,25 Z" fill="#3B2722"></path><rect x="12" y="18" width="10" height="90" fill="#3B2722"></rect><circle cx="17" cy="14" r="6" fill="#FFC94D" stroke="#3B2722" stroke-width="2.5"></circle><rect x="216" y="18" width="10" height="90" fill="#3B2722"></rect><circle cx="221" cy="14" r="6" fill="#FFC94D" stroke="#3B2722" stroke-width="2.5"></circle><path d="M0,108 H240" stroke="#3B2722" stroke-width="3"></path></svg></span>
+          <h3>Aluminum pool fence</h3>
+          <p>Powder-coated pickets with gates that self-close and self-latch, built to Florida pool-barrier code.</p>
+          <span class="e04-spec">4–5 ft · Black or bronze</span>
+          <span class="e04-cardfoot"><span class="e04-price">from $[PRICE]<small>per foot, installed</small></span><span class="e04-slug">/aluminum-fence-<br>installation →</span></span>
+        </a>
+        <a class="e04-card" href="/picket-fence">
+          <span class="e04-badge">Picket</span>
+          <span class="e04-label"><svg viewBox="0 0 240 112" aria-hidden="true"><rect x="12" y="66" width="216" height="9" fill="#E2B577" stroke="#3B2722" stroke-width="2"></rect><rect x="12" y="92" width="216" height="9" fill="#E2B577" stroke="#3B2722" stroke-width="2"></rect><path d="M14,108 V58 L21,47 L28,58 V108 Z M36,108 V58 L43,47 L50,58 V108 Z M58,108 V58 L65,47 L72,58 V108 Z M80,108 V58 L87,47 L94,58 V108 Z M102,108 V58 L109,47 L116,58 V108 Z M124,108 V58 L131,47 L138,58 V108 Z M146,108 V58 L153,47 L160,58 V108 Z M168,108 V58 L175,47 L182,58 V108 Z M190,108 V58 L197,47 L204,58 V108 Z M212,108 V58 L219,47 L226,58 V108 Z" fill="#FBFAF2" stroke="#3B2722" stroke-width="2.5" stroke-linejoin="round"></path><path d="M0,108 H240" stroke="#3B2722" stroke-width="3"></path></svg></span>
+          <h3>Front-yard picket</h3>
+          <p>Three or four feet of wood or vinyl pickets. Gothic, dog-ear or flat tops, spaced to keep a dog in.</p>
+          <span class="e04-spec">3–4 ft · Wood or vinyl</span>
+          <span class="e04-cardfoot"><span class="e04-price">from $[PRICE]<small>per foot, installed</small></span><span class="e04-slug">/picket-fence →</span></span>
+        </a>
+        <a class="e04-card" href="/fence-gates">
+          <span class="e04-badge">Gates</span>
+          <span class="e04-label"><svg viewBox="0 0 240 112" aria-hidden="true"><rect x="28" y="28" width="90" height="74" rx="2" fill="#E2B577" stroke="#3B2722" stroke-width="2.5"></rect><path d="M43,28 V102 M58,28 V102 M73,28 V102 M88,28 V102 M103,28 V102" stroke="#3B2722" stroke-width="1.5" opacity=".55"></path><path d="M28,40 H118 M28,90 H118 M32,88 L114,42" stroke="#3B2722" stroke-width="3" stroke-linecap="round"></path><rect x="122" y="28" width="90" height="74" rx="2" fill="#E2B577" stroke="#3B2722" stroke-width="2.5"></rect><path d="M137,28 V102 M152,28 V102 M167,28 V102 M182,28 V102 M197,28 V102" stroke="#3B2722" stroke-width="1.5" opacity=".55"></path><path d="M122,40 H212 M122,90 H212 M126,88 L208,42" stroke="#3B2722" stroke-width="3" stroke-linecap="round"></path><rect x="14" y="16" width="12" height="92" fill="#3B2722"></rect><rect x="214" y="16" width="12" height="92" fill="#3B2722"></rect><path d="M26,46 H40 M26,84 H40 M200,46 H214 M200,84 H214" stroke="#FFC94D" stroke-width="4" stroke-linecap="round"></path><circle cx="120" cy="66" r="4" fill="#FFC94D" stroke="#3B2722" stroke-width="2"></circle><path d="M0,108 H240" stroke="#3B2722" stroke-width="3"></path></svg></span>
+          <h3>Gates &amp; drive gates</h3>
+          <p>Walk gates, double drive gates and hardware swaps. Hung on steel-framed posts so they don't sag.</p>
+          <span class="e04-spec">4–12 ft openings</span>
+          <span class="e04-cardfoot"><span class="e04-price">from $[PRICE]<small>per gate, installed</small></span><span class="e04-slug">/fence-gates →</span></span>
+        </a>
+        <a class="e04-card" href="/fence-repair">
+          <span class="e04-badge">Repair</span>
+          <span class="e04-label"><svg viewBox="0 0 240 112" aria-hidden="true"><path d="M16,108 V44 L19,39 H29 L32,44 V108 Z M32,108 V44 L35,39 H45 L48,44 V108 Z M48,108 V44 L51,39 H61 L64,44 V108 Z M64,108 V44 L67,39 H77 L80,44 V108 Z M80,108 V44 L83,39 H93 L96,44 V108 Z M96,108 V44 L99,39 H109 L112,44 V108 Z M128,108 V44 L131,39 H141 L144,44 V108 Z M144,108 V44 L147,39 H157 L160,44 V108 Z M160,108 V44 L163,39 H173 L176,44 V108 Z M176,108 V44 L179,39 H189 L192,44 V108 Z M192,108 V44 L195,39 H205 L208,44 V108 Z M208,108 V44 L211,39 H221 L224,44 V108 Z" fill="#E2B577" stroke="#3B2722" stroke-width="2.5" stroke-linejoin="round"></path><path d="M112,108 V44 L115,39 H125 L128,44 V108 Z" fill="#F0D3A3" stroke="#3B2722" stroke-width="2.5" stroke-linejoin="round" transform="rotate(-14 112 108)"></path><g transform="translate(150,6) rotate(28)"><rect x="0" y="6" width="44" height="12" rx="3" fill="#6AACC2" stroke="#3B2722" stroke-width="2.5"></rect><rect x="17" y="17" width="9" height="40" rx="3" fill="#E2B577" stroke="#3B2722" stroke-width="2.5"></rect></g><path d="M0,108 H240" stroke="#3B2722" stroke-width="3"></path></svg></span>
+          <h3>Fence repair</h3>
+          <p>Leaning posts, storm damage, rotted boards and gates that drag. We match the boards you already have.</p>
+          <span class="e04-spec">Any material we install</span>
+          <span class="e04-cardfoot"><span class="e04-price">from $[PRICE]<small>per visit</small></span><span class="e04-slug">/fence-repair →</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="e04-feet" id="e04-prices" aria-label="Prices">
+    <div class="e04-in">
+      <div class="e04-feethead">
+        <div>
+          <span class="e04-kicker">What a fence costs in Vero Beach</span>
+          <h2 class="e04-serif">By the foot.</h2>
+        </div>
+        <p>Fences are priced by the linear foot, installed, plus each gate. Measure your line with a tape, multiply, and you are within a few hundred dollars of our written number.</p>
+      </div>
+      <div class="e04-tapewrap">
+        <svg class="e04-case" viewBox="0 0 156 156" aria-hidden="true">
+          <rect x="3" y="3" width="150" height="150" rx="36" fill="#4A332C" stroke="#F2EBD0" stroke-width="3"></rect>
+          <circle cx="78" cy="78" r="50" fill="#FFC94D" stroke="#3B2722" stroke-width="3"></circle>
+          <circle cx="78" cy="78" r="34" fill="#F2EBD0" stroke="#3B2722" stroke-width="3"></circle>
+          <text x="78" y="74" text-anchor="middle" font-family="Bagel Fat One, serif" font-size="15" fill="#3B2722">F&amp;S</text>
+          <text x="78" y="92" text-anchor="middle" font-family="Anonymous Pro, monospace" font-weight="700" font-size="11" fill="#3B2722">25 FT</text>
+          <rect x="128" y="20" width="22" height="16" rx="4" fill="#A0342A" stroke="#F2EBD0" stroke-width="2"></rect>
+        </svg>
+        <div class="e04-tape" aria-hidden="true"><i style="left: 96px;">1</i><i style="left: 192px;">2</i><i style="left: 288px;">3</i><i style="left: 384px;">4</i><i style="left: 480px;">5</i><i style="left: 576px;">6</i><i style="left: 672px;">7</i><i style="left: 768px;">8</i><i style="left: 864px;">9</i><i style="left: 960px;">10</i><i style="left: 1056px;">11</i><i style="left: 1152px;">12</i></div>
+        <div class="e04-flags">
+          <div class="e04-flag" style="left: 186px;"><b>Picket, 4 ft</b><strong>$[LOW]–$[HIGH]</strong><span>per foot, installed</span></div>
+          <div class="e04-flag" style="left: 440px;"><b>Wood privacy, 6 ft</b><strong>$[LOW]–$[HIGH]</strong><span>per foot, installed</span></div>
+          <div class="e04-flag" style="left: 694px;"><b>Aluminum, 4–5 ft</b><strong>$[LOW]–$[HIGH]</strong><span>per foot, installed</span></div>
+          <div class="e04-flag" style="left: 948px;"><b>Vinyl privacy, 6 ft</b><strong>$[LOW]–$[HIGH]</strong><span>per foot, installed</span></div>
+        </div>
+      </div>
+      <div class="e04-samples">
+        <div>
+          <h3>Three Vero Beach yards, priced</h3>
+          <ul class="e04-jobs">
+            <li><span>150 ft of 6 ft wood privacy, one walk gate</span><i></i><b>$[LOW]–$[HIGH]</b></li>
+            <li><span>90 ft of aluminum pool fence, two gates</span><i></i><b>$[LOW]–$[HIGH]</b></li>
+            <li><span>200 ft of white vinyl, one 12 ft drive gate</span><i></i><b>$[LOW]–$[HIGH]</b></li>
+          </ul>
+        </div>
+        <div>
+          <h3>In every price</h3>
+          <ul class="e04-incl">
+            <li><svg aria-hidden="true"><use href="#e04-check"></use></svg>Post holes, concrete and a string line</li>
+            <li><svg aria-hidden="true"><use href="#e04-check"></use></svg>County permit and HOA packet</li>
+            <li><svg aria-hidden="true"><use href="#e04-check"></use></svg>811 utility locate before digging</li>
+            <li><svg aria-hidden="true"><use href="#e04-check"></use></svg>Old fence torn out and hauled off</li>
+            <li><svg aria-hidden="true"><use href="#e04-check"></use></svg>No survey? We order one for $[PRICE]</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="e04-lot" aria-label="How a fence gets built">
+    <div class="e04-in">
+      <div class="e04-lotgrid">
+        <div class="e04-tagwrap">
+          <svg class="e04-string" viewBox="0 0 180 120" aria-hidden="true"><path d="M178,4 C120,10 140,60 96,70 C60,78 40,92 82,118" fill="none" stroke="#A0342A" stroke-width="3" stroke-linecap="round"></path></svg>
+          <div class="e04-tag">
+            <svg class="e04-tagbg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M16,0.5 H84 L99.5,11 V99.5 H0.5 V11 Z" fill="#EAD9A6" stroke="#3B2722" stroke-width="2.5" vector-effect="non-scaling-stroke" stroke-linejoin="round"></path></svg>
+            <span class="e04-hole" aria-hidden="true"></span>
+            <span class="e04-kicker">Lot tag · sample</span>
+            <p class="e04-lotno">No. VB-[JOB NO.]</p>
+            <dl>
+              <dt>Fence</dt><dd>6 ft pressure-treated pine, board-on-board</dd>
+              <dt>Posts</dt><dd>4×4, set [DEPTH] in concrete, 8 ft apart</dd>
+              <dt>Gate</dt><dd>4 ft walk gate, self-closing hinges</dd>
+              <dt>Permit</dt><dd>Indian River County [PERMIT NO.]</dd>
+              <dt>Locate</dt><dd>811 ticket [TICKET NO.]</dd>
+              <dt>Crew</dt><dd>[CREW LEAD] and crew</dd>
+              <dt>Passed</dt><dd>Final inspection [DATE]</dd>
+            </dl>
+            <svg class="e04-seal" viewBox="0 0 132 132" role="img" aria-label="Built and filed in Indian River County">
+              <circle cx="66" cy="66" r="63" fill="#6AACC2" stroke="#3B2722" stroke-width="3"></circle>
+              <circle cx="66" cy="66" r="34" fill="#F2EBD0" stroke="#3B2722" stroke-width="2.5"></circle>
+              <text font-family="Anonymous Pro, monospace" font-weight="700" font-size="11.5" fill="#3B2722"><textPath href="#e04-ring" textLength="296" lengthAdjust="spacing">BUILT &amp; FILED · INDIAN RIVER COUNTY · </textPath></text>
+              <use href="#e04-orn" x="56" y="48" width="20" height="36"></use>
+            </svg>
+          </div>
+          <img class="e04-bird" src="img/fence/07.jpg" alt="Red-bellied woodpecker perched on top of a weathered fence board" width="170" height="170" loading="lazy" style="object-fit: cover; object-position: 50% 40%;">
+          <p class="e04-birdcap">The neighborhood inspector. Unpaid, very thorough.</p>
+        </div>
+        <div class="e04-lotr">
+          <span class="e04-kicker">How a fence gets built</span>
+          <h2 class="e04-serif">Every fence leaves with a lot number.</h2>
+          <p>Your lot tag lists what went into the ground, who set it and which permit covers it. We fill it in on install day and email it to you with the permit card, so the next owner can read it too.</p>
+          <ol class="e04-steps">
+            <li><span>1</span><div><b>Walk the line</b><p>We measure with you, mark corners and gate swings, and note the HOA rules.</p></div></li>
+            <li><span>2</span><div><b>Written price</b><p>By the foot, every gate on its own line. Good for [DAYS] days.</p></div></li>
+            <li><span>3</span><div><b>Permit and HOA</b><p>We file both and call 811. You sign once and wait about [PERMIT DAYS] days.</p></div></li>
+            <li><span>4</span><div><b>Install day</b><p>Most yards take one or two days. The old fence leaves on our trailer.</p></div></li>
+          </ol>
+          <a class="e04-pill e04-pill--dark" href="/quote">Price My Fence</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="e04-rev" aria-label="Reviews">
+    <div class="e04-in">
+      <div class="e04-revgrid">
+        <div class="e04-ros">
+          <svg viewBox="0 0 240 330" role="img" aria-label="[RATING] star Google rating">
+            <path d="M92,180 L62,318 L86,300 L104,326 L128,190 Z" fill="#6AACC2" stroke="#3B2722" stroke-width="3" stroke-linejoin="round"></path>
+            <path d="M148,180 L178,318 L154,300 L136,326 L112,190 Z" fill="#6AACC2" stroke="#3B2722" stroke-width="3" stroke-linejoin="round"></path>
+            <path d="M220.0,120.0 A12.7,12.7 0 0,1 217.1,143.9 A12.7,12.7 0 0,1 208.5,166.5 A12.7,12.7 0 0,1 194.9,186.3 A12.7,12.7 0 0,1 176.8,202.3 A12.7,12.7 0 0,1 155.5,213.5 A12.7,12.7 0 0,1 132.1,219.3 A12.7,12.7 0 0,1 107.9,219.3 A12.7,12.7 0 0,1 84.5,213.5 A12.7,12.7 0 0,1 63.2,202.3 A12.7,12.7 0 0,1 45.1,186.3 A12.7,12.7 0 0,1 31.5,166.5 A12.7,12.7 0 0,1 22.9,143.9 A12.7,12.7 0 0,1 20.0,120.0 A12.7,12.7 0 0,1 22.9,96.1 A12.7,12.7 0 0,1 31.5,73.5 A12.7,12.7 0 0,1 45.1,53.7 A12.7,12.7 0 0,1 63.2,37.7 A12.7,12.7 0 0,1 84.5,26.5 A12.7,12.7 0 0,1 107.9,20.7 A12.7,12.7 0 0,1 132.1,20.7 A12.7,12.7 0 0,1 155.5,26.5 A12.7,12.7 0 0,1 176.8,37.7 A12.7,12.7 0 0,1 194.9,53.7 A12.7,12.7 0 0,1 208.5,73.5 A12.7,12.7 0 0,1 217.1,96.1 A12.7,12.7 0 0,1 220.0,120.0Z" fill="#6AACC2" stroke="#3B2722" stroke-width="3"></path>
+            <path d="M200.0,120.0 A13.1,13.1 0 0,1 196.1,144.7 A13.1,13.1 0 0,1 184.7,167.0 A13.1,13.1 0 0,1 167.0,184.7 A13.1,13.1 0 0,1 144.7,196.1 A13.1,13.1 0 0,1 120.0,200.0 A13.1,13.1 0 0,1 95.3,196.1 A13.1,13.1 0 0,1 73.0,184.7 A13.1,13.1 0 0,1 55.3,167.0 A13.1,13.1 0 0,1 43.9,144.7 A13.1,13.1 0 0,1 40.0,120.0 A13.1,13.1 0 0,1 43.9,95.3 A13.1,13.1 0 0,1 55.3,73.0 A13.1,13.1 0 0,1 73.0,55.3 A13.1,13.1 0 0,1 95.3,43.9 A13.1,13.1 0 0,1 120.0,40.0 A13.1,13.1 0 0,1 144.7,43.9 A13.1,13.1 0 0,1 167.0,55.3 A13.1,13.1 0 0,1 184.7,73.0 A13.1,13.1 0 0,1 196.1,95.3 A13.1,13.1 0 0,1 200.0,120.0Z" fill="#FBFAF2" stroke="#3B2722" stroke-width="3"></path>
+            <circle cx="120" cy="120" r="62" fill="#3B2722"></circle>
+            <circle cx="120" cy="120" r="55" fill="none" stroke="#FFC94D" stroke-width="2" stroke-dasharray="3 4"></circle>
+            <text x="120" y="97" text-anchor="middle" font-family="Anonymous Pro, monospace" font-weight="700" font-size="11" letter-spacing="2" fill="#F2EBD0">GOOGLE</text>
+            <text x="120" y="132" text-anchor="middle" font-family="Bagel Fat One, serif" font-size="27" fill="#FFC94D">[RATING]</text>
+            <text x="120" y="154" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" letter-spacing="2" fill="#FFC94D">★★★★★</text>
+          </svg>
+          <p>[RATING] from [COUNT] Google reviews<span>Newest review [DAYS] days ago</span></p>
+        </div>
+        <div class="e04-revr">
+          <span class="e04-kicker">From the neighbors</span>
+          <h2 class="e04-serif">What Vero Beach wrote down.</h2>
+          <figure class="e04-quote">
+            <blockquote>[Google review, pulled at build time]</blockquote>
+            <figcaption>[Reviewer], [Town] · Google review · [DATE]</figcaption>
+          </figure>
+          <div class="e04-minis">
+            <figure class="e04-mini" style="margin: 0;"><blockquote>[Google review, pulled at build time]</blockquote><figcaption>[Reviewer], [Town]</figcaption></figure>
+            <figure class="e04-mini" style="margin: 0;"><blockquote>[Google review, pulled at build time]</blockquote><figcaption>[Reviewer], [Town]</figcaption></figure>
+          </div>
+          <a class="e04-pill e04-pill--dark" href="/reviews">Read All Reviews</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="e04-towns" id="e04-towns" aria-label="Service area">
+    <div class="e04-in">
+      <div class="e04-townsgrid">
+        <div class="e04-map">
+          <svg viewBox="0 0 560 600" role="img" aria-label="Crate-label style map of Indian River County, from Roseland and Sebastian down to Vero Beach and Fort Pierce">
+            <rect width="560" height="600" fill="#F2EBD0"></rect>
+            <path d="M452,96 C458,220 470,380 482,580 H540 V96 Z" fill="#6AACC2"></path>
+            <path d="M394,96 C398,220 410,380 422,580 H442 C432,380 420,220 414,96 Z" fill="#6AACC2"></path>
+            <path d="M412,128 L456,121 L457,133 L413,140 Z" fill="#6AACC2"></path>
+            <path d="M436,540 L486,532 L488,544 L438,552 Z" fill="#6AACC2"></path>
+            <path d="M398,152 C360,158 342,178 302,174 C272,171 252,188 224,184" fill="none" stroke="#6AACC2" stroke-width="8" stroke-linecap="round"></path>
+            <path d="M492,186 q7,-7 14,0 t14,0 M500,266 q7,-7 14,0 t14,0 M498,346 q7,-7 14,0 t14,0 M506,436 q7,-7 14,0 t14,0 M514,506 q7,-7 14,0 t14,0" fill="none" stroke="#3B2722" stroke-width="2" stroke-linecap="round" opacity=".6"></path>
+            <path d="M40,494 H440" stroke="#3B2722" stroke-width="2" stroke-dasharray="2 6" stroke-linecap="round"></path>
+            <text x="44" y="512" font-family="Anonymous Pro, monospace" font-weight="700" font-size="11" letter-spacing="1.5" fill="#3B2722">ST. LUCIE CO.</text>
+            <text x="44" y="486" font-family="Anonymous Pro, monospace" font-weight="700" font-size="11" letter-spacing="1.5" fill="#3B2722">INDIAN RIVER CO.</text>
+            <path d="M226,96 C228,260 236,420 244,580" fill="none" stroke="#3B2722" stroke-width="8"></path>
+            <path d="M226,96 C228,260 236,420 244,580" fill="none" stroke="#FFC94D" stroke-width="3"></path>
+            <path d="M364,96 C370,220 382,380 398,580" fill="none" stroke="#A0342A" stroke-width="3" stroke-dasharray="10 6"></path>
+            <path d="M40,412 H372" fill="none" stroke="#A0342A" stroke-width="3" stroke-dasharray="10 6"></path>
+            <g font-family="Anonymous Pro, monospace" font-weight="700" font-size="12" text-anchor="middle">
+              <rect x="214" y="290" width="34" height="22" rx="6" fill="#3B2722"></rect><text x="231" y="305" fill="#FFC94D">I-95</text>
+              <rect x="146" y="401" width="40" height="22" rx="6" fill="#F2EBD0" stroke="#A0342A" stroke-width="2"></rect><text x="166" y="416" fill="#A0342A">SR 60</text>
+              <rect x="346" y="226" width="40" height="22" rx="6" fill="#F2EBD0" stroke="#A0342A" stroke-width="2"></rect><text x="366" y="241" fill="#A0342A">US 1</text>
+            </g>
+            <text transform="translate(522,384) rotate(90)" font-family="Gloock, serif" font-size="17" letter-spacing="2.5" fill="#3B2722">ATLANTIC OCEAN</text>
+            <text transform="translate(403,420) rotate(85)" font-family="Anonymous Pro, monospace" font-weight="700" font-size="10" letter-spacing="1.5" fill="#3B2722">INDIAN RIVER LAGOON</text>
+            <g font-family="Inter, sans-serif" font-weight="600" font-size="15" fill="#3B2722" stroke="#F2EBD0" stroke-width="5" paint-order="stroke" stroke-linejoin="round">
+              <circle cx="352" cy="116" r="8" fill="#FFC94D" stroke="#3B2722" stroke-width="3"></circle><text x="338" y="121" text-anchor="end">Roseland</text>
+              <circle cx="366" cy="196" r="8" fill="#FFC94D" stroke="#3B2722" stroke-width="3"></circle><text x="352" y="201" text-anchor="end">Sebastian</text>
+              <circle cx="122" cy="196" r="8" fill="#FFC94D" stroke="#3B2722" stroke-width="3"></circle><text x="136" y="190">Fellsmere</text>
+              <circle cx="374" cy="276" r="8" fill="#FFC94D" stroke="#3B2722" stroke-width="3"></circle><text x="360" y="281" text-anchor="end">Wabasso</text>
+              <circle cx="432" cy="238" r="8" fill="#FFC94D" stroke="#3B2722" stroke-width="3"></circle><text x="448" y="232">Orchid</text>
+              <circle cx="440" cy="338" r="8" fill="#FFC94D" stroke="#3B2722" stroke-width="3"></circle><text x="456" y="330">Indian River</text><text x="456" y="348">Shores</text>
+              <circle cx="378" cy="348" r="8" fill="#FFC94D" stroke="#3B2722" stroke-width="3"></circle><text x="364" y="353" text-anchor="end">Gifford</text>
+              <circle cx="420" cy="560" r="8" fill="#FFC94D" stroke="#3B2722" stroke-width="3"></circle><text x="406" y="565" text-anchor="end">Fort Pierce</text>
+              <path d="M386.0,395.0 L390.4,405.9 L402.2,406.7 L393.1,414.3 L396.0,425.8 L386.0,419.5 L376.0,425.8 L378.9,414.3 L369.8,406.7 L381.6,405.9Z" fill="#A0342A" stroke="#3B2722" stroke-width="2.5" stroke-linejoin="round"></path>
+              <text x="364" y="402" text-anchor="end" font-size="21" font-weight="700">Vero Beach</text>
+            </g>
+            <g transform="translate(92,560)"><circle r="22" fill="#F2EBD0" stroke="#3B2722" stroke-width="2.5"></circle><path d="M0,-17 L6,4 L0,0 L-6,4 Z" fill="#3B2722"></path><text y="16" text-anchor="middle" font-family="Anonymous Pro, monospace" font-weight="700" font-size="11" fill="#3B2722">N</text></g>
+            <rect x="10" y="10" width="540" height="580" fill="none" stroke="#3B2722" stroke-width="4"></rect>
+            <rect x="20" y="20" width="520" height="560" fill="none" stroke="#3B2722" stroke-width="1.5"></rect>
+            <path d="M34,32 H526 L510,58 L526,84 H34 L50,58 Z" fill="#A0342A" stroke="#3B2722" stroke-width="3" stroke-linejoin="round"></path>
+            <text x="280" y="67" text-anchor="middle" font-family="Gloock, serif" font-size="24" letter-spacing="1" fill="#F2EBD0">BUILT IN INDIAN RIVER COUNTY</text>
+          </svg>
+        </div>
+        <div class="e04-townsr">
+          <span class="e04-kicker">Service area</span>
+          <h2 class="e04-serif">Nine towns, one crew.</h2>
+          <p>We build from Roseland down to Fort Pierce, on the mainland and the barrier island. Each town has its own page with permit notes and recent jobs.</p>
+          <ul class="e04-tlist">
+            <li><a href="/areas/vero-beach"><b>Vero Beach</b><span>/areas/vero-beach</span></a></li>
+            <li><a href="/areas/sebastian"><b>Sebastian</b><span>/areas/sebastian</span></a></li>
+            <li><a href="/areas/indian-river-shores"><b>Indian River Shores</b><span>/areas/indian-river-shores</span></a></li>
+            <li><a href="/areas/fellsmere"><b>Fellsmere</b><span>/areas/fellsmere</span></a></li>
+            <li><a href="/areas/orchid"><b>Orchid</b><span>/areas/orchid</span></a></li>
+            <li><a href="/areas/wabasso"><b>Wabasso</b><span>/areas/wabasso</span></a></li>
+            <li><a href="/areas/gifford"><b>Gifford</b><span>/areas/gifford</span></a></li>
+            <li><a href="/areas/roseland"><b>Roseland</b><span>/areas/roseland</span></a></li>
+            <li><a href="/areas/fort-pierce"><b>Fort Pierce</b><span>/areas/fort-pierce</span></a></li>
+            <li><a href="tel:+17725550164"><b>Not listed?</b><span>Call (772) 555-0164</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="e04-marq" aria-hidden="true">
+    <div class="e04-track" style="animation-direction: reverse;">
+      <span>Vero Beach<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Sebastian<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Indian River Shores<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Fellsmere<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Orchid<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Wabasso<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Gifford<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Roseland<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Fort Pierce<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Vero Beach<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Sebastian<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Indian River Shores<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Fellsmere<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Orchid<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Wabasso<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Gifford<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Roseland<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span><span>Fort Pierce<svg aria-hidden="true"><use href="#e04-orn"></use></svg></span>
+    </div>
+  </div>
+
+  <section class="e04-faq" id="e04-faq" aria-label="Questions">
+    <div class="e04-in">
+      <div class="e04-faqgrid">
+        <div>
+          <span class="e04-kicker" style="color: #A0342A;">Questions</span>
+          <h2 class="e04-serif" style="margin-top: 14px;">Asked over the fence.</h2>
+          <img class="e04-arch" src="img/fence/04.jpg" alt="Wood privacy fence with a lattice top and a matching gate in late-day shade" width="320" height="380" loading="lazy" style="object-fit: cover; object-position: 40% 60%;">
+        </div>
+        <div>
+          <div class="e04-qa"><span>01</span><div><h3>How much does a fence cost in Vero Beach?</h3><p>Most backyards run $[LOW]–$[HIGH] for 150 feet of 6 ft wood privacy with one gate, installed. Vinyl runs about $[PRICE] more per foot and aluminum about $[PRICE] more. Your written price lists every foot and every gate.</p></div></div>
+          <div class="e04-qa"><span>02</span><div><h3>Do I need a permit for a fence in Indian River County?</h3><p>For most residential fences, yes, and many HOAs want their own approval too. We pull the county or city permit and send the HOA packet with your survey. It shows on the price sheet as one line: $[PRICE].</p></div></div>
+          <div class="e04-qa"><span>03</span><div><h3>Which fence holds up best near the beach?</h3><p>Aluminum and vinyl. Salt air and sprinklers gray wood within a couple of seasons. Pressure-treated pine still lasts [YEARS] years with a sealer. On the barrier island we use stainless hardware and say so on the quote.</p></div></div>
+          <div class="e04-qa"><span>04</span><div><h3>How long does fence installation take?</h3><p>One or two days on site for most yards. The wait before that is the permit, usually [PERMIT DAYS] business days here. We call 811 to mark utility lines before any digging.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="e04-foot" aria-label="Footer">
+    <div class="e04-in">
+      <span class="e04-kicker">Call the yard</span>
+      <a class="e04-bigtel" href="tel:+17725550164">(772) 555-0164</a>
+      <div class="e04-footgrid">
+        <div class="e04-barn">
+          <b>Fair &amp; Square Fence Co.</b>
+          <dl>
+            <dt>Where</dt><dd>Service-area business, Vero Beach, FL</dd>
+            <dt>Phone</dt><dd><a href="tel:+17725550164">(772) 555-0164</a></dd>
+            <dt>Hours</dt><dd>[HOURS]</dd>
+            <dt>License</dt><dd>[LICENSE NO.] · [CERTIFICATION]</dd>
+          </dl>
+        </div>
+        <div class="e04-footcta">
+          <p>Send a photo of your yard and a rough length, or have us walk it. Either way, the price comes back in writing, by the foot.</p>
+          <a class="e04-pill" href="/quote">Price My Fence</a>
+        </div>
+      </div>
+      <nav class="e04-footlinks" aria-label="Services">
+        <a href="/wood-fence-installation">/wood-fence-installation</a>
+        <a href="/vinyl-fence-installation">/vinyl-fence-installation</a>
+        <a href="/aluminum-fence-installation">/aluminum-fence-installation</a>
+        <a href="/picket-fence">/picket-fence</a>
+        <a href="/fence-gates">/fence-gates</a>
+        <a href="/fence-repair">/fence-repair</a>
+        <a href="/privacy">/privacy</a>
+      </nav>
+      <p class="e04-nap">Fair &amp; Square Fence Co. · Service-area business, Vero Beach, FL · (772) 555-0164 · [HOURS] · License [LICENSE NO.]</p>
+      <p class="e04-credit">Avenue Vision · E04 · Honey Label · style refs withheld</p>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":7300}}'>class Component extends DCLogic { renderVals() { return {}; } }</script>
+</body>
+</html>

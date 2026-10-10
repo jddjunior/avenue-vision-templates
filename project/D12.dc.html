@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Turfstat Lawn Care · Lawn care in Lakeland</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.d12{--black:#000000;--carbon:#191919;--line-d:#2e2e2e;--white:#ffffff;--mist:#f3f5f9;--hair:#e5e7eb;--gray:#5f5f5f;--gray-d:#a3a3a3;--volt:#d4ff3a;
+  background:var(--white);color:var(--black);font-family:Montserrat,system-ui,sans-serif;font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.d12 *{box-sizing:border-box}
+:where(.d12) a{color:inherit}
+:where(.d12) :where(h1,h2,h3,p){margin:0}
+.d12-wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+.d12-lbl{font-size:14px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gray)}
+.d12-dark .d12-lbl,.d12-hero .d12-lbl{color:var(--gray-d)}
+.d12-h2{font-size:56px;font-weight:400;line-height:.9;letter-spacing:-0.045em;margin-top:16px;max-width:900px}
+.d12-head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;align-items:end}
+.d12-head .d12-lede{margin-top:0;margin-bottom:4px}
+.d12-lede{font-size:19px;line-height:1.35;letter-spacing:-0.02em;color:var(--gray);max-width:560px;margin-top:20px}
+.d12-dark{background:var(--black);color:var(--white)}
+.d12-dark .d12-lede{color:var(--gray-d)}
+.d12-sec{padding:80px 0}
+.d12 a:focus-visible{outline:3px solid var(--volt);outline-offset:3px}
+
+/* pills */
+.d12-pill{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:300px;font-size:15px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+.d12-pill-volt{background:var(--volt);color:var(--black) !important}
+.d12-pill-volt:hover{background:#c3f01f}
+.d12-pill-white{background:var(--white);color:var(--black) !important;min-height:56px;padding:0 34px}
+.d12-pill-white:hover{background:var(--volt)}
+.d12-pill-line{border:1.5px solid var(--hair);color:var(--black) !important;font-size:14px}
+.d12-pill-line:hover{border-color:var(--black)}
+
+/* announce + nav */
+.d12-ann{background:var(--volt);color:var(--black);font-size:14px;font-weight:500;display:flex;justify-content:center;align-items:center;gap:16px;min-height:44px;padding:8px 16px;text-align:center;flex-wrap:wrap}
+.d12-ann a{font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-underline-offset:3px;min-height:28px;display:inline-flex;align-items:center}
+.d12-nav{background:var(--black);color:var(--white);display:flex;align-items:center;gap:40px;padding:0 56px;height:88px}
+.d12-logo{font-size:22px;font-weight:500;letter-spacing:.26em;text-decoration:none;color:var(--white) !important;display:inline-flex;align-items:center;gap:10px}
+.d12-logo i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--volt)}
+.d12-menu{display:flex;gap:34px;margin:0 auto;padding:0;list-style:none}
+.d12-menu a{font-size:15px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;min-height:44px;display:flex;align-items:center}
+.d12-menu a:hover{color:var(--volt)}
+.d12-nav-r{display:flex;align-items:center;gap:22px}
+.d12-tel{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:16px;text-decoration:none;min-height:44px;white-space:nowrap}
+
+/* hero */
+.d12-hero{background:var(--black);color:var(--white)}
+.d12-hero-top{padding:52px 100px 56px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:40px;align-items:end}
+.d12-hero h1{font-size:96px;font-weight:400;line-height:.86;letter-spacing:-0.045em;margin-top:22px}
+.d12-hero-sub{font-size:19px;line-height:1.35;letter-spacing:-0.02em;color:#d6d6d6;max-width:600px;margin-top:30px}
+.d12-hero-cta{display:flex;align-items:center;gap:26px;margin-top:34px;flex-wrap:wrap}
+.d12-hero-side{border-left:1px solid var(--line-d);padding-left:28px;display:flex;flex-direction:column;gap:22px}
+.d12-stat b{display:block;font-size:36px;white-space:nowrap;font-weight:400;letter-spacing:-0.04em;line-height:1}
+.d12-stat span{display:block;font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-d);margin-top:6px}
+.d12-band{display:grid;grid-template-columns:34fr 32fr 34fr;height:430px}
+.d12-panel{position:relative;overflow:hidden;background:#222}
+.d12-panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.d12-ov{position:absolute;z-index:1;color:#fff}
+.d12-ov b{display:block;font-size:32px;font-weight:400;letter-spacing:-0.03em;line-height:1}
+.d12-ov span{display:block;font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;margin-top:6px}
+.d12-panel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,0) 35%,rgba(0,0,0,0) 60%,rgba(0,0,0,.55) 100%)}
+.d12-score{background:var(--carbon);padding:26px 40px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.d12-score .d12-lbl{color:var(--gray-d);font-size:12px}
+.d12-ring{position:relative;width:200px;height:200px;margin:14px 0 8px}
+.d12-ring svg{display:block}
+.d12-ring-n{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.d12-ring-n b{font-size:76px;font-weight:400;letter-spacing:-0.05em;line-height:.9}
+.d12-ring-n span{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-d);margin-top:6px}
+.d12-delta{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--volt)}
+.d12-sub{width:100%;margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.d12-subrow{display:grid;grid-template-columns:96px 1fr 30px;align-items:center;gap:12px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-d);text-align:left}
+.d12-subrow i{display:block;height:6px;border-radius:300px;background:var(--line-d);position:relative;overflow:hidden}
+.d12-subrow i::before{content:"";position:absolute;left:0;top:0;bottom:0;width:var(--w);background:#fff;border-radius:300px}
+.d12-subrow b{color:#fff;font-weight:600;letter-spacing:0;font-size:15px;text-align:right}
+
+/* dashboard */
+.d12-dash{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:40px}
+.d12-tile{background:var(--mist);border-radius:24px;padding:28px 28px 24px;display:flex;flex-direction:column}
+.d12-tile-wide{grid-column:span 2}
+.d12-tile-h{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.d12-tile-h h3{font-size:20px;font-weight:600;letter-spacing:-0.02em}
+.d12-tile-h div p{font-size:14px;color:var(--gray);margin-top:2px}
+.d12-num{font-size:50px;font-weight:400;letter-spacing:-0.045em;line-height:.9;white-space:nowrap}
+.d12-num small{font-size:18px;letter-spacing:-0.01em;color:var(--gray);margin-left:4px}
+.d12-hl{background:var(--volt);padding:0 6px;border-radius:6px}
+.d12-chart{display:block;width:100%;height:auto;margin-top:18px}
+.d12-chart-sm{display:none}
+.d12-tile-foot{margin-top:auto;padding-top:14px;font-size:14px;color:var(--gray);line-height:1.4}
+.d12-zg{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.d12-zg li{display:flex;flex-direction:column;gap:6px}
+.d12-zg b{font-size:28px;font-weight:400;letter-spacing:-0.04em;line-height:1}
+.d12-zg i{display:block;height:6px;border-radius:300px;background:#d5d8de;position:relative;overflow:hidden}
+.d12-zg i::before{content:"";position:absolute;left:0;top:0;bottom:0;width:var(--w);background:#000}
+.d12-zg span{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gray)}
+.d12-zones{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.d12-zones li{display:grid;grid-template-columns:96px 1fr 44px;align-items:center;gap:10px;font-size:14px;font-weight:500}
+.d12-dots{display:flex;gap:4px}
+.d12-dots i{width:10px;height:10px;border-radius:50%;background:#d5d8de}
+.d12-dots i.d12-on{background:#000}
+.d12-zones b{font-size:12px;font-weight:600;letter-spacing:.1em;text-align:right}
+.d12-minis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:22px;border-top:1px solid #dfe2e8;padding-top:16px}
+.d12-minis span{display:block;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gray)}
+.d12-minis b{display:block;font-size:28px;font-weight:400;letter-spacing:-0.04em;margin-top:4px}
+.d12-minis b .d12-hl{font-size:28px;letter-spacing:-0.04em;color:#000;text-transform:none}
+.d12-cells{display:grid;grid-template-columns:repeat(20,1fr);gap:3px;margin-top:22px}
+.d12-cells i{height:34px;border-radius:3px;background:#000}
+.d12-cells i.d12-off{background:#d5d8de}
+
+/* visit log */
+.d12-log{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:40px;margin-top:40px;align-items:start}
+.d12-feed{border-top:1px solid var(--line-d)}
+.d12-act{padding:24px 0 26px;border-bottom:1px solid var(--line-d)}
+.d12-act-h{display:flex;align-items:center;gap:14px}
+.d12-av{width:44px;height:44px;border-radius:50%;background:#2a2a2a;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;flex:none}
+.d12-act-h b{display:block;font-size:15px;font-weight:600}
+.d12-act-h div span{display:block;font-size:13px;color:var(--gray-d);margin-top:1px}
+.d12-act h3{font-size:26px;font-weight:500;letter-spacing:-0.03em;margin-top:18px}
+.d12-act h3 a{text-decoration:none}
+.d12-act h3 a:hover{text-decoration:underline}
+.d12-kpis{display:flex;gap:0;margin-top:16px}
+.d12-kpi{padding:0 26px;border-left:1px solid var(--line-d)}
+.d12-kpi:first-child{padding-left:0;border-left:0}
+.d12-kpi span{display:block;font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-d)}
+.d12-kpi b{display:block;font-size:26px;font-weight:400;letter-spacing:-0.03em;margin-top:4px;white-space:nowrap}
+.d12-kpi b em{font-style:normal;color:var(--volt)}
+.d12-media{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:4px;margin-top:20px}
+.d12-media svg,.d12-media img{display:block;width:100%;height:220px}
+.d12-media img{object-fit:cover}
+.d12-note{font-size:15px;color:#d6d6d6;margin-top:16px;line-height:1.45}
+.d12-note b{color:#fff;font-weight:600}
+.d12-aside{display:flex;flex-direction:column;gap:24px;position:sticky;top:24px}
+.d12-season{background:var(--carbon);border-radius:24px;padding:28px}
+.d12-season h3{font-size:20px;font-weight:600;letter-spacing:-0.02em}
+.d12-season dl{margin:18px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:20px 16px}
+.d12-season dt{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-d)}
+.d12-season dd{margin:4px 0 0;font-size:32px;font-weight:400;letter-spacing:-0.04em;line-height:1}
+.d12-next h3{margin-top:10px}
+.d12-next-p{font-size:15px;color:var(--gray-d);margin-top:8px;line-height:1.45}
+.d12-pill-ghost{border:1.5px solid #3a3a3a;color:#fff !important;font-size:13px;min-height:44px;margin-top:16px;padding:0 20px}
+.d12-pill-ghost:hover{border-color:#fff}
+.d12-story{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4 / 5;background:#222}
+.d12-story img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.d12-story::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0) 62%,rgba(0,0,0,.6) 100%)}
+.d12-story h3{position:absolute;z-index:1;top:24px;left:24px;right:24px;font-size:24px;font-weight:600;letter-spacing:-0.02em;line-height:1.15}
+.d12-story .d12-ov{left:24px;bottom:24px}
+.d12-story .d12-ov2{left:auto;right:24px;text-align:right}
+
+/* programs table */
+.d12-prog-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,460px);gap:40px;align-items:end}
+.d12-plan{background:var(--mist);border-radius:24px;padding:24px;display:grid;grid-template-columns:120px minmax(0,1fr);gap:20px;align-items:center}
+.d12-plan img{width:120px;height:120px;border-radius:24px;object-fit:cover;display:block}
+.d12-plan h3{font-size:20px;font-weight:700;letter-spacing:-0.02em}
+.d12-plan p{font-size:15px;color:var(--gray);margin-top:4px;line-height:1.4}
+.d12-plan .d12-pill{margin-top:12px;min-height:44px}
+.d12-table{width:100%;border-collapse:collapse;margin-top:36px;font-size:16px}
+.d12-table th{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);text-align:left;padding:0 16px 14px 0;border-bottom:1.5px solid #000}
+.d12-table td{padding:12px 16px 12px 0;border-bottom:1px solid var(--hair);vertical-align:middle}
+.d12-table td:first-child a{font-size:22px;font-weight:500;letter-spacing:-0.03em;text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
+.d12-table td:first-child a:hover{text-decoration:underline}
+.d12-slug{font-size:14px;color:var(--gray)}
+.d12-price{font-size:18px;font-weight:600;white-space:nowrap}
+.d12-tags{display:flex;gap:6px;flex-wrap:wrap}
+.d12-tag{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px solid #000;border-radius:300px;padding:4px 10px}
+.d12-tag-on{background:var(--volt);border-color:var(--volt)}
+.d12-go{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--hair);display:inline-flex;align-items:center;justify-content:center}
+
+/* proof */
+.d12-proof{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:56px;align-items:end;margin-top:8px}
+.d12-big{font-size:104px;font-weight:400;line-height:.8;letter-spacing:-0.06em;white-space:nowrap}
+.d12-proof-meta{display:flex;gap:32px;margin-top:28px;border-top:1px solid var(--line-d);padding-top:20px}
+.d12-proof-meta b{display:block;font-size:24px;font-weight:400;letter-spacing:-0.03em}
+.d12-proof-meta span{display:block;font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-d);margin-top:4px}
+.d12-cmts{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-d)}
+.d12-cmts li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:16px;padding:22px 0;border-bottom:1px solid var(--line-d)}
+.d12-cmts blockquote{margin:0;font-size:19px;letter-spacing:-0.02em;line-height:1.35}
+.d12-cmts p{font-size:14px;color:var(--gray-d);margin-top:6px}
+.d12-cmts p b{color:#fff;font-weight:600}
+
+/* areas */
+.d12-areas{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;margin-top:40px;align-items:start}
+.d12-mapcard{background:var(--mist);border-radius:24px;overflow:hidden}
+.d12-map{display:block;width:100%;height:auto}
+.d12-mapkpis{display:flex;padding:20px 28px 24px;border-top:1px solid var(--hair)}
+.d12-mapkpis .d12-kpi{border-left-color:var(--hair)}
+.d12-mapkpis .d12-kpi span{color:var(--gray)}
+.d12-map a text{fill:#000}
+.d12-map a:hover text{text-decoration:underline}
+.d12-seg{width:100%;border-collapse:collapse;font-size:16px}
+.d12-seg th{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);text-align:left;padding:0 10px 12px 0;border-bottom:1.5px solid #000}
+.d12-seg td{padding:0 10px 0 0;border-bottom:1px solid var(--hair);height:54px}
+.d12-seg td a{font-weight:600;font-size:17px;text-decoration:none;display:inline-flex;flex-direction:column;justify-content:center;min-height:50px}
+.d12-seg td a span{font-size:13px;font-weight:400;color:var(--gray)}
+.d12-seg td a:hover{text-decoration:underline}
+.d12-seg .d12-mi{font-size:22px;font-weight:400;letter-spacing:-0.03em;white-space:nowrap}
+.d12-bar{display:block;height:8px;border-radius:300px;background:#000}
+
+/* faq */
+.d12-faq{margin-top:36px;border-top:1.5px solid #000}
+.d12-q{display:grid;grid-template-columns:120px minmax(0,1fr) minmax(0,1.1fr);gap:32px;padding:24px 0;border-bottom:1px solid var(--hair)}
+.d12-q>span{font-size:14px;font-weight:600;letter-spacing:.1em;color:var(--gray)}
+.d12-q h3{font-size:26px;font-weight:500;letter-spacing:-0.035em;line-height:1.12}
+.d12-q p{font-size:17px;line-height:1.5;color:#333;letter-spacing:-0.01em}
+
+/* close */
+.d12-close{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);background:var(--black);color:#fff}
+.d12-close-img{position:relative;min-height:520px;overflow:hidden}
+.d12-close-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 60%;display:block}
+.d12-close-img .d12-ov{left:32px;bottom:32px}
+.d12-close-img::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.55),rgba(0,0,0,0) 40%)}
+.d12-close-body{padding:64px 72px 56px}
+.d12-close h2{font-size:72px;font-weight:400;line-height:.86;letter-spacing:-0.05em}
+.d12-close-p{font-size:19px;color:#d6d6d6;margin-top:24px;max-width:520px;line-height:1.35}
+.d12-nap{margin:32px 0 0;display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px 28px;border-top:1px solid var(--line-d);padding-top:24px}
+.d12-nap dt{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-d)}
+.d12-nap dd{margin:4px 0 0;font-size:17px;font-weight:500}
+.d12-nap dd a{color:var(--volt);text-decoration:none}
+
+/* footer */
+.d12-foot{background:var(--mist);padding:36px 0 28px}
+.d12-foot .d12-logo{color:#000 !important}
+.d12-foot-links{display:flex;flex-wrap:wrap;gap:4px 24px;margin-top:18px;font-size:15px}
+.d12-foot-links a{text-decoration:none;min-height:36px;display:inline-flex;align-items:center;color:#333}
+.d12-foot-links a:hover{color:#000;text-decoration:underline}
+.d12-foot-nap{font-size:15px;color:var(--gray);margin-top:10px}
+.d12-credit{font-size:13px;color:var(--gray);margin-top:18px;padding-top:14px;border-top:1px solid var(--hair)}
+
+@media (max-width:1100px){
+  .d12-menu{display:none}
+  .d12-hero-top{grid-template-columns:minmax(0,1fr);padding:56px 40px}
+  .d12-hero-side{flex-direction:row;border-left:0;padding-left:0;border-top:1px solid var(--line-d);padding-top:22px;flex-wrap:wrap}
+  .d12-dash{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .d12-log,.d12-areas,.d12-prog-head,.d12-proof,.d12-head{grid-template-columns:minmax(0,1fr)}
+  .d12-head{gap:16px}
+  .d12-nap{grid-template-columns:1fr 1fr}
+  .d12-aside{position:static}
+  .d12-close{grid-template-columns:minmax(0,1fr)}
+  .d12-q{grid-template-columns:80px minmax(0,1fr)}
+  .d12-q p{grid-column:2}
+}
+@media (max-width:700px){
+  .d12-wrap{padding:0 16px}
+  .d12-sec{padding:72px 0}
+  .d12-h2{font-size:42px}
+  .d12-lede{font-size:17px}
+  .d12-ann{font-size:13px;gap:8px}
+  .d12-nav{padding:0 16px;height:68px;gap:12px}
+  .d12-logo{font-size:17px;letter-spacing:.2em}
+  .d12-nav-r{margin-left:auto;gap:8px}
+  .d12-nav-r .d12-tel span{display:none}
+  .d12-nav-r .d12-tel{width:44px;justify-content:center}
+  .d12-nav .d12-pill{padding:0 16px;font-size:13px;min-height:44px}
+  .d12-hero-top{padding:44px 16px 40px;gap:28px}
+  .d12-hero h1{font-size:54px;line-height:.9}
+  .d12-hero-sub{font-size:17px}
+  .d12-hero-side{gap:18px 28px}
+  .d12-stat b{font-size:30px}
+  .d12-band{grid-template-columns:minmax(0,1fr);height:auto}
+  .d12-panel{height:280px}
+  .d12-score{padding:30px 20px}
+  .d12-dash{grid-template-columns:minmax(0,1fr);gap:16px}
+  .d12-tile-wide{grid-column:auto}
+  .d12-tile{padding:22px 18px 20px}
+  .d12-num{font-size:40px}
+  .d12-tile-wide .d12-chart{display:none}
+  .d12-tile-wide .d12-chart-sm{display:block}
+  .d12-mapkpis{padding:16px}
+  .d12-kpis,.d12-mapkpis{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px}
+  .d12-kpi,.d12-mapkpis .d12-kpi{padding:0;border-left:0}
+  .d12-kpi b{font-size:22px}
+  .d12-act h3{font-size:22px}
+  .d12-media{grid-template-columns:minmax(0,1fr)}
+  .d12-media svg,.d12-media img{height:180px}
+  .d12-plan{grid-template-columns:minmax(0,1fr)}
+  .d12-plan img{width:100%;height:160px}
+  .d12-table thead{display:none}
+  .d12-table,.d12-table tbody,.d12-table tr,.d12-table td{display:block;width:100%}
+  .d12-table tr{border-bottom:1px solid var(--hair);padding:14px 0;display:grid;grid-template-columns:minmax(0,1fr) 44px;gap:4px 12px}
+  .d12-table td{border:0;padding:0}
+  .d12-table td:nth-child(1){grid-column:1}
+  .d12-table td:nth-child(2){grid-column:1}
+  .d12-table td:nth-child(3){grid-column:1}
+  .d12-table td:nth-child(4){grid-column:1}
+  .d12-table td:nth-child(5){grid-column:1;padding-top:6px}
+  .d12-table td:nth-child(6){grid-column:2;grid-row:1 / span 3;align-self:center}
+  .d12-table td:first-child a{font-size:20px}
+  .d12-big{font-size:72px}
+  .d12-proof-meta{gap:20px;flex-wrap:wrap}
+  .d12-cmts blockquote{font-size:17px}
+  .d12-seg th:nth-child(3),.d12-seg td:nth-child(3){display:none}
+  .d12-q{grid-template-columns:minmax(0,1fr);gap:10px;padding:24px 0}
+  .d12-q p{grid-column:auto}
+  .d12-q h3{font-size:22px}
+  .d12-close-img{min-height:300px}
+  .d12-close-body{padding:56px 16px 48px}
+  .d12-close h2{font-size:50px}
+  .d12-nap{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</helmet>
+<div class="d12">
+
+  <div class="d12-ann">Spring green-up in Polk County starts in March. Get a baseline Lawn Score before it does. <a href="/book">Book a Visit</a></div>
+
+  <header class="d12-nav">
+    <a class="d12-logo" href="/" aria-label="Turfstat Lawn Care home">TURFSTAT<i aria-hidden="true"></i></a>
+    <ul class="d12-menu">
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#score">Lawn Score</a></li>
+      <li><a href="#log">Visit Log</a></li>
+      <li><a href="#areas">Areas</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="d12-nav-r">
+      <a class="d12-tel" href="tel:+18635550152" aria-label="Call (863) 555-0152"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5l3 .4 1.2 4-2 1.6a12 12 0 006 6l1.6-2 4 1.2.4 3c-.1 1-.9 1.8-1.9 1.8C10.6 19.5 4.5 13.4 4.8 5.4c0-1 .8-1.8 1.8-1.9z" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round"></path></svg><span>(863) 555-0152</span></a>
+      <a class="d12-pill d12-pill-volt" href="/book">Book a Visit</a>
+    </div>
+  </header>
+
+  <section class="d12-hero" aria-labelledby="d12-h1">
+    <div class="d12-hero-top">
+      <div>
+        <p class="d12-lbl">Lawn care · Lakeland, FL · Polk County</p>
+        <h1 id="d12-h1">Lawn care in Lakeland, measured every visit.</h1>
+        <p class="d12-hero-sub">Every visit ends with a Lawn Score out of 100 for density, color, weeds and soil, sent to your phone with photos. You see what the work did, not just a bill.</p>
+        <div class="d12-hero-cta">
+          <a class="d12-pill d12-pill-white" href="/book">Book a Visit</a>
+          <a class="d12-tel" href="tel:+18635550152"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5l3 .4 1.2 4-2 1.6a12 12 0 006 6l1.6-2 4 1.2.4 3c-.1 1-.9 1.8-1.9 1.8C10.6 19.5 4.5 13.4 4.8 5.4c0-1 .8-1.8 1.8-1.9z" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round"></path></svg>(863) 555-0152</a>
+        </div>
+      </div>
+      <div class="d12-hero-side">
+        <div class="d12-stat"><b>[RATING]</b><span>[COUNT] Google reviews</span></div>
+        <div class="d12-stat"><b>from $[PRICE]</b><span>per mowing visit</span></div>
+        <div class="d12-stat"><b>3.5–4.0 in</b><span>St. Augustine cut height</span></div>
+      </div>
+    </div>
+    <div class="d12-band">
+      <div class="d12-panel">
+        <img src="img/lawn/06.jpg" alt="Wide striped lawn in Lakeland with a mower working in the distance" width="1400" height="933" style="object-position:62% 50%">
+        <p class="d12-ov" style="left:28px;top:26px"><b>92</b><span>Density</span></p>
+        <p class="d12-ov" style="left:28px;bottom:26px"><b>45°</b><span>Stripe angle, visit 14</span></p>
+      </div>
+      <div class="d12-score" id="score">
+        <p class="d12-lbl">Sample report · Visit 14</p>
+        <div class="d12-ring">
+          <svg width="200" height="200" viewBox="0 0 260 260" aria-hidden="true"><circle cx="130" cy="130" r="104" fill="none" stroke="#2e2e2e" stroke-width="16"></circle><circle cx="130" cy="130" r="104" fill="none" stroke="#d4ff3a" stroke-width="16" stroke-linecap="round" stroke-dasharray="568.5 653.5" transform="rotate(-90 130 130)"></circle></svg>
+          <p class="d12-ring-n"><b>87</b><span>Lawn Score</span></p>
+        </div>
+        <p class="d12-delta"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="#d4ff3a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>+6 since visit 13</p>
+        <div class="d12-sub">
+          <p class="d12-subrow">Density<i style="--w:92%"></i><b>92</b></p>
+          <p class="d12-subrow">Color<i style="--w:84%"></i><b>84</b></p>
+          <p class="d12-subrow">Weed-free<i style="--w:90%"></i><b>90</b></p>
+          <p class="d12-subrow">Soil<i style="--w:81%"></i><b>81</b></p>
+        </div>
+      </div>
+      <div class="d12-panel">
+        <img src="img/lawn/03.jpg" alt="Two-person crew mowing and trimming a backyard lawn" width="1400" height="653" style="object-position:60% 50%">
+        <p class="d12-ov" style="right:28px;top:26px;text-align:right"><b>41 min</b><span>On site</span></p>
+        <p class="d12-ov" style="right:28px;bottom:26px;text-align:right"><b>7,400 sq ft</b><span>Mowed and edged</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="d12-sec" aria-labelledby="d12-dash-h">
+    <div class="d12-wrap">
+      <div class="d12-head"><div><p class="d12-lbl">The Lawn Score</p><h2 class="d12-h2" id="d12-dash-h">Five numbers, measured on every visit.</h2></div><p class="d12-lede">Your tech walks the yard with a probe, a soil meter and a camera. The numbers land in your report before the truck leaves the street.</p></div>
+      <div class="d12-dash">
+        <div class="d12-tile d12-tile-wide">
+          <div class="d12-tile-h"><div><h3>Lawn Score, last 12 months</h3><p>Sample yard: St. Augustine, 7,400 sq ft, South Lakeland</p></div><p class="d12-num"><span class="d12-hl">88</span><small>/100</small></p></div>
+          <svg class="d12-chart" viewBox="0 0 700 270" role="img" aria-label="Line chart: sample Lawn Score rising from 61 to 88 over 12 months">
+            <g stroke="#d5d8de" stroke-width="1"><path d="M40 190H690M40 148H690M40 106H690M40 64H690"></path></g>
+            <g font-family="Montserrat, sans-serif" font-size="12" font-weight="500" fill="#5f5f5f"><text x="0" y="194">60</text><text x="0" y="152">70</text><text x="0" y="110">80</text><text x="0" y="68">90</text></g>
+            <path d="M50,240 L50,185.8 L106,177.4 L162,164.8 L218,156.4 L274,148.0 L330,131.2 L386,135.4 L442,118.6 L498,106.0 L554,93.4 L610,85.0 L666,72.4 L666,240 Z" fill="#d4ff3a"></path>
+            <polyline points="50,185.8 106,177.4 162,164.8 218,156.4 274,148.0 330,131.2 386,135.4 442,118.6 498,106.0 554,93.4 610,85.0 666,72.4" fill="none" stroke="#000" stroke-width="3" stroke-linejoin="round"></polyline>
+            <g fill="#000"><circle cx="50" cy="185.8" r="4"></circle><circle cx="218" cy="156.4" r="4"></circle><circle cx="386" cy="135.4" r="4"></circle><circle cx="554" cy="93.4" r="4"></circle><circle cx="666" cy="72.4" r="7"></circle></g>
+            <path d="M40 240H690" stroke="#000" stroke-width="1.5"></path>
+            <g font-family="Montserrat, sans-serif" font-size="12" font-weight="600" fill="#5f5f5f" text-anchor="middle"><text x="50" y="262">JAN</text><text x="106" y="262">FEB</text><text x="162" y="262">MAR</text><text x="218" y="262">APR</text><text x="274" y="262">MAY</text><text x="330" y="262">JUN</text><text x="386" y="262">JUL</text><text x="442" y="262">AUG</text><text x="498" y="262">SEP</text><text x="554" y="262">OCT</text><text x="610" y="262">NOV</text><text x="666" y="262">DEC</text></g>
+            <g font-family="Montserrat, sans-serif" font-size="12" font-weight="600" fill="#000"><text x="56" y="210">61 · first visit</text><text x="392" y="156">dip: July heat, chinch check</text></g>
+          </svg>
+          <svg class="d12-chart d12-chart-sm" viewBox="0 0 320 200" role="img" aria-label="Line chart: sample Lawn Score rising from 61 to 88 over 12 months">
+            <path d="M14,170 L14,140 L40,136 L66,129 L92,125 L118,121 L144,112 L170,114 L196,105 L222,99 L248,92 L274,88 L300,81 L300,170 Z" fill="#d4ff3a"></path>
+            <polyline points="14,140 40,136 66,129 92,125 118,121 144,112 170,114 196,105 222,99 248,92 274,88 300,81" fill="none" stroke="#000" stroke-width="3" stroke-linejoin="round"></polyline>
+            <circle cx="300" cy="81" r="6" fill="#000"></circle>
+            <path d="M8 170H312" stroke="#000" stroke-width="1.5"></path>
+            <g font-family="Montserrat, sans-serif" font-size="14" font-weight="600" fill="#000"><text x="14" y="128">61</text><text x="276" y="66">88</text></g>
+            <g font-family="Montserrat, sans-serif" font-size="13" font-weight="600" fill="#5f5f5f"><text x="8" y="192">JAN</text><text x="312" y="192" text-anchor="end">DEC</text></g>
+          </svg>
+        </div>
+        <div class="d12-tile">
+          <div class="d12-tile-h"><div><h3>Soil pH</h3><p>Target for St. Augustine</p></div><p class="d12-num">6.4</p></div>
+          <svg class="d12-chart" viewBox="0 0 300 170" role="img" aria-label="Gauge: soil pH 6.4, inside the 6.0 to 7.0 target band">
+            <path d="M40 150A110 110 0 0 1 260 150" fill="none" stroke="#d5d8de" stroke-width="22"></path>
+            <path d="M107.9 48.4A110 110 0 0 1 192.1 48.4" fill="none" stroke="#d4ff3a" stroke-width="22"></path>
+            <path d="M101.6 34.2L111.9 57.7M198.4 34.2L188.1 57.7" stroke="#000" stroke-width="3" stroke-linecap="round"></path>
+            <line x1="150" y1="150" x2="143.1" y2="62.3" stroke="#000" stroke-width="4" stroke-linecap="round"></line>
+            <circle cx="150" cy="150" r="9" fill="#000"></circle>
+            <g font-family="Montserrat, sans-serif" font-size="12" font-weight="600" fill="#5f5f5f" text-anchor="middle"><text x="22" y="166">4.5</text><text x="278" y="166">8.5</text><text x="101" y="22">6.0</text><text x="199" y="22">7.0</text></g>
+          </svg>
+          <p class="d12-tile-foot">Inside the 6.0 to 7.0 band. No lime or sulfur this round.</p>
+        </div>
+        <div class="d12-tile">
+          <div class="d12-tile-h"><div><h3>Turf density</h3><p>Shoots per sq ft vs. target</p></div><p class="d12-num">92<small>%</small></p></div>
+          <div class="d12-cells" role="img" aria-label="92 percent density meter"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="d12-off"></i><i class="d12-off"></i></div>
+          <p class="d12-tile-foot">Up 4 since visit 13. Thin spot by the driveway is filling in.</p>
+        </div>
+        <div class="d12-tile">
+          <div class="d12-tile-h"><div><h3>Weed pressure</h3><p>By zone, 0 to 10</p></div><p class="d12-num">2<small>/10</small></p></div>
+          <ul class="d12-zg">
+            <li><b>1</b><i style="--w:10%"></i><span>Front</span></li>
+            <li><b>2</b><i style="--w:20%"></i><span>Back</span></li>
+            <li><b>4</b><i style="--w:40%"></i><span>Side</span></li>
+            <li><b>1</b><i style="--w:10%"></i><span>Curb</span></li>
+          </ul>
+          <p class="d12-tile-foot">Dollarweed on the side strip, spot-treated only.</p>
+        </div>
+        <div class="d12-tile">
+          <div class="d12-tile-h"><div><h3>Water</h3><p>8 weeks: black rain, gray sprinklers</p></div><p class="d12-num">0.9<small>in/wk</small></p></div>
+          <svg class="d12-chart" viewBox="0 40 300 110" role="img" aria-label="Bar chart: weekly rain and irrigation against a 1 inch target">
+            <g fill="#000"><rect x="14" y="70" width="22" height="50"></rect><rect x="50" y="90" width="22" height="30"></rect><rect x="86" y="60" width="22" height="60"></rect><rect x="122" y="96" width="22" height="24"></rect><rect x="158" y="56" width="22" height="64"></rect><rect x="194" y="84" width="22" height="36"></rect><rect x="230" y="78" width="22" height="42"></rect><rect x="266" y="88" width="22" height="32"></rect></g>
+            <g fill="#7a7a7a"><rect x="14" y="58" width="22" height="12"></rect><rect x="50" y="62" width="22" height="28"></rect><rect x="122" y="66" width="22" height="30"></rect><rect x="194" y="62" width="22" height="22"></rect><rect x="230" y="66" width="22" height="12"></rect><rect x="266" y="68" width="22" height="20"></rect></g>
+            <rect x="262" y="52" width="30" height="72" fill="none" stroke="#000" stroke-width="1.5" rx="3"></rect>
+            <path d="M6 60H296" stroke="#000" stroke-width="1.5" stroke-dasharray="5 4"></path>
+            <path d="M6 120H296" stroke="#000" stroke-width="1.5"></path>
+            <g font-family="Montserrat, sans-serif" font-size="11" font-weight="600" fill="#5f5f5f"><text x="6" y="142">8 WK AGO</text><text x="294" y="142" text-anchor="end">THIS WEEK</text><text x="200" y="48">1.0 IN TARGET</text></g>
+          </svg>
+          <p class="d12-tile-foot">We set the sprinkler clock to close the gap.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="d12-sec d12-dark" id="log" aria-labelledby="d12-log-h">
+    <div class="d12-wrap">
+      <div class="d12-head"><div><p class="d12-lbl">Visit log</p><h2 class="d12-h2" id="d12-log-h">Every visit, logged like a workout.</h2></div><p class="d12-lede">Who came, how long they stayed, what they put down and where they walked. Same feed in your inbox after every stop.</p></div>
+      <div class="d12-log">
+        <div class="d12-feed">
+          <article class="d12-act">
+            <div class="d12-act-h"><span class="d12-av" aria-hidden="true">T</span><div><b>[TECH NAME] · Crew 2</b><span>Tue, Apr 14 · 7:52 AM · South Lakeland</span></div></div>
+            <h3><a href="/lawn-mowing">Mow, edge and blow · 4.0 in cut</a></h3>
+            <div class="d12-kpis"><p class="d12-kpi"><span>Area</span><b>7,400 sq ft</b></p><p class="d12-kpi"><span>Time</span><b>41 min</b></p><p class="d12-kpi"><span>Edging</span><b>212 ft</b></p><p class="d12-kpi"><span>Score</span><b>81 → <em>87</em></b></p></div>
+            <div class="d12-media">
+              <svg viewBox="0 0 360 220" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Mow path map: diagonal stripes across front and back yard">
+                <rect width="360" height="220" fill="#141414"></rect>
+                <rect x="24" y="18" width="312" height="184" fill="none" stroke="#3a3a3a" stroke-width="2"></rect>
+                <rect x="128" y="78" width="104" height="64" fill="#2a2a2a"></rect>
+                <rect x="232" y="96" width="60" height="28" fill="#222"></rect>
+                <path d="M34 30L122 72M34 52L122 94M34 74L122 116M34 96L122 138M34 118L122 160M34 140L122 182M34 162L110 196M60 30L122 60M86 30L122 48M238 30L326 72M238 52L326 94M248 140L326 178M238 150L310 194M260 30L326 62" stroke="#d4ff3a" stroke-width="3" stroke-linecap="round" fill="none"></path>
+                <path d="M128 150L232 150M128 158L232 158M128 166L232 166M128 174L232 174M128 182L232 182M128 190L232 190" stroke="#d4ff3a" stroke-width="3" stroke-linecap="round" opacity=".85"></path>
+                <circle cx="34" cy="30" r="6" fill="#fff"></circle>
+                <text x="44" y="214" font-family="Montserrat, sans-serif" font-size="11" font-weight="600" fill="#a3a3a3" letter-spacing="1">MOW PATH · 45°</text>
+              </svg>
+              <img src="img/lawn/07.jpg" alt="Fresh diagonal mowing stripes on a St. Augustine lawn" width="1400" height="933" loading="lazy">
+            </div>
+            <p class="d12-note"><b>Tech note:</b> Chinch bug can test on the south strip came back clean. Raised the deck to 4.0 in for the heat.</p>
+          </article>
+          <article class="d12-act">
+            <div class="d12-act-h"><span class="d12-av" aria-hidden="true">T</span><div><b>[TECH NAME] · Applicator</b><span>Tue, Apr 7 · 9:15 AM · South Lakeland</span></div></div>
+            <h3><a href="/fertilization-weed-control">Fertilizer and weed control · slow-release blend</a></h3>
+            <div class="d12-kpis"><p class="d12-kpi"><span>Nitrogen</span><b>0.5 lb / 1k</b></p><p class="d12-kpi"><span>Spot-sprayed</span><b>3 zones</b></p><p class="d12-kpi"><span>Wind</span><b>4 mph</b></p><p class="d12-kpi"><span>Color</span><b>78 → <em>84</em></b></p></div>
+            <p class="d12-note"><b>Tech note:</b> Rain expected Thursday, so no irrigation needed to water it in. Pets can go back out once the lawn is dry.</p>
+          </article>
+        </div>
+        <aside class="d12-aside">
+          <div class="d12-season">
+            <h3>This season, sample yard</h3>
+            <dl>
+              <div><dt>Visits</dt><dd>14</dd></div>
+              <div><dt>Score</dt><dd>+26</dd></div>
+              <div><dt>Mowed</dt><dd>103k <small style="font-size:14px">sq ft</small></dd></div>
+              <div><dt>Feedings</dt><dd>3</dd></div>
+            </dl>
+          </div>
+          <div class="d12-story">
+            <img src="img/lawn/05.jpg" alt="Technician edging a flower bed along a Lakeland backyard lawn" width="1000" height="1503" loading="lazy" style="object-position:50% 40%">
+            <h3>Clean edges are logged in feet, not promised in adjectives.</h3>
+            <p class="d12-ov"><b>212 ft</b><span>Edged today</span></p>
+            <p class="d12-ov d12-ov2"><b>12 min</b><span>Bed line</span></p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="d12-sec" id="programs" aria-labelledby="d12-prog-h">
+    <div class="d12-wrap">
+      <div class="d12-prog-head">
+        <div>
+          <p class="d12-lbl">Programs and prices</p>
+          <h2 class="d12-h2" id="d12-prog-h">Seven services. Each one moves a number.</h2>
+        </div>
+        <div class="d12-plan">
+          <img src="img/lawn/08.jpg" alt="Push mower parked on a freshly cut lawn" width="1400" height="786" loading="lazy" style="object-position:55% 50%">
+          <div>
+            <h3>Season Plan · $[PRICE]/mo</h3>
+            <p>Weekly mowing, [COUNT] feedings, weed control and two soil tests. One bill, one score.</p>
+            <a class="d12-pill d12-pill-line" href="/season-plan">See the Plan</a>
+          </div>
+        </div>
+      </div>
+      <table class="d12-table">
+        <thead><tr><th>Service</th><th>Page</th><th>How often</th><th>Price</th><th>Moves</th><th><span style="position:absolute;width:1px;height:1px;overflow:hidden">Open</span></th></tr></thead>
+        <tbody>
+          <tr><td><a href="/lawn-mowing">Mowing and edging</a></td><td class="d12-slug">/lawn-mowing</td><td>Weekly, Apr to Oct</td><td class="d12-price">$[LOW]–$[HIGH]<span class="d12-slug"> /visit</span></td><td><span class="d12-tags"><span class="d12-tag d12-tag-on">Density</span><span class="d12-tag">Color</span></span></td><td><a class="d12-go" href="/lawn-mowing" aria-label="Mowing and edging page"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></td></tr>
+          <tr><td><a href="/fertilization-weed-control">Fertilizer and weed control</a></td><td class="d12-slug">/fertilization-weed-control</td><td>Every 6 to 8 weeks</td><td class="d12-price">$[LOW]–$[HIGH]<span class="d12-slug"> /visit</span></td><td><span class="d12-tags"><span class="d12-tag d12-tag-on">Color</span><span class="d12-tag">Weeds</span></span></td><td><a class="d12-go" href="/fertilization-weed-control" aria-label="Fertilizer and weed control page"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></td></tr>
+          <tr><td><a href="/chinch-bug-control">Chinch bug and insect control</a></td><td class="d12-slug">/chinch-bug-control</td><td>As found, plus checks</td><td class="d12-price">from $[PRICE]</td><td><span class="d12-tags"><span class="d12-tag d12-tag-on">Density</span></span></td><td><a class="d12-go" href="/chinch-bug-control" aria-label="Chinch bug control page"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></td></tr>
+          <tr><td><a href="/soil-testing">Soil test and pH correction</a></td><td class="d12-slug">/soil-testing</td><td>Twice a year</td><td class="d12-price">from $[PRICE]</td><td><span class="d12-tags"><span class="d12-tag d12-tag-on">Soil</span></span></td><td><a class="d12-go" href="/soil-testing" aria-label="Soil testing page"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></td></tr>
+          <tr><td><a href="/core-aeration">Core aeration</a></td><td class="d12-slug">/core-aeration</td><td>Once a year, spring</td><td class="d12-price">$[LOW]–$[HIGH]</td><td><span class="d12-tags"><span class="d12-tag">Soil</span><span class="d12-tag d12-tag-on">Density</span></span></td><td><a class="d12-go" href="/core-aeration" aria-label="Core aeration page"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></td></tr>
+          <tr><td><a href="/irrigation-check">Sprinkler check and tune</a></td><td class="d12-slug">/irrigation-check</td><td>Spring and fall</td><td class="d12-price">from $[PRICE]</td><td><span class="d12-tags"><span class="d12-tag d12-tag-on">Water</span></span></td><td><a class="d12-go" href="/irrigation-check" aria-label="Sprinkler check page"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></td></tr>
+          <tr><td><a href="/sod-installation">Sod installation</a></td><td class="d12-slug">/sod-installation</td><td>One time</td><td class="d12-price">$[PRICE] /sq ft</td><td><span class="d12-tags"><span class="d12-tag d12-tag-on">All five</span></span></td><td><a class="d12-go" href="/sod-installation" aria-label="Sod installation page"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="d12-sec d12-dark" id="reviews" aria-labelledby="d12-rev-h">
+    <div class="d12-wrap">
+      <p class="d12-lbl">Proof</p>
+      <h2 class="d12-h2" id="d12-rev-h" style="margin-bottom:36px">Scored by the neighbors, too.</h2>
+      <div class="d12-proof">
+        <div>
+          <p class="d12-big">[RATING]</p>
+          <div class="d12-proof-meta">
+            <p><b>[COUNT]</b><span>Google reviews</span></p>
+            <p><b>[DAYS] days</b><span>Since newest review</span></p>
+          </div>
+        </div>
+        <ul class="d12-cmts">
+          <li><span class="d12-av" aria-hidden="true">R</span><div><blockquote>[Google review, pulled at build time]</blockquote><p><b>[Reviewer], Lakeland</b> · Google review · [DATE]</p></div></li>
+          <li><span class="d12-av" aria-hidden="true">R</span><div><blockquote>[Google review, pulled at build time]</blockquote><p><b>[Reviewer], Winter Haven</b> · Google review · [DATE]</p></div></li>
+          <li><span class="d12-av" aria-hidden="true">R</span><div><blockquote>[Google review, pulled at build time]</blockquote><p><b>[Reviewer], Auburndale</b> · Google review · [DATE]</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="d12-sec" id="areas" aria-labelledby="d12-area-h">
+    <div class="d12-wrap">
+      <div class="d12-head"><div><p class="d12-lbl">Service area</p><h2 class="d12-h2" id="d12-area-h">One loop around Polk County.</h2></div><p class="d12-lede">Eight towns on a weekly route out of Lakeland. If your street is on the loop, your crew shows up on the same day every week.</p></div>
+      <div class="d12-areas">
+        <div class="d12-mapcard">
+          <svg class="d12-map" viewBox="0 0 800 520" role="img" aria-label="Route map of the weekly service loop through Lakeland and nearby Polk County towns">
+            <rect width="800" height="520" fill="#f3f5f9"></rect>
+            <g stroke="#e0e3e9" stroke-width="1"><path d="M0 104H800M0 208H800M0 312H800M0 416H800M160 0V520M320 0V520M480 0V520M640 0V520"></path></g>
+            <g fill="#dde1e8"><ellipse cx="456" cy="214" rx="32" ry="24"></ellipse><ellipse cx="414" cy="158" rx="18" ry="14"></ellipse><ellipse cx="404" cy="296" rx="16" ry="11"></ellipse><ellipse cx="574" cy="372" rx="48" ry="30"></ellipse><ellipse cx="716" cy="290" rx="14" ry="10"></ellipse><ellipse cx="748" cy="344" rx="12" ry="16"></ellipse><ellipse cx="700" cy="350" rx="10" ry="8"></ellipse></g>
+            <path d="M0 300C60 284 100 270 140 262C220 246 280 216 330 196C390 172 430 150 470 138C540 116 620 86 800 36" fill="none" stroke="#c9ced6" stroke-width="5"></path>
+            <text x="230" y="214" font-family="Montserrat, sans-serif" font-size="12" font-weight="600" fill="#5f5f5f" letter-spacing="1.5" transform="rotate(-20 230 214)">I-4</text>
+            <polyline points="400,250 430,200 478,150 520,108 560,70 586,120 604,180 620,230 668,262 730,320 690,368 640,404 560,430 526,394 490,350 452,394 400,428 330,450 268,410 200,352 130,270 214,262 300,256 400,250" fill="none" stroke="#000" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"></polyline>
+            <polyline points="400,250 430,200 478,150 520,108 560,70 586,120 604,180 620,230 668,262 730,320 690,368 640,404 560,430 526,394 490,350 452,394 400,428 330,450 268,410 200,352 130,270 214,262 300,256 400,250" fill="none" stroke="#d4ff3a" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"></polyline>
+            <g font-family="Montserrat, sans-serif" font-weight="600" font-size="18" stroke="#f3f5f9" stroke-width="6" stroke-linejoin="round" paint-order="stroke">
+              <a href="/areas/lakeland"><circle cx="400" cy="250" r="12" fill="#000"></circle><circle cx="400" cy="250" r="5" fill="#d4ff3a"></circle><text x="330" y="236" font-size="22" font-weight="700">Lakeland</text></a>
+              <a href="/areas/polk-city"><circle cx="560" cy="70" r="8" fill="#000"></circle><text x="576" y="64">Polk City</text></a>
+              <a href="/areas/auburndale"><circle cx="620" cy="230" r="8" fill="#000"></circle><text x="636" y="226">Auburndale</text></a>
+              <a href="/areas/winter-haven"><circle cx="730" cy="320" r="8" fill="#000"></circle><text x="716" y="300" text-anchor="end">Winter Haven</text></a>
+              <a href="/areas/bartow"><circle cx="560" cy="430" r="8" fill="#000"></circle><text x="576" y="456">Bartow</text></a>
+              <a href="/areas/highland-city"><circle cx="490" cy="350" r="8" fill="#000"></circle><text x="420" y="334">Highland City</text></a>
+              <a href="/areas/mulberry"><circle cx="330" cy="450" r="8" fill="#000"></circle><text x="300" y="484">Mulberry</text></a>
+              <a href="/areas/plant-city"><circle cx="130" cy="270" r="8" fill="#000"></circle><text x="84" y="246">Plant City</text></a>
+            </g>
+            <g font-family="Montserrat, sans-serif" font-size="11" font-weight="600" fill="#5f5f5f" letter-spacing="1"><text x="24" y="500">WEEKLY LOOP · 8 TOWNS</text><text x="664" y="500">N ↑</text></g>
+          </svg>
+          <div class="d12-mapkpis"><p class="d12-kpi"><span>Towns</span><b>8</b></p><p class="d12-kpi"><span>Farthest stop</span><b>17 mi</b></p><p class="d12-kpi"><span>Your route day</span><b>[DAY]</b></p></div>
+        </div>
+        <table class="d12-seg">
+          <thead><tr><th>Town</th><th>From downtown</th><th>Distance</th></tr></thead>
+          <tbody>
+            <tr><td><a href="/areas/lakeland">Lakeland<span>/areas/lakeland</span></a></td><td class="d12-mi">0 mi</td><td><i class="d12-bar" style="width:4%"></i></td></tr>
+            <tr><td><a href="/areas/highland-city">Highland City<span>/areas/highland-city</span></a></td><td class="d12-mi">8 mi</td><td><i class="d12-bar" style="width:47%"></i></td></tr>
+            <tr><td><a href="/areas/auburndale">Auburndale<span>/areas/auburndale</span></a></td><td class="d12-mi">11 mi</td><td><i class="d12-bar" style="width:65%"></i></td></tr>
+            <tr><td><a href="/areas/mulberry">Mulberry<span>/areas/mulberry</span></a></td><td class="d12-mi">11 mi</td><td><i class="d12-bar" style="width:65%"></i></td></tr>
+            <tr><td><a href="/areas/plant-city">Plant City<span>/areas/plant-city</span></a></td><td class="d12-mi">12 mi</td><td><i class="d12-bar" style="width:71%"></i></td></tr>
+            <tr><td><a href="/areas/polk-city">Polk City<span>/areas/polk-city</span></a></td><td class="d12-mi">14 mi</td><td><i class="d12-bar" style="width:82%"></i></td></tr>
+            <tr><td><a href="/areas/bartow">Bartow<span>/areas/bartow</span></a></td><td class="d12-mi">15 mi</td><td><i class="d12-bar" style="width:88%"></i></td></tr>
+            <tr><td><a href="/areas/winter-haven">Winter Haven<span>/areas/winter-haven</span></a></td><td class="d12-mi">17 mi</td><td><i class="d12-bar" style="width:100%"></i></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="d12-sec" id="faq" aria-labelledby="d12-faq-h" style="padding-top:0">
+    <div class="d12-wrap">
+      <p class="d12-lbl">Lab notes</p>
+      <h2 class="d12-h2" id="d12-faq-h">Questions Lakeland homeowners ask.</h2>
+      <div class="d12-faq">
+        <div class="d12-q"><span>01</span><h3>How much does lawn care cost in Lakeland?</h3><p>Weekly mowing for a typical quarter-acre Lakeland lot runs $[LOW]–$[HIGH] a visit. Fertilizer and weed control runs $[LOW]–$[HIGH] per application. Your price comes from measured square footage, not a guess from the truck.</p></div>
+        <div class="d12-q"><span>02</span><h3>When should I fertilize my lawn in Central Florida?</h3><p>St. Augustine and Bahia lawns in Polk County green up in March. We start feeding then and space applications through the growing season, and we follow any local summer limits on nitrogen.</p></div>
+        <div class="d12-q"><span>03</span><h3>How short should I cut St. Augustine grass?</h3><p>3.5 to 4 inches for most St. Augustine. Cutting lower stresses it in Florida heat and opens the door to chinch bugs and weeds. We log the deck height on every visit so you can check.</p></div>
+        <div class="d12-q"><span>04</span><h3>What are the brown patches in my lawn?</h3><p>In summer it is usually chinch bugs, which hit the hot, sunny edges by the driveway and sidewalk first. In cooler, wet months it is often large patch fungus. We confirm with a can test or a soil plug before we treat anything.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="d12-close" aria-labelledby="d12-close-h">
+    <div class="d12-close-img">
+      <img src="img/lawn/09.jpg" alt="Finished front lawn with fresh mulch beds at a brick home" width="1400" height="1051" loading="lazy">
+      <p class="d12-ov"><b>Visit 1</b><span>Your baseline score</span></p>
+    </div>
+    <div class="d12-close-body">
+      <p class="d12-lbl">Start here</p>
+      <h2 id="d12-close-h" style="margin-top:18px">Get your first Lawn Score.</h2>
+      <p class="d12-close-p">One visit sets the baseline: a measured square footage, a soil reading and a score out of 100. Then you decide what, if anything, to fix.</p>
+      <div class="d12-hero-cta">
+        <a class="d12-pill d12-pill-white" href="/book">Book a Visit</a>
+        <a class="d12-tel" href="tel:+18635550152"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5l3 .4 1.2 4-2 1.6a12 12 0 006 6l1.6-2 4 1.2.4 3c-.1 1-.9 1.8-1.9 1.8C10.6 19.5 4.5 13.4 4.8 5.4c0-1 .8-1.8 1.8-1.9z" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round"></path></svg>(863) 555-0152</a>
+      </div>
+      <dl class="d12-nap">
+        <div><dt>Business</dt><dd>Turfstat Lawn Care</dd></div>
+        <div><dt>Phone</dt><dd><a href="tel:+18635550152">(863) 555-0152</a></dd></div>
+        <div><dt>Address</dt><dd>[STREET ADDRESS], Lakeland, FL [ZIP]</dd></div>
+        <div><dt>Hours</dt><dd>[HOURS]</dd></div>
+        <div><dt>License</dt><dd>[LICENSE NO.]</dd></div>
+        <div><dt>Owner</dt><dd>[OWNER NAME], [CERTIFICATION]</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <footer class="d12-foot">
+    <div class="d12-wrap">
+      <a class="d12-logo" href="/">TURFSTAT<i aria-hidden="true"></i></a>
+      <p class="d12-foot-nap">Turfstat Lawn Care · Lakeland, FL · (863) 555-0152 · [HOURS] · License [LICENSE NO.]</p>
+      <nav class="d12-foot-links" aria-label="Footer"><a href="/lawn-mowing">Mowing</a><a href="/fertilization-weed-control">Fertilizer and weeds</a><a href="/chinch-bug-control">Chinch bugs</a><a href="/soil-testing">Soil testing</a><a href="/core-aeration">Aeration</a><a href="/irrigation-check">Sprinklers</a><a href="/sod-installation">Sod</a><a href="/season-plan">Season Plan</a><a href="/reviews">Reviews</a><a href="/privacy">Privacy</a></nav>
+      <p class="d12-credit">Avenue Vision · D12 · Performance Lab · style refs withheld</p>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":7600}}'>class Component extends DCLogic { renderVals() { return {}; } }</script>
+</body>
+</html>

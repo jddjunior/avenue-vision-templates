@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Plumbline bidet service page</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@600;700&amp;family=Nunito+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 100%; background: #FFFFFF; color: #17222D; font-family: 'Nunito Sans', system-ui, sans-serif; font-size: 17px; line-height: 1.55;">
+
+  <header aria-label="Site header" style="background: #FFFFFF; border-bottom: 1px solid #D5DFE7;">
+    <div style="background: #1F2D3A; color: #E6EEF5;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 24px; font-size: 14px; font-weight: 600;">
+        <p style="margin: 0; padding: 12px 0; display: inline-flex; align-items: center; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF6B4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Late? We pay you $[AMOUNT] a minute, up to $[CAP].</p>
+        <div style="display: flex; align-items: center; gap: 22px;">
+          <a href="#" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; color: #FFFFFF; text-decoration: none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>Find a location</a>
+          <a href="tel:+14075550152" style="display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF; text-decoration: none;">(407) 555-0152</a>
+        </div>
+      </div>
+    </div>
+    <div style="max-width: 1200px; margin: 0 auto; padding: 14px 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 28px;">
+      <a href="#" aria-label="Plumbline Plumbing of Orlando home" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; text-decoration: none;">
+        <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#1A66C2"></circle><path d="M31 20h3M20 31v3M6 20h3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path><path d="M20 22v-4.5M20 22l6 3.5" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"></path><path d="M20 6.5c-1.6 2.6-4 5-4 7.6a4 4 0 0 0 8 0c0-2.6-2.4-5-4-7.6z" fill="#FFFFFF"></path><circle cx="20" cy="22" r="1.9" fill="#FFFFFF"></circle></svg>
+        <span style="display: flex; flex-direction: column; line-height: 1;">
+          <span style="font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 700; font-size: 23px; letter-spacing: -0.01em; color: #17222D;">Plumbline</span>
+          <span style="margin-top: 5px; display: flex; align-items: baseline; gap: 6px;"><span style="font-weight: 700; font-size: 10.5px; letter-spacing: 0.28em; color: #4B5A68;">PLUMBING</span><span style="font-weight: 700; font-size: 13px; color: #1A66C2;">of Orlando</span></span>
+        </span>
+      </a>
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 0 28px; font-size: 16px; font-weight: 700;">
+        <a href="#" style="display: inline-flex; align-items: center; min-height: 44px; color: #17222D; text-decoration: none;">Services</a>
+        <a href="#" style="display: inline-flex; align-items: center; min-height: 44px; color: #17222D; text-decoration: none;">Emergency</a>
+        <a href="#" style="display: inline-flex; align-items: center; min-height: 44px; color: #17222D; text-decoration: none;">Membership</a>
+        <a href="#" style="display: inline-flex; align-items: center; min-height: 44px; color: #17222D; text-decoration: none;">Tips</a>
+        <a href="#" style="display: inline-flex; align-items: center; min-height: 44px; color: #17222D; text-decoration: none;">About</a>
+      </nav>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px;">
+        <a href="tel:+14075550152" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #17222D; font-weight: 700; text-decoration: none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg>(407) 555-0152</a>
+        <a href="#" style="display: inline-flex; align-items: center; justify-content: center; height: 50px; padding: 0 26px; border-radius: 999px; background: #FF6B4A; color: #1A1A1A; font-weight: 700; font-size: 16px; text-decoration: none; white-space: nowrap;">Book Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section aria-label="Bidet installation and repair in Orlando" style="background: #EEF4F8;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 6px 40px 52px;">
+        <nav aria-label="Breadcrumb" style="font-size: 14px; color: #4B5A68; margin-bottom: 18px;">
+          <ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0 10px;">
+            <li><a href="#" style="display: inline-flex; align-items: center; min-height: 44px; color: #1A66C2; font-weight: 600; text-decoration: none;">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="#" style="display: inline-flex; align-items: center; min-height: 44px; color: #1A66C2; font-weight: 600; text-decoration: none;">Orlando</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="#" style="display: inline-flex; align-items: center; min-height: 44px; color: #1A66C2; font-weight: 600; text-decoration: none;">Services</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="#" style="display: inline-flex; align-items: center; min-height: 44px; color: #1A66C2; font-weight: 600; text-decoration: none;">Fixtures</a></li>
+            <li aria-hidden="true">/</li>
+            <li><span aria-current="page" style="font-weight: 700; color: #17222D;">Bidets</span></li>
+          </ol>
+        </nav>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 48px; align-items: center;">
+          <div>
+            <h1 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 700; font-size: 50px; line-height: 1.08; letter-spacing: -0.02em; color: #17222D;">Bidet Installation and Repair in Orlando</h1>
+            <p style="margin: 16px 0 0; font-size: 19px; color: #4B5A68; max-width: 560px;">Seats, attachments, sprayers and smart toilets. Valve and outlet checked first, full price before we start.</p>
+            <div style="margin-top: 22px; display: inline-flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; padding: 14px 18px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"></path><circle cx="7.5" cy="8" r="1.5"></circle></svg>
+              <p style="margin: 0; font-size: 16px;"><b style="font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600;">Most installs: $[LOW]–$[HIGH]</b>, usually under [HOURS] hours</p>
+            </div>
+            <div style="margin-top: 26px; display: flex; flex-wrap: wrap; gap: 12px;">
+              <a href="#" style="display: inline-flex; align-items: center; justify-content: center; height: 50px; padding: 0 30px; border-radius: 999px; background: #FF6B4A; color: #1A1A1A; font-weight: 700; font-size: 16px; text-decoration: none;">Book Now</a>
+              <a href="tel:+14075550152" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 50px; padding: 0 26px; border-radius: 999px; background: #1A66C2; color: #FFFFFF; font-weight: 700; font-size: 16px; text-decoration: none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5h3l1.6 4.2-2 1.4a11.5 11.5 0 0 0 5.7 5.7l1.4-2 4.2 1.6v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"></path></svg>Call (407) 555-0152</a>
+            </div>
+            <ul style="list-style: none; margin: 26px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 24px; font-size: 15px; font-weight: 600; color: #17222D;">
+              <li style="display: inline-flex; align-items: center; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F8A5B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>On time, or we pay $[AMOUNT] a minute</li>
+              <li style="display: inline-flex; align-items: center; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z" fill="#FF6B4A"></path></svg>[RATING] from [COUNT] Orlando reviews</li>
+              <li style="display: inline-flex; align-items: center; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"></path><path d="M9 12l2 2 4-4"></path></svg>License CFC[LICENSE NO.]</li>
+            </ul>
+          </div>
+          <div style="position: relative; aspect-ratio: 4 / 3; border-radius: 14px; background: #D9E5EF; overflow: hidden;">
+            <svg width="100%" height="100%" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="position: absolute; top: 0; left: 0;"><defs><pattern id="pc3tile" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#C6D6E4" stroke-width="2"></path></pattern></defs><rect width="400" height="300" fill="url(#pc3tile)"></rect></svg>
+            <p style="position: absolute; left: 16px; top: 16px; right: 16px; margin: 0; font-size: 13px; font-weight: 700; color: #17222D;"><span style="background: #FFFFFF; padding: 6px 10px; border-radius: 8px; display: inline-block;">Photo: Plumbline plumber fitting a bidet seat in an Orlando bathroom</span></p>
+            <div style="position: absolute; right: 16px; bottom: 16px; width: min(290px, calc(100% - 32px)); box-sizing: border-box; background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; padding: 16px 18px; box-shadow: 0 10px 24px rgba(31, 45, 58, 0.14); font-size: 14px;">
+              <p style="margin: 0 0 10px; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 15px;">Your price, before we start</p>
+              <div style="display: flex; justify-content: space-between; gap: 12px; padding: 4px 0;"><span>Bidet seat install</span><b>$[PRICE]</b></div>
+              <div style="display: flex; justify-content: space-between; gap: 12px; padding: 4px 0;"><span>Quarter-turn shutoff valve</span><b>$[PRICE]</b></div>
+              <div style="display: flex; justify-content: space-between; gap: 12px; padding: 4px 0;"><span>Haul away old seat</span><b>Included</b></div>
+              <div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0 0; margin-top: 6px; border-top: 1px solid #D5DFE7; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600;"><span>Total</span><span>$[PRICE]</span></div>
+              <p style="margin: 10px 0 0; display: flex; align-items: center; gap: 6px; font-size: 13px; color: #4B5A68;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1F8A5B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Arrived on time · approved on your phone</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Bidet types we install" style="background: #FFFFFF;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 40px 40px;">
+        <div style="max-width: 900px;">
+          <h2 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 700; font-size: 38px; line-height: 1.15; letter-spacing: -0.01em;">Five Bidet Types and What Each One Needs</h2>
+          <p style="margin: 12px 0 0; color: #4B5A68;">Most Orlando bathrooms take the first three with no new wiring or plumbing.</p>
+        </div>
+        <div style="margin-top: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 16px;">
+
+          <article style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; overflow: hidden;">
+            <div style="background: #EEF4F8; padding: 12px; display: flex; align-items: center; justify-content: center;">
+              <svg width="100%" height="76" viewBox="0 0 120 80" fill="none" stroke="#1F2D3A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="8" width="22" height="28" rx="3"></rect><path d="M28 44h68c0 11-12 18-28 18h-8l-2 10H42l2-12c-9-3-16-8-16-16z"></path><rect x="26" y="35" width="72" height="9" rx="4"></rect><rect x="82" y="26" width="14" height="9" rx="2" stroke="#1A66C2"></rect><path d="M96 30h6c4 0 6-2 6-6V16" stroke="#1A66C2"></path><rect x="102" y="5" width="12" height="11" rx="2" stroke="#1A66C2"></rect><path d="M56 56c3-5 9-5 12 0" stroke="#1A66C2"></path></svg>
+            </div>
+            <div style="padding: 18px; display: flex; flex-direction: column; gap: 10px; flex: 1;">
+              <h3 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 19px; line-height: 1.25;">Bidet seat</h3>
+              <p style="margin: 0; font-size: 15px; color: #4B5A68;">Replaces your seat. Warm water and a dryer.</p>
+              <dl style="margin: auto 0 0; padding-top: 12px; border-top: 1px solid #D5DFE7; display: grid; gap: 8px; font-size: 14px;">
+                <div style="display: flex; align-items: center; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3v5M15 3v5M7 8h10v3a5 5 0 0 1-10 0zM12 16v5"></path></svg><dt style="font-weight: 700;">Outlet</dt><dd style="margin: 0 0 0 auto; text-align: right;">Yes, within 4 ft</dd></div>
+                <div style="display: flex; align-items: center; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"></path></svg><dt style="font-weight: 700;">Water</dt><dd style="margin: 0 0 0 auto; text-align: right;">Cold line, T-valve</dd></div>
+                <div style="display: flex; align-items: center; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><dt style="font-weight: 700;">Job</dt><dd style="margin: 0 0 0 auto; text-align: right;">Same visit</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; overflow: hidden;">
+            <div style="background: #EEF4F8; padding: 12px; display: flex; align-items: center; justify-content: center;">
+              <svg width="100%" height="76" viewBox="0 0 120 80" fill="none" stroke="#1F2D3A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="8" width="22" height="28" rx="3"></rect><path d="M28 44h68c0 11-12 18-28 18h-8l-2 10H42l2-12c-9-3-16-8-16-16z"></path><rect x="26" y="37" width="72" height="6" rx="3"></rect><path d="M38 47h36" stroke="#1A66C2" stroke-width="3.2"></path><circle cx="88" cy="50" r="4" stroke="#1A66C2"></circle><path d="M8 52h12M14 52v-14" stroke="#1A66C2"></path><path d="M20 52c8 0 12-2 18-5" stroke="#1A66C2"></path></svg>
+            </div>
+            <div style="padding: 18px; display: flex; flex-direction: column; gap: 10px; flex: 1;">
+              <h3 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 19px; line-height: 1.25;">Bidet attachment</h3>
+              <p style="margin: 0; font-size: 15px; color: #4B5A68;">A thin plate under your seat. No power.</p>
+              <dl style="margin: auto 0 0; padding-top: 12px; border-top: 1px solid #D5DFE7; display: grid; gap: 8px; font-size: 14px;">
+                <div style="display: flex; align-items: center; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3v5M15 3v5M7 8h10v3a5 5 0 0 1-10 0zM12 16v5"></path></svg><dt style="font-weight: 700;">Outlet</dt><dd style="margin: 0 0 0 auto; text-align: right;">Not needed</dd></div>
+                <div style="display: flex; align-items: center; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"></path></svg><dt style="font-weight: 700;">Water</dt><dd style="margin: 0 0 0 auto; text-align: right;">Cold line, T-valve</dd></div>
+                <div style="display: flex; align-items: center; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><dt style="font-weight: 700;">Job</dt><dd style="margin: 0 0 0 auto; text-align: right;">Same visit</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; overflow: hidden;">
+            <div style="background: #EEF4F8; padding: 12px; display: flex; align-items: center; justify-content: center;">
+              <svg width="100%" height="76" viewBox="0 0 120 80" fill="none" stroke="#1F2D3A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="8" width="22" height="28" rx="3"></rect><path d="M28 44h68c0 11-12 18-28 18h-8l-2 10H42l2-12c-9-3-16-8-16-16z"></path><rect x="26" y="37" width="72" height="6" rx="3"></rect><rect x="102" y="8" width="9" height="22" rx="4.5" stroke="#1A66C2"></rect><path d="M100 12h-4" stroke="#1A66C2"></path><path d="M106.5 30c0 34-6 46-30 46H22c-6 0-10-4-10-10V40" stroke="#1A66C2"></path></svg>
+            </div>
+            <div style="padding: 18px; display: flex; flex-direction: column; gap: 10px; flex: 1;">
+              <h3 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 19px; line-height: 1.25;">Handheld sprayer</h3>
+              <p style="margin: 0; font-size: 15px; color: #4B5A68;">A sprayer on a hose, clipped by the tank.</p>
+              <dl style="margin: auto 0 0; padding-top: 12px; border-top: 1px solid #D5DFE7; display: grid; gap: 8px; font-size: 14px;">
+                <div style="display: flex; align-items: center; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3v5M15 3v5M7 8h10v3a5 5 0 0 1-10 0zM12 16v5"></path></svg><dt style="font-weight: 700;">Outlet</dt><dd style="margin: 0 0 0 auto; text-align: right;">Not needed</dd></div>
+                <div style="display: flex; align-items: center; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"></path></svg><dt style="font-weight: 700;">Water</dt><dd style="margin: 0 0 0 auto; text-align: right;">Cold line, T-valve</dd></div>
+                <div style="display: flex; align-items: center; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><dt style="font-weight: 700;">Job</dt><dd style="margin: 0 0 0 auto; text-align: right;">Same visit</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; overflow: hidden;">
+            <div style="background: #EEF4F8; padding: 12px; display: flex; align-items: center; justify-content: center;">
+              <svg width="100%" height="76" viewBox="0 0 120 80" fill="none" stroke="#1F2D3A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 40h76"></path><path d="M26 40h68c0 13-13 20-28 20h-12c-15 0-28-7-28-20z"></path><path d="M52 60l-3 14h22l-3-14"></path><path d="M34 40V28h12v5" stroke="#1A66C2"></path><path d="M30 28h8" stroke="#1A66C2"></path><path d="M50 36c3 1 5 3 6 6" stroke="#1A66C2"></path><path d="M84 40v-8M80 32h8" stroke="#1A66C2"></path></svg>
+            </div>
+            <div style="padding: 18px; display: flex; flex-direction: column; gap: 10px; flex: 1;">
+              <h3 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 19px; line-height: 1.25;">Standalone bidet</h3>
+              <p style="margin: 0; font-size: 15px; color: #4B5A68;">A separate fixture. Usually a remodel.</p>
+              <dl style="margin: auto 0 0; padding-top: 12px; border-top: 1px solid #D5DFE7; display: grid; gap: 8px; font-size: 14px;">
+                <div style="display: flex; align-items: center; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3v5M15 3v5M7 8h10v3a5 5 0 0 1-10 0zM12 16v5"></path></svg><dt style="font-weight: 700;">Outlet</dt><dd style="margin: 0 0 0 auto; text-align: right;">Not needed</dd></div>
+                <div style="display: flex; align-items: center; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"></path></svg><dt style="font-weight: 700;">Water</dt><dd style="margin: 0 0 0 auto; text-align: right;">Hot, cold and a drain</dd></div>
+                <div style="display: flex; align-items: center; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><dt style="font-weight: 700;">Job</dt><dd style="margin: 0 0 0 auto; text-align: right;">Permit may apply</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; overflow: hidden;">
+            <div style="background: #EEF4F8; padding: 12px; display: flex; align-items: center; justify-content: center;">
+              <svg width="100%" height="76" viewBox="0 0 120 80" fill="none" stroke="#1F2D3A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 38V24c0-7 5-12 12-12h6v26"></path><path d="M28 44h68c0 11-12 18-28 18h-8l-2 10H42l2-12c-9-3-16-8-16-16z"></path><rect x="26" y="36" width="72" height="8" rx="4"></rect><rect x="4" y="10" width="11" height="11" rx="2" stroke="#1A66C2"></rect><path d="M20 32h-10V21" stroke="#1A66C2"></path><rect x="102" y="6" width="12" height="22" rx="3" stroke="#1A66C2"></rect><path d="M108 12v.5M108 17v.5M108 22v.5" stroke="#1A66C2"></path></svg>
+            </div>
+            <div style="padding: 18px; display: flex; flex-direction: column; gap: 10px; flex: 1;">
+              <h3 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 19px; line-height: 1.25;">Smart toilet</h3>
+              <p style="margin: 0; font-size: 15px; color: #4B5A68;">Bidet built in, with a remote and auto lid.</p>
+              <dl style="margin: auto 0 0; padding-top: 12px; border-top: 1px solid #D5DFE7; display: grid; gap: 8px; font-size: 14px;">
+                <div style="display: flex; align-items: center; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3v5M15 3v5M7 8h10v3a5 5 0 0 1-10 0zM12 16v5"></path></svg><dt style="font-weight: 700;">Outlet</dt><dd style="margin: 0 0 0 auto; text-align: right;">Yes, GFCI in 4 ft</dd></div>
+                <div style="display: flex; align-items: center; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"></path></svg><dt style="font-weight: 700;">Water</dt><dd style="margin: 0 0 0 auto; text-align: right;">Cold line</dd></div>
+                <div style="display: flex; align-items: center; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><dt style="font-weight: 700;">Job</dt><dd style="margin: 0 0 0 auto; text-align: right;">Full toilet swap</dd></div>
+              </dl>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Will it fit my toilet" style="background: #EEF4F8;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 40px 40px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 24px; align-items: end;">
+          <div style="display: grid; gap: 20px;">
+          <div>
+            <h2 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 700; font-size: 38px; line-height: 1.15; letter-spacing: -0.01em;">Will It Fit My Toilet?</h2>
+            <p style="margin: 10px 0 0; color: #4B5A68;">Three questions, and we tell you what fits and what needs fixing first.</p>
+          </div>
+          <form aria-label="Bidet fit check" style="display: grid; gap: 12px;">
+            <div style="background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; padding: 16px 20px;">
+              <fieldset style="margin: 0; padding: 0; border: 0; min-width: 0;">
+                <legend style="padding: 0; margin-bottom: 12px; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 18px; color: #17222D;">1. What shape is your toilet bowl?</legend>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                  <label style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 16px; border: 1px solid #D5DFE7; border-radius: 999px; font-weight: 600; cursor: pointer;"><input type="radio" name="shape" value="round" style="width: 18px; height: 18px; margin: 0; accent-color: #1A66C2;">Round</label>
+                  <label style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 16px; border: 2px solid #1A66C2; background: #EEF4F8; border-radius: 999px; font-weight: 700; cursor: pointer;"><input type="radio" name="shape" value="elongated" checked="" style="width: 18px; height: 18px; margin: 0; accent-color: #1A66C2;">Elongated (oval)</label>
+                  <label style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 16px; border: 1px solid #D5DFE7; border-radius: 999px; font-weight: 600; cursor: pointer;"><input type="radio" name="shape" value="unsure" style="width: 18px; height: 18px; margin: 0; accent-color: #1A66C2;">Not sure</label>
+                </div>
+                <p style="margin: 8px 0 0; font-size: 14px; color: #4B5A68;">Seat bolts to front rim: about 16.5 in is round, 18.5 in is elongated.</p>
+              </fieldset>
+            </div>
+            <div style="background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; padding: 16px 20px;">
+              <fieldset style="margin: 0; padding: 0; border: 0; min-width: 0;">
+                <legend style="padding: 0; margin-bottom: 12px; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 18px; color: #17222D;">2. Is there a GFCI outlet within 4 ft of the toilet?</legend>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                  <label style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 16px; border: 2px solid #1A66C2; background: #EEF4F8; border-radius: 999px; font-weight: 700; cursor: pointer;"><input type="radio" name="outlet" value="yes" checked="" style="width: 18px; height: 18px; margin: 0; accent-color: #1A66C2;">Yes</label>
+                  <label style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 16px; border: 1px solid #D5DFE7; border-radius: 999px; font-weight: 600; cursor: pointer;"><input type="radio" name="outlet" value="no" style="width: 18px; height: 18px; margin: 0; accent-color: #1A66C2;">No</label>
+                  <label style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 16px; border: 1px solid #D5DFE7; border-radius: 999px; font-weight: 600; cursor: pointer;"><input type="radio" name="outlet" value="unsure" style="width: 18px; height: 18px; margin: 0; accent-color: #1A66C2;">Not sure</label>
+                </div>
+              </fieldset>
+            </div>
+            <div style="background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; padding: 16px 20px;">
+              <fieldset style="margin: 0; padding: 0; border: 0; min-width: 0;">
+                <legend style="padding: 0; margin-bottom: 12px; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 18px; color: #17222D;">3. How is the shutoff valve behind the toilet?</legend>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                  <label style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 16px; border: 2px solid #1A66C2; background: #EEF4F8; border-radius: 999px; font-weight: 700; cursor: pointer;"><input type="radio" name="valve" value="good" checked="" style="width: 18px; height: 18px; margin: 0; accent-color: #1A66C2;">Turns easily</label>
+                  <label style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 16px; border: 1px solid #D5DFE7; border-radius: 999px; font-weight: 600; cursor: pointer;"><input type="radio" name="valve" value="stuck" style="width: 18px; height: 18px; margin: 0; accent-color: #1A66C2;">Stuck or dripping</label>
+                  <label style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 16px; border: 1px solid #D5DFE7; border-radius: 999px; font-weight: 600; cursor: pointer;"><input type="radio" name="valve" value="none" style="width: 18px; height: 18px; margin: 0; accent-color: #1A66C2;">Can't find it</label>
+                </div>
+              </fieldset>
+            </div>
+          </form>
+          </div>
+          <div role="status" aria-live="polite" style="background: #FFFFFF; border: 2px solid #1A66C2; border-radius: 14px; padding: 22px 24px;">
+            <p style="margin: 0; display: inline-flex; align-items: center; background: #1A66C2; color: #FFFFFF; border-radius: 999px; padding: 4px 12px; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">Your result</p>
+            <h3 style="margin: 14px 0 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.2;">Good fit. A seat, attachment or smart toilet all work.</h3>
+            <ul style="list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 8px; font-size: 16px;">
+              <li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>Elongated bowl:</b> pick an elongated seat.</span></li>
+              <li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>Outlet nearby:</b> powered seats work.</span></li>
+              <li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>Valve turns easily:</b> we add a T-valve, no wall work.</span></li>
+            </ul>
+            <div style="margin-top: 16px; padding: 14px 18px; background: #EEF4F8; border-radius: 12px;">
+              <p style="margin: 0; font-size: 14px; color: #4B5A68;">Estimate for this setup</p>
+              <p style="margin: 2px 0 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 700; font-size: 24px;">$[LOW]–$[HIGH] installed</p>
+              <p style="margin: 2px 0 0; font-size: 14px; color: #4B5A68;">About [HOURS] hours, one visit</p>
+            </div>
+            <div style="margin-top: 18px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
+              <a href="#" style="display: inline-flex; align-items: center; justify-content: center; height: 50px; padding: 0 28px; border-radius: 999px; background: #FF6B4A; color: #1A1A1A; font-weight: 700; font-size: 16px; text-decoration: none;">Book My Install</a>
+              <a href="#" style="display: inline-flex; align-items: center; min-height: 44px; color: #1A66C2; font-weight: 700; text-decoration: underline; text-underline-offset: 3px;">Text Us a Photo</a>
+            </div>
+            <p style="margin: 16px 0 0; font-size: 13px; color: #4B5A68;">Other answers change the plan, not the visit: a stuck valve gets replaced first ($[PRICE]), and no outlet means a non-electric attachment. Not sure? Your plumber checks on arrival.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Install, repair or replace" style="background: #FFFFFF;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 40px 40px;">
+        <div style="max-width: 900px;">
+          <h2 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 700; font-size: 38px; line-height: 1.15; letter-spacing: -0.01em;">Install, Repair or Replace in Orlando</h2>
+        </div>
+        <div style="margin-top: 26px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 20px;">
+          <article style="display: flex; flex-direction: column; gap: 12px; background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; padding: 22px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; background: #EEF4F8;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span>
+              <h3 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 22px;">Install</h3>
+            </div>
+            <p style="margin: 0; color: #4B5A68; font-size: 16px;"><b style="color: #17222D;">When:</b> you're adding a bidet for the first time.</p>
+            <ul style="list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 15px;">
+              <li style="display: flex; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px;"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Check the valve, outlet and bowl shape first</li>
+              <li style="display: flex; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px;"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Fit the T-valve and a braided supply line</li>
+              <li style="display: flex; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px;"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Level the unit and test every setting</li>            </ul>
+            <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid #D5DFE7; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+              <p style="margin: 0; font-size: 15px;">Typical <b style="font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600;">$[LOW]–$[HIGH]</b></p>
+              <a href="#" style="display: inline-flex; align-items: center; justify-content: center; height: 50px; padding: 0 22px; border-radius: 999px; background: #FF6B4A; color: #1A1A1A; font-weight: 700; font-size: 15px; text-decoration: none;">Book My Install</a>
+            </div>
+          </article>
+          <article style="display: flex; flex-direction: column; gap: 12px; background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; padding: 22px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; background: #EEF4F8;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0-5.3 5.3L4 17l3 3 5.2-5.2a4 4 0 0 0 5.3-5.3l-2.5 2.5-2.5-.5-.5-2.5z"></path></svg></span>
+              <h3 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 22px;">Repair</h3>
+            </div>
+            <p style="margin: 0; color: #4B5A68; font-size: 16px;"><b style="color: #17222D;">When:</b> weak spray, a drip at the T-valve, no warm water, or a stuck nozzle.</p>
+            <ul style="list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 15px;">
+              <li style="display: flex; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px;"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Clear the inlet screen and descale the nozzle</li>
+              <li style="display: flex; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px;"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Replace a leaking T-valve or supply hose</li>
+              <li style="display: flex; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px;"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Check the GFCI and power to the seat</li>            </ul>
+            <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid #D5DFE7; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+              <p style="margin: 0; font-size: 15px;">Typical <b style="font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600;">$[LOW]–$[HIGH]</b></p>
+              <a href="#" style="display: inline-flex; align-items: center; justify-content: center; height: 50px; padding: 0 22px; border-radius: 999px; background: #1A66C2; color: #FFFFFF; font-weight: 700; font-size: 15px; text-decoration: none;">Book a Repair</a>
+            </div>
+          </article>
+          <article style="display: flex; flex-direction: column; gap: 12px; background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; padding: 22px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; background: #EEF4F8;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9a8 8 0 0 1 14-3l2 2M20 4v4h-4M20 15a8 8 0 0 1-14 3l-2-2M4 20v-4h4"></path></svg></span>
+              <h3 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 22px;">Replace</h3>
+            </div>
+            <p style="margin: 0; color: #4B5A68; font-size: 16px;"><b style="color: #17222D;">When:</b> the unit is past [YEARS] years, cracked, or its parts are no longer made.</p>
+            <ul style="list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 15px;">
+              <li style="display: flex; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px;"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Remove and haul away the old unit</li>
+              <li style="display: flex; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px;"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>New shutoff valve if the old one is worn</li>
+              <li style="display: flex; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px;"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Step up: attachment to seat, seat to smart toilet</li>            </ul>
+            <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid #D5DFE7; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+              <p style="margin: 0; font-size: 15px;">Typical <b style="font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600;">$[LOW]–$[HIGH]</b></p>
+              <a href="#" style="display: inline-flex; align-items: center; justify-content: center; height: 50px; padding: 0 22px; border-radius: 999px; background: #1A66C2; color: #FFFFFF; font-weight: 700; font-size: 15px; text-decoration: none;">Price My Swap</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="What changes the price" style="background: #EEF4F8;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 40px 40px; display: flex; flex-wrap: wrap; gap: 32px 40px; align-items: flex-start;">
+        <div style="flex: 1 1 340px; min-width: 0;">
+          <h2 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 700; font-size: 38px; line-height: 1.15; letter-spacing: -0.01em;">What Changes the Price of an Orlando Bidet Install</h2>
+          <p style="margin: 12px 0 0; color: #4B5A68;">Six things move the number. Your plumber checks each one on arrival and shows you the price first.</p>
+          <div style="margin-top: 20px; background: #1F2D3A; color: #FFFFFF; border-radius: 14px; padding: 22px 24px;">
+            <p style="margin: 0; font-size: 14px; color: #C9D6E2;">Most Orlando installs</p>
+            <p style="margin: 4px 0 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 700; font-size: 36px; line-height: 1.1;">$[LOW]–$[HIGH]</p>
+            <p style="margin: 12px 0 0; font-size: 15px; color: #E3EBF2;">You approve the price before we start. If we find something new, we stop and ask first.</p>
+          </div>
+        </div>
+        <ol style="flex: 1.7 1 520px; min-width: 0; list-style: none; margin: 0; padding: 0; background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; overflow: hidden;">
+          <li style="display: flex; align-items: flex-start; gap: 14px; padding: 14px 20px;">
+            <span style="flex: none; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 999px; background: #EEF4F8; color: #1A66C2; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 700; font-size: 15px;">1</span>
+            <div style="flex: 1 1 auto; min-width: 0;"><div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 12px;"><h3 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 17px;">The type you pick</h3><span style="border: 1px solid #D5DFE7; border-radius: 999px; padding: 2px 10px; font-size: 12px; font-weight: 700;">Biggest factor</span></div><p style="margin: 2px 0 0; font-size: 15px; color: #4B5A68;">Attachments sit at the low end, smart toilets at the top.</p></div>
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 14px; padding: 14px 20px; border-top: 1px solid #D5DFE7;">
+            <span style="flex: none; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 999px; background: #EEF4F8; color: #1A66C2; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 700; font-size: 15px;">2</span>
+            <div style="flex: 1 1 auto; min-width: 0;"><div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 12px;"><h3 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 17px;">Your unit or ours</h3><span style="border: 1px solid #D5DFE7; border-radius: 999px; padding: 2px 10px; font-size: 12px; font-weight: 700;">Labor only $[PRICE]</span></div><p style="margin: 2px 0 0; font-size: 15px; color: #4B5A68;">Have one? Pay labor only. Or ours, with a [YEARS]-year parts warranty.</p></div>
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 14px; padding: 14px 20px; border-top: 1px solid #D5DFE7;">
+            <span style="flex: none; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 999px; background: #EEF4F8; color: #1A66C2; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 700; font-size: 15px;">3</span>
+            <div style="flex: 1 1 auto; min-width: 0;"><div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 12px;"><h3 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 17px;">Shutoff valve condition</h3><span style="border: 1px solid #D5DFE7; border-radius: 999px; padding: 2px 10px; font-size: 12px; font-weight: 700;">Adds $[PRICE]</span></div><p style="margin: 2px 0 0; font-size: 15px; color: #4B5A68;">Older multi-turn valves often seize. We swap in a quarter-turn valve.</p></div>
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 14px; padding: 14px 20px; border-top: 1px solid #D5DFE7;">
+            <span style="flex: none; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 999px; background: #EEF4F8; color: #1A66C2; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 700; font-size: 15px;">4</span>
+            <div style="flex: 1 1 auto; min-width: 0;"><div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 12px;"><h3 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 17px;">Outlet distance</h3><span style="border: 1px solid #D5DFE7; border-radius: 999px; padding: 2px 10px; font-size: 12px; font-weight: 700;">Electrician, separate</span></div><p style="margin: 2px 0 0; font-size: 15px; color: #4B5A68;">No GFCI outlet in 4 ft means an electrician first, or a non-electric model.</p></div>
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 14px; padding: 14px 20px; border-top: 1px solid #D5DFE7;">
+            <span style="flex: none; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 999px; background: #EEF4F8; color: #1A66C2; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 700; font-size: 15px;">5</span>
+            <div style="flex: 1 1 auto; min-width: 0;"><div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 12px;"><h3 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 17px;">Warm water line</h3><span style="border: 1px solid #D5DFE7; border-radius: 999px; padding: 2px 10px; font-size: 12px; font-weight: 700;">Adds $[PRICE]</span></div><p style="margin: 2px 0 0; font-size: 15px; color: #4B5A68;">Non-electric warm-water attachments need a hot line run from the sink.</p></div>
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 14px; padding: 14px 20px; border-top: 1px solid #D5DFE7;">
+            <span style="flex: none; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 999px; background: #EEF4F8; color: #1A66C2; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 700; font-size: 15px;">6</span>
+            <div style="flex: 1 1 auto; min-width: 0;"><div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 12px;"><h3 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 17px;">Toilet condition</h3><span style="border: 1px solid #D5DFE7; border-radius: 999px; padding: 2px 10px; font-size: 12px; font-weight: 700;">Quoted on site</span></div><p style="margin: 2px 0 0; font-size: 15px; color: #4B5A68;">Rusted seat bolts, a rocking toilet or a cracked flange get fixed first.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section aria-label="Related fixture services" style="background: #FFFFFF;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 40px 40px;">
+        <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 24px;">
+          <h2 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 700; font-size: 38px; line-height: 1.15; letter-spacing: -0.01em;">Related Fixture Services in Orlando</h2>
+          <a href="#" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; color: #1A66C2; font-weight: 700; text-decoration: none;">All Orlando services<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        </div>
+        <div style="margin-top: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 16px;">
+          <a href="#" style="display: grid; grid-template-columns: 48px 1fr; gap: 4px 14px; align-content: start; background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; padding: 18px; color: #17222D; text-decoration: none;">
+            <span style="grid-row: span 3; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 12px; background: #EEF4F8;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F2D3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h7v8H6z"></path><path d="M4 11h16c0 4-3 6.5-7 6.5h-1l-1 3.5H8l.8-4C6 16 4 14 4 11z"></path></svg></span>
+            <span style="font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 19px;">Toilets</span>
+            <span style="font-size: 15px; color: #4B5A68;">Running, clogged or rocking toilets, and new installs.</span>
+            <span style="margin-top: 4px; display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 13px; font-weight: 700; color: #1A66C2;">/orlando/services/toilets<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+          </a>
+          <a href="#" style="display: grid; grid-template-columns: 48px 1fr; gap: 4px 14px; align-content: start; background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; padding: 18px; color: #17222D; text-decoration: none;">
+            <span style="grid-row: span 3; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 12px; background: #EEF4F8;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F2D3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h10a5 5 0 0 1 5 5v1h-3v-1a2 2 0 0 0-2-2H3z"></path><path d="M8 9V5M5 5h6M16.5 18.5v2"></path></svg></span>
+            <span style="font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 19px;">Faucets</span>
+            <span style="font-size: 15px; color: #4B5A68;">Drips, low flow and new kitchen or bath faucets.</span>
+            <span style="margin-top: 4px; display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 13px; font-weight: 700; color: #1A66C2;">/orlando/services/faucets<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+          </a>
+          <a href="#" style="display: grid; grid-template-columns: 48px 1fr; gap: 4px 14px; align-content: start; background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; padding: 18px; color: #17222D; text-decoration: none;">
+            <span style="grid-row: span 3; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 12px; background: #EEF4F8;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F2D3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V7a3 3 0 0 1 3-3h4v3"></path><path d="M9 7h6M10 11v2M12 11v2M14 11v2M10 16v2M14 16v2M12 15v2"></path></svg></span>
+            <span style="font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 19px;">Showers</span>
+            <span style="font-size: 15px; color: #4B5A68;">Valves, heads, pressure problems and leaks behind tile.</span>
+            <span style="margin-top: 4px; display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 13px; font-weight: 700; color: #1A66C2;">/orlando/services/showers<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+          </a>
+          <a href="#" style="display: grid; grid-template-columns: 48px 1fr; gap: 4px 14px; align-content: start; background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; padding: 18px; color: #17222D; text-decoration: none;">
+            <span style="grid-row: span 3; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 12px; background: #EEF4F8;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F2D3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11h18v1a6 6 0 0 1-6 6H9a6 6 0 0 1-6-6z"></path><path d="M12 11V6a2 2 0 0 1 4 0M10 21h4"></path></svg></span>
+            <span style="font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 19px;">Sinks</span>
+            <span style="font-size: 15px; color: #4B5A68;">Slow drains, leaks under the cabinet and new sinks.</span>
+            <span style="margin-top: 4px; display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 13px; font-weight: 700; color: #1A66C2;">/orlando/services/sinks<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A66C2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Bidet questions" style="background: #EEF4F8;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 40px 40px;">
+        <h2 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 700; font-size: 38px; line-height: 1.15; letter-spacing: -0.01em;">Bidet Questions from Orlando Homeowners</h2>
+        <div style="margin-top: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 16px;">
+          <div style="background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; padding: 24px;">
+            <h3 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 19px; line-height: 1.3;">How much does it cost to install a bidet in Orlando?</h3>
+            <p style="margin: 10px 0 0; font-size: 16px; color: #4B5A68;">Most installs run $[LOW]–$[HIGH]. Attachments cost least, smart toilets most, since the whole toilet is replaced. You see the full price first.</p>
+          </div>
+          <div style="background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; padding: 24px;">
+            <h3 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 19px; line-height: 1.3;">Can a bidet seat go on any toilet?</h3>
+            <p style="margin: 10px 0 0; font-size: 16px; color: #4B5A68;">Most toilets take one if the seat matches the bowl shape. Some skirted and wall-hung toilets need a specific model, so we check yours first.</p>
+          </div>
+          <div style="background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; padding: 24px;">
+            <h3 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 19px; line-height: 1.3;">Do I need an electrician for an electric bidet seat?</h3>
+            <p style="margin: 10px 0 0; font-size: 16px; color: #4B5A68;">Only if there is no GFCI outlet within about 4 ft. If there is, we plug in and route the cord neatly. If not, pick a non-electric attachment or add an outlet first.</p>
+          </div>
+          <div style="background: #FFFFFF; border: 1px solid #D5DFE7; border-radius: 14px; padding: 24px;">
+            <h3 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 19px; line-height: 1.3;">Does Orlando water clog bidet nozzles?</h3>
+            <p style="margin: 10px 0 0; font-size: 16px; color: #4B5A68;">Central Florida water scales up nozzles and inlet screens over time. Most weak-spray calls are a blocked screen, not a broken seat. An inline filter ($[PRICE]) helps.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Book a bidet install" style="background: #1F2D3A; color: #FFFFFF;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 48px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 32px; align-items: center;">
+        <div>
+          <h2 style="margin: 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 700; font-size: 38px; line-height: 1.15; letter-spacing: -0.01em; color: #FFFFFF;">Book Your Bidet Install in Orlando</h2>
+          <p style="margin: 14px 0 0; font-size: 18px; color: #E3EBF2;">Pick a two-hour window. Your plumber texts a photo and an ETA on the way. Late? We pay you $[AMOUNT] a minute, up to $[CAP].</p>
+          <div style="margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px;">
+            <a href="#" style="display: inline-flex; align-items: center; justify-content: center; height: 50px; padding: 0 30px; border-radius: 999px; background: #FF6B4A; color: #1A1A1A; font-weight: 700; font-size: 16px; text-decoration: none;">Book Now</a>
+            <a href="tel:+14075550152" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 50px; padding: 0 26px; border-radius: 999px; background: #1A66C2; color: #FFFFFF; font-weight: 700; font-size: 16px; text-decoration: none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5h3l1.6 4.2-2 1.4a11.5 11.5 0 0 0 5.7 5.7l1.4-2 4.2 1.6v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"></path></svg>Call (407) 555-0152</a>
+          </div>
+        </div>
+        <div style="background: #FFFFFF; color: #17222D; border: 2px dashed #FF6B4A; border-radius: 14px; padding: 24px 26px;">
+          <p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #4B5A68;">Orlando offer</p>
+          <p style="margin: 6px 0 0; font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 700; font-size: 30px; line-height: 1.15;">$[AMOUNT] Off Any Bidet Install</p>
+          <p style="margin: 8px 0 0; font-size: 15px;">Mention it when you book, online or by phone.</p>
+          <p style="margin: 12px 0 0; font-size: 12px; color: #4B5A68;">With completed install. One per household. Not valid with other offers. Expires 12/31/2026.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer aria-label="Site footer" style="background: #1F2D3A; color: #DCE5EE;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 56px 40px 28px; display: flex; flex-direction: column; gap: 36px;">
+      <div style="display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 24px 40px;">
+        <div style="display: flex; flex-direction: column; gap: 14px; max-width: 400px;">
+          <a href="#" aria-label="Plumbline Plumbing of Orlando home" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; text-decoration: none;">
+            <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#1A66C2"></circle><path d="M31 20h3M20 31v3M6 20h3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path><path d="M20 22v-4.5M20 22l6 3.5" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"></path><path d="M20 6.5c-1.6 2.6-4 5-4 7.6a4 4 0 0 0 8 0c0-2.6-2.4-5-4-7.6z" fill="#FFFFFF"></path><circle cx="20" cy="22" r="1.9" fill="#FFFFFF"></circle></svg>
+            <span style="display: flex; flex-direction: column; line-height: 1;">
+              <span style="font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 700; font-size: 23px; letter-spacing: -0.01em; color: #FFFFFF;">Plumbline</span>
+              <span style="margin-top: 5px; display: flex; align-items: baseline; gap: 6px;"><span style="font-weight: 700; font-size: 10.5px; letter-spacing: 0.28em; color: #B8C7D4;">PLUMBING</span><span style="font-weight: 700; font-size: 13px; color: #9CC4F5;">of Orlando</span></span>
+            </span>
+          </a>
+          <address style="font-style: normal; font-size: 15px; line-height: 1.7;">
+            <b style="color: #FFFFFF;">Plumbline Plumbing of Orlando</b><br>
+            [STREET ADDRESS], Orlando, FL [ZIP]<br>
+            <a href="tel:+14075550152" style="color: #FFFFFF; font-weight: 700;">(407) 555-0152</a> · Open 24/7 · Office [HOURS]<br>
+            Florida license CFC[LICENSE NO.]
+          </address>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px; max-width: 460px;">
+          <span style="font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; font-size: 15px; color: #FFFFFF;">Towns we serve</span>
+          <div style="display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px;">
+            <a href="#" style="display: inline-flex; align-items: center; min-height: 32px; color: #DCE5EE;">Orlando</a>
+            <a href="#" style="display: inline-flex; align-items: center; min-height: 32px; color: #DCE5EE;">Winter Park</a>
+            <a href="#" style="display: inline-flex; align-items: center; min-height: 32px; color: #DCE5EE;">Maitland</a>
+            <a href="#" style="display: inline-flex; align-items: center; min-height: 32px; color: #DCE5EE;">Apopka</a>
+            <a href="#" style="display: inline-flex; align-items: center; min-height: 32px; color: #DCE5EE;">Kissimmee</a>
+            <a href="#" style="display: inline-flex; align-items: center; min-height: 32px; color: #DCE5EE;">Ocoee</a>
+            <a href="#" style="display: inline-flex; align-items: center; min-height: 32px; color: #DCE5EE;">Windermere</a>
+            <a href="#" style="display: inline-flex; align-items: center; min-height: 32px; color: #DCE5EE;">Oviedo</a>
+            <a href="#" style="display: inline-flex; align-items: center; min-height: 32px; color: #DCE5EE;">Altamonte Springs</a>
+          </div>
+          <a href="#" style="align-self: flex-start; margin-top: 6px; display: inline-flex; align-items: center; height: 50px; padding: 0 24px; border-radius: 999px; background: #FF6B4A; color: #1A1A1A; font-weight: 700; text-decoration: none;">Book Now</a>
+        </div>
+      </div>
+      <nav aria-label="Services by category" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(170px, 100%), 1fr)); gap: 24px; padding-top: 28px; border-top: 1px solid #3E5163; font-size: 15px;">
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <span style="font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; color: #FFFFFF;">Fixtures</span>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Toilets</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Faucets</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Sinks and disposals</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Showers and tubs</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Bidets</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <span style="font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; color: #FFFFFF;">Water heaters &amp; systems</span>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Tank water heaters</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Tankless heaters</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Water lines</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Gas lines</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Water treatment</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <span style="font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; color: #FFFFFF;">Drains &amp; sewers</span>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Drain cleaning</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Sewer line repair</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Camera inspection</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Hydro jetting</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Septic systems</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <span style="font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; color: #FFFFFF;">Emergencies</span>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">24/7 emergency service</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Leak detection</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Burst pipes</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Slab leaks</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Sewage backups</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <span style="font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; color: #FFFFFF;">Outdoor &amp; specialty</span>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Outdoor spigots</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Sump and well pumps</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Whole-home repiping</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Backflow testing</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Commercial plumbing</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <span style="font-family: Lexend, 'Nunito Sans', sans-serif; font-weight: 600; color: #FFFFFF;">Company</span>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">About Plumbline</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Membership</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Tips</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Careers</a>
+          <a href="#" style="color: #DCE5EE; text-decoration: none;">Own a Location</a>
+        </div>
+      </nav>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px; padding-top: 20px; border-top: 1px solid #3E5163; font-size: 13px; color: #B8C7D4;">
+        <p style="margin: 0;">Each location independently owned and operated. Plumbline Plumbing of Orlando is owned by [LEGAL ENTITY]. © 2026 Plumbline Plumbing.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 4px 18px;">
+          <a href="#" style="color: #B8C7D4;">Privacy</a>
+          <a href="#" style="color: #B8C7D4;">Terms</a>
+          <a href="#" style="color: #B8C7D4;">Accessibility</a>
+          <a href="#" style="color: #B8C7D4;">Guarantee terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":4650}}'>class Component extends DCLogic { renderVals() { return {}; } }</script>
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Fourth Street Electric home page</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.d02{--ink:#000000;--paper:#FFFFFF;--hot:#FF4D1A;--gray:#6B6D6A;width:100%;background:var(--paper);color:var(--ink);font-family:Inter,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:17px;line-height:1.2;letter-spacing:.011em;font-weight:400;font-optical-sizing:auto;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.d02 *{box-sizing:border-box}
+:where(.d02) :where(p,h1,h2,h3,figure,blockquote,ul,ol,dl,dd){margin:0}
+:where(.d02) :where(ul,ol){padding:0;list-style:none}
+:where(.d02) a{color:inherit}
+.d02 a:focus-visible{outline:2px solid var(--ink);outline-offset:-4px}
+.d02-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.d02-g{display:grid;grid-template-columns:repeat(12,minmax(0,1fr))}
+.d02-t{position:relative;padding:25px;min-width:0}
+.d02-hot{background:var(--hot)}
+.d02-blk{background:var(--ink);color:var(--paper)}
+.d02-c1-3{grid-column:1 / 4}.d02-c4-6{grid-column:4 / 7}.d02-c7-9{grid-column:7 / 10}.d02-c10-12{grid-column:10 / 13}
+.d02-c7-12{grid-column:7 / 13}.d02-c4-12{grid-column:4 / 13}.d02-c5-12{grid-column:5 / 13}.d02-c1-4{grid-column:1 / 5}.d02-c5-8{grid-column:5 / 9}.d02-c9-12{grid-column:9 / 13}.d02-c4-8{grid-column:4 / 9}.d02-c4-9{grid-column:4 / 10}
+.d02-small{font-size:15px;line-height:1.33;letter-spacing:.01em}
+.d02-muted{color:var(--gray)}
+.d02-h21{font-size:21px;line-height:1.15;letter-spacing:.011em;font-weight:400}
+.d02-h30{font-size:30px;line-height:1.1;letter-spacing:.011em;font-weight:400}
+.d02-num{font-weight:300;line-height:.78;letter-spacing:0;font-variant-numeric:lining-nums;font-feature-settings:'tnum' 0}
+
+/* hero row 1 */
+.d02-r1>.d02-t{min-height:520px}
+.d02-brand{display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.d02-mark{display:block;font-size:200px;line-height:.86;margin:0 0 0 -10px}
+.d02-word{margin-top:14px;font-size:21px;line-height:1.15}
+.d02-index li a{display:flex;align-items:center;min-height:44px;font-size:17px;text-decoration:none;color:var(--gray);transition:color .12s}
+.d02-index li a:hover{color:var(--ink)}
+.d02-index li a[aria-current]{color:var(--ink)}
+.d02-call{display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.d02-digits{display:block;text-decoration:none;font-size:104px;margin-top:22px}
+.d02-digits span{display:block}
+.d02-digits:hover{text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:8px}
+.d02-btn{display:inline-flex;align-items:center;justify-content:space-between;gap:21px;min-height:62px;padding:0 21px;background:var(--ink);color:var(--paper);text-decoration:none;font-size:17px;letter-spacing:.011em;border-radius:0;transition:background .12s,color .12s}
+.d02-btn:hover{background:var(--paper);color:var(--ink)}
+.d02-btn-hot{background:var(--hot);color:var(--ink)}
+.d02-btn-hot:hover{background:var(--ink);color:var(--paper)}
+.d02-head{display:flex;flex-direction:column;justify-content:space-between;gap:30px}
+.d02-corners{display:flex;justify-content:space-between;gap:16px}
+.d02-h1{font-size:clamp(34px,4.85vw,62px);line-height:1.0;letter-spacing:.011em;font-weight:400;max-width:12.5em}
+.d02-deck{margin-top:24px;font-size:21px;line-height:1.2;max-width:26em}
+
+/* hero row 2 */
+.d02-r2>.d02-t{min-height:400px}
+.d02-photo{padding:0;overflow:hidden}
+.d02-photo img{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover}
+.d02-pill{position:absolute;top:25px;left:25px;z-index:1;display:inline-flex;align-items:center;gap:8px;background:var(--paper);color:var(--ink);border-radius:9999px;padding:6px 12px 6px 11px;font-size:15px;line-height:1.2;letter-spacing:.024em}
+.d02-pill::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ink)}
+.d02-amp{display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.d02-amp .d02-num{font-size:150px}
+.d02-amp .d02-num sup{font-size:.28em;vertical-align:top;position:relative;top:.12em;margin-left:.06em;letter-spacing:.02em}
+.d02-link{display:inline-flex;align-items:center;gap:10px;min-height:44px;font-size:15px;letter-spacing:.024em;text-decoration:none}
+.d02-link:hover{text-decoration:underline;text-underline-offset:4px}
+.d02-arr{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;border:1px solid currentColor;flex:none}
+.d02-proof{display:flex;flex-direction:column;justify-content:space-between;gap:20px;border-top:1px solid var(--ink)}
+.d02-rating{font-size:62px;line-height:1;letter-spacing:.011em}
+
+/* section header rows */
+.d02-sec{border-top:1px solid var(--ink)}
+.d02-gap{margin-top:84px}
+.d02-rail{padding:25px}
+.d02-rail .d02-h21+p{margin-top:10px}
+.d02-lede{padding:25px 25px 84px;font-size:30px;line-height:1.1;max-width:24em}
+
+/* services index */
+.d02-svc{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));border-top:1px solid var(--ink);text-decoration:none;transition:background .12s}
+.d02-svc:last-child{border-bottom:1px solid var(--ink)}
+.d02-svc:hover{background:var(--hot)}
+.d02-svc:hover .d02-muted{color:var(--ink)}
+.d02-svc>*{padding:21px 25px;min-width:0}
+.d02-svc .d02-num{grid-column:1 / 4;font-size:118px;padding-top:16px;padding-bottom:12px}
+.d02-svc-name{grid-column:4 / 8}
+.d02-svc-name .d02-small{margin-top:8px;display:block}
+.d02-svc-desc{grid-column:8 / 11;font-size:17px;line-height:1.2}
+.d02-svc-price{grid-column:11 / 13;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;gap:14px}
+.d02-svc-price .d02-h21{white-space:nowrap;font-size:19px}
+
+/* photo block */
+.d02-plate{padding:84px 0 0}
+.d02-plate img{display:block;width:100%;height:auto}
+.d02-plate .d02-rail{display:flex;flex-direction:column;justify-content:flex-end}
+
+/* prices */
+.d02-table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.d02-table th,.d02-table td{text-align:left;font-weight:400;padding:14px 25px 14px 0;border-bottom:1px solid var(--ink);vertical-align:top}
+.d02-table thead th{font-size:15px;color:var(--gray);padding-top:25px;padding-bottom:10px}
+.d02-table tbody th{font-size:17px;width:44%}
+.d02-table td{font-size:17px;white-space:nowrap}
+.d02-table td a{font-size:15px;color:var(--gray);text-decoration:none}
+.d02-table td a:hover{color:var(--ink);text-decoration:underline}
+.d02-pricewrap{padding:0 0 84px 25px}
+.d02-tnote{margin-top:14px;font-size:15px;color:var(--gray)}
+
+/* steps */
+.d02-steps>.d02-t{min-height:420px;display:flex;flex-direction:column;justify-content:space-between;gap:30px}
+.d02-steps .d02-num{font-size:220px;margin-left:-8px}
+.d02-steps .d02-t p+p{margin-top:8px}
+.d02-white-hair{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+
+/* areas */
+.d02 .d02-towns{display:grid;grid-template-columns:1fr 1fr;column-gap:25px;padding:0 25px 25px}
+.d02-towns li{border-top:1px solid var(--ink)}
+.d02-towns a{display:flex;flex-direction:column;justify-content:center;min-height:72px;text-decoration:none}
+.d02-towns a span:first-child{font-size:21px;line-height:1.15}
+.d02-towns a span+span{font-size:15px;color:var(--gray);margin-top:4px}
+.d02-towns a:hover span:first-child{text-decoration:underline;text-underline-offset:4px}
+.d02-mapcell{padding:0 25px 25px}
+.d02-mapcell svg{display:block;width:100%;height:auto}
+
+/* reviews */
+.d02-quote{display:flex;flex-direction:column;justify-content:space-between;gap:40px;min-height:460px}
+.d02-quote blockquote p{font-size:clamp(28px,3.2vw,41px);line-height:1.1;letter-spacing:.016em}
+.d02-quote figcaption{margin-top:21px;font-size:17px}
+
+/* faq */
+.d02-qa{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));border-top:1px solid var(--ink)}
+.d02-qa:last-child{border-bottom:1px solid var(--ink)}
+.d02-qa h3{grid-column:1 / 5;padding:21px 25px 25px 25px;font-size:21px;line-height:1.15;font-weight:400}
+.d02-qa p{grid-column:5 / 10;padding:21px 25px 25px 0;font-size:17px;line-height:1.3}
+
+/* footer */
+.d02-foot{border-top:1px solid var(--ink);margin-top:84px}
+.d02-foot-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 30px;padding:18px 25px}
+.d02-foot-row+.d02-foot-row{border-top:1px solid var(--ink)}
+.d02-foot nav{display:flex;flex-wrap:wrap;gap:0 26px}
+.d02-foot nav a,.d02-foot-row>a{display:inline-flex;align-items:center;min-height:44px;font-size:15px;text-decoration:none}
+.d02-foot nav a:hover,.d02-foot-row>a:hover{text-decoration:underline;text-underline-offset:4px}
+.d02-credit{padding:14px 25px 22px;font-size:13px;color:var(--gray);border-top:1px solid #E2E2E0}
+
+@media (max-width:1100px){
+  .d02-digits{font-size:clamp(72px,8.4vw,104px)}
+  .d02-amp .d02-num{font-size:clamp(96px,11vw,150px)}
+  .d02-svc .d02-num{font-size:clamp(72px,9vw,118px)}
+}
+@media (max-width:760px){
+  .d02-g,.d02-svc{grid-template-columns:minmax(0,1fr)}
+  .d02-g>*,.d02-svc>*{grid-column:1 / -1}
+  .d02-r1>.d02-t,.d02-r2>.d02-t{min-height:0}
+  .d02-t{padding:21px 16px}
+  .d02-brand{order:1;gap:14px}
+  .d02-head{order:2;padding-top:6px;gap:20px}
+  .d02-call{order:3}
+  .d02-mark{font-size:100px;margin:0 0 0 -5px}
+  .d02-word{margin-top:8px}
+  .d02-index ul{display:grid;grid-template-columns:1fr 1fr 1fr;column-gap:14px}
+  .d02-index li{border-top:1px solid var(--ink)}
+  .d02-corners{font-size:13px}
+  .d02-h1{font-size:36px;line-height:1.02}
+  .d02-deck{font-size:18px}
+  .d02-digits{font-size:84px;margin-top:12px}
+  .d02-call .d02-btn{width:100%}
+  .d02-r2>.d02-photo{min-height:280px}
+  .d02-gap{margin-top:44px}
+  .d02-pill{top:16px;left:16px}
+  .d02-amp .d02-num{font-size:120px}
+  .d02-proof{border-top:0}
+  .d02-rail{padding:21px 16px 6px}
+  .d02-lede{padding:6px 16px 36px;font-size:24px}
+  .d02-svc{grid-template-columns:86px minmax(0,1fr)}
+  .d02-svc>*{padding:16px 16px 0 0}
+  .d02-svc .d02-num{grid-column:1 / 2;grid-row:1 / 4;font-size:54px;padding:18px 0 16px 16px}
+  .d02-svc-name,.d02-svc-desc,.d02-svc-price{grid-column:2 / 3}
+  .d02-svc-name .d02-h30{font-size:24px}
+  .d02-svc-price{flex-direction:row;align-items:center;justify-content:space-between;padding-bottom:12px}
+  .d02-plate{padding-top:36px}
+  .d02-plate .d02-rail{order:2;padding-top:12px}
+  .d02-plate figure{order:1}
+  .d02-pricewrap{padding:0 16px 36px}
+  .d02-table thead{display:none}
+  .d02-table tr{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;border-bottom:1px solid var(--ink);padding:12px 0}
+  .d02-table th,.d02-table td{border:0;padding:0}
+  .d02-table tbody th{width:auto;grid-column:1 / -1;margin-bottom:6px}
+  .d02-table td.d02-t-time{text-align:right}
+  .d02-table td.d02-t-page{grid-column:1 / -1;margin-top:4px}
+  .d02-steps>.d02-t{min-height:0}
+  .d02-steps .d02-num{font-size:140px}
+  .d02 .d02-towns{padding:0 16px 16px;column-gap:16px}
+  .d02-towns a{min-height:64px}
+  .d02-towns a span:first-child{font-size:19px}
+  .d02-mapcell{padding:0 16px 16px}
+  .d02-quote{min-height:0}
+  .d02-qa{grid-template-columns:minmax(0,1fr)}
+  .d02-qa h3{grid-column:1 / -1;padding:18px 16px 8px}
+  .d02-qa p{grid-column:1 / -1;padding:0 16px 20px}
+  .d02-foot{margin-top:36px}
+  .d02-foot-row{padding:14px 16px}
+  .d02-credit{padding:12px 16px 20px}
+}
+</style>
+</helmet>
+<div class="d02">
+
+  <header class="d02-g d02-r1">
+    <div class="d02-t d02-brand d02-c1-3">
+      <div>
+        <span class="d02-mark d02-num" aria-hidden="true">4</span>
+        <p class="d02-word">Fourth Street Electric</p>
+      </div>
+      <nav class="d02-index" aria-label="Main">
+        <ul>
+          <li><a href="/" aria-current="page">Home</a></li>
+          <li><a href="#d02-services">Services</a></li>
+          <li><a href="#d02-prices">Prices</a></li>
+          <li><a href="#d02-areas">Areas</a></li>
+          <li><a href="#d02-reviews">Reviews</a></li>
+          <li><a href="#d02-questions">Questions</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="d02-t d02-hot d02-call d02-c4-6">
+      <div>
+        <p class="d02-small">Call an electrician</p>
+        <a class="d02-digits d02-num" href="tel:+17275550142" aria-label="Call (727) 555-0142"><span>727</span><span>555</span><span>0142</span></a>
+      </div>
+      <div>
+        <a class="d02-btn" href="/price">Get My Price <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg></a>
+        <p class="d02-small" style="margin-top: 12px;">Open [HOURS]</p>
+      </div>
+    </div>
+    <div class="d02-t d02-head d02-c7-12">
+      <div class="d02-corners d02-h21"><span>Electrical contractor</span><span>Pinellas County</span></div>
+      <div>
+        <h1 class="d02-h1">Electrical repair and panel upgrades in St.&nbsp;Petersburg, FL</h1>
+        <p class="d02-deck">One written price before any wire is cut. Licensed and insured, and we pull the permit.</p>
+      </div>
+      <div class="d02-corners d02-small"><span>License [LICENSE NO.]</span><span>Service-area business</span></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="d02-g d02-r2" aria-label="Highlights">
+      <div class="d02-t d02-photo d02-c1-3">
+        <span class="d02-pill">Panel work</span>
+        <img src="img/elec/04.jpg" alt="Electrician working inside an outdoor electrical panel on a stucco wall" width="1600" height="900" style="width: 100%; height: 100%; object-fit: cover; object-position: 38% 50%;">
+      </div>
+      <div class="d02-t d02-blk d02-amp d02-c4-6">
+        <p class="d02-num" aria-label="200 amp">200<sup>A</sup></p>
+        <div>
+          <p class="d02-h21">Panel upgrades from 100 to 200 amp. From $[PRICE], permit included.</p>
+          <a class="d02-link" href="/panel-upgrade" style="margin-top: 10px;"><span class="d02-arr"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h9M6.5 2.5L10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.3"></path></svg></span>/panel-upgrade</a>
+        </div>
+      </div>
+      <div class="d02-t d02-photo d02-c7-9">
+        <span class="d02-pill">Breakers</span>
+        <img src="img/elec/05.jpg" alt="Rows of breakers and color-coded wires in an open distribution panel" width="1600" height="1067" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%;">
+      </div>
+      <div class="d02-t d02-proof d02-c10-12">
+        <div>
+          <p class="d02-small">Google rating</p>
+          <p class="d02-rating" style="margin-top: 12px;">[RATING]</p>
+          <p class="d02-h21" style="margin-top: 10px;">from [COUNT] Google reviews</p>
+        </div>
+        <div>
+          <p class="d02-small d02-muted">Newest review [DAYS] days ago</p>
+          <a class="d02-link" href="#d02-reviews"><span class="d02-arr"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h9M6.5 2.5L10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.3"></path></svg></span>Read the reviews</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="d02-services" class="d02-sec" aria-labelledby="d02-services-h">
+      <div class="d02-g">
+        <div class="d02-rail d02-c1-3">
+          <h2 id="d02-services-h" class="d02-h21">Services</h2>
+          <p class="d02-small d02-muted">8 kinds of work, each on its own page</p>
+        </div>
+        <p class="d02-lede d02-c4-12">Every job below gets a written price at your door before anyone opens a panel or cuts a wire.</p>
+      </div>
+      <div>
+        <a class="d02-svc" href="/panel-upgrade">
+          <span class="d02-num" aria-hidden="true">01</span>
+          <span class="d02-svc-name"><span class="d02-h30">Panel upgrades</span><span class="d02-small d02-muted">/panel-upgrade</span></span>
+          <span class="d02-svc-desc">100 to 200 amp, new breakers, permit and inspection handled. Most swaps take one day.</span>
+          <span class="d02-svc-price"><span class="d02-h21">from $[PRICE]</span><span class="d02-arr"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h9M6.5 2.5L10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.3"></path></svg></span></span>
+        </a>
+        <a class="d02-svc" href="/ev-charger-installation">
+          <span class="d02-num" aria-hidden="true">02</span>
+          <span class="d02-svc-name"><span class="d02-h30">EV charger installation</span><span class="d02-small d02-muted">/ev-charger-installation</span></span>
+          <span class="d02-svc-desc">A Level 2, 240-volt circuit for a wall unit or a NEMA 14-50 outlet. Load check included.</span>
+          <span class="d02-svc-price"><span class="d02-h21">from $[PRICE]</span><span class="d02-arr"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h9M6.5 2.5L10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.3"></path></svg></span></span>
+        </a>
+        <a class="d02-svc" href="/electrical-repair">
+          <span class="d02-num" aria-hidden="true">03</span>
+          <span class="d02-svc-name"><span class="d02-h30">Electrical repair</span><span class="d02-small d02-muted">/electrical-repair</span></span>
+          <span class="d02-svc-desc">Dead outlets, breakers that keep tripping, flickering lights and warm switch plates.</span>
+          <span class="d02-svc-price"><span class="d02-h21">$[LOW]–$[HIGH]</span><span class="d02-arr"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h9M6.5 2.5L10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.3"></path></svg></span></span>
+        </a>
+        <a class="d02-svc" href="/surge-protection">
+          <span class="d02-num" aria-hidden="true">04</span>
+          <span class="d02-svc-name"><span class="d02-h30">Surge protection</span><span class="d02-small d02-muted">/surge-protection</span></span>
+          <span class="d02-svc-desc">A whole-home protector at the panel, sized for Pinellas lightning season.</span>
+          <span class="d02-svc-price"><span class="d02-h21">from $[PRICE]</span><span class="d02-arr"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h9M6.5 2.5L10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.3"></path></svg></span></span>
+        </a>
+        <a class="d02-svc" href="/generator-installation">
+          <span class="d02-num" aria-hidden="true">05</span>
+          <span class="d02-svc-name"><span class="d02-h30">Generator hookups</span><span class="d02-small d02-muted">/generator-installation</span></span>
+          <span class="d02-svc-desc">Interlock kits, inlet boxes and standby generators, wired before hurricane season opens June 1.</span>
+          <span class="d02-svc-price"><span class="d02-h21">from $[PRICE]</span><span class="d02-arr"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h9M6.5 2.5L10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.3"></path></svg></span></span>
+        </a>
+        <a class="d02-svc" href="/lighting-installation">
+          <span class="d02-num" aria-hidden="true">06</span>
+          <span class="d02-svc-name"><span class="d02-h30">Lighting and ceiling fans</span><span class="d02-small d02-muted">/lighting-installation</span></span>
+          <span class="d02-svc-desc">Recessed lights, fans, outdoor and dock lighting, dimmers and timers.</span>
+          <span class="d02-svc-price"><span class="d02-h21">from $[PRICE]</span><span class="d02-arr"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h9M6.5 2.5L10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.3"></path></svg></span></span>
+        </a>
+        <a class="d02-svc" href="/rewiring">
+          <span class="d02-num" aria-hidden="true">07</span>
+          <span class="d02-svc-name"><span class="d02-h30">Rewiring</span><span class="d02-small d02-muted">/rewiring</span></span>
+          <span class="d02-svc-desc">Cloth-covered wire, aluminum branch circuits and two-prong outlets in older Kenwood and Old Northeast homes.</span>
+          <span class="d02-svc-price"><span class="d02-h21">$[LOW]–$[HIGH]</span><span class="d02-arr"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h9M6.5 2.5L10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.3"></path></svg></span></span>
+        </a>
+        <a class="d02-svc" href="/electrical-inspection">
+          <span class="d02-num" aria-hidden="true">08</span>
+          <span class="d02-svc-name"><span class="d02-h30">Inspections</span><span class="d02-small d02-muted">/electrical-inspection</span></span>
+          <span class="d02-svc-desc">Insurance 4-point and pre-sale inspections, with a written report you can send to the insurer.</span>
+          <span class="d02-svc-price"><span class="d02-h21">from $[PRICE]</span><span class="d02-arr"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h9M6.5 2.5L10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.3"></path></svg></span></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="d02-g d02-plate" aria-label="On site">
+      <div class="d02-rail d02-c1-3">
+        <p class="d02-h21">On site</p>
+        <p class="d02-small d02-muted" style="margin-top: 10px;">Exterior receptacle on a wood-frame house, mounted, wired and sealed against the weather.</p>
+      </div>
+      <figure class="d02-c5-12">
+        <img src="img/elec/07.jpg" alt="Electrician in an orange vest drilling a mounting hole on the outside wall of a wood-frame house" width="1600" height="1067" loading="lazy" style="width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover;">
+      </figure>
+    </section>
+
+    <section id="d02-prices" class="d02-sec d02-gap" aria-labelledby="d02-prices-h">
+      <div class="d02-g">
+        <div class="d02-rail d02-c1-3">
+          <h2 id="d02-prices-h" class="d02-h21">Prices</h2>
+          <p class="d02-small d02-muted">Electrical work in St. Petersburg, parts and labor in a standard home. Prices as of [MONTH YEAR].</p>
+        </div>
+        <div class="d02-pricewrap d02-c4-12">
+          <table class="d02-table">
+            <caption class="d02-sr">Typical electrician prices in St. Petersburg, FL</caption>
+            <thead>
+              <tr><th scope="col">Job</th><th scope="col">Typical price</th><th scope="col">On site</th><th scope="col">Page</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Outlet or switch replaced</th><td>$[LOW]–$[HIGH]</td><td class="d02-t-time">1 hr</td><td class="d02-t-page"><a href="/electrical-repair">/electrical-repair</a></td></tr>
+              <tr><th scope="row">Tripping breaker found and fixed</th><td>$[LOW]–$[HIGH]</td><td class="d02-t-time">1–2 hr</td><td class="d02-t-page"><a href="/electrical-repair">/electrical-repair</a></td></tr>
+              <tr><th scope="row">Ceiling fan or light fixture installed</th><td>from $[PRICE]</td><td class="d02-t-time">1–2 hr</td><td class="d02-t-page"><a href="/lighting-installation">/lighting-installation</a></td></tr>
+              <tr><th scope="row">Whole-home surge protector</th><td>from $[PRICE]</td><td class="d02-t-time">1 hr</td><td class="d02-t-page"><a href="/surge-protection">/surge-protection</a></td></tr>
+              <tr><th scope="row">Level 2 EV charger, panel within 25 ft</th><td>from $[PRICE]</td><td class="d02-t-time">3–5 hr</td><td class="d02-t-page"><a href="/ev-charger-installation">/ev-charger-installation</a></td></tr>
+              <tr><th scope="row">Generator interlock kit and inlet box</th><td>from $[PRICE]</td><td class="d02-t-time">3–4 hr</td><td class="d02-t-page"><a href="/generator-installation">/generator-installation</a></td></tr>
+              <tr><th scope="row">Panel upgrade, 100 to 200 amp</th><td>$[LOW]–$[HIGH]</td><td class="d02-t-time">1 day</td><td class="d02-t-page"><a href="/panel-upgrade">/panel-upgrade</a></td></tr>
+              <tr><th scope="row">Insurance 4-point inspection, electrical</th><td>from $[PRICE]</td><td class="d02-t-time">1 hr</td><td class="d02-t-page"><a href="/electrical-inspection">/electrical-inspection</a></td></tr>
+              <tr><th scope="row">Whole-home rewire, 1,500 sq ft</th><td>$[LOW]–$[HIGH]</td><td class="d02-t-time">3–5 days</td><td class="d02-t-page"><a href="/rewiring">/rewiring</a></td></tr>
+            </tbody>
+          </table>
+          <p class="d02-tnote">The figure you approve is written on the work order and does not change if the job runs long.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="d02-how-h">
+      <h2 id="d02-how-h" class="d02-sr">How the price works</h2>
+      <div class="d02-g d02-steps">
+        <div class="d02-t d02-hot d02-c1-4">
+          <span class="d02-num" aria-hidden="true">1</span>
+          <div><p class="d02-h21">Call or book</p><p class="d02-small">Call <a href="tel:+17275550142" style="white-space: nowrap;">(727) 555-0142</a> or book online and pick a two-hour arrival window.</p></div>
+        </div>
+        <div class="d02-t d02-white-hair d02-c5-8">
+          <span class="d02-num" aria-hidden="true">2</span>
+          <div><p class="d02-h21">We test, then price</p><p class="d02-small">The electrician finds the fault and writes one price for the fix. Trip fee $[PRICE], credited when you approve.</p></div>
+        </div>
+        <div class="d02-t d02-blk d02-c9-12">
+          <span class="d02-num" aria-hidden="true">3</span>
+          <div><p class="d02-h21">You decide</p><p class="d02-small">Approve and the work starts that visit when parts allow. Decline and you owe only the trip fee.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="d02-areas" class="d02-sec d02-gap" aria-labelledby="d02-areas-h">
+      <div class="d02-g">
+        <div class="d02-rail d02-c1-3">
+          <h2 id="d02-areas-h" class="d02-h21">Areas</h2>
+          <p class="d02-small d02-muted">Electricians serving St. Petersburg and 8 towns across south Pinellas County.</p>
+        </div>
+        <div class="d02-c4-8" style="padding-top: 25px;">
+          <ul class="d02-towns">
+            <li><a href="/areas/gulfport"><span>Gulfport</span><span>/areas/gulfport</span></a></li>
+            <li><a href="/areas/south-pasadena"><span>South Pasadena</span><span>/areas/south-pasadena</span></a></li>
+            <li><a href="/areas/st-pete-beach"><span>St. Pete Beach</span><span>/areas/st-pete-beach</span></a></li>
+            <li><a href="/areas/treasure-island"><span>Treasure Island</span><span>/areas/treasure-island</span></a></li>
+            <li><a href="/areas/pinellas-park"><span>Pinellas Park</span><span>/areas/pinellas-park</span></a></li>
+            <li><a href="/areas/kenneth-city"><span>Kenneth City</span><span>/areas/kenneth-city</span></a></li>
+            <li><a href="/areas/seminole"><span>Seminole</span><span>/areas/seminole</span></a></li>
+            <li><a href="/areas/largo"><span>Largo</span><span>/areas/largo</span></a></li>
+          </ul>
+          <p class="d02-small" style="padding: 0 25px;">Town not listed? Call <a href="tel:+17275550142" style="white-space: nowrap;">(727) 555-0142</a> and ask.</p>
+        </div>
+        <div class="d02-mapcell d02-c9-12" style="padding-top: 25px;">
+          <svg viewBox="0 0 320 400" role="img" aria-label="Line map of south Pinellas County with the towns served">
+            <path d="M34 0L34 62L20 100L15 150L40 200L70 252L95 282L120 300L140 322L160 336L170 352L194 378L230 368L256 340L263 287L266 250L280 200L286 150L280 60L278 0" fill="none" stroke="#000000" stroke-width="1"></path>
+            <path d="M56 236L64 236L106 282L132 326L143 374L137 376L125 330L98 288Z" fill="none" stroke="#000000" stroke-width="1"></path>
+            <text x="12" y="392" font-family="Inter, Arial, sans-serif" font-size="11" fill="#6B6D6A">Gulf of Mexico</text>
+            <text transform="translate(298 96) rotate(90)" font-family="Inter, Arial, sans-serif" font-size="11" fill="#6B6D6A">Tampa Bay</text>
+            <rect x="245" y="278" width="12" height="12" fill="#FF4D1A" stroke="#000000" stroke-width="1"></rect>
+            <text x="260" y="270" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" fill="#000000">St. Petersburg</text>
+            <g fill="#000000" font-family="Inter, Arial, sans-serif" font-size="11">
+              <circle cx="83" cy="112" r="3"></circle><text x="91" y="116">Largo</text>
+              <circle cx="79" cy="200" r="3"></circle><text x="87" y="204">Seminole</text>
+              <circle cx="184" cy="197" r="3"></circle><text x="192" y="201">Pinellas Park</text>
+              <circle cx="160" cy="231" r="3"></circle><text x="168" y="235">Kenneth City</text>
+              <circle cx="139" cy="306" r="3"></circle><text x="147" y="304">South Pasadena</text>
+              <circle cx="179" cy="315" r="3"></circle><text x="186" y="331">Gulfport</text>
+              <circle cx="104" cy="289" r="3"></circle><text x="96" y="302" text-anchor="end">Treasure Island</text>
+              <circle cx="136" cy="344" r="3"></circle><text x="128" y="352" text-anchor="end">St. Pete Beach</text>
+            </g>
+            <path d="M232 392h40M232 392v-4M252 392v-3M272 392v-4" fill="none" stroke="#000000" stroke-width="1"></path>
+            <text x="276" y="392" font-family="Inter, Arial, sans-serif" font-size="10" fill="#6B6D6A">2 mi</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="d02-reviews" class="d02-g d02-gap" aria-labelledby="d02-reviews-h">
+      <div class="d02-t d02-hot d02-c1-3" style="display: flex; flex-direction: column; justify-content: space-between; gap: 30px;">
+        <h2 id="d02-reviews-h" class="d02-h21">Reviews</h2>
+        <div>
+          <p class="d02-rating">[RATING]</p>
+          <p class="d02-small" style="margin-top: 10px;">from [COUNT] Google reviews. Newest review [DAYS] days ago.</p>
+        </div>
+      </div>
+      <figure class="d02-t d02-quote d02-c4-9">
+        <blockquote><p>“[Google review, pulled at build time]”</p></blockquote>
+        <div>
+          <figcaption>[Reviewer], [Town]</figcaption>
+          <a class="d02-link" href="/reviews" style="margin-top: 12px;"><span class="d02-arr"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h9M6.5 2.5L10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.3"></path></svg></span>Read all [COUNT] reviews on Google</a>
+        </div>
+      </figure>
+      <div class="d02-t d02-photo d02-c10-12" style="min-height: 460px;">
+        <span class="d02-pill">Testing</span>
+        <img src="img/elec/09.jpg" alt="Gloved hands testing a contactor with a voltage tester" width="1600" height="1200" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 30% 50%;">
+      </div>
+    </section>
+
+    <section id="d02-questions" class="d02-sec d02-gap" aria-labelledby="d02-questions-h">
+      <div class="d02-g">
+        <div class="d02-rail d02-c1-3">
+          <h2 id="d02-questions-h" class="d02-h21">Questions</h2>
+          <p class="d02-small d02-muted">Answered by [OWNER NAME], licensed electrical contractor</p>
+        </div>
+        <div class="d02-c4-12" style="padding-top: 25px;">
+          <div class="d02-qa">
+            <h3>How much does an electrician cost in St. Petersburg?</h3>
+            <p>Small repairs run $[LOW]–$[HIGH]. The trip fee is $[PRICE] and comes off the bill if you approve the work. Panel upgrades and EV chargers get a written price after we see the panel.</p>
+          </div>
+          <div class="d02-qa">
+            <h3>Do I need a permit for a panel upgrade?</h3>
+            <p>Yes. A panel change in St. Petersburg needs a permit and an inspection. We pull the permit, book the inspector and coordinate the power shutoff with the utility.</p>
+          </div>
+          <div class="d02-qa">
+            <h3>Can my panel handle an EV charger?</h3>
+            <p>Most 200-amp panels can. A 100-amp panel in an older Kenwood or Old Northeast home often needs a load calculation first. We run it on the first visit and tell you which one you have.</p>
+          </div>
+          <div class="d02-qa">
+            <h3>What does a 4-point inspection check on the electrical?</h3>
+            <p>Insurers look at the panel brand and age, the wire type and any double-tapped breakers. Federal Pacific and Zinsco panels are flagged by most Florida insurers. We inspect and, if needed, price the fix in the same visit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="d02-foot">
+    <div class="d02-foot-row">
+      <p><span style="font-weight: 500;">Fourth Street Electric</span> Service-area business, St. Petersburg, FL</p>
+      <a href="tel:+17275550142">(727) 555-0142</a>
+      <nav aria-label="Services">
+        <a href="/panel-upgrade">Panels</a>
+        <a href="/ev-charger-installation">EV chargers</a>
+        <a href="/electrical-repair">Repair</a>
+        <a href="/generator-installation">Generators</a>
+        <a href="/electrical-inspection">Inspections</a>
+      </nav>
+    </div>
+    <div class="d02-foot-row d02-small">
+      <p>Florida electrical contractor license [LICENSE NO.]</p>
+      <p>Open [HOURS]</p>
+      <p>Insured · [YEARS] years in Pinellas County</p>
+      <a class="d02-btn d02-btn-hot" href="/price">Get My Price <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg></a>
+    </div>
+    <p class="d02-credit">Avenue Vision · D02 · Swiss Grid · style refs withheld</p>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":6000}}'>class Component extends DCLogic { renderVals() { return {}; } }</script>
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Nothing Left Hauling &amp; Demo home page</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&amp;family=JetBrains+Mono:wght@400;500&amp;family=Big+Shoulders+Display:wght@800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.d03{--d03-ink:#000000;--d03-paper:#ffffff;--d03-news:#e8e8e8;--d03-red:#c80000;--d03-mute:#555555;--d03-sans:'Inter Tight','Helvetica Neue',Arial,sans-serif;--d03-mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;--d03-out:'Big Shoulders Display','Inter Tight',sans-serif;background:#ffffff;color:#000000;font-family:var(--d03-sans);font-size:18px;line-height:1.33;-webkit-font-smoothing:antialiased;overflow:hidden}
+.d03 *{box-sizing:border-box}
+.d03 :where(a){color:inherit}
+.d03 a:focus-visible{outline:2px solid #000000;outline-offset:3px}
+.d03-mono{font-family:var(--d03-mono);font-size:12px;line-height:1.4;letter-spacing:.05em;text-transform:uppercase;font-weight:400}
+.d03-arw{display:inline-block;position:relative;width:34px;height:12px;margin-left:12px;vertical-align:middle;flex:none}
+.d03-arw::before{content:"";position:absolute;left:0;right:1px;top:50%;height:1.5px;margin-top:-1px;background:currentColor}
+.d03-arw::after{content:"";position:absolute;right:1px;top:50%;width:9px;height:9px;margin-top:-5px;border-top:1.5px solid currentColor;border-right:1.5px solid currentColor;transform:rotate(45deg)}
+.d03-arw-dn{width:12px;height:34px;margin:0}
+.d03-arw-dn::before{left:50%;right:auto;top:0;bottom:1px;width:1.5px;height:auto;margin:0 0 0 -1px}
+.d03-arw-dn::after{left:50%;right:auto;top:auto;bottom:1px;margin:0 0 0 -5px;transform:rotate(135deg)}
+
+.d03-top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:10px 20px;min-height:66px;border-bottom:1px solid #000000;position:relative;z-index:2;background:#ffffff}
+.d03-logo{display:inline-flex;align-items:center;gap:12px;text-decoration:none;min-height:44px}
+.d03-logo-box{width:26px;height:26px;border:2px solid #000000;flex:none}
+.d03-logo-t{font-size:14px;line-height:1.08;font-weight:500;text-transform:uppercase;letter-spacing:.02em}
+.d03-nav{display:flex;align-items:center;gap:4px}
+.d03-nl{display:inline-flex;align-items:center;min-height:44px;padding:0 10px;font-size:16px;text-transform:uppercase;text-decoration:none;position:relative}
+.d03-nl::after{content:"";position:absolute;left:10px;right:10px;bottom:9px;height:1px;background:#000000;transform:scaleX(0);transition:transform .2s}
+.d03-nl:hover::after,.d03-nl-on::after{transform:scaleX(1)}
+.d03-pill{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 20px;border:1px solid #000000;border-radius:500px;font-size:16px;line-height:1;text-decoration:none;white-space:nowrap;background:#ffffff;color:#000000;transition:background .15s,color .15s}
+.d03-pill:hover{background:#000000;color:#ffffff}
+.d03-pill-solid{background:#000000;color:#ffffff}
+.d03-pill-solid:hover{background:#ffffff;color:#000000}
+.d03-pill-lg{min-height:56px;padding:0 26px;font-size:18px}
+.d03-nav .d03-pill{margin-left:10px}
+
+.d03-date{display:flex;flex-wrap:wrap;border-bottom:1px solid #000000}
+.d03-date span{padding:11px 20px;border-right:1px solid #000000}
+.d03-date span:last-child{border-right:0;margin-left:auto}
+
+.d03-hero{position:relative;padding:44px 20px 64px;border-bottom:1px solid #000000;overflow:hidden}
+.d03-scaf{position:absolute;left:-8px;bottom:-68px;margin:0;font-family:var(--d03-out);font-weight:800;font-size:948px;line-height:1;transform:scaleX(.73);transform-origin:0 100%;letter-spacing:.005em;color:transparent;-webkit-text-stroke:1px #000000;white-space:nowrap;pointer-events:none;user-select:none;z-index:0}
+.d03-hero > .d03-in{position:relative;z-index:1}
+.d03-kick{display:flex;flex-wrap:wrap;gap:6px 28px;margin:0 0 22px}
+.d03-kick span:first-child{color:var(--d03-red)}
+.d03-head{margin:0;max-width:1236px;font-size:clamp(34px,5.75vw,74px);line-height:1.08;font-weight:500;text-transform:uppercase;letter-spacing:-.012em}
+.d03-head h1,.d03-head p{display:inline;margin:0;font:inherit;letter-spacing:inherit}
+.d03-inl{display:inline-block;vertical-align:top;margin:.62em .7em 0 .45em;font-family:var(--d03-sans);font-size:12px;line-height:1;font-weight:500;letter-spacing:.04em;text-transform:uppercase}
+.d03-hrow{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:20px;margin-top:46px;align-items:start}
+.d03-lede{margin:0 0 28px;max-width:520px;font-size:18px;line-height:1.33}
+.d03-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px}
+.d03-tl{display:inline-flex;align-items:center;min-height:44px;font-size:18px;text-decoration:none;border-bottom:1px solid #000000;white-space:nowrap}
+.d03-tl:hover{border-bottom-width:3px}
+.d03-hproof{margin-top:30px;padding-top:14px;border-top:1px solid #000000;max-width:520px;display:flex;flex-wrap:wrap;gap:4px 18px}
+.d03-collage{position:relative;height:380px}
+.d03-ph{display:block;margin:0;position:absolute}
+.d03-ph img{display:block;width:100%;height:100%;object-fit:cover}
+.d03-ph figcaption{margin-top:8px;background:#ffffff;display:inline-block;padding:2px 6px 2px 0}
+.d03-ph-a{left:6%;top:0;width:50%;height:296px}
+.d03-ph-b{right:0;top:96px;width:36%;height:236px}
+
+.d03-sec{position:relative;padding:96px 20px;border-bottom:1px solid #000000}
+.d03-sec-wall{padding-bottom:0}
+.d03-band{background:var(--d03-news)}
+.d03-sh{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:20px;margin-bottom:52px;align-items:start}
+.d03-idx{color:var(--d03-red);padding-top:12px}
+.d03-band .d03-idx{color:#b00000}
+.d03-h2{margin:0;font-size:clamp(30px,3.6vw,46px);line-height:1.1;font-weight:500;text-transform:uppercase;letter-spacing:-.005em}
+.d03-sub{margin:18px 0 0;max-width:620px;font-size:18px}
+
+.d03-wall{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));margin:0 -20px;border-top:1px solid #000000}
+.d03-col{display:flex;flex-direction:column;justify-content:space-between;gap:20px;min-height:640px;padding:20px;border-left:1px solid #000000;text-decoration:none;transition:background .15s,color .15s}
+.d03-col:first-child{border-left:0}
+.d03-col:hover{background:#000000;color:#ffffff}
+.d03-col:hover .d03-price{color:#ffffff}
+.d03-col-top{display:flex;flex-direction:column;gap:6px}
+.d03-col-num{display:flex;justify-content:space-between;align-items:center}
+.d03-col-num .d03-arw{margin-left:0}
+.d03-price{color:var(--d03-red)}
+.d03-vert{writing-mode:vertical-rl;transform:rotate(180deg);height:330px;margin:0;font-size:40px;line-height:1.02;font-weight:500;text-transform:uppercase;letter-spacing:-.01em;align-self:flex-start}
+.d03-col-desc{margin:0 0 14px;font-size:15px;line-height:1.33}
+.d03-col-foot{display:flex;flex-direction:column}
+.d03-slug{display:block;min-height:48px;padding-top:12px;border-top:1px solid currentColor;overflow-wrap:anywhere}
+
+.d03-gauge{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:1px solid #000000;background:#ffffff}
+.d03-g{display:flex;flex-direction:column;border-left:1px solid #000000}
+.d03-g:first-child{border-left:0}
+.d03-g-bar{position:relative;height:180px;border-bottom:1px solid #000000}
+.d03-g-bar::before{content:"";position:absolute;left:0;right:0;top:25%;border-top:1px dotted #000000}
+.d03-g-bar::after{content:"";position:absolute;left:0;right:0;top:50%;border-top:1px dotted #000000}
+.d03-g-fill{position:absolute;left:0;right:0;bottom:0;background:#000000}
+.d03-g-body{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px}
+.d03-g-price{margin:0;font-size:28px;line-height:1.05;font-weight:500;letter-spacing:-.01em}
+.d03-g-vol{margin:0;font-size:15px;line-height:1.33}
+.d03-demo{display:grid;grid-template-columns:minmax(0,3fr) repeat(4,minmax(0,2.25fr));border:1px solid #000000;border-top:0;background:#ffffff}
+.d03-demo > div{padding:18px 20px;border-left:1px solid #000000}
+.d03-demo > div:first-child{border-left:0}
+.d03-demo b{display:block;margin-top:6px;font-size:22px;line-height:1.1;font-weight:500}
+.d03-incl{margin:22px 0 0;display:flex;flex-wrap:wrap;gap:6px 26px}
+
+.d03-sort{padding:96px 0 0;border-bottom:1px solid #000000}
+.d03-sort-h{padding:0 20px;margin:0 0 48px;font-size:clamp(56px,11.6vw,150px);line-height:.93;font-weight:400;letter-spacing:-.05em}
+.d03-sort-img{display:block;width:100%;height:560px;object-fit:cover;object-position:50% 58%}
+.d03-sort-cap{display:flex;justify-content:space-between;gap:20px;padding:10px 20px;border-bottom:1px solid #000000}
+.d03-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.d03-stat{padding:28px 20px 40px;border-left:1px solid #000000}
+.d03-stat:first-child{border-left:0}
+.d03-stat .d03-stat-n{margin:0 0 14px;max-width:none;font-size:clamp(64px,8.6vw,112px);line-height:.93;font-weight:400;letter-spacing:-.05em}
+.d03-stat p{margin:0;max-width:340px;font-size:17px}
+
+.d03-rate{display:flex;flex-wrap:wrap;align-items:flex-end;gap:16px 40px}
+.d03-big{margin:0;font-size:clamp(84px,15.5vw,200px);line-height:.82;font-weight:400;letter-spacing:-.05em}
+.d03-rate-t{max-width:420px;padding-bottom:6px}
+.d03-rate-t p{margin:0 0 10px;font-size:24px;line-height:1.2;font-weight:500;text-transform:uppercase}
+.d03-clips{list-style:none;margin:56px 0 0;padding:0;border-top:1px solid #000000}
+.d03-clip{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,6fr) minmax(0,4fr);gap:20px;align-items:baseline;padding:24px 0;border-bottom:1px solid #000000}
+.d03-clip blockquote{margin:0;font-size:26px;line-height:1.2;font-weight:400;letter-spacing:-.01em}
+.d03-more{margin-top:28px}
+
+.d03-route{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:20px;align-items:stretch}
+.d03-route-ph{margin:0;position:relative;min-height:400px}
+.d03-route-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:38% 50%}
+.d03-towns{list-style:none;margin:0;padding:0;border-top:1px solid #000000}
+.d03-town{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:78px;padding:10px 0;border-bottom:1px solid #000000;text-decoration:none}
+.d03-town-n{font-size:clamp(26px,3.5vw,44px);line-height:1;font-weight:500;text-transform:uppercase;letter-spacing:-.01em}
+.d03-town-s{display:inline-flex;align-items:center;white-space:nowrap}
+.d03-town:hover{background:#000000;color:#ffffff;padding-left:12px;padding-right:12px}
+
+.d03-faq{border-top:1px solid #000000}
+.d03-q{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,5fr) minmax(0,4fr);gap:20px;padding:30px 0;border-bottom:1px solid #000000;align-items:start}
+.d03-q h3{margin:0;font-size:26px;line-height:1.12;font-weight:500;text-transform:uppercase;letter-spacing:-.005em}
+.d03-q p{margin:0;font-size:17px;line-height:1.4}
+.d03-q-n{padding-top:6px}
+
+.d03-call{position:relative;overflow:hidden;padding:88px 20px 96px;border-bottom:1px solid #000000}
+.d03-scaf-b{left:auto;right:-6px;bottom:-26px;font-size:480px;transform:none}
+.d03-call > .d03-in{position:relative;z-index:1}
+.d03-tel{display:inline-block;margin:18px 0 26px;font-size:clamp(40px,10.6vw,138px);line-height:.95;font-weight:500;letter-spacing:-.03em;text-decoration:none;border-bottom:2px solid #000000;white-space:nowrap}
+.d03-tel:hover{border-bottom-width:6px}
+.d03-call-row{display:flex;flex-wrap:wrap;align-items:center;gap:16px 32px}
+.d03-call-row p{margin:0;max-width:460px;background:#ffffff}
+
+.d03-colo{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,4fr) minmax(0,4fr);border-bottom:1px solid #000000}
+.d03-colo > div{padding:28px 20px 32px;border-left:1px solid #000000}
+.d03-colo > div:first-child{border-left:0}
+.d03-colo h2{margin:0 0 14px;font-size:18px;line-height:1.2;font-weight:500;text-transform:uppercase}
+.d03-colo ul{list-style:none;margin:0;padding:0}
+.d03-colo li{margin:0}
+.d03-colo li a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
+.d03-colo li a:hover{text-decoration:underline}
+.d03-nap{margin:0;font-style:normal;display:flex;flex-direction:column;gap:6px}
+.d03-fine{padding:16px 20px 22px;color:var(--d03-mute);font-size:11px}
+
+@media (max-width: 900px){
+  .d03-nav .d03-nl{display:none}
+  .d03-hrow{grid-template-columns:1fr}
+  .d03-collage{height:360px}
+  .d03-wall{grid-template-columns:1fr}
+  .d03-col{min-height:0;border-left:0;border-top:1px solid #000000;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px 20px;padding:20px}
+  .d03-col:first-child{border-top:0}
+  .d03-vert{writing-mode:horizontal-tb;transform:none;height:auto;font-size:30px;grid-column:1 / -1;grid-row:1}
+  .d03-col-top{grid-column:1;grid-row:2}
+  .d03-col-foot{grid-column:2;grid-row:2}
+  .d03-gauge{grid-template-columns:1fr}
+  .d03-g{flex-direction:row;border-left:0;border-top:1px solid #000000}
+  .d03-g:first-child{border-top:0}
+  .d03-g-bar{height:auto;width:72px;flex:none;border-bottom:0;border-right:1px solid #000000}
+  .d03-demo{grid-template-columns:1fr 1fr}
+  .d03-demo > div{border-left:0;border-top:1px solid #000000}
+  .d03-demo > div:first-child{grid-column:1 / -1;border-top:0}
+  .d03-demo > div:nth-child(odd){border-left:1px solid #000000}
+  .d03-demo > div:first-child{border-left:0}
+  .d03-stats{grid-template-columns:1fr}
+  .d03-stat{border-left:0;border-top:1px solid #000000}
+  .d03-stat:first-child{border-top:0}
+  .d03-route{grid-template-columns:1fr}
+  .d03-route-ph{min-height:260px}
+  .d03-clip{grid-template-columns:1fr;gap:10px}
+  .d03-q{grid-template-columns:1fr;gap:12px}
+  .d03-colo{grid-template-columns:1fr}
+  .d03-colo > div{border-left:0;border-top:1px solid #000000}
+  .d03-colo > div:first-child{border-top:0}
+  .d03-sh{grid-template-columns:1fr;gap:12px;margin-bottom:36px}
+}
+@media (max-width: 560px){
+  .d03-top{padding:10px 16px}
+  .d03-logo-t{font-size:12px}
+  .d03-nav .d03-pill-solid{display:none}
+  .d03-nav .d03-pill{margin-left:0;padding:0 14px;font-size:14px}
+  .d03-date{padding:10px 16px;gap:2px 14px}
+  .d03-date span{padding:0;border-right:0}
+  .d03-date span:last-child{margin-left:0}
+  .d03-hero{padding:32px 16px 48px}
+  .d03-scaf{font-size:520px;bottom:-36px;transform:scaleX(.62)}
+  .d03-collage{height:300px}
+  .d03-ph-a{left:0;width:64%;height:220px}
+  .d03-ph-b{top:120px;width:48%;height:170px}
+  .d03-ph figcaption{display:none}
+  .d03-sec{padding:64px 16px}
+  .d03-wall{margin:0 -16px}
+  .d03-col{grid-template-columns:1fr;padding:18px 16px}
+  .d03-col-top{grid-row:2;grid-column:1;flex-direction:row;justify-content:space-between;gap:16px}
+  .d03-col-num{gap:16px}
+  .d03-slug{min-height:0}
+  .d03-col-foot{grid-row:3;grid-column:1}
+  .d03-g-body{padding:14px 16px 16px}
+  .d03-g-bar{width:44px}
+  .d03-g-price{font-size:24px}
+  .d03-demo{grid-template-columns:1fr}
+  .d03-demo > div:nth-child(odd){border-left:0}
+  .d03-sort{padding-top:64px}
+  .d03-sort-h{padding:0 16px;margin-bottom:32px}
+  .d03-sort-img{height:300px}
+  .d03-sort-cap{padding:10px 16px;flex-direction:column;gap:4px}
+  .d03-stat{padding:24px 16px 32px}
+  .d03-clip blockquote{font-size:21px}
+  .d03-call{padding:64px 16px 72px}
+  .d03-scaf-b{font-size:300px;bottom:-14px;right:-30px}
+  .d03-tel{font-size:clamp(34px,10.4vw,48px)}
+  .d03-colo > div{padding:24px 16px 28px}
+  .d03-fine{padding:16px 16px 22px}
+  .d03-town-s{font-size:11px}
+}
+</style>
+</helmet>
+<div class="d03">
+
+  <header class="d03-top">
+    <a class="d03-logo" href="/">
+      <span class="d03-logo-box" aria-hidden="true"></span>
+      <span class="d03-logo-t">Nothing Left<br>Hauling &amp; Demo</span>
+    </a>
+    <nav class="d03-nav" aria-label="Main">
+      <a class="d03-nl d03-nl-on" href="#d03-services">Services</a>
+      <a class="d03-nl" href="#d03-prices">Prices</a>
+      <a class="d03-nl" href="#d03-areas">Areas</a>
+      <a class="d03-nl" href="#d03-faq">Questions</a>
+      <a class="d03-pill" href="tel:+13055550143">(305) 555-0143</a>
+      <a class="d03-pill d03-pill-solid" href="/book-a-pickup">Book a Pickup</a>
+    </nav>
+  </header>
+
+  <div class="d03-date d03-mono" aria-label="Business details">
+    <span>Miami, Florida</span>
+    <span>Service-area business, Miami-Dade County</span>
+    <span>Open [HOURS]</span>
+    <span>Lic. [LICENSE NO.]</span>
+    <span>Newest Google review [DAYS] days ago</span>
+  </div>
+
+  <section class="d03-hero" aria-label="Junk removal in Miami">
+    <p class="d03-scaf" aria-hidden="true">GONE</p>
+    <div class="d03-in">
+      <p class="d03-kick d03-mono"><span>No. 01 / Junk removal + light demolition</span><span>Two people, one truck, one written price</span></p>
+      <div class="d03-head">
+        <h1>Junk removal and light demolition in Miami, FL.</h1>
+        <span class="d03-inl" aria-hidden="true">Same day</span>
+        <p>One truck, one price, nothing left behind.</p>
+      </div>
+      <div class="d03-hrow">
+        <div>
+          <p class="d03-lede">Couches, fridges, garage and estate cleanouts, renovation debris, sheds, fences and hot tubs. You point, we lift, load and sweep. The price is in writing before anything moves. Call before [CUTOFF TIME] and we can usually come the same afternoon.</p>
+          <div class="d03-ctas">
+            <a class="d03-pill d03-pill-solid d03-pill-lg" href="/book-a-pickup">Book a Pickup<span class="d03-arw" aria-hidden="true"></span></a>
+            <a class="d03-tl" href="tel:+13055550143">Call (305) 555-0143<span class="d03-arw" aria-hidden="true"></span></a>
+          </div>
+          <div class="d03-hproof d03-mono">
+            <span>[RATING] from [COUNT] Google reviews</span>
+            <span>Newest review [DAYS] days ago</span>
+          </div>
+        </div>
+        <div class="d03-collage">
+          <figure class="d03-ph d03-ph-a">
+            <img src="img/junk/02.jpg" alt="Boxes, a cabinet and household junk piled by a backyard fence before pickup" width="560" height="296" style="object-fit: cover; object-position: 50% 60%;">
+            <figcaption class="d03-mono">Fig. A / Backyard pile, before</figcaption>
+          </figure>
+          <figure class="d03-ph d03-ph-b">
+            <img src="img/junk/08.jpg" alt="Pickup truck bed loaded high with black trash bags" width="400" height="236" style="object-fit: cover; object-position: 40% 50%;">
+            <figcaption class="d03-mono">Fig. B / One load out</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="d03-sec d03-sec-wall" id="d03-services" aria-labelledby="d03-services-h">
+    <div class="d03-sh">
+      <p class="d03-idx d03-mono">02 / The load list</p>
+      <div>
+        <h2 class="d03-h2" id="d03-services-h">Seven jobs we run every week across Miami-Dade</h2>
+        <p class="d03-sub">Each one has its own page with what we take, what we leave, and the price range for that job.</p>
+      </div>
+    </div>
+    <div class="d03-wall">
+      <a class="d03-col" href="/junk-removal">
+        <span class="d03-col-top d03-mono"><span class="d03-col-num"><span>01</span><span class="d03-arw" aria-hidden="true"></span></span><span class="d03-price">From $[PRICE]</span></span>
+        <span class="d03-vert">Junk removal</span>
+        <span class="d03-col-foot"><span class="d03-col-desc">Single items to whole rooms. Couches, mattresses, TVs, boxes.</span><span class="d03-slug d03-mono">/junk-removal</span></span>
+      </a>
+      <a class="d03-col" href="/furniture-appliance-removal">
+        <span class="d03-col-top d03-mono"><span class="d03-col-num"><span>02</span><span class="d03-arw" aria-hidden="true"></span></span><span class="d03-price">From $[PRICE]</span></span>
+        <span class="d03-vert">Furniture + appliances</span>
+        <span class="d03-col-foot"><span class="d03-col-desc">Fridges, washers, sectionals, down stairs and out of condos.</span><span class="d03-slug d03-mono">/furniture-appliance-removal</span></span>
+      </a>
+      <a class="d03-col" href="/cleanouts">
+        <span class="d03-col-top d03-mono"><span class="d03-col-num"><span>03</span><span class="d03-arw" aria-hidden="true"></span></span><span class="d03-price">$[LOW]–$[HIGH]</span></span>
+        <span class="d03-vert">Garage + estate cleanouts</span>
+        <span class="d03-col-foot"><span class="d03-col-desc">Whole garages, storage units, rentals between tenants.</span><span class="d03-slug d03-mono">/cleanouts</span></span>
+      </a>
+      <a class="d03-col" href="/construction-debris-removal">
+        <span class="d03-col-top d03-mono"><span class="d03-col-num"><span>04</span><span class="d03-arw" aria-hidden="true"></span></span><span class="d03-price">$[LOW]–$[HIGH]</span></span>
+        <span class="d03-vert">Construction debris</span>
+        <span class="d03-col-foot"><span class="d03-col-desc">Drywall, tile, cabinets, lumber. Remodel leftovers by the load.</span><span class="d03-slug d03-mono">/construction-debris-removal</span></span>
+      </a>
+      <a class="d03-col" href="/shed-fence-demolition">
+        <span class="d03-col-top d03-mono"><span class="d03-col-num"><span>05</span><span class="d03-arw" aria-hidden="true"></span></span><span class="d03-price">$[LOW]–$[HIGH]</span></span>
+        <span class="d03-vert">Shed + fence demolition</span>
+        <span class="d03-col-foot"><span class="d03-col-desc">Torn down, cut up, hauled off. Slab left broom-clean.</span><span class="d03-slug d03-mono">/shed-fence-demolition</span></span>
+      </a>
+      <a class="d03-col" href="/hot-tub-removal">
+        <span class="d03-col-top d03-mono"><span class="d03-col-num"><span>06</span><span class="d03-arw" aria-hidden="true"></span></span><span class="d03-price">$[LOW]–$[HIGH]</span></span>
+        <span class="d03-vert">Hot tub removal</span>
+        <span class="d03-col-foot"><span class="d03-col-desc">Drained, power checked off, cut and carried out in one visit.</span><span class="d03-slug d03-mono">/hot-tub-removal</span></span>
+      </a>
+      <a class="d03-col" href="/interior-demolition">
+        <span class="d03-col-top d03-mono"><span class="d03-col-num"><span>07</span><span class="d03-arw" aria-hidden="true"></span></span><span class="d03-price">$[LOW]–$[HIGH]</span></span>
+        <span class="d03-vert">Kitchen + bath tear-out</span>
+        <span class="d03-col-foot"><span class="d03-col-desc">Cabinets, counters, tile and fixtures out, ready for your contractor.</span><span class="d03-slug d03-mono">/interior-demolition</span></span>
+      </a>
+    </div>
+  </section>
+
+  <section class="d03-sec d03-band" id="d03-prices" aria-labelledby="d03-prices-h">
+    <div class="d03-sh">
+      <p class="d03-idx d03-mono">03 / Load gauge</p>
+      <div>
+        <h2 class="d03-h2" id="d03-prices-h">Priced by how much of the truck you fill</h2>
+        <p class="d03-sub">We look, point at the line on this chart, and write the number down. Loading, hauling, dump fees and the sweep-up are in it.</p>
+      </div>
+    </div>
+    <div class="d03-gauge">
+      <div class="d03-g">
+        <div class="d03-g-bar" aria-hidden="true"><span class="d03-g-fill" style="height: 8%;"></span></div>
+        <div class="d03-g-body"><span class="d03-mono">Single item</span><p class="d03-g-price">From $[PRICE]</p><p class="d03-g-vol">One couch, one fridge or one mattress set.</p></div>
+      </div>
+      <div class="d03-g">
+        <div class="d03-g-bar" aria-hidden="true"><span class="d03-g-fill" style="height: 25%;"></span></div>
+        <div class="d03-g-body"><span class="d03-mono">1/4 truck</span><p class="d03-g-price">$[LOW]–$[HIGH]</p><p class="d03-g-vol">About a pickup bed. A small room or a balcony.</p></div>
+      </div>
+      <div class="d03-g">
+        <div class="d03-g-bar" aria-hidden="true"><span class="d03-g-fill" style="height: 50%;"></span></div>
+        <div class="d03-g-body"><span class="d03-mono">1/2 truck</span><p class="d03-g-price">$[LOW]–$[HIGH]</p><p class="d03-g-vol">A one-car garage corner or a bedroom set.</p></div>
+      </div>
+      <div class="d03-g">
+        <div class="d03-g-bar" aria-hidden="true"><span class="d03-g-fill" style="height: 75%;"></span></div>
+        <div class="d03-g-body"><span class="d03-mono">3/4 truck</span><p class="d03-g-price">$[LOW]–$[HIGH]</p><p class="d03-g-vol">Most of a garage, or a remodel tear-out.</p></div>
+      </div>
+      <div class="d03-g">
+        <div class="d03-g-bar" aria-hidden="true"><span class="d03-g-fill" style="height: 100%;"></span></div>
+        <div class="d03-g-body"><span class="d03-mono">Full truck</span><p class="d03-g-price">$[LOW]–$[HIGH]</p><p class="d03-g-vol">About [CU YD] cubic yards. A full estate cleanout.</p></div>
+      </div>
+    </div>
+    <div class="d03-demo">
+      <div><span class="d03-mono">Light demolition, quoted on site</span><b>No charge to look</b></div>
+      <div><span class="d03-mono">Shed, up to 10x12</span><b>$[LOW]–$[HIGH]</b></div>
+      <div><span class="d03-mono">Fence, per 50 ft</span><b>$[LOW]–$[HIGH]</b></div>
+      <div><span class="d03-mono">Hot tub</span><b>$[LOW]–$[HIGH]</b></div>
+      <div><span class="d03-mono">Kitchen tear-out</span><b>$[LOW]–$[HIGH]</b></div>
+    </div>
+    <p class="d03-incl d03-mono"><span>Card, cash or Zelle</span><span>Price in writing before we lift</span><span>Pay when the space is empty</span></p>
+  </section>
+
+  <section class="d03-sort" aria-labelledby="d03-sort-h">
+    <h2 class="d03-sort-h" id="d03-sort-h">Donate. Recycle.<br>Dump last.</h2>
+    <img class="d03-sort-img" src="img/junk/09.jpg" alt="Flatbed truck stacked high with scrap metal, furniture and junk, heading down a street" width="1280" height="560" loading="lazy" style="object-fit: cover;">
+    <div class="d03-sort-cap d03-mono"><span>Fig. C / Every load gets sorted at the curb</span><span>04 / Where it goes</span></div>
+    <div class="d03-stats">
+      <div class="d03-stat"><p class="d03-stat-n">[%]</p><p>Donated. Furniture and appliances that still work go to [DONATION PARTNER] in Miami-Dade.</p></div>
+      <div class="d03-stat"><p class="d03-stat-n">[%]</p><p>Recycled. Metal, cardboard, concrete and clean wood go to licensed recyclers, not the landfill.</p></div>
+      <div class="d03-stat"><p class="d03-stat-n">[%]</p><p>Landfill. Only what nobody can use, at a county-permitted transfer station.</p></div>
+    </div>
+  </section>
+
+  <section class="d03-sec" aria-labelledby="d03-proof-h">
+    <div class="d03-sh">
+      <p class="d03-idx d03-mono">05 / On the record</p>
+      <h2 class="d03-h2" id="d03-proof-h">What Miami-Dade says on Google</h2>
+    </div>
+    <div class="d03-rate">
+      <p class="d03-big">[RATING]</p>
+      <div class="d03-rate-t">
+        <p>From [COUNT] Google reviews</p>
+        <span class="d03-mono">Newest review [DAYS] days ago</span>
+      </div>
+    </div>
+    <ol class="d03-clips">
+      <li class="d03-clip"><span class="d03-mono">R/01 Google</span><blockquote>&ldquo;[Google review, pulled at build time]&rdquo;</blockquote><span class="d03-mono">[Reviewer], [Town]</span></li>
+      <li class="d03-clip"><span class="d03-mono">R/02 Google</span><blockquote>&ldquo;[Google review, pulled at build time]&rdquo;</blockquote><span class="d03-mono">[Reviewer], [Town]</span></li>
+      <li class="d03-clip"><span class="d03-mono">R/03 Google</span><blockquote>&ldquo;[Google review, pulled at build time]&rdquo;</blockquote><span class="d03-mono">[Reviewer], [Town]</span></li>
+    </ol>
+    <a class="d03-tl d03-more" href="#">Read all [COUNT] reviews on Google<span class="d03-arw" aria-hidden="true"></span></a>
+  </section>
+
+  <section class="d03-sec" id="d03-areas" aria-labelledby="d03-areas-h">
+    <div class="d03-sh">
+      <p class="d03-idx d03-mono">06 / Route</p>
+      <div>
+        <h2 class="d03-h2" id="d03-areas-h">Trucks out across Miami-Dade every day</h2>
+        <p class="d03-sub">Each town has its own page with local dump rules, HOA notes and recent pickups.</p>
+      </div>
+    </div>
+    <div class="d03-route">
+      <figure class="d03-route-ph">
+        <img src="img/junk/06.jpg" alt="Pickup truck towing a caged trailer of yard equipment and junk on a highway" width="420" height="640" loading="lazy" style="object-fit: cover;">
+      </figure>
+      <ul class="d03-towns">
+        <li><a class="d03-town" href="/areas/miami-beach"><span class="d03-town-n">Miami Beach</span><span class="d03-town-s d03-mono">/areas/miami-beach<span class="d03-arw" aria-hidden="true"></span></span></a></li>
+        <li><a class="d03-town" href="/areas/coral-gables"><span class="d03-town-n">Coral Gables</span><span class="d03-town-s d03-mono">/areas/coral-gables<span class="d03-arw" aria-hidden="true"></span></span></a></li>
+        <li><a class="d03-town" href="/areas/hialeah"><span class="d03-town-n">Hialeah</span><span class="d03-town-s d03-mono">/areas/hialeah<span class="d03-arw" aria-hidden="true"></span></span></a></li>
+        <li><a class="d03-town" href="/areas/doral"><span class="d03-town-n">Doral</span><span class="d03-town-s d03-mono">/areas/doral<span class="d03-arw" aria-hidden="true"></span></span></a></li>
+        <li><a class="d03-town" href="/areas/kendall"><span class="d03-town-n">Kendall</span><span class="d03-town-s d03-mono">/areas/kendall<span class="d03-arw" aria-hidden="true"></span></span></a></li>
+        <li><a class="d03-town" href="/areas/north-miami"><span class="d03-town-n">North Miami</span><span class="d03-town-s d03-mono">/areas/north-miami<span class="d03-arw" aria-hidden="true"></span></span></a></li>
+        <li><a class="d03-town" href="/areas/south-miami"><span class="d03-town-n">South Miami</span><span class="d03-town-s d03-mono">/areas/south-miami<span class="d03-arw" aria-hidden="true"></span></span></a></li>
+        <li><a class="d03-town" href="/areas/key-biscayne"><span class="d03-town-n">Key Biscayne</span><span class="d03-town-s d03-mono">/areas/key-biscayne<span class="d03-arw" aria-hidden="true"></span></span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="d03-sec" id="d03-faq" aria-labelledby="d03-faq-h">
+    <div class="d03-sh">
+      <p class="d03-idx d03-mono">07 / Asked at the door</p>
+      <h2 class="d03-h2" id="d03-faq-h">Four questions we hear before every pickup</h2>
+    </div>
+    <div class="d03-faq">
+      <div class="d03-q">
+        <span class="d03-q-n d03-mono">Q/01 Cost</span>
+        <h3>How much does junk removal cost in Miami?</h3>
+        <p>Most pickups land between $[LOW] and $[HIGH]. Single items start at $[PRICE], and a full truck runs $[LOW]–$[HIGH]. Loading, hauling and dump fees are included, and you get the number in writing before we lift anything.</p>
+      </div>
+      <div class="d03-q">
+        <span class="d03-q-n d03-mono">Q/02 Timing</span>
+        <h3>Can you pick up junk today?</h3>
+        <p>Usually. Call (305) 555-0143 before [CUTOFF TIME] and we can be there the same afternoon in most of Miami-Dade. After that, we book a two-hour arrival window for the next morning.</p>
+      </div>
+      <div class="d03-q">
+        <span class="d03-q-n d03-mono">Q/03 Access</span>
+        <h3>Do I need to be home for the pickup?</h3>
+        <p>No. Leave it at the curb, in the driveway or in an open garage and text us a photo. We send a photo back when it is gone, and you pay by card over the phone.</p>
+      </div>
+      <div class="d03-q">
+        <span class="d03-q-n d03-mono">Q/04 Permits</span>
+        <h3>Do I need a permit to tear down a shed in Miami?</h3>
+        <p>Sometimes. Larger sheds and anything wired or plumbed often need a demolition permit from your city or Miami-Dade County. We check with the building department, pull the permit when it is needed, and put the fee in the quote.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="d03-call" id="d03-book" aria-labelledby="d03-call-h">
+    <p class="d03-scaf d03-scaf-b" aria-hidden="true">305</p>
+    <div class="d03-in">
+      <h2 class="d03-mono" id="d03-call-h" style="margin: 0; color: #c80000;">08 / Dispatch, call or text</h2>
+      <a class="d03-tel" href="tel:+13055550143">(305) 555-0143</a>
+      <div class="d03-call-row">
+        <a class="d03-pill d03-pill-solid d03-pill-lg" href="/book-a-pickup">Book a Pickup<span class="d03-arw" aria-hidden="true"></span></a>
+        <p>A person answers [HOURS]. Tell us what is going and where it is. We give you an arrival window and a price range on the call.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="d03-colo" aria-label="Business details">
+    <div>
+      <h2>Nothing Left Hauling &amp; Demo</h2>
+      <address class="d03-nap d03-mono">
+        <span>Service-area business</span>
+        <span>Miami, FL, all of Miami-Dade</span>
+        <a href="tel:+13055550143">(305) 555-0143</a>
+        <span>Hours [HOURS]</span>
+        <span>Lic. [LICENSE NO.]</span>
+        <span>Insured, [YEARS] years hauling</span>
+      </address>
+    </div>
+    <div>
+      <h2>Services</h2>
+      <ul class="d03-mono">
+        <li><a href="/junk-removal">/junk-removal</a></li>
+        <li><a href="/furniture-appliance-removal">/furniture-appliance-removal</a></li>
+        <li><a href="/cleanouts">/cleanouts</a></li>
+        <li><a href="/construction-debris-removal">/construction-debris-removal</a></li>
+        <li><a href="/shed-fence-demolition">/shed-fence-demolition</a></li>
+        <li><a href="/hot-tub-removal">/hot-tub-removal</a></li>
+        <li><a href="/interior-demolition">/interior-demolition</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Areas</h2>
+      <ul class="d03-mono">
+        <li><a href="/areas/miami-beach">/areas/miami-beach</a></li>
+        <li><a href="/areas/coral-gables">/areas/coral-gables</a></li>
+        <li><a href="/areas/hialeah">/areas/hialeah</a></li>
+        <li><a href="/areas/doral">/areas/doral</a></li>
+        <li><a href="/areas/kendall">/areas/kendall</a></li>
+        <li><a href="/areas/north-miami">/areas/north-miami</a></li>
+        <li><a href="/areas/south-miami">/areas/south-miami</a></li>
+        <li><a href="/areas/key-biscayne">/areas/key-biscayne</a></li>
+      </ul>
+    </div>
+  </footer>
+  <p class="d03-fine d03-mono" style="margin: 0;">Avenue Vision · D03 · Brutalist Broadside · style refs withheld</p>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":8000}}'>class Component extends DCLogic { renderVals() { return {}; } }</script>
+</body>
+</html>

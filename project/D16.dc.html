@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Palafox Concrete &amp; Paving, Pensacola</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.d16{--concrete:#d9d8d4;--iron:#1f1f1f;--yellow:#ffc414;--orange:#ff5b1f;--pink:#f49ac5;--green:#0b7a46;--blue:#2440ff;--white:#ffffff;--grot:'Archivo','Arial Narrow',Arial,sans-serif;--poster:'Anton',Impact,'Arial Narrow',sans-serif;container-type:inline-size;background:var(--concrete);color:var(--iron);font-family:var(--grot);font-size:16px;line-height:1.3;overflow-x:clip}
+.d16 *{box-sizing:border-box}
+:where(.d16) a{color:inherit}
+.d16 a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+:where(.d16) p{margin:0}
+.d16-tex{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+
+/* header */
+.d16-top{position:relative;z-index:3;display:flex;align-items:center;gap:20px;padding:20px 20px 0}
+.d16-mark{display:block;text-decoration:none;line-height:1}
+.d16-mark b{display:block;font-stretch:75%;font-weight:800;font-size:30px;letter-spacing:-0.03em;text-transform:uppercase}
+.d16-mark span{display:block;margin-top:3px;font-size:13px;letter-spacing:-0.01em}
+.d16-top-pair{margin-left:auto;display:flex;align-items:center;gap:12px;font-size:18px;letter-spacing:-0.03em}
+.d16-tel{display:inline-flex;align-items:center;min-height:44px;font-weight:600;text-decoration:none;border-bottom:2px solid var(--iron)}
+.d16-pill{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 22px;border-radius:100px;background:var(--iron);color:var(--concrete);font-family:var(--grot);font-size:16px;letter-spacing:-0.02em;text-decoration:none;white-space:nowrap}
+.d16-pill:hover{background:var(--blue);color:var(--white)}
+.d16-menu{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:var(--iron);flex:none}
+.d16-menu:hover{background:var(--blue)}
+
+/* hero */
+.d16-hero{position:relative;padding:0 0 28px;overflow:hidden}
+.d16-h1{position:relative;z-index:2;margin:18px 0 0;padding:0 20px;font-family:var(--grot);font-weight:400;font-stretch:85%;font-size:18.6cqw;line-height:.78;letter-spacing:-0.06em}
+.d16-h1 span{display:block;white-space:nowrap}
+.d16-h1-r{text-align:right;margin-right:-.01em}
+.d16-h1-l{position:relative;margin-left:-.05em;width:max-content}
+.d16-dim{position:absolute;left:.06em;right:0;top:100%;margin-top:.07em;height:auto;width:calc(100% - .06em);display:block;letter-spacing:0;font-stretch:100%}
+.d16-sticker{position:absolute;z-index:3;right:5.5%;top:46%;width:190px;height:190px;border-radius:50%;background:var(--blue);color:var(--white);display:block;text-decoration:none;transform:rotate(-14deg)}
+.d16-sticker:hover{background:var(--iron)}
+.d16-sticker svg{display:block;width:100%;height:100%}
+.d16-hero-foot{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:40px;align-items:end;padding:88px 20px 0}
+.d16-legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;letter-spacing:-0.01em;align-self:end}
+.d16-legend span{display:inline-flex;align-items:center;gap:7px}
+.d16-legend i{display:inline-block;width:10px;height:10px;border-radius:50%}
+.d16-note{display:flex;flex-direction:column;gap:12px}
+.d16-note-h{font-size:22px;line-height:1.08;letter-spacing:-0.03em;font-weight:500}
+.d16-note p.d16-note-b{font-size:17px;line-height:1.25;letter-spacing:-0.02em}
+.d16-pair{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:19px;letter-spacing:-0.03em}
+
+/* pours: 4 paint blocks */
+.d16-pours{padding:0 20px 40px;border-top:1px solid var(--iron)}
+.d16-sechead{display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:40px;align-items:end;padding:22px 0 26px}
+.d16-h2{margin:0;font-family:var(--grot);font-weight:400;font-stretch:85%;font-size:64px;line-height:.82;letter-spacing:-0.045em}
+.d16-h2 small{display:block;font-size:15px;letter-spacing:-0.01em;line-height:1.2;margin-bottom:12px;font-stretch:100%}
+.d16-sechead p{font-size:17px;line-height:1.25;letter-spacing:-0.02em}
+.d16-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.d16-card{position:relative;background:var(--paint);color:var(--ink,var(--iron));padding:20px 20px 22px;display:flex;flex-direction:column;gap:8px;min-height:100%}
+.d16-card img{display:block;width:100%;height:auto;aspect-ratio:1 / 1.08;object-fit:cover;margin-bottom:14px}
+.d16-card h3{margin:0;display:flex;align-items:center;gap:10px;font-weight:400;font-stretch:85%;font-size:30px;line-height:1;letter-spacing:-0.04em}
+.d16-card h3 a{text-decoration:none}
+.d16-card h3 a::after{content:"";position:absolute;inset:0}
+.d16-card h3 i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--ink,var(--iron));flex:none;transform:translateY(2px)}
+.d16-card-slug{font-size:14px;letter-spacing:-0.01em;text-decoration:underline;text-underline-offset:3px}
+.d16-card-price{font-size:17px;line-height:1.2;letter-spacing:-0.02em;margin-top:auto;padding-top:10px;border-top:1px solid var(--ink,var(--iron))}
+.d16-card:hover h3 a{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+
+/* SICK band */
+.d16-band{position:relative;display:grid;grid-template-columns:150px minmax(0,1fr);background:var(--blue);color:var(--yellow);border-top:2px solid var(--yellow);border-bottom:2px solid var(--yellow);overflow:hidden}
+.d16-vert{position:relative;border-right:2px solid var(--yellow);overflow:hidden}
+.d16-vert span{position:absolute;left:50%;top:0;transform-origin:0 0;transform:rotate(90deg) translate(0,-50%);white-space:nowrap;font-family:var(--poster);font-size:120px;line-height:1;letter-spacing:.01em;text-transform:uppercase}
+.d16-marquee{border-bottom:2px solid var(--yellow);overflow:hidden;white-space:nowrap;font-family:var(--grot);font-style:italic;font-weight:200;font-stretch:62%;font-size:112px;line-height:1.02;letter-spacing:-0.02em;text-transform:uppercase}
+.d16-marquee span{display:inline-block;padding-left:12px;animation:d16-slide 38s linear infinite}
+@keyframes d16-slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.d16-band-grid{display:grid;grid-template-columns:38% minmax(0,1fr)}
+.d16-band-a{border-right:2px solid var(--yellow);display:flex;flex-direction:column}
+.d16-blob{display:flex;align-items:center;justify-content:center;padding:34px 20px;border-bottom:2px solid var(--yellow)}
+.d16-blob svg{width:250px;height:auto;display:block}
+.d16-band-text{padding:32px 36px 40px;display:flex;flex-direction:column;gap:16px}
+.d16-band-text h2{margin:0;font-family:var(--grot);font-weight:500;font-stretch:85%;font-size:34px;line-height:.95;letter-spacing:-0.04em;color:var(--yellow)}
+.d16-band-text p{color:var(--white);font-size:17px;line-height:1.4;letter-spacing:-0.015em;max-width:420px}
+.d16-more{list-style:none;margin:0;padding:18px 0 22px 34px}
+.d16-more li + li{border-top:2px solid var(--yellow)}
+.d16-more a{display:grid;grid-template-columns:auto minmax(210px,1fr);align-items:end;gap:6px 24px;padding:14px 20px 12px 0;text-decoration:none}
+.d16-more-n{font-family:var(--poster);font-size:124px;line-height:.74;text-transform:uppercase;letter-spacing:.005em;padding-top:10px}
+.d16-more-m{display:flex;flex-direction:column;gap:4px;padding-bottom:6px;color:var(--white);font-size:16px;line-height:1.25;letter-spacing:-0.015em}
+.d16-more-m b{font-weight:700;color:var(--yellow);font-size:22px;letter-spacing:-0.03em}
+.d16-more-m u{text-underline-offset:3px}
+.d16-more a:hover .d16-more-n{color:var(--white)}
+
+/* proof */
+.d16-proof{background:var(--orange);color:var(--iron);padding:0 20px 46px;overflow:hidden}
+.d16-proof-big{margin:0 0 .17em -.15em;font-family:var(--grot);font-weight:400;font-stretch:85%;font-size:calc((100cqw + 30px) / 3.32);line-height:.76;letter-spacing:-0.06em;white-space:nowrap;padding-top:.08em}
+.d16-proof-grid{display:grid;grid-template-columns:420px minmax(0,1fr);gap:40px;margin-top:26px;border-top:1px solid var(--iron);padding-top:20px}
+.d16-proof-grid h2{margin:0;font-weight:400;font-stretch:85%;font-size:40px;line-height:.9;letter-spacing:-0.045em}
+.d16-proof-grid h2 + p{margin-top:14px;font-size:17px;letter-spacing:-0.02em}
+.d16-quotes{list-style:none;margin:0;padding:0}
+.d16-quotes li{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:24px;align-items:baseline;padding:14px 0 16px;border-bottom:1px solid var(--iron)}
+.d16-quotes li:first-child{padding-top:0}
+.d16-quotes blockquote{margin:0;font-stretch:85%;font-size:30px;line-height:1;letter-spacing:-0.04em}
+.d16-quotes cite{font-style:normal;font-size:15px;letter-spacing:-0.01em;text-align:right}
+
+/* towns */
+.d16-towns{background:var(--pink);padding:0 20px 46px}
+.d16-towns .d16-sechead{border-bottom:1px solid var(--iron)}
+.d16-wall{margin:22px 0 0;font-weight:400;font-stretch:85%;font-size:7.6cqw;line-height:1.08;letter-spacing:-0.055em}
+.d16-wall a{position:relative;text-decoration:none;white-space:nowrap}
+.d16-wall a:hover{text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:8px}
+.d16-wall sup{position:absolute;left:.06em;top:.02em;font-size:13px;line-height:1;letter-spacing:-0.01em;font-stretch:100%;white-space:nowrap}
+
+/* faq */
+.d16-faq{position:relative;padding:0 20px 50px;overflow:hidden}
+.d16-faq .d16-sechead{position:relative;border-bottom:1px solid var(--iron)}
+.d16-q{position:relative;display:grid;grid-template-columns:60px minmax(0,1fr) minmax(0,1fr);gap:0 32px;padding:24px 0 26px;border-bottom:1px solid var(--iron)}
+.d16-q-n{font-size:15px;letter-spacing:-0.01em;padding-top:4px}
+.d16-q h3{margin:0;font-weight:400;font-stretch:85%;font-size:40px;line-height:.9;letter-spacing:-0.045em}
+.d16-q p{font-size:18px;line-height:1.35;letter-spacing:-0.02em;max-width:540px}
+
+/* close */
+.d16-close{background:var(--yellow);color:var(--iron);padding:26px 20px 24px;overflow:hidden}
+.d16-close-pair{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:22px;letter-spacing:-0.03em}
+.d16-close-pair .d16-pair{font-size:22px}
+.d16-phone{display:block;margin:18px 0 0 -.01em;font-family:var(--poster);font-size:calc((100cqw - 40px) / 5.3);line-height:.76;letter-spacing:0;text-decoration:none;white-space:nowrap;padding-top:.04em}
+.d16-phone:hover{color:var(--blue)}
+.d16-nap{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));margin-top:30px;border-top:1px solid var(--iron);border-bottom:1px solid var(--iron)}
+.d16-nap div{padding:12px 14px 14px 0;font-size:15px;line-height:1.3;letter-spacing:-0.01em}
+.d16-nap div + div{padding-left:14px;border-left:1px solid var(--iron)}
+.d16-nap b{display:block;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.02em;margin-bottom:4px}
+.d16-nap a{display:inline-flex;align-items:center;min-height:44px;font-weight:600}
+.d16-credit{margin-top:26px;font-size:13px;color:#4d3f0b;letter-spacing:-0.01em}
+
+@media (max-width:900px){
+  .d16-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .d16-hero-foot,.d16-sechead,.d16-proof-grid{grid-template-columns:1fr}
+  .d16-band-grid{grid-template-columns:1fr}
+  .d16-band-a{border-right:0;border-bottom:2px solid var(--yellow)}
+  .d16-q{grid-template-columns:50px minmax(0,1fr);gap:12px 20px}
+  .d16-q p{grid-column:2}
+  .d16-nap{grid-template-columns:1fr 1fr}
+  .d16-nap div + div{border-left:0;padding-left:0}
+  .d16-nap div{border-bottom:1px solid var(--iron);padding-left:0}
+}
+@media (max-width:600px){
+  .d16-top{padding:14px 16px 0;gap:10px}
+  .d16-mark b{font-size:24px}
+  .d16-top-pair span,.d16-top-pair .d16-pill{display:none}
+  .d16-top-pair{font-size:16px}
+  .d16-h1{font-size:23.5cqw;padding:0 16px;margin-top:26px;line-height:.8}
+  .d16-sticker{position:relative;right:auto;top:auto;width:132px;height:132px;margin:44px 16px 6px auto}
+  .d16-hero-foot{padding:0 16px 0;gap:26px}
+  .d16-legend{order:2}
+  .d16-pours,.d16-towns,.d16-faq,.d16-proof,.d16-close{padding-left:16px;padding-right:16px}
+  .d16-h2{font-size:48px}
+  .d16-cards{grid-template-columns:1fr}
+  .d16-band{grid-template-columns:64px minmax(0,1fr)}
+  .d16-vert span{font-size:54px}
+  .d16-marquee{font-size:64px}
+  .d16-more{padding:10px 0 14px 18px}
+  .d16-more a{grid-template-columns:1fr;padding-right:12px}
+  .d16-more-n{font-size:88px}
+  .d16-band-text{padding:24px 18px 30px}
+  .d16-blob svg{width:190px}
+  .d16-proof-big{font-size:calc((100cqw + 12px) / 3.32)}
+  .d16-quotes li{grid-template-columns:1fr;gap:6px}
+  .d16-quotes cite{text-align:left}
+  .d16-quotes blockquote{font-size:26px}
+  .d16-wall{font-size:13.5cqw;line-height:.95}
+  .d16-wall a{white-space:normal}
+  .d16-wall sup{display:none}
+  .d16-q{grid-template-columns:1fr}
+  .d16-q p{grid-column:1}
+  .d16-q h3{font-size:32px}
+  .d16-phone{font-size:calc((100cqw - 32px) / 5.3)}
+  .d16-nap{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){.d16-marquee span{animation:none}}
+</style>
+</helmet>
+<div class="d16">
+
+  <section class="d16-hero" aria-label="Hero">
+    <svg class="d16-tex" aria-hidden="true" preserveAspectRatio="none">
+      <filter id="d16-speck" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="7"></feTurbulence><feColorMatrix values="0 0 0 0 .12  0 0 0 0 .12  0 0 0 0 .11  1.6 0 0 0 -.78"></feColorMatrix></filter>
+      <filter id="d16-mottle" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".006 .012" numOctaves="3" seed="3"></feTurbulence><feColorMatrix values="0 0 0 0 .35  0 0 0 0 .34  0 0 0 0 .32  .9 0 0 0 -.38"></feColorMatrix></filter>
+      <rect width="100%" height="100%" filter="url(#d16-mottle)" opacity=".55"></rect>
+      <rect width="100%" height="100%" filter="url(#d16-speck)" opacity=".45"></rect>
+      <g stroke-width="1">
+        <line x1="25%" y1="0" x2="25%" y2="100%" stroke="#1f1f1f" stroke-opacity=".28"></line>
+        <line x1="50%" y1="0" x2="50%" y2="100%" stroke="#1f1f1f" stroke-opacity=".28"></line>
+        <line x1="75%" y1="0" x2="75%" y2="100%" stroke="#1f1f1f" stroke-opacity=".28"></line>
+        <line x1="0" y1="62%" x2="100%" y2="62%" stroke="#1f1f1f" stroke-opacity=".28"></line>
+        <line x1="25.1%" y1="0" x2="25.1%" y2="100%" stroke="#ffffff" stroke-opacity=".5"></line>
+        <line x1="50.1%" y1="0" x2="50.1%" y2="100%" stroke="#ffffff" stroke-opacity=".5"></line>
+        <line x1="75.1%" y1="0" x2="75.1%" y2="100%" stroke="#ffffff" stroke-opacity=".5"></line>
+      </g>
+    </svg>
+    <header class="d16-top">
+      <a class="d16-mark" href="/" aria-label="Palafox Concrete and Paving, home"><b>Palafox</b><span>Concrete &amp; Paving · Pensacola</span></a>
+      <div class="d16-top-pair"><span>Driveway cracked?</span><a class="d16-tel" href="tel:+18505550156">(850) 555-0156</a><a class="d16-pill" href="/estimate">Get My Price</a></div>
+      <a class="d16-menu" href="#d16-services" aria-label="Jump to services"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true"><path d="M0 1h22M0 7h22M0 13h22" stroke="#d9d8d4" stroke-width="1.6"></path></svg></a>
+    </header>
+    <h1 class="d16-h1"><span class="d16-h1-r">Concrete &amp;</span><span class="d16-h1-r">paving in</span><span class="d16-h1-l">Pensacola<svg class="d16-dim" viewBox="0 0 900 70" aria-hidden="true"><defs><filter id="d16-spray" x="-5%" y="-40%" width="110%" height="180%"><feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="2" seed="11" result="n"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="5"></feDisplacementMap><feGaussianBlur stdDeviation=".7"></feGaussianBlur></filter></defs><g filter="url(#d16-spray)" fill="none" stroke="#ff5b1f" stroke-width="7" stroke-linecap="round"><path d="M6 12V58M894 12V58"></path><path d="M10 35H296M604 35H890"></path><path d="M10 35l30-16M10 35l30 16M890 35l-30-16M890 35l-30 16"></path></g><text x="450" y="52" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="46" fill="#ff5b1f" filter="url(#d16-spray)">24'-0" DRIVE</text></svg></span></h1>
+    <a class="d16-sticker" href="tel:+18505550156" aria-label="Call the yard, (850) 555-0156">
+      <svg viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="d16-ring" d="M100 100m-74 0a74 74 0 1 1 148 0a74 74 0 1 1-148 0"></path></defs>
+        <circle cx="100" cy="100" r="92" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="2 7"></circle>
+        <text font-family="Archivo, sans-serif" font-size="17" font-weight="600" fill="#ffffff"><textPath href="#d16-ring" textLength="462" lengthAdjust="spacing">CALL THE YARD · CALL THE YARD · CALL THE YARD · </textPath></text>
+        <text x="100" y="94" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="30" fill="#ffc414">(850)</text>
+        <text x="100" y="128" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="30" fill="#ffc414">555-0156</text>
+      </svg>
+    </a>
+    <div class="d16-hero-foot">
+      <div class="d16-legend" aria-label="Paint key used on this page">
+        <span><i style="background:#ffc414"></i>Yellow · gas</span>
+        <span><i style="background:#ff5b1f"></i>Orange · comms</span>
+        <span><i style="background:#f49ac5"></i>Pink · survey</span>
+        <span><i style="background:#0b7a46"></i>Green · sewer</span>
+        <span><i style="background:#2440ff"></i>Blue · water</span>
+        <span>Locate paint before every pour. Call 811 before you dig.</span>
+      </div>
+      <div class="d16-note">
+        <p class="d16-note-h">Driveways, slabs and footings, formed, poured and saw-cut by one crew.</p>
+        <p class="d16-note-b">Flatwork across Escambia and Santa Rosa County for [YEARS] years. [RATING] from [COUNT] Google reviews. Newest review [DAYS] days ago.</p>
+        <p class="d16-pair"><span>Need a slab?</span><a class="d16-pill" href="/estimate">Get My Price</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="d16-pours" id="d16-services" aria-labelledby="d16-pours-h">
+    <div class="d16-sechead">
+      <h2 class="d16-h2" id="d16-pours-h"><small>01–04</small>What we pour most</h2>
+      <p>Each service has its own page and its own paint color. Prices are per square foot with tear-out, rebar and saw-cut joints included. Your number is written down before the forms go in.</p>
+    </div>
+    <div class="d16-cards">
+      <article class="d16-card" style="--paint:#ffc414">
+        <img src="img/conc/09.jpg" alt="Concrete pouring from a chute onto a rebar grid" width="1000" height="1500" loading="lazy" style="object-position:50% 40%">
+        <h3><a href="/concrete-driveways">Driveways</a><i></i></h3>
+        <span class="d16-card-slug">/concrete-driveways</span>
+        <p class="d16-card-price">$[LOW]–$[HIGH] per sq ft, broom finish, 4-inch slab</p>
+      </article>
+      <article class="d16-card" style="--paint:#0b7a46;--ink:#ffffff">
+        <img src="img/conc/03.jpg" alt="Worker in a hard hat tying a rebar mat before a slab pour" width="1600" height="982" loading="lazy" style="object-position:62% 50%">
+        <h3><a href="/concrete-slabs">House &amp; shop slabs</a><i></i></h3>
+        <span class="d16-card-slug">/concrete-slabs</span>
+        <p class="d16-card-price">From $[PRICE] per sq ft, vapor barrier and rebar mat</p>
+      </article>
+      <article class="d16-card" style="--paint:#f49ac5">
+        <img src="img/conc/05.jpg" alt="Fresh concrete being spread by shovel along a trench footing" width="1000" height="1497" loading="lazy" style="object-position:50% 60%">
+        <h3><a href="/footings-sidewalks">Footings &amp; walks</a><i></i></h3>
+        <span class="d16-card-slug">/footings-sidewalks</span>
+        <p class="d16-card-price">$[LOW]–$[HIGH] per linear ft, dug, formed and poured</p>
+      </article>
+      <article class="d16-card" style="--paint:#ff5b1f">
+        <img src="img/conc/07.jpg" alt="Crew in orange vests setting rebar across a large foundation pad" width="1600" height="1201" loading="lazy" style="object-position:40% 70%">
+        <h3><a href="/commercial-pads">Lots &amp; pads</a><i></i></h3>
+        <span class="d16-card-slug">/commercial-pads</span>
+        <p class="d16-card-price">Bid per job, from $[PRICE] per sq ft for 6-inch pads</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="d16-band" aria-labelledby="d16-more-h">
+    <div class="d16-vert" aria-hidden="true"><span>Pour · Finish · Saw-cut · Cure · Seal · Pour · Finish · Saw-cut · Cure · Seal ·</span></div>
+    <div>
+      <div class="d16-marquee" aria-hidden="true"><span>Patios + Stamped + Asphalt + Repair + Patios + Stamped + Asphalt + Repair + Patios + Stamped + Asphalt + Repair + Patios + Stamped + Asphalt + Repair +</span></div>
+      <div class="d16-band-grid">
+        <div class="d16-band-a">
+          <div class="d16-blob" aria-hidden="true">
+            <svg viewBox="0 0 260 220">
+              <path d="M70 30c14-22 46-18 56 2 14-18 46-14 52 8 22-6 44 12 38 34 22 8 26 38 6 50 14 18 2 46-22 46-2 24-32 34-50 20-14 20-46 18-56-4-20 12-48 0-48-24-24-2-36-30-20-48-18-14-12-44 12-48-4-24 18-42 32-36z" fill="#ffc414"></path>
+              <text x="130" y="62" text-anchor="middle" font-family="Archivo, sans-serif" font-size="14" font-weight="700" fill="#2440ff" letter-spacing="1">HAND-FLOATED</text>
+              <g fill="none" stroke="#2440ff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M52 146l124-40 12 22-124 40z"></path>
+                <path d="M104 132l6-30q2-8 10-10l34-10q8-2 9 6l-2 32"></path>
+                <path d="M120 96l38-12"></path>
+                <path d="M46 176c20-6 30 4 50-2s30-12 50-6 30 6 50-2" stroke-width="3"></path>
+              </g>
+            </svg>
+          </div>
+          <div class="d16-band-text">
+            <h2 id="d16-more-h">Four more jobs, same crew, same yard.</h2>
+            <p>The crew that forms your driveway also stamps patios, lays asphalt and fixes the slab that sank. One number to call, one name on the permit, one warranty of [WARRANTY] years on workmanship.</p>
+            <p class="d16-pair"><a class="d16-pill" href="/estimate" style="background:#ffc414;color:#1f1f1f">Get My Price</a></p>
+          </div>
+        </div>
+        <ul class="d16-more">
+          <li><a href="/patios-pool-decks"><span class="d16-more-n">Patios</span><span class="d16-more-m"><b>&amp; pool decks</b><u>/patios-pool-decks</u>From $[PRICE] per sq ft</span></a></li>
+          <li><a href="/stamped-concrete"><span class="d16-more-n">Stamped</span><span class="d16-more-m"><b>&amp; decorative</b><u>/stamped-concrete</u>$[LOW]–$[HIGH] per sq ft</span></a></li>
+          <li><a href="/asphalt-paving"><span class="d16-more-n">Asphalt</span><span class="d16-more-m"><b>paving &amp; sealcoat</b><u>/asphalt-paving</u>From $[PRICE] per sq ft</span></a></li>
+          <li><a href="/concrete-repair"><span class="d16-more-n">Repair</span><span class="d16-more-m"><b>cracks, lifting &amp; leveling</b><u>/concrete-repair</u>From $[PRICE] per visit</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="d16-proof" aria-labelledby="d16-proof-h">
+    <p class="d16-proof-big" aria-hidden="true">[RATING]</p>
+    <div class="d16-proof-grid">
+      <div>
+        <h2 id="d16-proof-h">[RATING] from [COUNT] Google reviews</h2>
+        <p>Newest review [DAYS] days ago. Pulled straight from Google at build time.</p>
+      </div>
+      <ol class="d16-quotes">
+        <li><blockquote>[Google review, pulled at build time]</blockquote><cite>[Reviewer], [Town]</cite></li>
+        <li><blockquote>[Google review, pulled at build time]</blockquote><cite>[Reviewer], [Town]</cite></li>
+        <li><blockquote>[Google review, pulled at build time]</blockquote><cite>[Reviewer], [Town]</cite></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="d16-towns" aria-labelledby="d16-towns-h">
+    <div class="d16-sechead">
+      <h2 class="d16-h2" id="d16-towns-h"><small>Service area</small>Where we pour</h2>
+      <p>Ten towns, one yard. Each town has its own page with the pours we have done nearby and the permit office that handles it.</p>
+    </div>
+    <p class="d16-wall"><a href="/areas/pensacola">Pensacola<sup>/areas/pensacola</sup></a>, <a href="/areas/gulf-breeze">Gulf Breeze<sup>/areas/gulf-breeze</sup></a>, <a href="/areas/pace">Pace<sup>/areas/pace</sup></a>, <a href="/areas/milton">Milton<sup>/areas/milton</sup></a>, <a href="/areas/navarre">Navarre<sup>/areas/navarre</sup></a>, <a href="/areas/cantonment">Cantonment<sup>/areas/cantonment</sup></a>, <a href="/areas/perdido-key">Perdido Key<sup>/areas/perdido-key</sup></a>, <a href="/areas/warrington">Warrington<sup>/areas/warrington</sup></a>, <a href="/areas/ferry-pass">Ferry Pass<sup>/areas/ferry-pass</sup></a> and <a href="/areas/molino">Molino<sup>/areas/molino</sup></a>.</p>
+  </section>
+
+  <section class="d16-faq" aria-labelledby="d16-faq-h">
+    <svg class="d16-tex" aria-hidden="true" preserveAspectRatio="none">
+      <rect width="100%" height="100%" filter="url(#d16-mottle)" opacity=".45"></rect>
+      <rect width="100%" height="100%" filter="url(#d16-speck)" opacity=".4"></rect>
+      <line x1="50%" y1="0" x2="50%" y2="100%" stroke="#1f1f1f" stroke-opacity=".22"></line>
+      <line x1="50.1%" y1="0" x2="50.1%" y2="100%" stroke="#ffffff" stroke-opacity=".5"></line>
+    </svg>
+    <div class="d16-sechead">
+      <h2 class="d16-h2" id="d16-faq-h"><small>Before you pour</small>Questions we get at the curb</h2>
+      <p>Straight answers for Pensacola heat, sand and hurricane rain.</p>
+    </div>
+    <div class="d16-q">
+      <span class="d16-q-n">Q1</span>
+      <h3>How much does a concrete driveway cost in Pensacola?</h3>
+      <p>Most 4-inch broom-finish driveways we pour run $[LOW]–$[HIGH] per square foot with tear-out. Rebar or fiber, and saw-cut joints every 10 feet or less, are in that price, not extras.</p>
+    </div>
+    <div class="d16-q">
+      <span class="d16-q-n">Q2</span>
+      <h3>How long before I can drive on new concrete?</h3>
+      <p>Walk on it after 24 hours. Park a car on it after 7 days. Wait 28 days for a loaded truck or a boat trailer. In summer we wet-cure or spray a curing compound the same afternoon so it does not crack early.</p>
+    </div>
+    <div class="d16-q">
+      <span class="d16-q-n">Q3</span>
+      <h3>Do I need a permit for a driveway in Escambia County?</h3>
+      <p>Usually, when the drive meets the county right-of-way or you widen the curb cut. Inside Pensacola city limits the city handles it. We pull the permit and book the inspection, and the fee is its own line on your quote.</p>
+    </div>
+    <div class="d16-q">
+      <span class="d16-q-n">Q4</span>
+      <h3>Concrete or pavers for a pool deck in Florida?</h3>
+      <p>Concrete costs less up front and has no joints for weeds or ants. Pavers cost more but lift out for repairs. For pool decks we pour with a textured cool-deck or stamped finish so it stays walkable barefoot in August.</p>
+    </div>
+  </section>
+
+  <footer class="d16-close" aria-label="Contact">
+    <div class="d16-close-pair">
+      <span>Ready to pour? Call the yard or send the address.</span>
+      <p class="d16-pair"><span>Want a number first?</span><a class="d16-pill" href="/estimate">Get My Price</a></p>
+    </div>
+    <a class="d16-phone" href="tel:+18505550156" aria-label="Call (850) 555-0156">850 555 0156</a>
+    <div class="d16-nap">
+      <div><b>Business</b>Palafox Concrete &amp; Paving</div>
+      <div><b>Address</b>Service-area business · Pensacola, FL · [STREET ADDRESS]</div>
+      <div><b>Phone</b><a href="tel:+18505550156">(850) 555-0156</a></div>
+      <div><b>Hours</b>[HOURS]</div>
+      <div><b>License</b>FL [LICENSE NO.] · ACI [CERTIFICATION] · Owner [OWNER NAME]</div>
+    </div>
+    <p class="d16-credit">Avenue Vision · D16 · Building-Scale Type · style refs withheld</p>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":4700}}'>class Component extends DCLogic { renderVals() { return {}; } }</script>
+</body>
+</html>

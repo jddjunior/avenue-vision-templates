@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Orla Pools · Naples</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;1,200&amp;family=Inter:wght@200;300;400&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.d05{--linen:#e8e0d6;--cream:#f3eee8;--sand:#d8ccbf;--ink:#3b3836;--mortar:#5a5551;--dust:#9b918a;--hair:rgba(59,56,54,.28);background:var(--linen);color:var(--ink);font-family:Inter,'Helvetica Neue',Arial,sans-serif;font-weight:300;font-size:15px;line-height:1.6;letter-spacing:.02em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.d05 *{box-sizing:border-box}
+.d05 a{color:inherit}
+.d05-serif{font-family:Spectral,Georgia,serif;font-weight:200;letter-spacing:0}
+.d05-label{font-family:Inter,Arial,sans-serif;font-weight:400;font-size:11px;line-height:1.35;letter-spacing:.15em;text-transform:uppercase;color:var(--mortar)}
+.d05-wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+.d05-link{display:inline-flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;font-weight:300;font-size:15px;letter-spacing:.04em}
+.d05-link span{border-bottom:1px solid currentColor;padding-bottom:2px}
+.d05-link:hover span,.d05-link:focus-visible span{border-bottom-width:2px}
+.d05-link:focus-visible,.d05-row:focus-visible,.d05-town:focus-visible,.d05-nav a:focus-visible{outline:1px solid var(--ink);outline-offset:4px}
+.d05-arrow{width:14px;height:14px;flex:none}
+
+/* announcement + masthead */
+.d05-bar{background:var(--cream);text-align:center;font-size:12px;letter-spacing:.06em;color:var(--mortar)}
+.d05-bar a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:var(--ink)}
+.d05-bar a span{border-bottom:1px solid var(--hair)}
+.d05-mast{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:6px 40px;border-bottom:1px solid var(--hair)}
+.d05-nav{display:flex;gap:34px;font-size:14px;letter-spacing:.05em}
+.d05-nav a{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;min-width:44px;text-decoration:none}
+.d05-nav-r{justify-content:flex-end}
+.d05-mark{text-align:center;text-decoration:none;display:block;padding:8px 0}
+.d05-mark b{display:block;font-weight:200;font-size:23px;letter-spacing:.46em;margin-right:-.46em;line-height:1.1}
+.d05-mark i{display:block;font-style:normal;font-weight:400;font-size:9px;letter-spacing:.32em;margin-right:-.32em;color:var(--mortar);margin-top:6px}
+.d05-only-m{display:none}
+
+/* hero */
+.d05-hero{position:relative;margin:0;height:620px;overflow:hidden;background:#3f4a55}
+.d05-hero img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 60%;transform:scaleX(-1);filter:brightness(.72) saturate(.78) sepia(.08)}
+.d05-chip{position:absolute;background:var(--cream);color:var(--ink);padding:16px 20px 15px;max-width:300px}
+.d05-chip .d05-label{color:var(--ink)}
+.d05-chip p{margin:6px 0 0;font-size:13px;line-height:1.45;color:var(--mortar)}
+.d05-hero .d05-chip{top:32px;left:40px}
+.d05-hero-foot{position:absolute;left:40px;bottom:44px;display:flex;flex-direction:column;align-items:flex-start;gap:18px;color:#fff;max-width:640px}
+.d05-h1{margin:0;font-family:Spectral,Georgia,serif;font-weight:200;font-size:46px;line-height:1.16;letter-spacing:-.005em;max-width:600px;color:#fff}
+.d05-hero .d05-link{color:#fff;font-size:17px}
+
+/* statement */
+.d05-statement{text-align:center;padding:96px 40px 92px}
+.d05-statement p.d05-big{font-family:Spectral,Georgia,serif;font-weight:200;font-size:30px;line-height:2;max-width:900px;margin:22px auto 0}
+.d05-facts{display:flex;justify-content:center;flex-wrap:wrap;margin:38px auto 0;max-width:1100px}
+.d05-facts span{padding:4px 26px;border-left:1px solid var(--hair);white-space:nowrap}
+.d05-facts span:first-child{border-left:0}
+.d05-statement .d05-link{margin-top:30px}
+
+/* collection */
+.d05-sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;border-top:1px solid var(--hair);padding-top:22px;margin-bottom:44px}
+.d05-h2{font-family:Spectral,Georgia,serif;font-weight:200;font-size:36px;line-height:1.2;margin:14px 0 0;letter-spacing:-.005em}
+.d05-vit{margin:0}
+.d05-case{background:var(--cream);padding:66px 150px 0;display:flex;flex-direction:column;align-items:center}
+.d05-glass{position:relative;width:100%;border:1px solid rgba(59,56,54,.22);padding:16px;background:rgba(255,255,255,.42)}
+.d05-glass img{display:block;width:100%;height:auto;object-fit:cover;filter:saturate(.68) sepia(.12) brightness(.99)}
+.d05-no{position:absolute;top:30px;left:30px;background:var(--cream);padding:8px 12px 7px;font-size:10px}
+.d05-plinth{width:calc(100% + 40px);height:52px;background:var(--sand);border-top:1px solid var(--hair)}
+.d05-wall{display:grid;grid-template-columns:1.25fr 1.4fr 1fr;gap:40px;padding:26px 0 0}
+.d05-wall h3{font-family:Spectral,Georgia,serif;font-weight:200;font-size:24px;line-height:1.25;margin:8px 0 0}
+.d05-wall p{margin:0;color:var(--mortar);font-size:14px}
+.d05-wall .d05-price{font-family:Spectral,Georgia,serif;font-weight:300;font-size:20px;color:var(--ink);margin:6px 0 2px;letter-spacing:.01em}
+.d05-pair{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:84px}
+.d05-pair .d05-case{padding:52px 70px 0}
+.d05-pair .d05-wall{grid-template-columns:1fr;gap:10px}
+.d05-pair .d05-wall-meta{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;border-top:1px solid var(--hair);padding-top:12px;margin-top:8px}
+
+/* plate */
+.d05-plate{position:relative;margin:100px 0 0;height:470px;overflow:hidden}
+.d05-plate img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 70%;filter:saturate(.66) sepia(.12)}
+.d05-plate .d05-chip{left:40px;bottom:40px;max-width:360px}
+
+/* list of works */
+.d05-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.d05-row{display:grid;grid-template-columns:70px 1.6fr 1.2fr 1fr 24px;align-items:center;gap:24px;min-height:68px;padding:12px 0;border-bottom:1px solid var(--hair);text-decoration:none}
+.d05-row .d05-t{font-family:Spectral,Georgia,serif;font-weight:200;font-size:23px;line-height:1.25}
+.d05-row .d05-slug{font-size:13px;letter-spacing:.06em;color:var(--mortar)}
+.d05-row .d05-gp{font-size:14px;letter-spacing:.04em;text-align:right}
+.d05-row:hover .d05-t{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+
+/* process */
+.d05-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid var(--hair);margin-top:10px}
+.d05-step{padding:26px 26px 0 0;position:relative}
+.d05-step:before{content:"";position:absolute;top:-4px;left:0;width:7px;height:7px;background:var(--ink);border-radius:50%}
+.d05-step .d05-n{font-family:Spectral,Georgia,serif;font-weight:200;font-size:30px;line-height:1;margin:6px 0 14px;display:block}
+.d05-step h3{font-family:Spectral,Georgia,serif;font-weight:300;font-size:19px;margin:0 0 8px;line-height:1.3}
+.d05-step p{margin:0;font-size:14px;color:var(--mortar);line-height:1.6}
+
+/* visitor book */
+.d05-book{display:grid;grid-template-columns:5fr 7fr;gap:80px;align-items:start}
+.d05-score{font-family:Spectral,Georgia,serif;font-weight:200;font-size:44px;line-height:1.2;margin:16px 0 18px}
+.d05-entry{border-top:1px solid var(--hair);padding:24px 0 26px}
+.d05-entry:last-of-type{border-bottom:1px solid var(--hair)}
+.d05-entry q{display:block;font-family:Spectral,Georgia,serif;font-style:italic;font-weight:200;font-size:26px;line-height:1.5;quotes:none}
+.d05-entry .d05-label{margin-top:14px;display:block}
+
+/* areas */
+.d05-towns{display:flex;flex-wrap:wrap;justify-content:center;gap:34px 0;max-width:1060px;margin:0 auto;padding:10px 0 0}
+.d05-town{display:flex;flex-direction:column;align-items:center;text-align:center;padding:4px 30px;text-decoration:none;border-left:1px solid var(--hair)}
+.d05-town:first-child,.d05-town:nth-child(5){border-left:0}
+.d05-town b{display:block;font-family:Spectral,Georgia,serif;font-weight:200;font-size:34px;line-height:1.15}
+.d05-town span{display:block;font-size:12px;letter-spacing:.06em;color:var(--mortar);margin-top:8px}
+.d05-towns-note{text-align:center;margin-top:40px}
+.d05-town:hover b{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+
+/* faq */
+.d05-faq{max-width:820px;margin:0 auto}
+.d05-qa{border-top:1px solid var(--hair);padding:28px 0 30px;display:grid;grid-template-columns:64px 1fr;gap:0 10px}
+.d05-qa:last-child{border-bottom:1px solid var(--hair)}
+.d05-qa h3{grid-column:2;font-family:Spectral,Georgia,serif;font-weight:200;font-size:27px;line-height:1.3;margin:0 0 14px}
+.d05-qa p{grid-column:2;margin:0;color:var(--mortar);font-size:15.5px;line-height:1.7;max-width:680px}
+.d05-qa .d05-label{grid-row:1;padding-top:12px}
+
+/* visit */
+.d05-visit{background:var(--cream);margin-top:104px;padding:84px 0 88px}
+.d05-visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:start}
+.d05-visit p{color:var(--mortar);max-width:440px}
+.d05-tel{font-family:Spectral,Georgia,serif;font-weight:200;font-size:34px;text-decoration:none;display:inline-flex;align-items:center;min-height:56px;border-bottom:1px solid var(--hair)}
+.d05-form{display:grid;grid-template-columns:1fr 1fr;gap:26px 30px}
+.d05-field{display:flex;flex-direction:column;gap:6px}
+.d05-field.d05-full{grid-column:1 / -1}
+.d05-field input,.d05-field textarea{font:300 16px/1.4 Inter,Arial,sans-serif;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--mortar);border-radius:0;padding:10px 0;min-height:44px}
+.d05-field textarea{resize:vertical;min-height:88px}
+.d05-field input:focus,.d05-field textarea:focus{outline:none;border-bottom:1px solid var(--ink);box-shadow:0 1px 0 var(--ink)}
+.d05-send{grid-column:1 / -1;justify-self:start;background:none;border:0;color:var(--ink);font:300 17px Inter,Arial,sans-serif;letter-spacing:.04em;cursor:pointer;padding:0;display:inline-flex;align-items:center;gap:10px;min-height:48px}
+.d05-send span{border-bottom:1px solid var(--ink);padding-bottom:2px}
+.d05-send:focus-visible{outline:1px solid var(--ink);outline-offset:4px}
+
+/* colophon */
+.d05-colo{background:#efe5dd;padding:64px 0 30px;border-top:1px solid var(--hair)}
+.d05-colo-in{text-align:center;max-width:860px;margin:0 auto}
+.d05-colo-in p{margin:8px 0 0;font-size:14px;line-height:1.7;color:var(--mortar)}
+.d05-colo-in p.d05-colo-name{font-family:Spectral,Georgia,serif;font-weight:200;font-size:30px;line-height:1.2;color:var(--ink);margin:16px 0 14px;letter-spacing:0}
+.d05-colo-in a{text-decoration:underline;text-decoration-color:var(--hair);text-underline-offset:3px;color:var(--ink);display:inline-flex;align-items:center;min-height:44px;margin:-12px 0}
+.d05-colo-links{display:flex;flex-wrap:wrap;justify-content:center;gap:0 28px;margin-top:40px;padding-top:14px;border-top:1px solid var(--hair);font-size:13.5px;letter-spacing:.05em}
+.d05-colo-links a{text-decoration:none;display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px}
+.d05-credit{margin-top:30px;font-size:11px;letter-spacing:.08em;color:var(--mortar);text-align:center}
+
+.d05-sec{padding-top:104px}
+
+@media (max-width:820px){
+  .d05-wrap{padding:0 22px}
+  .d05-mast{padding:4px 14px}
+  .d05-only-d,.d05-nav a.d05-only-d{display:none}
+  .d05-only-m{display:inline-flex}
+  .d05-bar-long{display:none}
+  .d05-nav{gap:16px;font-size:13px}
+  .d05-mark b{font-size:19px}
+  .d05-mark i{font-size:8px;letter-spacing:.24em;margin-right:-.24em}
+  .d05-hero{height:600px}
+  .d05-hero img{object-position:50% 50%;filter:brightness(.62) saturate(.78) sepia(.08)}
+  .d05-hero .d05-chip{top:18px;left:18px;right:18px;max-width:none;padding:12px 14px}
+  .d05-hero-foot{left:22px;right:22px;bottom:26px;gap:12px}
+  .d05-h1{font-size:33px}
+  .d05-statement{padding:80px 22px 70px}
+  .d05-statement p.d05-big{font-size:23px;line-height:1.8}
+  .d05-facts{flex-direction:column;gap:6px}
+  .d05-facts span{border-left:0;padding:2px 0}
+  .d05-sec{padding-top:86px}
+  .d05-sec-head{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:34px}
+  .d05-h2{font-size:29px}
+  .d05-case,.d05-pair .d05-case{padding:30px 22px 0}
+  .d05-glass{padding:8px}
+  .d05-no{top:16px;left:16px}
+  .d05-plinth{height:34px;width:calc(100% + 16px)}
+  .d05-wall{grid-template-columns:1fr;gap:12px}
+  .d05-pair{grid-template-columns:1fr;gap:60px;margin-top:60px}
+  .d05-plate{height:420px;margin-top:86px}
+  .d05-plate .d05-chip{left:16px;right:16px;bottom:16px;max-width:none}
+  .d05-row{grid-template-columns:34px 1fr 18px;gap:6px 12px;padding:16px 0}
+  .d05-row .d05-num{grid-row:1 / span 3}
+  .d05-row .d05-t{grid-column:2;font-size:21px}
+  .d05-row .d05-slug{grid-column:2}
+  .d05-row .d05-gp{grid-column:2;text-align:left}
+  .d05-row .d05-arrow{grid-column:3;grid-row:1}
+  .d05-steps{grid-template-columns:1fr;border-top:0;border-left:1px solid var(--hair);margin-left:4px}
+  .d05-step{padding:0 0 30px 24px}
+  .d05-step:before{top:6px;left:-4px}
+  .d05-book{grid-template-columns:1fr;gap:30px}
+  .d05-score{font-size:34px}
+  .d05-entry q{font-size:21px}
+  .d05-towns{flex-direction:column;align-items:stretch;gap:0;border-top:1px solid var(--hair)}
+  .d05-town{flex-direction:row;justify-content:space-between;align-items:baseline;text-align:left;border-left:0;border-bottom:1px solid var(--hair);padding:14px 0;gap:12px}
+  .d05-town b{font-size:23px}
+  .d05-town span{margin-top:0;font-size:11.5px}
+  .d05-towns-note{text-align:left;margin-top:24px}
+  .d05-qa{grid-template-columns:1fr;padding:26px 0 28px}
+  .d05-qa h3,.d05-qa p{grid-column:1}
+  .d05-qa .d05-label{grid-row:auto;padding:0 0 8px}
+  .d05-qa h3{font-size:23px}
+  .d05-visit{margin-top:90px;padding:70px 0 80px}
+  .d05-visit-grid{grid-template-columns:1fr;gap:40px}
+  .d05-form{grid-template-columns:1fr}
+  .d05-tel{font-size:28px}
+  .d05-colo-links{gap:0 18px}
+}
+</style>
+</helmet>
+<div class="d05">
+
+  <div class="d05-bar"><span class="d05-bar-long">Pools designed, built and cared for in Naples since [YEAR] &#160;·&#160; </span><span class="d05-only-m" style="margin-right:8px">Naples studio &#160;·</span><a href="tel:+12395550145"><span>(239) 555-0145</span></a></div>
+
+  <header class="d05-mast">
+    <nav class="d05-nav" aria-label="Primary">
+      <a href="#d05-collection" class="d05-only-d">Collection</a>
+      <a href="#d05-works">Services <svg width="7" height="5" viewBox="0 0 7 5" aria-hidden="true"><path d="M0 0h7L3.5 5z" fill="#3b3836"></path></svg></a>
+      <a href="#d05-areas" class="d05-only-d">Areas</a>
+    </nav>
+    <a href="#" class="d05-mark" aria-label="Orla Pools, home"><b>ORLA</b><i>Pools · Naples</i></a>
+    <nav class="d05-nav d05-nav-r" aria-label="Contact">
+      <a href="tel:+12395550145" class="d05-only-d">(239) 555-0145</a>
+      <a href="#d05-visit" class="d05-link"><span>Book a Visit</span></a>
+    </nav>
+  </header>
+
+  <figure class="d05-hero">
+    <img src="img/pool/09.jpg" alt="Still vanishing-edge pool at dusk reflecting a white two-storey house and glass stair rail" width="1000" height="1498">
+    <div class="d05-chip">
+      <div class="d05-label">Plate I</div>
+      <p>Vanishing edge at dusk. Shellstone coping, glass rail, water held level to the millimetre.</p>
+    </div>
+    <div class="d05-hero-foot">
+      <h1 class="d05-h1">Custom pools and outdoor living in Naples, Florida</h1>
+      <a href="#d05-visit" class="d05-link"><span>Book a Visit</span><svg class="d05-arrow" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" fill="none" stroke="#fff" stroke-width="1"></path></svg></a>
+    </div>
+  </figure>
+
+  <section class="d05-statement" aria-label="About the studio">
+    <div class="d05-label">The studio</div>
+    <p class="d05-big">We build around [COUNT] pools a year across Collier County, and look after each one once the water is in. Every pool is drawn for its lot, priced in writing, and finished by the same crew.</p>
+    <div class="d05-facts d05-label">
+      <span>[RATING] from [COUNT] Google reviews</span>
+      <span>Newest review [DAYS] days ago</span>
+      <span>Florida license [LICENSE NO.]</span>
+    </div>
+    <a href="#d05-collection" class="d05-link"><span>See the collection</span><svg class="d05-arrow" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v11M3 8l4 4 4-4" fill="none" stroke="#3b3836" stroke-width="1"></path></svg></a>
+  </section>
+
+  <section id="d05-collection" class="d05-wrap" aria-labelledby="d05-col-h">
+    <div class="d05-sec-head">
+      <div>
+        <div class="d05-label">The collection · three works</div>
+        <h2 id="d05-col-h" class="d05-h2">Pools, shown the way they were finished</h2>
+      </div>
+      <div class="d05-label">Guide prices for Collier County, [YEAR]</div>
+    </div>
+
+    <figure class="d05-vit">
+      <div class="d05-case">
+        <div class="d05-glass">
+          <img src="img/pool/06.jpg" alt="Vanishing-edge pool lined in glass mosaic beside a white pavilion, looking out over open water" width="1600" height="900" loading="lazy" style="aspect-ratio:16/9;object-fit:cover">
+          <span class="d05-no d05-label">No. 01</span>
+        </div>
+        <div class="d05-plinth"></div>
+      </div>
+      <figcaption class="d05-wall">
+        <div>
+          <div class="d05-label">New construction</div>
+          <h3>Vanishing edge over open water</h3>
+        </div>
+        <p>Glass mosaic interior, shellstone deck and coping, 44 × 16 ft with a 9 in. sun shelf. Drawn, permitted and built in 18 weeks.</p>
+        <div>
+          <div class="d05-label">Guide price</div>
+          <div class="d05-price">$[LOW]–$[HIGH]</div>
+          <a href="/custom-pool-construction" class="d05-link"><span>/custom-pool-construction</span></a>
+        </div>
+      </figcaption>
+    </figure>
+
+    <div class="d05-pair">
+      <figure class="d05-vit">
+        <div class="d05-case">
+          <div class="d05-glass">
+            <img src="img/pool/02.jpg" alt="Bright white courtyard pool with pale plaster finish and outdoor lounge under a deep overhang" width="1000" height="1499" loading="lazy" style="aspect-ratio:5/6;object-fit:cover;object-position:50% 70%">
+            <span class="d05-no d05-label">No. 02</span>
+          </div>
+          <div class="d05-plinth"></div>
+        </div>
+        <figcaption class="d05-wall">
+          <div>
+            <div class="d05-label">Renovation</div>
+            <h3>Courtyard pool, refinished in pale plaster</h3>
+          </div>
+          <p>Old marcite stripped to the shell, new waterline tile, porcelain deck, LED niches. 30 × 12 ft, back in the water in 7 weeks.</p>
+          <div class="d05-wall-meta">
+            <div><div class="d05-label">Guide price</div><div class="d05-price">$[LOW]–$[HIGH]</div></div>
+            <a href="/pool-renovation" class="d05-link"><span>/pool-renovation</span></a>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="d05-vit">
+        <div class="d05-case">
+          <div class="d05-glass">
+            <img src="img/pool/07.jpg" alt="Pool and raised spa at dusk with fire bowls, lit lounge and covered outdoor kitchen" width="1600" height="1067" loading="lazy" style="aspect-ratio:5/6;object-fit:cover;object-position:46% 50%">
+            <span class="d05-no d05-label">No. 03</span>
+          </div>
+          <div class="d05-plinth"></div>
+        </div>
+        <figcaption class="d05-wall">
+          <div>
+            <div class="d05-label">Outdoor living</div>
+            <h3>Raised spa, fire bowls and a summer kitchen</h3>
+          </div>
+          <p>Spa spilling into the pool, two gas fire bowls, a 14 ft kitchen under the lanai roof. Built in 12 weeks around an existing pool.</p>
+          <div class="d05-wall-meta">
+            <div><div class="d05-label">Guide price</div><div class="d05-price">$[LOW]–$[HIGH]</div></div>
+            <a href="/outdoor-kitchens" class="d05-link"><span>/outdoor-kitchens</span></a>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <figure class="d05-plate">
+    <img src="img/pool/01.jpg" alt="Modern white house with a long pool whose floor is striped in dark tile, reflecting the facade" width="1600" height="1067" loading="lazy">
+    <div class="d05-chip">
+      <div class="d05-label">Plate II</div>
+      <p>Banded tile floor, 3 ft at the steps to 6 ft at the far wall. The stripes are set by hand, one course at a time.</p>
+    </div>
+  </figure>
+
+  <section id="d05-works" class="d05-wrap d05-sec" aria-labelledby="d05-works-h">
+    <div class="d05-sec-head">
+      <div>
+        <div class="d05-label">List of works</div>
+        <h2 id="d05-works-h" class="d05-h2">Seven things we make, each with its own page</h2>
+      </div>
+      <div class="d05-label">Guide prices · written quote after one visit</div>
+    </div>
+    <ul class="d05-list">
+      <li><a class="d05-row" href="/custom-pool-construction"><span class="d05-label d05-num">01</span><span class="d05-t">Custom pool design and construction</span><span class="d05-slug">/custom-pool-construction</span><span class="d05-gp">from $[PRICE]</span><svg class="d05-arrow" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" fill="none" stroke="#3b3836" stroke-width="1"></path></svg></a></li>
+      <li><a class="d05-row" href="/pool-renovation"><span class="d05-label d05-num">02</span><span class="d05-t">Pool renovation, resurfacing and retiling</span><span class="d05-slug">/pool-renovation</span><span class="d05-gp">$[LOW]–$[HIGH]</span><svg class="d05-arrow" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" fill="none" stroke="#3b3836" stroke-width="1"></path></svg></a></li>
+      <li><a class="d05-row" href="/outdoor-kitchens"><span class="d05-label d05-num">03</span><span class="d05-t">Outdoor kitchens and summer rooms</span><span class="d05-slug">/outdoor-kitchens</span><span class="d05-gp">$[LOW]–$[HIGH]</span><svg class="d05-arrow" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" fill="none" stroke="#3b3836" stroke-width="1"></path></svg></a></li>
+      <li><a class="d05-row" href="/pool-decks"><span class="d05-label d05-num">04</span><span class="d05-t">Travertine, shellstone and paver decks</span><span class="d05-slug">/pool-decks</span><span class="d05-gp">from $[PRICE] per sq ft</span><svg class="d05-arrow" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" fill="none" stroke="#3b3836" stroke-width="1"></path></svg></a></li>
+      <li><a class="d05-row" href="/pool-enclosures"><span class="d05-label d05-num">05</span><span class="d05-t">Screen enclosures and lanais</span><span class="d05-slug">/pool-enclosures</span><span class="d05-gp">$[LOW]–$[HIGH]</span><svg class="d05-arrow" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" fill="none" stroke="#3b3836" stroke-width="1"></path></svg></a></li>
+      <li><a class="d05-row" href="/spas-water-features"><span class="d05-label d05-num">06</span><span class="d05-t">Spas, fire bowls and water features</span><span class="d05-slug">/spas-water-features</span><span class="d05-gp">from $[PRICE]</span><svg class="d05-arrow" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" fill="none" stroke="#3b3836" stroke-width="1"></path></svg></a></li>
+      <li><a class="d05-row" href="/pool-care"><span class="d05-label d05-num">07</span><span class="d05-t">Weekly pool care</span><span class="d05-slug">/pool-care</span><span class="d05-gp">from $[PRICE] a month</span><svg class="d05-arrow" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" fill="none" stroke="#3b3836" stroke-width="1"></path></svg></a></li>
+    </ul>
+  </section>
+
+  <section class="d05-wrap d05-sec" aria-labelledby="d05-proc-h">
+    <div class="d05-sec-head">
+      <div>
+        <div class="d05-label">How a commission runs</div>
+        <h2 id="d05-proc-h" class="d05-h2">From first visit to first swim, in five steps</h2>
+      </div>
+      <div class="d05-label">Typical new pool · 14 to 20 weeks</div>
+    </div>
+    <ol class="d05-steps" style="list-style:none;padding:0;margin:0">
+      <li class="d05-step"><span class="d05-label">Day 1</span><span class="d05-n">I</span><h3>The visit</h3><p>A designer walks the lot with you, checks setbacks, sun and the water table, and measures. About 90 minutes.</p></li>
+      <li class="d05-step"><span class="d05-label">Weeks 1–3</span><span class="d05-n">II</span><h3>Drawings and one price</h3><p>Plan, section and a materials board, with a written price. Two rounds of changes included.</p></li>
+      <li class="d05-step"><span class="d05-label">Weeks 3–8</span><span class="d05-n">III</span><h3>Permits</h3><p>We file with Collier County, the City of Naples or Marco Island, and meet every inspector on site.</p></li>
+      <li class="d05-step"><span class="d05-label">Weeks 8–20</span><span class="d05-n">IV</span><h3>The build</h3><p>Dig, steel, shell, tile, deck, plaster. One site lead from the first stake to start-up.</p></li>
+      <li class="d05-step"><span class="d05-label">After</span><span class="d05-n">V</span><h3>Care</h3><p>Weekly service from $[PRICE] a month, or a handover lesson if you would rather keep it yourself.</p></li>
+    </ol>
+  </section>
+
+  <section class="d05-wrap d05-sec" aria-labelledby="d05-book-h">
+    <div class="d05-book">
+      <div style="border-top:1px solid var(--hair);padding-top:22px">
+        <div class="d05-label">Visitor book</div>
+        <h2 id="d05-book-h" class="d05-score">[RATING] from [COUNT] Google reviews</h2>
+        <div class="d05-label">Newest review [DAYS] days ago</div>
+        <a href="#" class="d05-link" style="margin-top:22px"><span>Read every review on Google</span><svg class="d05-arrow" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" fill="none" stroke="#3b3836" stroke-width="1"></path></svg></a>
+      </div>
+      <div>
+        <div class="d05-entry"><q>[Google review, pulled at build time]</q><span class="d05-label">[Reviewer], Pelican Bay</span></div>
+        <div class="d05-entry"><q>[Google review, pulled at build time]</q><span class="d05-label">[Reviewer], Marco Island</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="d05-areas" class="d05-wrap d05-sec" aria-labelledby="d05-areas-h">
+    <div class="d05-sec-head">
+      <div>
+        <div class="d05-label">Where the collection lives</div>
+        <h2 id="d05-areas-h" class="d05-h2">Pools across Collier and south Lee County</h2>
+      </div>
+      <div class="d05-label">Service-area business · we come to you</div>
+    </div>
+    <div class="d05-towns">
+      <a class="d05-town" href="/areas/naples"><b>Naples</b><span>/areas/naples</span></a>
+      <a class="d05-town" href="/areas/pelican-bay"><b>Pelican Bay</b><span>/areas/pelican-bay</span></a>
+      <a class="d05-town" href="/areas/north-naples"><b>North Naples</b><span>/areas/north-naples</span></a>
+      <a class="d05-town" href="/areas/marco-island"><b>Marco Island</b><span>/areas/marco-island</span></a>
+      <a class="d05-town" href="/areas/bonita-springs"><b>Bonita Springs</b><span>/areas/bonita-springs</span></a>
+      <a class="d05-town" href="/areas/estero"><b>Estero</b><span>/areas/estero</span></a>
+      <a class="d05-town" href="/areas/golden-gate-estates"><b>Golden Gate Estates</b><span>/areas/golden-gate-estates</span></a>
+      <a class="d05-town" href="/areas/ave-maria"><b>Ave Maria</b><span>/areas/ave-maria</span></a>
+    </div>
+    <p class="d05-label d05-towns-note">Collier County · Bonita Springs and Estero in Lee County · no travel fee inside these towns</p>
+  </section>
+
+  <section class="d05-wrap d05-sec" aria-labelledby="d05-faq-h">
+    <div class="d05-faq">
+      <div class="d05-label" style="text-align:center">Questions</div>
+      <h2 id="d05-faq-h" class="d05-h2" style="text-align:center;margin-bottom:38px">Asked most often at the first visit</h2>
+      <div class="d05-qa">
+        <span class="d05-label">Q. 1</span>
+        <h3>How much does a custom pool cost in Naples?</h3>
+        <p>Most new pools we build in Collier County land between $[LOW] and $[HIGH] with deck and screen enclosure. A plunge pool starts near $[PRICE]. You get one written price after the site visit, line by line, and it does not move unless the drawings do.</p>
+      </div>
+      <div class="d05-qa">
+        <span class="d05-label">Q. 2</span>
+        <h3>How long does it take to build a pool in Naples?</h3>
+        <p>Plan on 14 to 20 weeks from signed drawings: 3 to 6 weeks for the permit, then 10 to 14 weeks on site. Summer storms can add a few days, and we tell you the week they do.</p>
+      </div>
+      <div class="d05-qa">
+        <span class="d05-label">Q. 3</span>
+        <h3>Do I need a permit for a pool in Collier County?</h3>
+        <p>Yes. Every in-ground pool, spa and screen enclosure needs a building permit from Collier County, the City of Naples or Marco Island, plus a safety barrier that meets Florida's pool safety law. We file it, book the inspections and close it out.</p>
+      </div>
+      <div class="d05-qa">
+        <span class="d05-label">Q. 4</span>
+        <h3>Can you renovate a pool you did not build?</h3>
+        <p>Yes. A resurface with new waterline tile and coping takes 4 to 7 weeks and runs $[LOW]–$[HIGH] for a typical Naples pool. We check the shell, plumbing and equipment first and tell you what can stay.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="d05-visit" class="d05-visit" aria-labelledby="d05-visit-h">
+    <div class="d05-wrap d05-visit-grid">
+      <div>
+        <div class="d05-label">By appointment</div>
+        <h2 id="d05-visit-h" class="d05-h2">Visits are Monday to Saturday, on your lot</h2>
+        <p>A designer comes out, measures, and listens. Drawings and a written price follow within three weeks. There is no charge for the first visit.</p>
+        <a href="tel:+12395550145" class="d05-tel">(239) 555-0145</a>
+        <p class="d05-label" style="margin-top:14px">Studio hours [HOURS]</p>
+      </div>
+      <form class="d05-form" action="#">
+        <label class="d05-field"><span class="d05-label">Name</span><input type="text" name="name" autocomplete="name"></label>
+        <label class="d05-field"><span class="d05-label">Phone</span><input type="tel" name="phone" autocomplete="tel"></label>
+        <label class="d05-field d05-full"><span class="d05-label">Neighborhood or town</span><input type="text" name="town"></label>
+        <label class="d05-field d05-full"><span class="d05-label">What you have in mind</span><textarea name="note" rows="3"></textarea></label>
+        <button type="submit" class="d05-send"><span>Book a Visit</span><svg class="d05-arrow" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" fill="none" stroke="#3b3836" stroke-width="1"></path></svg></button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="d05-colo">
+    <div class="d05-wrap">
+      <div class="d05-colo-in">
+        <div class="d05-label">Colophon</div>
+        <p class="d05-colo-name">Orla Pools &amp; Outdoor Living</p>
+        <p>Service-area business · Naples, Florida · <a href="tel:+12395550145">(239) 555-0145</a> · [HOURS]</p>
+        <p>Certified pool contractor [LICENSE NO.] · [CERTIFICATION] · [YEARS] years in Collier County · Owner [OWNER NAME]</p>
+      </div>
+      <nav class="d05-colo-links" aria-label="Footer">
+        <a href="#d05-collection">Collection</a>
+        <a href="#d05-works">List of works</a>
+        <a href="#d05-areas">Areas</a>
+        <a href="/custom-pool-construction">Custom pools</a>
+        <a href="/pool-renovation">Renovation</a>
+        <a href="/pool-care">Weekly care</a>
+        <a href="#d05-visit">Book a Visit</a>
+      </nav>
+      <p class="d05-credit">Avenue Vision · D05 · Quiet Luxury Gallery · style refs withheld</p>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":7700}}'>class Component extends DCLogic { renderVals() { return {}; } }</script>
+</body>
+</html>

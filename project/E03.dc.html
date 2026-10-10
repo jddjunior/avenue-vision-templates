@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cherry Top Appliance Repair home page</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600;700&amp;family=Work+Sans:wght@400;500;600;700;900&amp;family=Yellowtail&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.e03{--paper:#FFF7EA;--bisque:#FEE5CA;--white:#FFFDF8;--ink:#2B1A17;--soft:#5E4741;--cherry:#B4152F;--pink:#F7B8C8;--pinkd:#E98AA4;--mint:#A8E3CF;--mintd:#6CC6A6;--butter:#F9E39A;--butterd:#EBC659;--blue:#BCD3F4;--blued:#86A9E0;--sherbet:#FFC9A8;--sherbetd:#F49B6C;--pista:#D6E8A8;--pistad:#A9C866;--waffle:#E8B46B;width:100%;background:var(--paper);color:var(--ink);font-family:'Work Sans','Helvetica Neue',Arial,sans-serif;font-size:17px;line-height:1.45;overflow-x:hidden}
+.e03 *{box-sizing:border-box}
+:where(.e03) a{color:inherit}
+.e03 a:focus-visible{outline:3px solid var(--cherry);outline-offset:3px}
+:where(.e03 h1,.e03 h2,.e03 h3,.e03 p){margin:0}
+.e03-in{max-width:1280px;margin:0 auto;padding:0 40px}
+.e03-mq{font-family:Antonio,'Oswald',Impact,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.04em;line-height:.86}
+.e03-script{font-family:Yellowtail,'Brush Script MT',cursive;font-weight:400;color:var(--cherry);letter-spacing:0;text-transform:none}
+.e03-bill{font-family:'Work Sans',Arial,sans-serif;font-weight:900;letter-spacing:-.01em;line-height:.7;text-transform:uppercase;white-space:nowrap;pointer-events:none;user-select:none}
+.e03-eyebrow{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.e03-tag{display:inline-block;background:var(--mint);color:var(--ink);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:9px 18px;line-height:1.25;-webkit-mask:radial-gradient(circle 8px at 0 0,#0000 98%,#000) top left,radial-gradient(circle 8px at 100% 0,#0000 98%,#000) top right,radial-gradient(circle 8px at 0 100%,#0000 98%,#000) bottom left,radial-gradient(circle 8px at 100% 100%,#0000 98%,#000) bottom right;-webkit-mask-size:51% 51%;-webkit-mask-repeat:no-repeat;mask:radial-gradient(circle 8px at 0 0,#0000 98%,#000) top left,radial-gradient(circle 8px at 100% 0,#0000 98%,#000) top right,radial-gradient(circle 8px at 0 100%,#0000 98%,#000) bottom left,radial-gradient(circle 8px at 100% 100%,#0000 98%,#000) bottom right;mask-size:51% 51%;mask-repeat:no-repeat}
+.e03-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:300px;background:var(--bisque);color:var(--cherry);border:2px solid var(--cherry);border-bottom-width:5px;border-right-width:4px;font-family:Antonio,Impact,sans-serif;font-weight:700;font-size:20px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:transform .15s ease,border-width .15s ease}
+.e03-btn:hover{transform:translateY(2px);border-bottom-width:3px}
+.e03-ghost{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:300px;border:1.5px solid var(--ink);text-decoration:none;font-size:15px;font-weight:500;color:var(--ink);white-space:nowrap}
+.e03-ghost:hover{background:var(--bisque)}
+.e03-tel{display:inline-flex;flex-direction:column;justify-content:center;min-height:52px;text-decoration:none;color:var(--ink)}
+.e03-tel b{font-family:Antonio,Impact,sans-serif;font-weight:700;font-size:28px;letter-spacing:.04em;line-height:1}
+.e03-tel small{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);margin-bottom:4px}
+.e03-stars{color:var(--cherry);letter-spacing:2px;font-size:16px}
+
+/* header + awning */
+.e03-head{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;padding:18px 40px 16px;max-width:1280px;margin:0 auto}
+.e03-nav{display:flex;gap:10px;flex-wrap:wrap}
+.e03-nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:300px;background:var(--bisque);border:1.5px solid var(--cherry);border-bottom-width:3px;border-right-width:3px;color:var(--cherry);font-size:15px;font-weight:500;text-decoration:none}
+.e03-nav a:hover{background:var(--white)}
+.e03-mark{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:var(--cherry);min-height:44px}
+.e03-mark .e03-script{font-size:54px;line-height:.9;display:flex;align-items:flex-end;gap:2px}
+.e03-mark .e03-script svg{width:30px;height:38px;margin-bottom:10px}
+.e03-mark span.e03-sub{font-size:11px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--ink);margin-top:6px}
+.e03-headr{display:flex;justify-content:flex-end;align-items:center;gap:22px}
+.e03-awning{height:44px;background:repeating-linear-gradient(90deg,var(--pink) 0 44px,var(--white) 44px 88px);border-top:3px solid var(--cherry);position:relative}
+.e03-awning::after{content:"";position:absolute;left:0;right:0;top:44px;height:22px;background:radial-gradient(circle at 22px 0,var(--pink) 21px,transparent 22px) 0 0/88px 22px repeat-x,radial-gradient(circle at 22px 0,var(--white) 19.5px,var(--pinkd) 20px 21.5px,transparent 22px) 44px 0/88px 22px repeat-x}
+
+/* hero */
+.e03-hero{padding:76px 0 0;position:relative}
+.e03-herogrid{display:grid;grid-template-columns:minmax(0,640px) minmax(0,1fr);gap:64px;align-items:end}
+.e03-h1{font-size:104px;margin-top:22px}
+.e03-h1 em{font-style:normal;color:var(--cherry)}
+.e03-heroside{display:flex;flex-direction:column;gap:22px;padding-bottom:6px}
+.e03-heroside p.e03-lede{font-size:18px;line-height:1.5;max-width:470px}
+.e03-ctarow{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.e03-proof{display:flex;flex-direction:column;gap:2px;font-size:14px}
+.e03-proof span:last-child{color:var(--soft);font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:500}
+.e03-trigger{display:inline-flex;align-items:center;gap:16px;text-decoration:none;color:var(--ink);width:max-content}
+.e03-trigger svg{width:96px;height:96px;flex:none;transition:transform .4s ease}
+.e03-trigger:hover svg{transform:rotate(30deg)}
+.e03-trigger span{font-family:Antonio,Impact,sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase}
+
+.e03-billrow{position:relative;margin-top:52px;height:530px}
+.e03-billrow .e03-bill{position:absolute;left:50%;top:0;transform:translateX(-50%);font-size:318px;color:var(--pink)}
+.e03-scoops{position:absolute;left:0;right:0;top:118px;display:flex;justify-content:center;gap:64px}
+.e03-scoop{position:relative;width:300px;margin:0}
+.e03-scoopimg{position:relative;z-index:2;display:block;width:300px;height:300px;object-fit:cover;-webkit-clip-path:url(#e03-drip);clip-path:url(#e03-drip)}
+.e03-scoopring{position:absolute;z-index:1;left:-8px;top:-8px;width:316px;height:316px;background:var(--ink);-webkit-clip-path:url(#e03-drip);clip-path:url(#e03-drip)}
+.e03-cone{position:relative;z-index:0;display:block;width:150px;height:160px;margin:-62px auto 0}
+.e03-scoop .e03-tag{position:absolute;z-index:3;left:-26px;top:168px}
+.e03-scoop:nth-child(2) .e03-tag{background:var(--butter)}
+.e03-scoop:nth-child(3) .e03-tag{background:var(--blue)}
+.e03-cherry{position:absolute;z-index:3;left:50%;top:-58px;width:56px;height:66px;transform:translateX(-30%) rotate(8deg)}
+.e03-seal{position:absolute;right:20px;top:24px;width:140px;height:140px;transform:rotate(-10deg);z-index:4}
+
+/* flavors */
+.e03-sec{padding:86px 0}
+.e03-flav{padding-top:40px}
+.e03-sechead{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:end;margin-bottom:64px}
+.e03-sechead .e03-script{font-size:44px;line-height:1;display:block;margin-bottom:10px}
+.e03-h2{font-size:84px}
+.e03-sechead p{font-size:18px;max-width:470px}
+.e03-pints{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:50px 40px}
+.e03-pint{position:relative;display:flex;flex-direction:column;text-decoration:none;color:var(--ink);padding-top:30px;transition:transform .2s ease}
+.e03-pint:hover{transform:translateY(-6px) rotate(-1deg)}
+.e03-lid{position:absolute;top:0;left:-10px;right:-10px;height:40px;border:2px solid var(--ink);border-radius:14px 14px 8px 8px;background:var(--lid);z-index:2}
+.e03-lid::after{content:"";position:absolute;left:50%;top:9px;width:64px;height:14px;margin-left:-32px;border-radius:10px;border:2px solid var(--ink);background:var(--tub)}
+.e03-tub{position:relative;padding:34px 40px 34px;display:flex;flex-direction:column;gap:12px;flex:1}
+.e03-tub>svg{position:absolute;inset:0;width:100%;height:100%;z-index:0;color:var(--tub)}
+.e03-tub>*:not(svg){position:relative;z-index:1}
+.e03-band{display:flex;align-items:center;gap:14px;margin:4px -40px 4px;padding:10px 40px;background:var(--white);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.e03-band svg{width:54px;height:54px;flex:none}
+.e03-band span{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;line-height:1.35}
+.e03-band span b{display:block;font-family:Yellowtail,cursive;font-weight:400;font-size:26px;letter-spacing:0;text-transform:none;color:var(--cherry);line-height:1.1}
+.e03-pint h3{font-size:40px;line-height:.92}
+.e03-pint p{font-size:15px;line-height:1.45}
+.e03-price{font-family:Antonio,Impact,sans-serif;font-weight:700;font-size:22px;letter-spacing:.04em;text-transform:uppercase;border-top:2px dashed var(--ink);padding-top:12px;margin-top:auto}
+.e03-slug{display:flex;justify-content:space-between;align-items:center;min-height:44px;padding:0 18px;border-radius:300px;background:var(--white);border:1.5px solid var(--ink);font-size:14px;font-weight:500}
+.e03-p1{--tub:var(--pink);--lid:var(--pinkd)}
+.e03-p2{--tub:var(--blue);--lid:var(--blued)}
+.e03-p3{--tub:var(--mint);--lid:var(--mintd)}
+.e03-p4{--tub:var(--butter);--lid:var(--butterd)}
+.e03-p5{--tub:var(--sherbet);--lid:var(--sherbetd)}
+.e03-p6{--tub:var(--pista);--lid:var(--pistad)}
+.e03-flavnote{margin-top:52px;display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;font-size:16px;text-align:center}
+
+/* sizes */
+.e03-sizes{position:relative;padding:24px 0 92px}
+.e03-sizes>.e03-in,.e03-towns>.e03-in{display:flow-root}
+.e03-sizes .e03-bill{position:absolute;left:50%;top:0;transform:translateX(-50%);font-size:300px;color:var(--butter)}
+.e03-panel{position:relative;margin-top:148px;background:var(--bisque);border-radius:60px;padding:64px 56px 56px;display:grid;grid-template-columns:minmax(0,330px) minmax(0,1fr);gap:48px}
+.e03-panel .e03-h2{font-size:76px}
+.e03-panel .e03-intro p{margin-top:20px;font-size:17px}
+.e03-panel .e03-intro .e03-small{font-size:14px;color:var(--soft);margin-top:18px}
+.e03-cones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;align-items:end}
+.e03-size{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px}
+.e03-size svg{width:150px;height:282px}
+.e03-size h3{font-size:32px;margin-top:10px}
+.e03-size .e03-script{font-size:26px;line-height:1}
+.e03-size .e03-amt{font-family:Antonio,Impact,sans-serif;font-weight:700;font-size:30px;letter-spacing:.03em;line-height:1.1;margin-top:6px}
+.e03-size p{font-size:14px;line-height:1.45;max-width:230px}
+.e03-tops{grid-column:1 / -1;border-top:2px dashed var(--ink);padding-top:26px;display:grid;grid-template-columns:auto repeat(4,minmax(0,1fr));gap:22px;align-items:start}
+.e03-tops h3{font-size:26px}
+.e03-top{font-size:14px;line-height:1.4;padding-left:30px;position:relative}
+.e03-top b{display:block;font-size:15px}
+.e03-top svg{position:absolute;left:0;top:2px;width:22px;height:22px}
+
+/* visit band */
+.e03-visit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:var(--ink);color:var(--paper);min-height:600px}
+.e03-visittxt{padding:72px 56px 72px max(40px,calc((100vw - 1200px)/2))}
+.e03-visittxt .e03-h2{color:var(--paper);font-size:74px}
+.e03-visittxt .e03-h2 em{font-style:normal;color:var(--pink)}
+.e03-steps{list-style:none;margin:34px 0 0;padding:0;display:flex;flex-direction:column;gap:22px;max-width:520px}
+.e03-steps li{display:grid;grid-template-columns:62px 1fr;gap:18px;align-items:start}
+.e03-steps svg{width:62px;height:62px}
+.e03-steps b{display:block;font-family:Antonio,Impact,sans-serif;font-size:24px;letter-spacing:.05em;text-transform:uppercase;font-weight:700;margin-bottom:2px}
+.e03-steps span{font-size:16px;color:#F3E4D6}
+.e03-visitimg{position:relative;overflow:hidden}
+.e03-visitimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+.e03-visitimg figcaption{position:absolute;left:24px;bottom:24px;background:var(--bisque);color:var(--ink);border-radius:300px;padding:10px 18px;font-size:14px;font-weight:500}
+
+/* reviews */
+.e03-rev{display:grid;grid-template-columns:minmax(0,470px) minmax(0,1fr);gap:64px;align-items:center}
+.e03-disp{position:relative;height:400px}
+.e03-disp>svg{position:absolute;left:0;top:40px;width:240px;height:240px}
+.e03-ticket{position:absolute;left:206px;top:136px;width:260px;background:var(--white);border:2px solid var(--ink);border-radius:6px;padding:26px 26px 24px 40px;transform:rotate(-6deg);transform-origin:left center}
+.e03-ticket::before{content:"";position:absolute;left:14px;top:12px;bottom:12px;border-left:2px dashed var(--ink)}
+.e03-ticket .e03-eyebrow{color:var(--soft)}
+.e03-ticket .e03-num{font-family:Antonio,Impact,sans-serif;font-weight:700;font-size:62px;line-height:.95;color:var(--cherry);letter-spacing:.02em}
+.e03-ticket p{font-size:15px;margin-top:6px}
+.e03-ticket p.e03-recent{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--soft);margin-top:10px}
+.e03-revr .e03-h2{font-size:76px}
+.e03-revr>p{margin-top:16px;font-size:18px;max-width:560px}
+.e03-quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:34px}
+.e03-quote{background:var(--white);border:2px solid var(--ink);border-radius:40px;padding:30px 30px 26px;display:flex;flex-direction:column;gap:18px}
+.e03-quote:nth-child(2){background:var(--bisque)}
+.e03-quote blockquote{margin:0;font-size:22px;line-height:1.3;font-weight:500}
+.e03-quote cite{font-style:normal;font-size:14px;color:var(--soft);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.e03-revr .e03-ghost{margin-top:26px}
+
+/* towns */
+.e03-towns{position:relative;padding:8px 0 92px}
+.e03-mapcol{position:relative;padding-top:104px}
+.e03-mapcol .e03-bill{position:absolute;left:-6px;top:0;font-size:206px;color:var(--mint)}
+.e03-townsgrid{position:relative;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:48px;align-items:start}
+.e03-map{position:relative;background:var(--bisque);border-radius:40px;border:2px solid var(--ink);overflow:hidden}
+.e03-map svg{display:block;width:100%;height:auto}
+.e03-townsr .e03-h2{font-size:68px}
+.e03-townsr>p{margin-top:16px;font-size:17px}
+.e03-tlist{list-style:none;margin:22px 0 0;padding:0;border-top:2px solid var(--ink);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:22px}
+.e03-tlist a{display:grid;grid-template-columns:16px 1fr auto;align-items:center;gap:10px;min-height:52px;border-bottom:2px dashed rgba(43,26,23,.35);text-decoration:none}
+.e03-tlist a:hover{background:var(--bisque)}
+.e03-tlist i{width:16px;height:16px;border-radius:50%;border:2px solid var(--ink);display:block}
+.e03-tlist b{font-family:Antonio,Impact,sans-serif;font-size:21px;letter-spacing:.04em;text-transform:uppercase;font-weight:700;line-height:1}
+.e03-tlist b small{display:block;font-family:'Work Sans',sans-serif;font-size:12px;letter-spacing:.02em;text-transform:none;font-weight:500;color:var(--soft);margin-top:3px}
+.e03-tlist span{font-size:13px;color:var(--soft);white-space:nowrap}
+
+/* faq */
+.e03-faqgrid{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:64px;align-items:start}
+.e03-faqgrid .e03-h2{font-size:80px}
+.e03-faqgrid .e03-faqside p{margin-top:18px;font-size:17px}
+.e03-faqside .e03-btn{margin-top:28px}
+.e03-qs{display:flex;flex-direction:column}
+.e03-q{display:grid;grid-template-columns:76px 1fr;gap:22px;padding:24px 0;border-top:2px dashed var(--ink)}
+.e03-q:last-child{border-bottom:2px dashed var(--ink)}
+.e03-q svg{width:76px;height:76px}
+.e03-q h3{font-family:Antonio,Impact,sans-serif;font-weight:700;font-size:30px;line-height:1.05;letter-spacing:.03em;text-transform:uppercase}
+.e03-q p{margin-top:10px;font-size:16px;line-height:1.55}
+
+/* footer */
+.e03-foot{position:relative;background:var(--paper);padding:0 0 40px}
+.e03-foottop{display:grid;grid-template-columns:minmax(0,440px) minmax(0,1fr);gap:64px;align-items:center;padding-top:76px}
+.e03-sign{position:relative;padding-top:74px;max-width:420px;margin:0 auto}
+.e03-sign>svg{position:absolute;left:0;top:0;width:100%;height:96px}
+.e03-board{position:relative;background:var(--bisque);border:3px solid var(--ink);border-radius:32px;padding:30px 30px 28px;text-align:center;transform:rotate(-3deg)}
+.e03-board::before{content:"";position:absolute;inset:8px;border:2px dashed var(--cherry);border-radius:24px;pointer-events:none}
+.e03-board .e03-script{font-size:50px;line-height:1}
+.e03-board .e03-mq{font-size:34px;line-height:1;margin-top:8px}
+.e03-board p{font-size:15px;margin-top:10px}
+.e03-board dl{margin:16px 0 0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;text-align:left;font-size:14px}
+.e03-board dt{font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:12px;padding-top:2px}
+.e03-board dd{margin:0}
+.e03-board dd a{display:inline-block;padding:12px 0;margin:-12px 0}
+.e03-callbig .e03-script{font-size:44px;display:block}
+.e03-callbig a.e03-bigtel{display:inline-block;font-family:Antonio,Impact,sans-serif;font-weight:700;font-size:112px;line-height:.9;letter-spacing:.02em;color:var(--cherry);text-decoration:none;margin:6px 0 22px;white-space:nowrap}
+.e03-callbig p{font-size:18px;max-width:560px;margin-bottom:26px}
+.e03-footlinks{margin-top:56px;border-top:2px solid var(--ink);padding-top:26px;display:flex;flex-wrap:wrap;gap:10px}
+.e03-footlinks a{display:inline-flex;align-items:center;min-height:44px;padding:0 4px;font-size:14px;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;margin-right:12px}
+.e03-nap{margin-top:18px;font-size:14px}
+.e03-credit{margin-top:14px;font-size:12px;color:var(--soft);letter-spacing:.02em}
+
+@media (max-width:1100px){
+  .e03-h1{font-size:88px}
+  .e03-scoops{gap:28px}
+}
+@media (max-width:860px){
+  .e03-in{padding:0 18px}
+  .e03-head{grid-template-columns:1fr;justify-items:center;padding:14px 18px 12px;gap:10px}
+  .e03-nav{display:none}
+  .e03-headr{justify-content:center;gap:16px;flex-wrap:wrap}
+  .e03-mark .e03-script{font-size:46px}
+  .e03-headr .e03-btn{min-height:48px;font-size:17px;padding:0 20px}
+  .e03-tel b{font-size:24px}
+  .e03-awning{height:28px;background:repeating-linear-gradient(90deg,var(--pink) 0 30px,var(--white) 30px 60px)}
+  .e03-awning::after{top:28px;height:15px;background:radial-gradient(circle at 15px 0,var(--pink) 14px,transparent 15px) 0 0/60px 15px repeat-x,radial-gradient(circle at 15px 0,var(--white) 12.5px,var(--pinkd) 13px 14.5px,transparent 15px) 30px 0/60px 15px repeat-x}
+  .e03-hero{padding-top:48px}
+  .e03-herogrid{grid-template-columns:1fr;gap:28px}
+  .e03-h1{font-size:15.2vw;margin-top:16px;line-height:.92}
+  .e03-trigger svg{width:76px;height:76px}
+  .e03-billrow{height:auto;margin-top:36px;padding-bottom:20px;display:flow-root}
+  .e03-billrow .e03-bill{font-size:30vw}
+  .e03-scoops{position:relative;top:auto;margin-top:25vw;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+  .e03-scoop{width:auto}
+  .e03-scoopimg{width:100%;height:auto;aspect-ratio:1/1}
+  .e03-scoopring{left:-3px;top:-3px;width:calc(100% + 6px);height:auto;aspect-ratio:1/1}
+  .e03-cone{width:52%;height:auto;aspect-ratio:150/160;margin-top:-20%}
+  .e03-scoop .e03-tag{position:relative;left:auto;top:auto;display:block;margin-top:8px;font-size:10px;letter-spacing:.06em;padding:7px 6px;text-align:center}
+  .e03-cherry{width:30px;height:36px;top:-30px}
+  .e03-seal{width:78px;height:78px;right:-8px;top:-44px}
+  .e03-sec{padding:72px 0}
+  .e03-mq{line-height:.93}
+  .e03-flav{padding-top:24px}
+  .e03-sechead{grid-template-columns:1fr;gap:18px;margin-bottom:40px}
+  .e03-h2,.e03-panel .e03-h2,.e03-revr .e03-h2,.e03-townsr .e03-h2,.e03-faqgrid .e03-h2,.e03-visittxt .e03-h2{font-size:56px}
+  .e03-pints{grid-template-columns:1fr;gap:44px}
+  .e03-tub{padding:30px 30px 30px}
+  .e03-band{margin:4px -30px;padding:10px 30px}
+  .e03-sizes .e03-bill,.e03-towns .e03-bill{font-size:27vw}
+  .e03-panel{margin-top:16vw;grid-template-columns:1fr;padding:40px 22px 34px;border-radius:40px;gap:30px}
+  .e03-cones{grid-template-columns:1fr;gap:22px}
+  .e03-size{display:grid;grid-template-columns:86px 1fr;grid-template-rows:auto auto auto auto;column-gap:16px;row-gap:2px;text-align:left;align-items:start;justify-items:start}
+  .e03-size svg{grid-row:1 / span 4;width:86px;height:162px}
+  .e03-size h3{margin-top:4px;font-size:28px}
+  .e03-size .e03-amt{font-size:26px;margin-top:2px}
+  .e03-tops{grid-template-columns:1fr;gap:16px}
+  .e03-visit{grid-template-columns:1fr}
+  .e03-visittxt{padding:56px 18px 56px}
+  .e03-visitimg{height:300px;order:-1}
+  .e03-rev{grid-template-columns:1fr;gap:16px}
+  .e03-disp{height:330px;max-width:360px}
+  .e03-disp>svg{width:200px;height:200px;top:0}
+  .e03-ticket{left:118px;top:104px;width:230px;padding:20px 18px 18px 34px}
+  .e03-ticket .e03-num{font-size:50px}
+  .e03-quotes{grid-template-columns:1fr}
+  .e03-townsgrid{grid-template-columns:1fr;gap:36px}
+  .e03-mapcol{padding-top:16vw}
+  .e03-mapcol .e03-bill{font-size:27vw}
+  .e03-tlist{grid-template-columns:1fr}
+  .e03-faqgrid{grid-template-columns:1fr;gap:28px}
+  .e03-q{grid-template-columns:52px 1fr;gap:14px}
+  .e03-q svg{width:52px;height:52px}
+  .e03-q h3{font-size:24px}
+  .e03-foottop{grid-template-columns:1fr;gap:48px;padding-top:64px}
+  .e03-callbig a.e03-bigtel{font-size:14.5vw}
+  .e03-board .e03-mq{font-size:28px}
+}
+</style>
+</helmet>
+<div class="e03">
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="e03-drip" clipPathUnits="objectBoundingBox">
+        <path d="M0.5,0 C0.78,0 1,0.21 1,0.47 C1,0.63 0.95,0.73 0.9,0.78 C0.88,0.8 0.87,0.83 0.87,0.87 C0.87,0.92 0.85,0.95 0.825,0.95 C0.8,0.95 0.78,0.92 0.78,0.88 C0.78,0.84 0.76,0.82 0.72,0.82 C0.67,0.82 0.62,0.83 0.6,0.86 C0.59,0.88 0.6,0.98 0.555,0.995 C0.51,1 0.51,0.92 0.505,0.88 C0.5,0.84 0.47,0.82 0.43,0.82 C0.38,0.82 0.34,0.83 0.32,0.85 C0.31,0.86 0.31,0.9 0.285,0.91 C0.26,0.92 0.25,0.88 0.24,0.85 C0.22,0.81 0.17,0.8 0.12,0.77 C0.04,0.71 0,0.6 0,0.47 C0,0.21 0.22,0 0.5,0 Z"></path>
+      </clipPath>
+      <clipPath id="e03-conec"><path d="M4 6 H146 L75 156 Z"></path></clipPath>
+      <path id="e03-ring" d="M70,70 m-52,0 a52,52 0 1,1 104,0 a52,52 0 1,1 -104,0"></path>
+      <path id="e03-ring2" d="M135,135 m-96,0 a96,96 0 1,1 192,0 a96,96 0 1,1 -192,0"></path>
+    </defs>
+  </svg>
+
+  <header aria-label="Header">
+    <div class="e03-head">
+      <nav class="e03-nav" aria-label="Main">
+        <a href="#e03-flavors">Flavors</a>
+        <a href="#e03-sizes">Sizes</a>
+        <a href="#e03-towns">Towns</a>
+        <a href="#e03-faq">Questions</a>
+      </nav>
+      <a class="e03-mark" href="/" aria-label="Cherry Top Appliance Repair, home">
+        <span class="e03-script">Cherry Top<svg viewBox="0 0 30 38" aria-hidden="true"><path d="M15 16 C16 8 21 4 27 2" stroke="#3E6B2F" stroke-width="2.5" fill="none" stroke-linecap="round"></path><circle cx="13" cy="26" r="10" fill="#B4152F" stroke="#2B1A17" stroke-width="2"></circle><ellipse cx="9.5" cy="22.5" rx="2.4" ry="3.4" fill="#FFFDF8" opacity=".7" transform="rotate(30 9.5 22.5)"></ellipse></svg></span>
+        <span class="e03-sub">Appliance Repair · Port Charlotte</span>
+      </a>
+      <div class="e03-headr">
+        <a class="e03-tel" href="tel:+19415550163"><small>Call the counter</small><b>(941) 555-0163</b></a>
+        <a class="e03-btn" href="/book">Book a Repair</a>
+      </div>
+    </div>
+    <div class="e03-awning" aria-hidden="true"></div>
+  </header>
+
+  <section class="e03-hero" aria-label="Hero">
+    <div class="e03-in">
+      <div class="e03-herogrid">
+        <div>
+          <span class="e03-tag">Fridges · Washers · Dryers · Ovens · Dishwashers</span>
+          <h1 class="e03-mq e03-h1">Appliance<br><em>repair</em> in<br>Port<br>Charlotte, FL</h1>
+        </div>
+        <div class="e03-heroside">
+          <a class="e03-trigger" href="#e03-flavors">
+            <svg viewBox="0 0 120 120" aria-hidden="true"><path d="M117.2,60.0 L116.7,62.5 L115.4,64.8 L113.5,67.0 L111.6,69.1 L110.0,71.1 L109.1,73.1 L108.9,75.4 L109.2,77.9 L109.9,80.7 L110.4,83.5 L110.4,86.2 L109.5,88.6 L107.9,90.5 L105.5,91.9 L102.8,92.9 L100.1,93.7 L97.8,94.6 L95.9,95.9 L94.6,97.8 L93.7,100.1 L92.9,102.8 L91.9,105.5 L90.5,107.9 L88.6,109.5 L86.2,110.4 L83.5,110.4 L80.7,109.9 L77.9,109.2 L75.4,108.9 L73.1,109.1 L71.1,110.0 L69.1,111.6 L67.0,113.5 L64.8,115.4 L62.5,116.7 L60.0,117.2 L57.5,116.7 L55.2,115.4 L53.0,113.5 L50.9,111.6 L48.9,110.0 L46.9,109.1 L44.6,108.9 L42.1,109.2 L39.3,109.9 L36.5,110.4 L33.8,110.4 L31.4,109.5 L29.5,107.9 L28.1,105.5 L27.1,102.8 L26.3,100.1 L25.4,97.8 L24.1,95.9 L22.2,94.6 L19.9,93.7 L17.2,92.9 L14.5,91.9 L12.1,90.5 L10.5,88.6 L9.6,86.2 L9.6,83.5 L10.1,80.7 L10.8,77.9 L11.1,75.4 L10.9,73.1 L10.0,71.1 L8.4,69.1 L6.5,67.0 L4.6,64.8 L3.3,62.5 L2.8,60.0 L3.3,57.5 L4.6,55.2 L6.5,53.0 L8.4,50.9 L10.0,48.9 L10.9,46.9 L11.1,44.6 L10.8,42.1 L10.1,39.3 L9.6,36.5 L9.6,33.8 L10.5,31.4 L12.1,29.5 L14.5,28.1 L17.2,27.1 L19.9,26.3 L22.2,25.4 L24.1,24.1 L25.4,22.2 L26.3,19.9 L27.1,17.2 L28.1,14.5 L29.5,12.1 L31.4,10.5 L33.8,9.6 L36.5,9.6 L39.3,10.1 L42.1,10.8 L44.6,11.1 L46.9,10.9 L48.9,10.0 L50.9,8.4 L53.0,6.5 L55.2,4.6 L57.5,3.3 L60.0,2.8 L62.5,3.3 L64.8,4.6 L67.0,6.5 L69.1,8.4 L71.1,10.0 L73.1,10.9 L75.4,11.1 L77.9,10.8 L80.7,10.1 L83.5,9.6 L86.2,9.6 L88.6,10.5 L90.5,12.1 L91.9,14.5 L92.9,17.2 L93.7,19.9 L94.6,22.2 L95.9,24.1 L97.8,25.4 L100.1,26.3 L102.8,27.1 L105.5,28.1 L107.9,29.5 L109.5,31.4 L110.4,33.8 L110.4,36.5 L109.9,39.3 L109.2,42.1 L108.9,44.6 L109.1,46.9 L110.0,48.9 L111.6,50.9 L113.5,53.0 L115.4,55.2 L116.7,57.5Z" fill="none" stroke="#2B1A17" stroke-width="2"></path><path d="M60 38 V82 M44 66 L60 82 L76 66" fill="none" stroke="#B4152F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <span>Today's flavors</span>
+          </a>
+          <p class="e03-lede">Fridge running warm, washer full of water, oven that won't hold 350. We come out the same or next day, find the fault, and write the price down before a single screw comes out. The $[PRICE] visit comes off the repair.</p>
+          <div class="e03-ctarow">
+            <a class="e03-btn" href="/book">Book a Repair</a>
+            <a class="e03-tel" href="tel:+19415550163"><small>Or call</small><b>(941) 555-0163</b></a>
+          </div>
+          <div class="e03-proof">
+            <span><span class="e03-stars" aria-hidden="true">★★★★★</span> [RATING] from [COUNT] Google reviews</span>
+            <span>Newest review [DAYS] days ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="e03-in">
+      <div class="e03-billrow">
+        <div class="e03-bill" aria-hidden="true">Fixed</div>
+        <svg class="e03-seal" viewBox="0 0 140 140" role="img" aria-label="Same day or next day across Charlotte County">
+          <circle cx="70" cy="70" r="67" fill="#FFF7EA" stroke="#B4152F" stroke-width="2.5"></circle>
+          <circle cx="70" cy="70" r="40" fill="none" stroke="#B4152F" stroke-width="1.5"></circle>
+          <text font-family="Work Sans, sans-serif" font-size="11.5" font-weight="600" fill="#B4152F"><textPath href="#e03-ring" textLength="318" lengthAdjust="spacing">SAME DAY · NEXT DAY · CHARLOTTE COUNTY · </textPath></text>
+          <text x="70" y="80" text-anchor="middle" font-family="Yellowtail, cursive" font-size="34" fill="#B4152F">C</text>
+          <text x="70" y="96" text-anchor="middle" font-family="Work Sans, sans-serif" font-size="8" font-weight="700" letter-spacing="1.5" fill="#2B1A17">EST. [YEAR]</text>
+        </svg>
+        <div class="e03-scoops">
+          <figure class="e03-scoop">
+            <span class="e03-scoopring" aria-hidden="true"></span>
+            <img class="e03-scoopimg" src="img/appliance/04.jpg" alt="Stainless French-door refrigerator in a white kitchen" width="300" height="300" style="object-fit: cover; object-position: 28% 60%;">
+            <svg class="e03-cone" viewBox="0 0 150 160" aria-hidden="true"><path d="M4 6 H146 L75 156 Z" fill="#E8B46B" stroke="#2B1A17" stroke-width="3" stroke-linejoin="round"></path><g clip-path="url(#e03-conec)" stroke="#B97A35" stroke-width="2.5"><path d="M-60 6 L90 156 M-20 6 L130 156 M20 6 L170 156 M60 6 L210 156 M100 6 L250 156"></path><path d="M210 6 L60 156 M170 6 L20 156 M130 6 L-20 156 M90 6 L-60 156 M50 6 L-100 156"></path></g><path d="M4 6 H146 L75 156 Z" fill="none" stroke="#2B1A17" stroke-width="3" stroke-linejoin="round"></path></svg>
+            <span class="e03-tag">Fridges &amp;<br>freezers</span>
+          </figure>
+          <figure class="e03-scoop">
+            <svg class="e03-cherry" viewBox="0 0 60 70" aria-hidden="true"><path d="M30 28 C31 14 40 6 52 2" stroke="#3E6B2F" stroke-width="3.5" fill="none" stroke-linecap="round"></path><circle cx="28" cy="46" r="21" fill="#B4152F" stroke="#2B1A17" stroke-width="3"></circle><ellipse cx="20" cy="38" rx="5" ry="7.5" fill="#FFFDF8" opacity=".6" transform="rotate(30 20 38)"></ellipse></svg>
+            <span class="e03-scoopring" aria-hidden="true"></span>
+            <img class="e03-scoopimg" src="img/appliance/03.jpg" alt="Stacked front-load washer and dryer in a laundry room" width="300" height="300" style="object-fit: cover; object-position: 50% 62%;">
+            <svg class="e03-cone" viewBox="0 0 150 160" aria-hidden="true"><path d="M4 6 H146 L75 156 Z" fill="#E8B46B" stroke="#2B1A17" stroke-width="3" stroke-linejoin="round"></path><g clip-path="url(#e03-conec)" stroke="#B97A35" stroke-width="2.5"><path d="M-60 6 L90 156 M-20 6 L130 156 M20 6 L170 156 M60 6 L210 156 M100 6 L250 156"></path><path d="M210 6 L60 156 M170 6 L20 156 M130 6 L-20 156 M90 6 L-60 156 M50 6 L-100 156"></path></g><path d="M4 6 H146 L75 156 Z" fill="none" stroke="#2B1A17" stroke-width="3" stroke-linejoin="round"></path></svg>
+            <span class="e03-tag">Washers &amp;<br>dryers</span>
+          </figure>
+          <figure class="e03-scoop">
+            <span class="e03-scoopring" aria-hidden="true"></span>
+            <img class="e03-scoopimg" src="img/appliance/09.jpg" alt="Close view of an oven's control knobs" width="300" height="300" style="object-fit: cover; object-position: 50% 45%;">
+            <svg class="e03-cone" viewBox="0 0 150 160" aria-hidden="true"><path d="M4 6 H146 L75 156 Z" fill="#E8B46B" stroke="#2B1A17" stroke-width="3" stroke-linejoin="round"></path><g clip-path="url(#e03-conec)" stroke="#B97A35" stroke-width="2.5"><path d="M-60 6 L90 156 M-20 6 L130 156 M20 6 L170 156 M60 6 L210 156 M100 6 L250 156"></path><path d="M210 6 L60 156 M170 6 L20 156 M130 6 L-20 156 M90 6 L-60 156 M50 6 L-100 156"></path></g><path d="M4 6 H146 L75 156 Z" fill="none" stroke="#2B1A17" stroke-width="3" stroke-linejoin="round"></path></svg>
+            <span class="e03-tag">Ovens &amp;<br>dishwashers</span>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="e03-sec e03-flav" id="e03-flavors" aria-label="Services">
+    <div class="e03-in">
+      <div class="e03-sechead">
+        <div>
+          <span class="e03-script">Flavors of the day</span>
+          <h2 class="e03-mq e03-h2">Six things we<br>fix every week.</h2>
+        </div>
+        <p>Each one has its own page with the usual faults, the parts we carry on the truck and the going rate in Port Charlotte. Pick the one that's acting up.</p>
+      </div>
+      <div class="e03-pints">
+        <a class="e03-pint e03-p1" href="/refrigerator-repair">
+          <span class="e03-lid" aria-hidden="true"></span>
+          <span class="e03-tub">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M1 1 H99 L94 99 H6 Z" fill="currentColor" stroke="#2B1A17" stroke-width="2" vector-effect="non-scaling-stroke"></path></svg>
+            <span class="e03-band"><svg viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="#FEE5CA" stroke="#2B1A17" stroke-width="2"></circle><rect x="17" y="10" width="20" height="34" rx="3" fill="#FFFDF8" stroke="#2B1A17" stroke-width="2"></rect><path d="M17 22 H37 M21 14 V19 M21 26 V33" stroke="#2B1A17" stroke-width="2" stroke-linecap="round"></path></svg><span><b>Strawberry</b>No. 01 · pint</span></span>
+            <h3 class="e03-mq">Refrigerator repair</h3>
+            <p>Warm fridge, frozen lettuce, a puddle under the crisper, a click every few minutes.</p>
+            <span class="e03-price">Repairs $[LOW]–$[HIGH]</span>
+            <span class="e03-slug">/refrigerator-repair <span aria-hidden="true">→</span></span>
+          </span>
+        </a>
+        <a class="e03-pint e03-p2" href="/ice-maker-repair">
+          <span class="e03-lid" aria-hidden="true"></span>
+          <span class="e03-tub">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M1 1 H99 L94 99 H6 Z" fill="currentColor" stroke="#2B1A17" stroke-width="2" vector-effect="non-scaling-stroke"></path></svg>
+            <span class="e03-band"><svg viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="#FEE5CA" stroke="#2B1A17" stroke-width="2"></circle><rect x="13" y="22" width="13" height="13" rx="3" fill="#FFFDF8" stroke="#2B1A17" stroke-width="2" transform="rotate(-10 19 28)"></rect><rect x="27" y="17" width="13" height="13" rx="3" fill="#FFFDF8" stroke="#2B1A17" stroke-width="2" transform="rotate(12 33 23)"></rect><rect x="24" y="31" width="13" height="13" rx="3" fill="#FFFDF8" stroke="#2B1A17" stroke-width="2"></rect></svg><span><b>Blueberry</b>No. 02 · pint</span></span>
+            <h3 class="e03-mq">Freezer &amp; ice maker</h3>
+            <p>No ice, slow ice, frost on the back wall, a freezer that hums along and still won't freeze.</p>
+            <span class="e03-price">From $[PRICE]</span>
+            <span class="e03-slug">/ice-maker-repair <span aria-hidden="true">→</span></span>
+          </span>
+        </a>
+        <a class="e03-pint e03-p3" href="/washer-repair">
+          <span class="e03-lid" aria-hidden="true"></span>
+          <span class="e03-tub">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M1 1 H99 L94 99 H6 Z" fill="currentColor" stroke="#2B1A17" stroke-width="2" vector-effect="non-scaling-stroke"></path></svg>
+            <span class="e03-band"><svg viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="#FEE5CA" stroke="#2B1A17" stroke-width="2"></circle><rect x="14" y="11" width="26" height="32" rx="3" fill="#FFFDF8" stroke="#2B1A17" stroke-width="2"></rect><path d="M14 18 H40" stroke="#2B1A17" stroke-width="2"></path><circle cx="27" cy="30" r="8" fill="none" stroke="#2B1A17" stroke-width="2"></circle><path d="M22 31 C24 28 30 33 32 30" fill="none" stroke="#2B1A17" stroke-width="1.6" stroke-linecap="round"></path></svg><span><b>Mint chip</b>No. 03 · pint</span></span>
+            <h3 class="e03-mq">Washer repair</h3>
+            <p>Won't drain, won't spin, walks across the floor, smells like the bottom of a pond.</p>
+            <span class="e03-price">Repairs $[LOW]–$[HIGH]</span>
+            <span class="e03-slug">/washer-repair <span aria-hidden="true">→</span></span>
+          </span>
+        </a>
+        <a class="e03-pint e03-p4" href="/dryer-repair">
+          <span class="e03-lid" aria-hidden="true"></span>
+          <span class="e03-tub">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M1 1 H99 L94 99 H6 Z" fill="currentColor" stroke="#2B1A17" stroke-width="2" vector-effect="non-scaling-stroke"></path></svg>
+            <span class="e03-band"><svg viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="#FEE5CA" stroke="#2B1A17" stroke-width="2"></circle><rect x="14" y="11" width="26" height="32" rx="3" fill="#FFFDF8" stroke="#2B1A17" stroke-width="2"></rect><path d="M14 18 H40" stroke="#2B1A17" stroke-width="2"></path><circle cx="27" cy="30" r="8" fill="none" stroke="#2B1A17" stroke-width="2"></circle><path d="M24 34 C22 31 26 29 24 26 M30 34 C28 31 32 29 30 26" fill="none" stroke="#B4152F" stroke-width="1.8" stroke-linecap="round"></path></svg><span><b>Butter pecan</b>No. 04 · pint</span></span>
+            <h3 class="e03-mq">Dryer repair</h3>
+            <p>No heat, two cycles to dry a load, a squeal or a thump. We check the vent on every call.</p>
+            <span class="e03-price">Repairs $[LOW]–$[HIGH]</span>
+            <span class="e03-slug">/dryer-repair <span aria-hidden="true">→</span></span>
+          </span>
+        </a>
+        <a class="e03-pint e03-p5" href="/oven-repair">
+          <span class="e03-lid" aria-hidden="true"></span>
+          <span class="e03-tub">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M1 1 H99 L94 99 H6 Z" fill="currentColor" stroke="#2B1A17" stroke-width="2" vector-effect="non-scaling-stroke"></path></svg>
+            <span class="e03-band"><svg viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="#FEE5CA" stroke="#2B1A17" stroke-width="2"></circle><rect x="12" y="12" width="30" height="30" rx="3" fill="#FFFDF8" stroke="#2B1A17" stroke-width="2"></rect><path d="M12 19 H42" stroke="#2B1A17" stroke-width="2"></path><circle cx="18" cy="15.5" r="1.6" fill="#2B1A17"></circle><circle cx="24" cy="15.5" r="1.6" fill="#2B1A17"></circle><circle cx="30" cy="15.5" r="1.6" fill="#2B1A17"></circle><rect x="17" y="24" width="20" height="13" rx="2" fill="none" stroke="#2B1A17" stroke-width="2"></rect></svg><span><b>Orange sherbet</b>No. 05 · pint</span></span>
+            <h3 class="e03-mq">Oven &amp; range repair</h3>
+            <p>Won't hold temperature, a burner that clicks and never lights, a door that won't lock for self-clean.</p>
+            <span class="e03-price">Repairs $[LOW]–$[HIGH]</span>
+            <span class="e03-slug">/oven-repair <span aria-hidden="true">→</span></span>
+          </span>
+        </a>
+        <a class="e03-pint e03-p6" href="/dishwasher-repair">
+          <span class="e03-lid" aria-hidden="true"></span>
+          <span class="e03-tub">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M1 1 H99 L94 99 H6 Z" fill="currentColor" stroke="#2B1A17" stroke-width="2" vector-effect="non-scaling-stroke"></path></svg>
+            <span class="e03-band"><svg viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="#FEE5CA" stroke="#2B1A17" stroke-width="2"></circle><rect x="13" y="11" width="28" height="32" rx="3" fill="#FFFDF8" stroke="#2B1A17" stroke-width="2"></rect><path d="M13 17 H41 M22 14 H32" stroke="#2B1A17" stroke-width="2"></path><path d="M21 26 C21 23 24 21 24 21 C24 21 27 23 27 26 C27 28 25.5 29.5 24 29.5 C22.5 29.5 21 28 21 26 Z M28 33 C28 31 30 29.5 30 29.5 C30 29.5 32 31 32 33 C32 34.5 31 35.5 30 35.5 C29 35.5 28 34.5 28 33 Z" fill="#86A9E0" stroke="#2B1A17" stroke-width="1.5"></path></svg><span><b>Pistachio</b>No. 06 · pint</span></span>
+            <h3 class="e03-mq">Dishwasher repair</h3>
+            <p>Standing water, cloudy glasses, a leak at the door, a pump that hums and doesn't drain.</p>
+            <span class="e03-price">Repairs $[LOW]–$[HIGH]</span>
+            <span class="e03-slug">/dishwasher-repair <span aria-hidden="true">→</span></span>
+          </span>
+        </a>
+      </div>
+      <p class="e03-flavnote"><span>We work on [BRANDS SERVICED]. Not sure which pint you need? Describe the noise on the phone.</span><a class="e03-ghost" href="tel:+19415550163">(941) 555-0163</a></p>
+    </div>
+  </section>
+
+  <section class="e03-sizes" id="e03-sizes" aria-label="Prices">
+    <div class="e03-in" style="position: relative;">
+      <div class="e03-bill" aria-hidden="true">Sizes</div>
+      <div class="e03-panel">
+        <div class="e03-intro">
+          <span class="e03-script" style="font-size: 38px; line-height: 1; display: block; margin-bottom: 8px;">Pick a size</span>
+          <h2 class="e03-mq e03-h2">What a<br>repair<br>costs here.</h2>
+          <p>Every call starts as a single. You only go up a size after you've read the written price and said yes. Ranges below are Port Charlotte parts and labor.</p>
+          <p class="e03-small">Parts and labor warranty: [WARRANTY]. Prices confirmed in writing at the door.</p>
+        </div>
+        <div class="e03-cones">
+          <div class="e03-size">
+            <svg viewBox="0 0 150 282" aria-hidden="true">
+              <g transform="translate(75,168)"><path d="M-50,4 C-50,-30 -27,-50 0,-50 C27,-50 50,-30 50,4 C44,6 42,14 34,14 C26,14 26,6 18,6 C10,6 10,16 1,16 C-8,16 -8,6 -16,6 C-24,6 -25,14 -33,14 C-41,14 -43,6 -50,4 Z" fill="#F7B8C8" stroke="#2B1A17" stroke-width="3" stroke-linejoin="round"></path></g>
+              <path d="M28 182 H122 L75 278 Z" fill="#E8B46B" stroke="#2B1A17" stroke-width="3" stroke-linejoin="round"></path>
+              <path d="M40 182 L92 244 M64 182 L104 230 M88 182 L114 206 M110 182 L58 244 M86 182 L46 230 M62 182 L36 206" stroke="#B97A35" stroke-width="2.5"></path>
+            </svg>
+            <h3 class="e03-mq">Single</h3>
+            <span class="e03-script">The look-see</span>
+            <span class="e03-amt">$[PRICE]</span>
+            <p>Diagnostic visit. Comes off the bill when you go ahead with the repair.</p>
+          </div>
+          <div class="e03-size">
+            <svg viewBox="0 0 150 282" aria-hidden="true">
+              <g transform="translate(75,100)"><path d="M-46,4 C-46,-28 -25,-46 0,-46 C25,-46 46,-28 46,4 C40,6 38,13 31,13 C24,13 24,6 17,6 C10,6 10,15 1,15 C-8,15 -8,6 -15,6 C-22,6 -23,13 -30,13 C-38,13 -40,6 -46,4 Z" fill="#F7B8C8" stroke="#2B1A17" stroke-width="3" stroke-linejoin="round"></path></g>
+              <g transform="translate(75,168)"><path d="M-50,4 C-50,-30 -27,-50 0,-50 C27,-50 50,-30 50,4 C44,6 42,14 34,14 C26,14 26,6 18,6 C10,6 10,16 1,16 C-8,16 -8,6 -16,6 C-24,6 -25,14 -33,14 C-41,14 -43,6 -50,4 Z" fill="#A8E3CF" stroke="#2B1A17" stroke-width="3" stroke-linejoin="round"></path></g>
+              <path d="M28 182 H122 L75 278 Z" fill="#E8B46B" stroke="#2B1A17" stroke-width="3" stroke-linejoin="round"></path>
+              <path d="M40 182 L92 244 M64 182 L104 230 M88 182 L114 206 M110 182 L58 244 M86 182 L46 230 M62 182 L36 206" stroke="#B97A35" stroke-width="2.5"></path>
+            </svg>
+            <h3 class="e03-mq">Double</h3>
+            <span class="e03-script">The usual</span>
+            <span class="e03-amt">$[LOW]–$[HIGH]</span>
+            <p>Most repairs: igniters, pumps, belts, door seals, water valves, thermostats.</p>
+          </div>
+          <div class="e03-size">
+            <svg viewBox="0 0 150 282" aria-hidden="true">
+              <path d="M78 12 C80 4 86 0 94 -2" stroke="#3E6B2F" stroke-width="3" fill="none" stroke-linecap="round"></path>
+              <circle cx="76" cy="20" r="11" fill="#B4152F" stroke="#2B1A17" stroke-width="2.5"></circle>
+              <g transform="translate(75,74)"><path d="M-42,4 C-42,-26 -23,-42 0,-42 C23,-42 42,-26 42,4 C37,6 35,12 29,12 C23,12 23,6 16,6 C9,6 9,14 1,14 C-7,14 -7,6 -14,6 C-21,6 -22,12 -28,12 C-35,12 -37,6 -42,4 Z" fill="#F7B8C8" stroke="#2B1A17" stroke-width="3" stroke-linejoin="round"></path></g>
+              <g transform="translate(75,124)"><path d="M-46,4 C-46,-28 -25,-46 0,-46 C25,-46 46,-28 46,4 C40,6 38,13 31,13 C24,13 24,6 17,6 C10,6 10,15 1,15 C-8,15 -8,6 -15,6 C-22,6 -23,13 -30,13 C-38,13 -40,6 -46,4 Z" fill="#A8E3CF" stroke="#2B1A17" stroke-width="3" stroke-linejoin="round"></path></g>
+              <g transform="translate(75,172)"><path d="M-50,4 C-50,-30 -27,-50 0,-50 C27,-50 50,-30 50,4 C44,6 42,14 34,14 C26,14 26,6 18,6 C10,6 10,16 1,16 C-8,16 -8,6 -16,6 C-24,6 -25,14 -33,14 C-41,14 -43,6 -50,4 Z" fill="#F9E39A" stroke="#2B1A17" stroke-width="3" stroke-linejoin="round"></path></g>
+              <path d="M60 52 l6 -3 M86 48 l5 4 M72 62 l-2 6 M94 64 l6 1 M54 68 l4 4" stroke="#2B1A17" stroke-width="3" stroke-linecap="round"></path>
+              <path d="M28 186 H122 L75 278 Z" fill="#E8B46B" stroke="#2B1A17" stroke-width="3" stroke-linejoin="round"></path>
+              <path d="M40 186 L92 246 M64 186 L104 232 M88 186 L114 210 M110 186 L58 246 M86 186 L46 232 M62 186 L36 210" stroke="#B97A35" stroke-width="2.5"></path>
+            </svg>
+            <h3 class="e03-mq">Triple</h3>
+            <span class="e03-script">The big scoop</span>
+            <span class="e03-amt">$[LOW]–$[HIGH]</span>
+            <p>Sealed systems, compressors and main control boards. If replacing makes more sense, we say so first.</p>
+          </div>
+        </div>
+        <div class="e03-tops">
+          <h3 class="e03-mq">Toppings</h3>
+          <p class="e03-top"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M4 8 l5 -3 M13 4 l5 3 M6 16 l2 -5 M14 18 l4 -3" stroke="#B4152F" stroke-width="3" stroke-linecap="round"></path></svg><b>Dryer vent clean-out</b>From $[PRICE] with any dryer repair</p>
+          <p class="e03-top"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M4 8 l5 -3 M13 4 l5 3 M6 16 l2 -5 M14 18 l4 -3" stroke="#6CC6A6" stroke-width="3" stroke-linecap="round"></path></svg><b>Ice maker water line</b>From $[PRICE], new braided line</p>
+          <p class="e03-top"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M4 8 l5 -3 M13 4 l5 3 M6 16 l2 -5 M14 18 l4 -3" stroke="#86A9E0" stroke-width="3" stroke-linecap="round"></path></svg><b>Haul-away</b>$[PRICE] to take the old unit with us</p>
+          <p class="e03-top"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M4 8 l5 -3 M13 4 l5 3 M6 16 l2 -5 M14 18 l4 -3" stroke="#EBC659" stroke-width="3" stroke-linecap="round"></path></svg><b>Saturday visit</b>Plus $[PRICE], booked a day ahead</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="e03-visit" aria-label="How a visit goes">
+    <div class="e03-visittxt">
+      <span class="e03-script" style="font-size: 38px; line-height: 1; display: block; margin-bottom: 10px; color: #F7B8C8;">How a visit goes</span>
+      <h2 class="e03-mq e03-h2">One truck,<br>one visit,<br><em>most fixes done.</em></h2>
+      <ol class="e03-steps">
+        <li><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M94.0,50.0 A10.3,10.3 0 0,1 89.6,69.1 A10.3,10.3 0 0,1 77.4,84.4 A10.3,10.3 0 0,1 59.8,92.9 A10.3,10.3 0 0,1 40.2,92.9 A10.3,10.3 0 0,1 22.6,84.4 A10.3,10.3 0 0,1 10.4,69.1 A10.3,10.3 0 0,1 6.0,50.0 A10.3,10.3 0 0,1 10.4,30.9 A10.3,10.3 0 0,1 22.6,15.6 A10.3,10.3 0 0,1 40.2,7.1 A10.3,10.3 0 0,1 59.8,7.1 A10.3,10.3 0 0,1 77.4,15.6 A10.3,10.3 0 0,1 89.6,30.9 A10.3,10.3 0 0,1 94.0,50.0Z" fill="#F7B8C8"></path><text x="50" y="64" text-anchor="middle" font-family="Antonio, sans-serif" font-weight="700" font-size="40" fill="#2B1A17">1</text></svg><div><b>Book by [CUTOFF TIME]</b><span>Same-day window for most of Port Charlotte. After that, first window tomorrow. We text 30 minutes out.</span></div></li>
+        <li><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M94.0,50.0 A10.3,10.3 0 0,1 89.6,69.1 A10.3,10.3 0 0,1 77.4,84.4 A10.3,10.3 0 0,1 59.8,92.9 A10.3,10.3 0 0,1 40.2,92.9 A10.3,10.3 0 0,1 22.6,84.4 A10.3,10.3 0 0,1 10.4,69.1 A10.3,10.3 0 0,1 6.0,50.0 A10.3,10.3 0 0,1 10.4,30.9 A10.3,10.3 0 0,1 22.6,15.6 A10.3,10.3 0 0,1 40.2,7.1 A10.3,10.3 0 0,1 59.8,7.1 A10.3,10.3 0 0,1 77.4,15.6 A10.3,10.3 0 0,1 89.6,30.9 A10.3,10.3 0 0,1 94.0,50.0Z" fill="#A8E3CF"></path><text x="50" y="64" text-anchor="middle" font-family="Antonio, sans-serif" font-weight="700" font-size="40" fill="#2B1A17">2</text></svg><div><b>Find it, then price it</b><span>We test before we guess. You get the fault, the part and the total in writing before any work.</span></div></li>
+        <li><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M94.0,50.0 A10.3,10.3 0 0,1 89.6,69.1 A10.3,10.3 0 0,1 77.4,84.4 A10.3,10.3 0 0,1 59.8,92.9 A10.3,10.3 0 0,1 40.2,92.9 A10.3,10.3 0 0,1 22.6,84.4 A10.3,10.3 0 0,1 10.4,69.1 A10.3,10.3 0 0,1 6.0,50.0 A10.3,10.3 0 0,1 10.4,30.9 A10.3,10.3 0 0,1 22.6,15.6 A10.3,10.3 0 0,1 40.2,7.1 A10.3,10.3 0 0,1 59.8,7.1 A10.3,10.3 0 0,1 77.4,15.6 A10.3,10.3 0 0,1 89.6,30.9 A10.3,10.3 0 0,1 94.0,50.0Z" fill="#F9E39A"></path><text x="50" y="64" text-anchor="middle" font-family="Antonio, sans-serif" font-weight="700" font-size="40" fill="#2B1A17">3</text></svg><div><b>Fixed on the first trip</b><span>The truck carries [COUNT] common parts. If we have to order one, the second visit has no trip charge.</span></div></li>
+      </ol>
+    </div>
+    <figure class="e03-visitimg" style="margin: 0;">
+      <img src="img/appliance/01.jpg" alt="Technician's hands driving a screw with a cordless drill" width="640" height="640" loading="lazy" style="object-fit: cover;">
+      <figcaption>Tools out only after you say yes.</figcaption>
+    </figure>
+  </section>
+
+  <section class="e03-sec" aria-label="Reviews">
+    <div class="e03-in">
+      <div class="e03-rev">
+        <div class="e03-disp">
+          <svg viewBox="0 0 270 270" role="img" aria-label="Take a number">
+            <circle cx="135" cy="135" r="130" fill="#B4152F" stroke="#2B1A17" stroke-width="3"></circle>
+            <circle cx="135" cy="135" r="74" fill="#FFF7EA" stroke="#2B1A17" stroke-width="3"></circle>
+            <text font-family="Antonio, sans-serif" font-weight="700" font-size="24" fill="#FFF7EA"><textPath href="#e03-ring2" textLength="596" lengthAdjust="spacing">TAKE A NUMBER · TAKE A NUMBER · TAKE A NUMBER · </textPath></text>
+            <rect x="200" y="122" width="40" height="26" rx="4" fill="#2B1A17"></rect>
+            <text x="135" y="128" text-anchor="middle" font-family="Yellowtail, cursive" font-size="34" fill="#B4152F">Now</text>
+            <text x="135" y="160" text-anchor="middle" font-family="Work Sans, sans-serif" font-weight="600" font-size="12" letter-spacing="3" fill="#2B1A17">SERVING</text>
+          </svg>
+          <div class="e03-ticket">
+            <p class="e03-eyebrow" style="margin: 0;">Google rating</p>
+            <p class="e03-num" style="margin: 4px 0 0;">[RATING]</p>
+            <p><span class="e03-stars" aria-hidden="true">★★★★★</span><br>from [COUNT] Google reviews</p>
+            <p class="e03-recent">Newest review [DAYS] days ago</p>
+          </div>
+        </div>
+        <div class="e03-revr">
+          <span class="e03-script" style="font-size: 38px; line-height: 1; display: block; margin-bottom: 8px;">Overheard at the counter</span>
+          <h2 class="e03-mq e03-h2">Charlotte County<br>keeps score.</h2>
+          <p>We pull the newest reviews straight from Google when the site builds, so nothing here is ours to edit.</p>
+          <div class="e03-quotes">
+            <figure class="e03-quote" style="margin: 0;">
+              <span class="e03-stars" aria-hidden="true">★★★★★</span>
+              <blockquote>[Google review, pulled at build time]</blockquote>
+              <cite><span>[Reviewer], [Town]</span><span>Google · [DATE]</span></cite>
+            </figure>
+            <figure class="e03-quote" style="margin: 0;">
+              <span class="e03-stars" aria-hidden="true">★★★★★</span>
+              <blockquote>[Google review, pulled at build time]</blockquote>
+              <cite><span>[Reviewer], [Town]</span><span>Google · [DATE]</span></cite>
+            </figure>
+          </div>
+          <a class="e03-ghost" href="/reviews">Read all [COUNT] reviews</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="e03-towns" id="e03-towns" aria-label="Service area">
+    <div class="e03-in" style="position: relative;">
+      <div class="e03-townsgrid">
+        <div class="e03-mapcol">
+        <div class="e03-bill" aria-hidden="true">Local</div>
+        <div class="e03-map">
+          <svg viewBox="0 0 640 470" role="img" aria-label="Hand-drawn map of Charlotte County showing the towns we serve around Charlotte Harbor">
+            <rect width="640" height="470" fill="#FEE5CA"></rect>
+            <path d="M0,0 H74 C92,70 62,140 92,210 C116,268 108,330 146,384 C166,416 178,444 188,470 H0 Z" fill="#BCD3F4"></path>
+            <path d="M188,470 C206,424 236,384 250,344 C262,306 300,292 330,300 C360,308 384,300 410,290 C440,280 470,284 482,300 C472,322 442,334 422,352 C400,382 382,420 380,470 Z" fill="#BCD3F4"></path>
+            <path d="M262,322 C250,282 272,240 252,200 C236,160 252,100 238,42 L234,0" fill="none" stroke="#BCD3F4" stroke-width="12" stroke-linecap="round"></path>
+            <path d="M474,293 C520,280 540,252 560,222 C580,190 590,150 600,110 C606,72 614,40 620,0" fill="none" stroke="#BCD3F4" stroke-width="12" stroke-linecap="round"></path>
+            <path d="M372,246 C330,226 300,214 290,212 M372,246 C340,280 300,296 282,302 M372,246 C420,240 450,240 482,236 M372,246 C410,290 440,320 468,338 M372,246 C300,200 230,170 172,152 M372,246 C290,300 220,330 118,330 M372,246 C300,330 230,380 176,398 M482,236 C510,240 534,246 556,252" fill="none" stroke="#B4152F" stroke-width="2.5" stroke-dasharray="7 7" stroke-linecap="round"></path>
+            <text x="30" y="300" font-family="Work Sans, sans-serif" font-style="italic" font-weight="600" font-size="13" letter-spacing="3" fill="#2E4F7E" transform="rotate(-70 30 300)">GULF OF MEXICO</text>
+            <text x="296" y="410" font-family="Work Sans, sans-serif" font-style="italic" font-weight="600" font-size="12" letter-spacing="2.5" fill="#2E4F7E">CHARLOTTE HARBOR</text>
+            <text x="244" y="10" font-family="Work Sans, sans-serif" font-style="italic" font-weight="600" font-size="11" letter-spacing="2" fill="#2E4F7E" transform="rotate(84 244 10)">MYAKKA RIVER</text>
+            <text x="586" y="200" font-family="Work Sans, sans-serif" font-style="italic" font-weight="600" font-size="11" letter-spacing="2" fill="#2E4F7E" transform="rotate(-68 586 200)">PEACE RIVER</text>
+            <g font-family="Work Sans, sans-serif" font-weight="600" font-size="15" fill="#2B1A17" stroke="#FEE5CA" stroke-width="5" paint-order="stroke" stroke-linejoin="round">
+              <circle cx="172" cy="152" r="9" fill="#A8E3CF" stroke="#2B1A17" stroke-width="2.5"></circle><text x="186" y="146">North Port</text>
+              <circle cx="290" cy="212" r="9" fill="#F9E39A" stroke="#2B1A17" stroke-width="2.5"></circle><text x="224" y="196">Murdock</text>
+              <circle cx="282" cy="302" r="9" fill="#BCD3F4" stroke="#2B1A17" stroke-width="2.5"></circle><text x="298" y="326">El Jobean</text>
+              <circle cx="118" cy="330" r="9" fill="#F7B8C8" stroke="#2B1A17" stroke-width="2.5"></circle><text x="130" y="318">Englewood</text>
+              <circle cx="176" cy="398" r="9" fill="#D6E8A8" stroke="#2B1A17" stroke-width="2.5"></circle><text x="192" y="404">Rotonda West</text>
+              <circle cx="482" cy="236" r="9" fill="#FFC9A8" stroke="#2B1A17" stroke-width="2.5"></circle><text x="410" y="216">Harbour Heights</text>
+              <circle cx="556" cy="252" r="9" fill="#A8E3CF" stroke="#2B1A17" stroke-width="2.5"></circle><text x="530" y="282">Deep Creek</text>
+              <circle cx="468" cy="338" r="9" fill="#F9E39A" stroke="#2B1A17" stroke-width="2.5"></circle><text x="484" y="344">Punta Gorda</text>
+              <circle cx="372" cy="246" r="17" fill="#B4152F" stroke="#2B1A17" stroke-width="3"></circle><text x="330" y="282" font-size="19" font-weight="700">Port Charlotte</text>
+            </g>
+            <g transform="translate(560,400)" font-family="Work Sans, sans-serif" font-size="11" font-weight="600" fill="#2B1A17"><path d="M0,-30 L8,-8 L0,-12 L-8,-8 Z" fill="#2B1A17"></path><text x="0" y="8" text-anchor="middle">N</text><path d="M-40,40 H40" stroke="#2B1A17" stroke-width="2"></path><path d="M-40,34 V46 M0,36 V44 M40,34 V46" stroke="#2B1A17" stroke-width="2"></path><text x="0" y="30" text-anchor="middle">about 10 mi</text></g>
+          </svg>
+        </div>
+        </div>
+        <div class="e03-townsr">
+          <span class="e03-script" style="font-size: 38px; line-height: 1; display: block; margin-bottom: 8px;">Our delivery route</span>
+          <h2 class="e03-mq e03-h2">Nine towns<br>around the harbor.</h2>
+          <p>Each town has its own page with recent jobs and the drive time from our Port Charlotte shop, on a typical weekday.</p>
+          <ul class="e03-tlist">
+            <li><a href="/areas/port-charlotte"><i style="background: #B4152F;"></i><b>Port Charlotte<small>/areas/port-charlotte</small></b><span>Home</span></a></li>
+            <li><a href="/areas/punta-gorda"><i style="background: #F9E39A;"></i><b>Punta Gorda<small>/areas/punta-gorda</small></b><span>15 min</span></a></li>
+            <li><a href="/areas/north-port"><i style="background: #A8E3CF;"></i><b>North Port<small>/areas/north-port</small></b><span>20 min</span></a></li>
+            <li><a href="/areas/murdock"><i style="background: #F9E39A;"></i><b>Murdock<small>/areas/murdock</small></b><span>8 min</span></a></li>
+            <li><a href="/areas/el-jobean"><i style="background: #BCD3F4;"></i><b>El Jobean<small>/areas/el-jobean</small></b><span>14 min</span></a></li>
+            <li><a href="/areas/harbour-heights"><i style="background: #FFC9A8;"></i><b>Harbour Heights<small>/areas/harbour-heights</small></b><span>12 min</span></a></li>
+            <li><a href="/areas/deep-creek"><i style="background: #A8E3CF;"></i><b>Deep Creek<small>/areas/deep-creek</small></b><span>18 min</span></a></li>
+            <li><a href="/areas/englewood"><i style="background: #F7B8C8;"></i><b>Englewood<small>/areas/englewood</small></b><span>30 min</span></a></li>
+            <li><a href="/areas/rotonda-west"><i style="background: #D6E8A8;"></i><b>Rotonda West<small>/areas/rotonda-west</small></b><span>25 min</span></a></li>
+            <li><a href="tel:+19415550163"><i style="background: #FFFDF8;"></i><b>Not listed?<small>Call and ask</small></b><span>Phone</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="e03-sec" id="e03-faq" aria-label="Questions" style="padding-top: 24px;">
+    <div class="e03-in">
+      <div class="e03-faqgrid">
+        <div class="e03-faqside">
+          <span class="e03-script" style="font-size: 38px; line-height: 1; display: block; margin-bottom: 8px;">Asked at the counter</span>
+          <h2 class="e03-mq e03-h2">Questions<br>we hear<br>daily.</h2>
+          <p>Short answers here. The long ones are on each repair page, or call and ask a tech.</p>
+          <a class="e03-btn" href="/book">Book a Repair</a>
+        </div>
+        <div class="e03-qs">
+          <div class="e03-q">
+            <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M94.0,50.0 A10.3,10.3 0 0,1 89.6,69.1 A10.3,10.3 0 0,1 77.4,84.4 A10.3,10.3 0 0,1 59.8,92.9 A10.3,10.3 0 0,1 40.2,92.9 A10.3,10.3 0 0,1 22.6,84.4 A10.3,10.3 0 0,1 10.4,69.1 A10.3,10.3 0 0,1 6.0,50.0 A10.3,10.3 0 0,1 10.4,30.9 A10.3,10.3 0 0,1 22.6,15.6 A10.3,10.3 0 0,1 40.2,7.1 A10.3,10.3 0 0,1 59.8,7.1 A10.3,10.3 0 0,1 77.4,15.6 A10.3,10.3 0 0,1 89.6,30.9 A10.3,10.3 0 0,1 94.0,50.0Z" fill="#F7B8C8" stroke="#2B1A17" stroke-width="2.5"></path><text x="50" y="64" text-anchor="middle" font-family="Antonio, sans-serif" font-weight="700" font-size="40" fill="#2B1A17">1</text></svg>
+            <div><h3>How much does appliance repair cost in Port Charlotte?</h3><p>Most repairs land between $[LOW] and $[HIGH] for parts and labor. The diagnostic visit is $[PRICE], and it comes off the bill when you go ahead. You see the total in writing before we start.</p></div>
+          </div>
+          <div class="e03-q">
+            <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M94.0,50.0 A10.3,10.3 0 0,1 89.6,69.1 A10.3,10.3 0 0,1 77.4,84.4 A10.3,10.3 0 0,1 59.8,92.9 A10.3,10.3 0 0,1 40.2,92.9 A10.3,10.3 0 0,1 22.6,84.4 A10.3,10.3 0 0,1 10.4,69.1 A10.3,10.3 0 0,1 6.0,50.0 A10.3,10.3 0 0,1 10.4,30.9 A10.3,10.3 0 0,1 22.6,15.6 A10.3,10.3 0 0,1 40.2,7.1 A10.3,10.3 0 0,1 59.8,7.1 A10.3,10.3 0 0,1 77.4,15.6 A10.3,10.3 0 0,1 89.6,30.9 A10.3,10.3 0 0,1 94.0,50.0Z" fill="#A8E3CF" stroke="#2B1A17" stroke-width="2.5"></path><text x="50" y="64" text-anchor="middle" font-family="Antonio, sans-serif" font-weight="700" font-size="40" fill="#2B1A17">2</text></svg>
+            <div><h3>Is it worth repairing a 10-year-old refrigerator?</h3><p>Usually, if the cabinet is sound. Fans, sensors, defrost heaters and ice makers are small bills. If the compressor or sealed system has failed on a fridge past [AGE] years, we tell you and show the math on replacing it.</p></div>
+          </div>
+          <div class="e03-q">
+            <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M94.0,50.0 A10.3,10.3 0 0,1 89.6,69.1 A10.3,10.3 0 0,1 77.4,84.4 A10.3,10.3 0 0,1 59.8,92.9 A10.3,10.3 0 0,1 40.2,92.9 A10.3,10.3 0 0,1 22.6,84.4 A10.3,10.3 0 0,1 10.4,69.1 A10.3,10.3 0 0,1 6.0,50.0 A10.3,10.3 0 0,1 10.4,30.9 A10.3,10.3 0 0,1 22.6,15.6 A10.3,10.3 0 0,1 40.2,7.1 A10.3,10.3 0 0,1 59.8,7.1 A10.3,10.3 0 0,1 77.4,15.6 A10.3,10.3 0 0,1 89.6,30.9 A10.3,10.3 0 0,1 94.0,50.0Z" fill="#F9E39A" stroke="#2B1A17" stroke-width="2.5"></path><text x="50" y="64" text-anchor="middle" font-family="Antonio, sans-serif" font-weight="700" font-size="40" fill="#2B1A17">3</text></svg>
+            <div><h3>Can an appliance tech come out today?</h3><p>Book before [CUTOFF TIME] and most Port Charlotte, Punta Gorda and North Port addresses get a same-day window. After that, you get the first window the next morning, and a text 30 minutes before we pull up.</p></div>
+          </div>
+          <div class="e03-q">
+            <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M94.0,50.0 A10.3,10.3 0 0,1 89.6,69.1 A10.3,10.3 0 0,1 77.4,84.4 A10.3,10.3 0 0,1 59.8,92.9 A10.3,10.3 0 0,1 40.2,92.9 A10.3,10.3 0 0,1 22.6,84.4 A10.3,10.3 0 0,1 10.4,69.1 A10.3,10.3 0 0,1 6.0,50.0 A10.3,10.3 0 0,1 10.4,30.9 A10.3,10.3 0 0,1 22.6,15.6 A10.3,10.3 0 0,1 40.2,7.1 A10.3,10.3 0 0,1 59.8,7.1 A10.3,10.3 0 0,1 77.4,15.6 A10.3,10.3 0 0,1 89.6,30.9 A10.3,10.3 0 0,1 94.0,50.0Z" fill="#BCD3F4" stroke="#2B1A17" stroke-width="2.5"></path><text x="50" y="64" text-anchor="middle" font-family="Antonio, sans-serif" font-weight="700" font-size="40" fill="#2B1A17">4</text></svg>
+            <div><h3>Why is my dryer taking two cycles to dry?</h3><p>Nine times out of ten it's the vent, not the dryer. Lint and salt air pack a duct fast near the water. We check airflow on every dryer call and clear the vent for $[PRICE] when it needs it.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="e03-foot" aria-label="Footer">
+    <div class="e03-awning" aria-hidden="true"></div>
+    <div class="e03-in">
+      <div class="e03-foottop">
+        <div class="e03-sign">
+          <svg viewBox="0 0 420 96" preserveAspectRatio="none" aria-hidden="true"><path d="M84 92 L210 10 L336 92" fill="none" stroke="#2B1A17" stroke-width="2.5"></path><circle cx="210" cy="10" r="7" fill="#B4152F" stroke="#2B1A17" stroke-width="2.5"></circle></svg>
+          <div class="e03-board">
+            <span class="e03-script">Come on in</span>
+            <p class="e03-mq">The phones are open</p>
+            <dl>
+              <dt>Hours</dt><dd>[HOURS]</dd>
+              <dt>Shop</dt><dd>Service-area business, Port Charlotte, FL</dd>
+              <dt>Phone</dt><dd><a href="tel:+19415550163">(941) 555-0163</a></dd>
+              <dt>License</dt><dd>[LICENSE NO.] · [CERTIFICATION]</dd>
+            </dl>
+          </div>
+        </div>
+        <div class="e03-callbig">
+          <span class="e03-script">Something running warm?</span>
+          <a class="e03-bigtel" href="tel:+19415550163">(941) 555-0163</a>
+          <p>A tech picks up, asks what it's doing and gives you a window. Most Port Charlotte calls are fixed on the first visit.</p>
+          <a class="e03-btn" href="/book">Book a Repair</a>
+        </div>
+      </div>
+      <nav class="e03-footlinks" aria-label="Services">
+        <a href="/refrigerator-repair">Refrigerator repair</a>
+        <a href="/ice-maker-repair">Freezer &amp; ice maker</a>
+        <a href="/washer-repair">Washer repair</a>
+        <a href="/dryer-repair">Dryer repair</a>
+        <a href="/oven-repair">Oven &amp; range repair</a>
+        <a href="/dishwasher-repair">Dishwasher repair</a>
+        <a href="/privacy">Privacy</a>
+      </nav>
+      <p class="e03-nap">Cherry Top Appliance Repair · Service-area business, Port Charlotte, FL · (941) 555-0163 · [HOURS] · License [LICENSE NO.]</p>
+      <p class="e03-credit">Avenue Vision · E03 · Ice Cream Parlor · style refs withheld</p>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":7400}}'>class Component extends DCLogic { renderVals() { return {}; } }</script>
+</body>
+</html>

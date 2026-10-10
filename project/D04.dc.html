@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Brick Street Design-Build home page</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400&amp;family=Space+Grotesk:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.d04{--d04-bone:#f2edde;--d04-rust:#b46a4a;--d04-ink:#000000;--d04-mute:#5e584c;--d04-m:80px;--d04-serif:'Newsreader',Georgia,'Times New Roman',serif;--d04-sans:'Space Grotesk','Helvetica Neue',Arial,sans-serif;background:#f2edde;color:#000000;font-family:var(--d04-serif);font-size:18px;line-height:1.45;font-weight:400;-webkit-font-smoothing:antialiased;overflow:hidden}
+.d04 *{box-sizing:border-box}
+.d04 :where(a){color:inherit}
+.d04 a:focus-visible{outline:2px solid #000000;outline-offset:3px}
+.d04-lab{font-family:var(--d04-sans);font-size:12px;line-height:1.35;letter-spacing:.07em;text-transform:uppercase;font-weight:500}
+.d04-wrap{padding-left:var(--d04-m);padding-right:var(--d04-m)}
+.d04-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.d04-ph{display:block;width:100%;height:auto;object-fit:cover;border:1px solid #000000;background:#e4dccb}
+.d04-cap{margin:10px 0 0;font-size:14px;line-height:1.4}
+.d04-cap .d04-lab{display:block;margin-bottom:4px}
+.d04-link{display:inline-flex;align-items:center;min-height:44px;font-family:var(--d04-sans);font-size:14px;letter-spacing:.01em;text-decoration:none;border-bottom:1px solid #000000;padding:0 2px;line-height:1.2}
+.d04-link:hover{border-bottom-width:3px}
+.d04-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border:1px solid #000000;font-family:var(--d04-sans);font-size:15px;font-weight:500;letter-spacing:.01em;text-decoration:none;color:#000000;background:transparent;transition:background .15s,color .15s;white-space:nowrap}
+.d04-btn:hover{background:#000000;color:#f2edde}
+
+.d04-nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:14px;padding-bottom:14px}
+.d04-nav-l,.d04-nav-r{display:flex;align-items:center;gap:6px 22px;flex-wrap:wrap}
+.d04-brand{display:inline-flex;align-items:center;min-height:44px;font-family:var(--d04-sans);font-size:14px;font-weight:500;letter-spacing:.01em;text-decoration:none;margin-right:18px}
+.d04-nl{display:inline-flex;align-items:center;min-height:44px;font-family:var(--d04-sans);font-size:14px;text-decoration:none;border-bottom:1px solid transparent}
+.d04-nl:hover{border-bottom-color:#000000}
+.d04-nav .d04-btn{min-height:44px;padding:0 16px;font-size:14px}
+
+.d04-title{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;padding-top:44px;padding-bottom:30px}
+.d04-title-note{max-width:300px;margin:0;font-size:15px;line-height:1.4;color:#000000}
+.d04-title-note span{display:block;color:var(--d04-mute);margin-top:6px}
+.d04-h1{margin:0;text-align:right;font-weight:300;font-size:clamp(40px,6vw,78px);line-height:1;letter-spacing:-.025em}
+.d04-spread{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.d04-spread figure{margin:0}
+.d04-sq{aspect-ratio:1 / 1}
+
+.d04-intro{padding-top:64px;padding-bottom:72px;row-gap:28px}
+.d04-intro-a{grid-column:1 / span 6;margin:0;font-size:28px;line-height:1.25;font-weight:300;letter-spacing:-.01em}
+.d04-intro-b{grid-column:8 / span 5}
+.d04-intro-b p{margin:0 0 20px;font-size:18px}
+.d04-facts{list-style:none;margin:0 0 26px;padding:0;border-top:1px solid #000000}
+.d04-facts li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #000000;font-size:15px}
+.d04-facts li span:first-child{font-family:var(--d04-sans);font-size:12px;letter-spacing:.07em;text-transform:uppercase;font-weight:500;padding-top:2px}
+.d04-cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 26px}
+
+.d04-mark{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding-left:20px;padding-right:20px}
+.d04-mark p,.d04-mark h2{margin:0;font-weight:300;font-size:clamp(44px,5.6vw,72px);line-height:1;letter-spacing:-.02em}
+
+.d04-plates{padding-top:32px;padding-bottom:80px}
+.d04-plate{margin:0}
+.d04-plate-wide{height:620px}
+.d04-plate-wide .d04-ph,.d04-offset-f .d04-ph{height:100%}
+.d04-pcap{margin-top:14px;row-gap:14px;align-items:start}
+.d04-pcap-n{grid-column:1 / span 3;display:flex;flex-direction:column;align-items:flex-start}
+.d04-pcap-n .d04-link{margin-top:2px;min-height:44px}
+.d04-lab a{text-transform:none;letter-spacing:.02em;font-weight:400;text-underline-offset:3px}
+.d04-pcap-t{grid-column:4 / span 5}
+.d04-pcap-t h3{margin:0 0 6px;font-size:23px;line-height:1.2;font-weight:400;letter-spacing:-.01em}
+.d04-pcap-t p{margin:0;font-size:15px;line-height:1.45}
+.d04-spec{grid-column:9 / span 4;margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:14px}
+.d04-spec dt{font-family:var(--d04-sans);font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:500;padding-top:2px}
+.d04-spec dd{margin:0}
+.d04-row{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px;margin-top:72px;align-items:start}
+.d04-row figure{margin:0}
+.d04-land{aspect-ratio:4 / 3}
+.d04-port{aspect-ratio:2 / 3}
+.d04-row .d04-cap{max-width:440px}
+.d04-cap h3{display:inline;font-size:14px;font-weight:400;margin:0}
+.d04-offset{margin-top:72px;align-items:end}
+.d04-offset-c{grid-column:1 / span 4;padding-bottom:4px}
+.d04-offset-c h3{margin:6px 0 8px;font-size:23px;line-height:1.2;font-weight:400;letter-spacing:-.01em}
+.d04-offset-c p{margin:0 0 6px;font-size:15px}
+.d04-offset-f{grid-column:5 / span 8;margin:0;height:520px}
+
+.d04-rust{background:var(--d04-rust);color:#000000;padding-top:72px;padding-bottom:76px}
+.d04-rust h2{margin:0;grid-column:1 / span 5;font-weight:300;font-size:clamp(36px,4.2vw,54px);line-height:1.05;letter-spacing:-.02em}
+.d04-rust-lede{grid-column:7 / span 6;margin:8px 0 0;font-size:22px;line-height:1.38;font-weight:400}
+.d04-steps{list-style:none;margin:52px 0 0;padding:0;grid-column:1 / -1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:24px;border-top:1px solid #000000}
+.d04-steps li{padding-top:18px}
+.d04-steps b{display:block;font-weight:300;font-size:48px;line-height:1;letter-spacing:-.02em;margin:10px 0 14px}
+.d04-steps p{margin:0;font-size:16px;line-height:1.45}
+.d04-rust .d04-btn:hover{background:#000000;color:#b46a4a}
+.d04-rust-cta{grid-column:1 / -1;margin-top:40px;display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center}
+
+.d04-contents{padding-top:32px;padding-bottom:80px;align-items:start}
+.d04-toc{grid-column:1 / span 7}
+.d04-toc-h{display:flex;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid #000000}
+.d04-toc ol{list-style:none;margin:0;padding:0}
+.d04-toc-a{display:grid;grid-template-columns:44px minmax(0,auto) minmax(24px,1fr) auto;align-items:baseline;column-gap:12px;row-gap:2px;padding:18px 0 14px;border-bottom:1px solid #000000;text-decoration:none}
+.d04-toc-a:hover .d04-toc-t{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+.d04-toc-n{font-family:var(--d04-sans);font-size:12px;letter-spacing:.07em;font-weight:500}
+.d04-toc-t{font-size:25px;line-height:1.15;font-weight:400;letter-spacing:-.01em}
+.d04-toc-d{border-bottom:1px dotted #000000;transform:translateY(-6px)}
+.d04-toc-p{font-size:18px;white-space:nowrap}
+.d04-toc-s{grid-column:2 / -1;font-family:var(--d04-sans);font-size:13px;color:var(--d04-mute)}
+.d04-toc-foot{margin:18px 0 0;font-size:15px;color:var(--d04-mute)}
+.d04-facing{grid-column:9 / span 4;margin:0}
+.d04-facing .d04-port{aspect-ratio:3 / 4}
+
+.d04-clients{padding-top:32px;padding-bottom:72px;row-gap:32px}
+.d04-rating{grid-column:1 / span 12;margin:0;font-size:clamp(26px,2.6vw,34px);line-height:1.25;font-weight:300;letter-spacing:-.01em;max-width:900px}
+.d04-rating span{color:var(--d04-mute)}
+.d04-q{grid-column:span 6;margin:0;padding-top:18px;border-top:1px solid #000000}
+.d04-q blockquote{margin:0 0 14px;font-size:26px;line-height:1.3;font-weight:300}
+.d04-q figcaption{font-size:14px}
+.d04-q figcaption .d04-lab{display:block;margin-bottom:4px}
+
+.d04-area{padding-bottom:80px;align-items:start;row-gap:28px}
+.d04-fig{grid-column:1 / span 8;margin:0}
+.d04-map{display:block;width:100%;height:auto;border:1px solid #000000;background:#efe9d8}
+.d04-area-c{grid-column:9 / span 4}
+.d04-area-c h2{margin:0 0 10px;font-size:23px;line-height:1.2;font-weight:400}
+.d04-area-c p{margin:0 0 18px;font-size:15px}
+.d04-towns{list-style:none;margin:0;padding:0;border-top:1px solid #000000}
+.d04-towns a{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:46px;border-bottom:1px solid #000000;text-decoration:none;font-size:18px}
+.d04-towns a span:last-child{font-family:var(--d04-sans);font-size:12px;color:var(--d04-mute)}
+.d04-towns a:hover span:first-child{text-decoration:underline;text-underline-offset:4px}
+
+.d04-notes{padding-top:32px;padding-bottom:80px}
+.d04-note{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,6fr) minmax(0,3fr);column-gap:24px;padding:22px 0 24px;border-top:1px solid #000000}
+.d04-note:last-child{border-bottom:1px solid #000000}
+.d04-note-n{font-weight:300;font-size:40px;line-height:1;letter-spacing:-.02em}
+.d04-note h3{margin:0 0 10px;font-size:25px;line-height:1.2;font-weight:400;letter-spacing:-.01em}
+.d04-note p{margin:0;font-size:17px;line-height:1.5}
+
+.d04-colo{background:var(--d04-rust);padding-top:56px;padding-bottom:48px;row-gap:24px}
+.d04-colo-h{grid-column:1 / span 4;margin:0;font-weight:300;font-size:clamp(36px,4.6vw,60px);line-height:1;letter-spacing:-.02em}
+.d04-colo-a{grid-column:5 / span 4;margin:0;font-style:normal;font-size:16px;line-height:1.55}
+.d04-colo-b{grid-column:9 / span 4;margin:0;font-size:16px;line-height:1.55}
+.d04-colo-a a,.d04-colo-b a{text-underline-offset:3px}
+.d04-colo-r{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:4px 22px;padding-top:18px;border-top:1px solid #000000;font-family:var(--d04-sans);font-size:13px}
+.d04-colo-r a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
+.d04-colo-r a:hover{text-decoration:underline}
+.d04-fine{margin:0;padding-top:18px;padding-bottom:22px;font-family:var(--d04-sans);font-size:12px;color:var(--d04-mute)}
+
+@media (max-width: 960px){
+  .d04{--d04-m:32px}
+  .d04-nav-l .d04-nl{display:none}
+  .d04-intro-a{grid-column:1 / -1}
+  .d04-intro-b{grid-column:1 / -1}
+  .d04-pcap-n{grid-column:1 / -1}
+  .d04-pcap-t{grid-column:1 / -1}
+  .d04-spec{grid-column:1 / -1}
+  .d04-offset-c{grid-column:1 / -1;order:2}
+  .d04-offset-f{grid-column:1 / -1;height:440px}
+  .d04-rust h2,.d04-rust-lede{grid-column:1 / -1}
+  .d04-steps{grid-template-columns:1fr 1fr;row-gap:28px}
+  .d04-toc{grid-column:1 / -1}
+  .d04-facing{grid-column:1 / -1;margin-top:40px}
+  .d04-fig{grid-column:1 / -1}
+  .d04-area-c{grid-column:1 / -1}
+  .d04-q{grid-column:1 / -1}
+  .d04-colo-h,.d04-colo-a,.d04-colo-b{grid-column:1 / -1}
+}
+@media (max-width: 560px){
+  .d04{--d04-m:18px;font-size:17px}
+  .d04-nav{gap:4px 10px;flex-wrap:wrap}
+  .d04-nav-r{width:100%;justify-content:space-between;flex-wrap:nowrap}
+  .d04-brand{margin-right:0;font-size:13px}
+  .d04-nav-r .d04-nl{font-size:13px}
+  .d04-nav-r .d04-btn{min-height:44px;padding:0 14px;font-size:13px}
+  .d04-title{flex-direction:column-reverse;align-items:flex-end;padding-top:24px;padding-bottom:22px;gap:18px}
+  .d04-title-note{max-width:none;text-align:right}
+  .d04-spread{grid-template-columns:1fr;gap:28px}
+  .d04-sq{aspect-ratio:4 / 3}
+  .d04-intro{padding-top:56px;padding-bottom:64px}
+  .d04-intro-a{font-size:23px}
+  .d04-mark{padding-left:18px;padding-right:18px}
+  .d04-plates{padding-bottom:72px}
+  .d04-plate-wide{height:300px}
+  .d04-row{grid-template-columns:1fr;margin-top:64px;gap:40px}
+  .d04-offset{margin-top:64px}
+  .d04-offset-f{height:280px}
+  .d04-rust{padding-top:64px;padding-bottom:64px}
+  .d04-rust-lede{font-size:19px}
+  .d04-steps{grid-template-columns:1fr;margin-top:44px}
+  .d04-contents{padding-bottom:72px}
+  .d04-toc-a{grid-template-columns:34px minmax(0,1fr) auto}
+  .d04-toc-d{display:none}
+  .d04-toc-t{font-size:21px}
+  .d04-toc-p{font-size:15px}
+  .d04-clients{padding-bottom:64px}
+  .d04-q blockquote{font-size:22px}
+  .d04-map .d04-map-name{display:none}
+  .d04-area{padding-bottom:72px}
+  .d04-notes{padding-bottom:72px}
+  .d04-note{grid-template-columns:1fr;row-gap:10px}
+  .d04-note-n{font-size:30px}
+  .d04-note h3{font-size:22px}
+  .d04-colo{padding-top:56px;padding-bottom:48px}
+}
+</style>
+</helmet>
+<div class="d04">
+
+  <header class="d04-nav d04-wrap">
+    <div class="d04-nav-l">
+      <a class="d04-brand" href="/">Brick Street Design-Build</a>
+      <a class="d04-nl" href="#d04-plates">Plates</a>
+      <a class="d04-nl" href="#d04-process">Process</a>
+      <a class="d04-nl" href="#d04-contents">Contents</a>
+      <a class="d04-nl" href="#d04-area">Area</a>
+      <a class="d04-nl" href="#d04-notes">Notes</a>
+    </div>
+    <div class="d04-nav-r">
+      <a class="d04-nl" href="tel:+14075550144">(407) 555-0144</a>
+      <a class="d04-btn" href="/book-a-consult">Book a Consult</a>
+    </div>
+  </header>
+
+  <section class="d04-wrap" aria-labelledby="d04-h1">
+    <div class="d04-title">
+      <p class="d04-title-note">Kitchens, baths, additions and whole houses, drawn and built by one firm. Seven finished rooms follow as plates.<span>[RATING] from [COUNT] Google reviews</span></p>
+      <h1 class="d04-h1" id="d04-h1">Design-build remodeling<br>in Winter Park, Florida</h1>
+    </div>
+    <div class="d04-spread">
+      <figure>
+        <img class="d04-ph d04-sq" src="img/remodel/05.jpg" alt="Remodeled kitchen with a long white quartz island, walnut base cabinets and three glass pendant lights" width="548" height="548" style="object-fit: cover; object-position: 38% 50%;">
+        <figcaption class="d04-cap"><span class="d04-lab">Plate 01</span>Kitchen opened to the living room. Waterfall quartz island, 11 ft, with walnut base cabinets.</figcaption>
+      </figure>
+      <figure>
+        <img class="d04-ph d04-sq" src="img/remodel/06.jpg" alt="Double-height living room with a stacked-stone fireplace wall and a gas linear fireplace" width="548" height="548" style="object-fit: cover; object-position: 66% 50%;">
+        <figcaption class="d04-cap"><span class="d04-lab">Plate 02</span>Living room. Stacked-stone fireplace wall run to the ceiling, linear gas insert.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="d04-intro d04-grid d04-wrap" aria-label="About the firm">
+    <p class="d04-intro-a">One firm draws the room, prices it, permits it and builds it. You sign one contract with one fixed price before demolition, and one project lead answers your calls from the first measure to the last punch-list item.</p>
+    <div class="d04-intro-b">
+      <p>We work inside the houses Winter Park is known for: 1920s bungalows off Park Avenue, mid-century ranches near the lakes, newer two-stories in Baldwin Park. Most projects take [WEEKS] weeks from first visit to keys back.</p>
+      <ul class="d04-facts">
+        <li><span>Reviews</span><span>[RATING] from [COUNT] on Google</span></li>
+        <li><span>Newest review</span><span>[DAYS] days ago</span></li>
+        <li><span>License</span><span>FL certified general contractor [LICENSE NO.]</span></li>
+        <li><span>In practice</span><span>[YEARS] years</span></li>
+      </ul>
+      <div class="d04-cta">
+        <a class="d04-btn" href="/book-a-consult">Book a Consult</a>
+        <a class="d04-link" href="tel:+14075550144">Call (407) 555-0144</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="d04-mark" id="d04-plates">
+    <p>Brick Street</p>
+    <h2>Plates</h2>
+  </div>
+
+  <section class="d04-plates d04-wrap" aria-label="Finished projects">
+    <figure class="d04-plate">
+      <div class="d04-plate-wide"><img class="d04-ph" src="img/remodel/03.jpg" alt="Open great room and kitchen under a vaulted ceiling with one exposed timber beam" width="1120" height="700" loading="lazy" style="object-fit: cover; object-position: 50% 45%;"></div>
+      <figcaption class="d04-pcap d04-grid">
+        <div class="d04-pcap-n"><span class="d04-lab">Plate 03</span><a class="d04-link" href="/wall-removal">/wall-removal</a></div>
+        <div class="d04-pcap-t"><h3>Great room, wall taken out</h3><p>The wall between kitchen and living room came out. A new beam carries the roof, and one timber was left exposed across the vault.</p></div>
+        <dl class="d04-spec"><dt>Scope</dt><dd>Design, engineering, permits, build</dd><dt>On site</dt><dd>[WEEKS] weeks</dd><dt>Range</dt><dd>$[LOW]–$[HIGH]</dd></dl>
+      </figcaption>
+    </figure>
+
+    <div class="d04-row">
+      <figure>
+        <img class="d04-ph d04-land" src="img/remodel/04.jpg" alt="Dining area with an upholstered table set beside an open stair with glass rails" width="660" height="495" loading="lazy" style="object-fit: cover;">
+        <figcaption class="d04-cap"><span class="d04-lab">Plate 04 · <a href="/whole-home-renovation">/whole-home-renovation</a></span><h3>Whole-home renovation.</h3> Stair rebuilt with glass rails, floors replaced through the first story, dining moved to the light. [WEEKS] weeks, $[LOW]–$[HIGH].</figcaption>
+      </figure>
+      <figure>
+        <img class="d04-ph d04-port" src="img/remodel/01.jpg" alt="Tall living room with a vaulted white ceiling, a single timber beam and a fireplace wall" width="468" height="702" loading="lazy" style="object-fit: cover;">
+        <figcaption class="d04-cap"><span class="d04-lab">Plate 05 · <a href="/home-additions">/home-additions</a></span><h3>Addition with vaulted ceiling.</h3> A [SQ FT] sq ft family room added to the back of a 1950s ranch. $[LOW]–$[HIGH].</figcaption>
+      </figure>
+    </div>
+
+    <div class="d04-offset d04-grid">
+      <div class="d04-offset-c">
+        <span class="d04-lab">Plate 06</span>
+        <h3>Living room refit</h3>
+        <p>Fireplace surround and mantel rebuilt, bay window reframed, dark oak floors refinished. Built in [WEEKS] weeks while the family lived upstairs.</p>
+        <a class="d04-link" href="/interior-renovation">/interior-renovation</a>
+      </div>
+      <figure class="d04-offset-f"><img class="d04-ph" src="img/remodel/09.jpg" alt="Living room with gray walls, a white fireplace surround with a wood mantel and a wide bay window" width="740" height="620" loading="lazy" style="object-fit: cover; object-position: 40% 50%;"></figure>
+    </div>
+  </section>
+
+  <section class="d04-rust" id="d04-process" aria-labelledby="d04-process-h">
+    <div class="d04-grid d04-wrap">
+      <h2 id="d04-process-h">How a remodel runs, start to keys</h2>
+      <p class="d04-rust-lede">Four stages, one team. You see a drawing and a fixed number before anything is torn out, and the number does not move unless you change the plan.</p>
+      <ol class="d04-steps">
+        <li><span class="d04-lab">Stage one</span><b>Measure</b><p>We visit, measure every wall and ask how you live in the room. The first visit is free and takes about 90 minutes.</p></li>
+        <li><span class="d04-lab">Stage two</span><b>Design</b><p>Floor plans, elevations and a materials board, revised until it is right. Design fee from $[PRICE], credited to the build.</p></li>
+        <li><span class="d04-lab">Stage three</span><b>Price</b><p>One fixed price in writing, with permits and City of Winter Park or Orange County fees included.</p></li>
+        <li><span class="d04-lab">Stage four</span><b>Build</b><p>One project lead on site, a written schedule, and a walk-through with you every week until the punch list is done.</p></li>
+      </ol>
+      <div class="d04-rust-cta">
+        <a class="d04-btn" href="/book-a-consult">Book a Consult</a>
+        <a class="d04-link" href="tel:+14075550144">Or call (407) 555-0144</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="d04-mark" id="d04-contents" style="padding-top: 72px;">
+    <p>Contents</p>
+    <h2>Prices</h2>
+  </div>
+
+  <section class="d04-contents d04-grid d04-wrap" aria-label="Services and prices">
+    <nav class="d04-toc" aria-label="Services">
+      <div class="d04-toc-h d04-lab"><span>Service</span><span>Typical range</span></div>
+      <ol>
+        <li><a class="d04-toc-a" href="/kitchen-remodeling"><span class="d04-toc-n">01</span><span class="d04-toc-t">Kitchen remodeling</span><span class="d04-toc-d" aria-hidden="true"></span><span class="d04-toc-p">$[LOW]–$[HIGH]</span><span class="d04-toc-s">/kitchen-remodeling · Plate 01</span></a></li>
+        <li><a class="d04-toc-a" href="/bathroom-remodeling"><span class="d04-toc-n">02</span><span class="d04-toc-t">Bathroom remodeling</span><span class="d04-toc-d" aria-hidden="true"></span><span class="d04-toc-p">$[LOW]–$[HIGH]</span><span class="d04-toc-s">/bathroom-remodeling</span></a></li>
+        <li><a class="d04-toc-a" href="/home-additions"><span class="d04-toc-n">03</span><span class="d04-toc-t">Home additions</span><span class="d04-toc-d" aria-hidden="true"></span><span class="d04-toc-p">$[LOW]–$[HIGH]</span><span class="d04-toc-s">/home-additions · Plate 05</span></a></li>
+        <li><a class="d04-toc-a" href="/whole-home-renovation"><span class="d04-toc-n">04</span><span class="d04-toc-t">Whole-home renovation</span><span class="d04-toc-d" aria-hidden="true"></span><span class="d04-toc-p">$[LOW]–$[HIGH]</span><span class="d04-toc-s">/whole-home-renovation · Plate 04</span></a></li>
+        <li><a class="d04-toc-a" href="/wall-removal"><span class="d04-toc-n">05</span><span class="d04-toc-t">Open floor plans and wall removal</span><span class="d04-toc-d" aria-hidden="true"></span><span class="d04-toc-p">$[LOW]–$[HIGH]</span><span class="d04-toc-s">/wall-removal · Plate 03</span></a></li>
+        <li><a class="d04-toc-a" href="/interior-renovation"><span class="d04-toc-n">06</span><span class="d04-toc-t">Living rooms and fireplaces</span><span class="d04-toc-d" aria-hidden="true"></span><span class="d04-toc-p">$[LOW]–$[HIGH]</span><span class="d04-toc-s">/interior-renovation · Plates 02, 06</span></a></li>
+        <li><a class="d04-toc-a" href="/lanai-outdoor-rooms"><span class="d04-toc-n">07</span><span class="d04-toc-t">Lanais and outdoor rooms</span><span class="d04-toc-d" aria-hidden="true"></span><span class="d04-toc-p">$[LOW]–$[HIGH]</span><span class="d04-toc-s">/lanai-outdoor-rooms</span></a></li>
+        <li><a class="d04-toc-a" href="/design-and-permits"><span class="d04-toc-n">08</span><span class="d04-toc-t">Design and permits only</span><span class="d04-toc-d" aria-hidden="true"></span><span class="d04-toc-p">from $[PRICE]</span><span class="d04-toc-s">/design-and-permits</span></a></li>
+      </ol>
+      <p class="d04-toc-foot">Ranges are for finished work in Winter Park homes over the last [YEARS] years, including design, permits and cleanup. Your fixed price comes after the design stage.</p>
+    </nav>
+    <figure class="d04-facing">
+      <img class="d04-ph d04-port" src="img/remodel/08.jpg" alt="Bright living room with a cognac leather sofa, sage accent wall and a sputnik ceiling light" width="364" height="485" loading="lazy" style="object-fit: cover; object-position: 30% 50%;">
+      <figcaption class="d04-cap"><span class="d04-lab">Plate 07</span>Family room. Sage accent wall, new lighting plan, kitchen opened behind.</figcaption>
+    </figure>
+  </section>
+
+  <div class="d04-mark">
+    <p>Clients</p>
+    <h2>Area</h2>
+  </div>
+
+  <section class="d04-clients d04-grid d04-wrap" aria-label="Google reviews">
+    <p class="d04-rating">[RATING] from [COUNT] Google reviews. <span>Newest review [DAYS] days ago.</span></p>
+    <figure class="d04-q">
+      <blockquote>&ldquo;[Google review, pulled at build time]&rdquo;</blockquote>
+      <figcaption><span class="d04-lab">Google review</span>[Reviewer], [Town]</figcaption>
+    </figure>
+    <figure class="d04-q">
+      <blockquote>&ldquo;[Google review, pulled at build time]&rdquo;</blockquote>
+      <figcaption><span class="d04-lab">Google review</span>[Reviewer], [Town]</figcaption>
+    </figure>
+  </section>
+
+  <section class="d04-area d04-grid d04-wrap" id="d04-area" aria-labelledby="d04-area-h">
+    <figure class="d04-fig">
+      <svg class="d04-map" viewBox="0 0 740 520" role="img" aria-label="Site plan of Winter Park with the eight nearby towns we work in">
+        <circle cx="370" cy="270" r="110" fill="none" stroke="#000000" stroke-width="1" stroke-dasharray="2 5"></circle>
+        <circle cx="370" cy="270" r="220" fill="none" stroke="#000000" stroke-width="1" stroke-dasharray="2 5"></circle>
+        <text x="370" y="153" text-anchor="middle" font-family="Space Grotesk, Arial, sans-serif" font-size="11" letter-spacing="1" fill="#000000">5 MI</text>
+        <text x="370" y="43" text-anchor="middle" font-family="Space Grotesk, Arial, sans-serif" font-size="11" letter-spacing="1" fill="#000000">10 MI</text>
+        <path d="M232 520 C262 450 296 392 318 330 C336 280 334 236 326 190 C318 140 300 90 282 0" fill="none" stroke="#000000" stroke-width="2"></path>
+        <text x="300" y="392" font-family="Space Grotesk, Arial, sans-serif" font-size="11" letter-spacing="1" fill="#000000">I-4</text>
+        <ellipse cx="404" cy="262" rx="30" ry="22" fill="#d9cfb8" stroke="#000000" stroke-width="1"></ellipse>
+        <ellipse cx="372" cy="232" rx="16" ry="12" fill="#d9cfb8" stroke="#000000" stroke-width="1"></ellipse>
+        <ellipse cx="360" cy="200" rx="22" ry="14" fill="#d9cfb8" stroke="#000000" stroke-width="1"></ellipse>
+        <ellipse cx="336" cy="268" rx="12" ry="10" fill="#d9cfb8" stroke="#000000" stroke-width="1"></ellipse>
+        <rect x="364" y="264" width="12" height="12" fill="#000000"></rect>
+        <text x="384" y="300" font-family="Newsreader, Georgia, serif" font-size="20" fill="#000000">Winter Park</text>
+        <circle cx="374" cy="178" r="4" fill="#000000"></circle><text class="d04-map-name" x="384" y="174" font-family="Newsreader, Georgia, serif" font-size="16" fill="#000000">Maitland</text>
+        <circle cx="236" cy="174" r="4" fill="#000000"></circle><text class="d04-map-name" x="226" y="170" text-anchor="end" font-family="Newsreader, Georgia, serif" font-size="16" fill="#000000">Altamonte Springs</text>
+        <circle cx="282" cy="62" r="4" fill="#000000"></circle><text class="d04-map-name" x="272" y="58" text-anchor="end" font-family="Newsreader, Georgia, serif" font-size="16" fill="#000000">Longwood</text>
+        <circle cx="492" cy="88" r="4" fill="#000000"></circle><text class="d04-map-name" x="502" y="84" font-family="Newsreader, Georgia, serif" font-size="16" fill="#000000">Winter Springs</text>
+        <circle cx="490" cy="176" r="4" fill="#000000"></circle><text class="d04-map-name" x="500" y="172" font-family="Newsreader, Georgia, serif" font-size="16" fill="#000000">Casselberry</text>
+        <circle cx="632" cy="208" r="4" fill="#000000"></circle><text class="d04-map-name" x="642" y="204" font-family="Newsreader, Georgia, serif" font-size="16" fill="#000000">Oviedo</text>
+        <circle cx="414" cy="340" r="4" fill="#000000"></circle><text class="d04-map-name" x="424" y="345" font-family="Newsreader, Georgia, serif" font-size="16" fill="#000000">Baldwin Park</text>
+        <circle cx="268" cy="384" r="4" fill="#000000"></circle><text class="d04-map-name" x="258" y="389" text-anchor="end" font-family="Newsreader, Georgia, serif" font-size="16" fill="#000000">College Park</text>
+        <path d="M690 470 L690 430 M684 442 L690 430 L696 442" fill="none" stroke="#000000" stroke-width="1"></path>
+        <text x="690" y="488" text-anchor="middle" font-family="Space Grotesk, Arial, sans-serif" font-size="11" fill="#000000">N</text>
+      </svg>
+      <figcaption class="d04-cap"><span class="d04-lab">Fig. 08 · Site plan</span>Winter Park and the towns we drive to, within about 10 miles of Lake Virginia. Rings at 5 and 10 miles.</figcaption>
+    </figure>
+    <div class="d04-area-c">
+      <h2 id="d04-area-h">Remodeling across Winter Park and the lakes</h2>
+      <p>Service-area business. Each town has its own page with permit notes and finished work nearby.</p>
+      <ul class="d04-towns">
+        <li><a href="/areas/winter-park"><span>Winter Park</span><span>/areas/winter-park</span></a></li>
+        <li><a href="/areas/maitland"><span>Maitland</span><span>/areas/maitland</span></a></li>
+        <li><a href="/areas/baldwin-park"><span>Baldwin Park</span><span>/areas/baldwin-park</span></a></li>
+        <li><a href="/areas/college-park"><span>College Park</span><span>/areas/college-park</span></a></li>
+        <li><a href="/areas/altamonte-springs"><span>Altamonte Springs</span><span>/areas/altamonte-springs</span></a></li>
+        <li><a href="/areas/casselberry"><span>Casselberry</span><span>/areas/casselberry</span></a></li>
+        <li><a href="/areas/winter-springs"><span>Winter Springs</span><span>/areas/winter-springs</span></a></li>
+        <li><a href="/areas/oviedo"><span>Oviedo</span><span>/areas/oviedo</span></a></li>
+        <li><a href="/areas/longwood"><span>Longwood</span><span>/areas/longwood</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="d04-mark" id="d04-notes">
+    <p>Notes</p>
+    <h2>Questions</h2>
+  </div>
+
+  <section class="d04-notes d04-wrap" aria-label="Questions">
+    <div class="d04-note">
+      <span class="d04-note-n">1.</span>
+      <div><h3>How much does a kitchen remodel cost in Winter Park?</h3><p>Most of our kitchens finish between $[LOW] and $[HIGH]. Cabinets, counters and whether a wall moves set the number. You get one fixed price in writing after design, before anything is torn out.</p></div>
+    </div>
+    <div class="d04-note">
+      <span class="d04-note-n">2.</span>
+      <div><h3>What does design-build mean, and why use it?</h3><p>One company designs the room, prices it and builds it. You do not hire an architect and a contractor separately and referee between them. One contract, one schedule, one person to call.</p></div>
+    </div>
+    <div class="d04-note">
+      <span class="d04-note-n">3.</span>
+      <div><h3>Do I need a permit to remodel in Winter Park?</h3><p>Moving walls, plumbing, wiring or windows needs a City of Winter Park building permit, and homes in a historic district may also need design review. We draw, file and track every permit, and the fees are in your price.</p></div>
+    </div>
+    <div class="d04-note">
+      <span class="d04-note-n">4.</span>
+      <div><h3>How long does a bathroom remodel take?</h3><p>Plan on [WEEKS] weeks for design and permits, then about [WEEKS] weeks of construction for a primary bath. You get a written schedule before we start, and we walk it with you every week.</p></div>
+    </div>
+  </section>
+
+  <footer class="d04-colo d04-grid d04-wrap" aria-label="Colophon">
+    <h2 class="d04-colo-h">Colophon</h2>
+    <address class="d04-colo-a"><b style="font-weight: 400;">Brick Street Design-Build</b><br>Service-area business, Winter Park, Florida<br>Studio visits by appointment, [STREET ADDRESS]<br><a href="tel:+14075550144">(407) 555-0144</a><br>Hours [HOURS]</address>
+    <p class="d04-colo-b">FL certified general contractor [LICENSE NO.]<br>Insured, [YEARS] years in practice<br>Owner and lead designer [OWNER NAME]<br><a class="d04-btn" href="/book-a-consult" style="margin-top: 16px;">Book a Consult</a></p>
+    <nav class="d04-colo-r" aria-label="Services and areas">
+      <a href="/kitchen-remodeling">/kitchen-remodeling</a>
+      <a href="/bathroom-remodeling">/bathroom-remodeling</a>
+      <a href="/home-additions">/home-additions</a>
+      <a href="/whole-home-renovation">/whole-home-renovation</a>
+      <a href="/wall-removal">/wall-removal</a>
+      <a href="/interior-renovation">/interior-renovation</a>
+      <a href="/lanai-outdoor-rooms">/lanai-outdoor-rooms</a>
+      <a href="/design-and-permits">/design-and-permits</a>
+    </nav>
+  </footer>
+  <p class="d04-fine d04-wrap">Avenue Vision · D04 · Architecture Monograph · style refs withheld</p>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":7800}}'>class Component extends DCLogic { renderVals() { return {}; } }</script>
+</body>
+</html>

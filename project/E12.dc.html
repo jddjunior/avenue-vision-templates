@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Good Sparks Electric Co. home page</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&amp;family=Red+Hat+Display:wght@400..900&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.e12{--pitch:#141414;--char:#232323;--cream:#FDF9F0;--white:#FFFFFF;--lime:#C7FF69;--coral:#FF5A46;--cyan:#33D6F2;--sun:#FFE100;--lav:#EBEBF5;--lilac:#E3C7FF;--iris:#7A78FF;--green:#00A652;--orange:#FF6D38;--yellow:#FFC412;--cobalt:#478BFF;--mute:#B3AFA6;width:100%;background:var(--white);color:var(--pitch);font-family:'DM Sans','Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:1.5;letter-spacing:0.005em}
+.e12 *{box-sizing:border-box}
+:where(.e12) a{color:inherit}
+.e12 a:focus-visible{outline:3px solid var(--iris);outline-offset:3px}
+.e12-in{position:relative;max-width:1200px;margin:0 auto;padding:0 40px}
+.e12-disp{font-family:'Red Hat Display','Arial Black',sans-serif;font-weight:900;letter-spacing:-0.04em;line-height:.85}
+.e12-norm{font-family:'Red Hat Display',sans-serif;font-weight:400;letter-spacing:-0.015em;line-height:1.2}
+.e12-eyebrow{margin:0 0 18px;font-size:14px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase}
+.e12-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:1000px;font-weight:500;font-size:16px;text-decoration:none;white-space:nowrap;transition:transform .15s ease}
+.e12-btn:hover{transform:translateY(-2px)}
+.e12-btn-lime{background:var(--lime);color:var(--pitch)}
+.e12-btn-limeline{border:2px solid var(--lime);color:var(--lime)}
+.e12-btn-dark{background:var(--pitch);color:var(--cream)}
+.e12-btn-line{border:2px solid var(--pitch);color:var(--pitch)}
+/* nav */
+.e12-navwrap{display:flex;justify-content:center;align-items:center;gap:10px;padding:20px 20px 0}
+.e12-nav{display:flex;align-items:center;gap:4px;background:var(--pitch);border-radius:1000px;padding:7px 8px 7px 7px;color:var(--cream)}
+.e12-mark{display:inline-flex;align-items:center;min-height:44px;gap:10px;padding-right:8px;text-decoration:none;color:var(--cream);font-family:'Red Hat Display',sans-serif;font-weight:900;font-size:17px;letter-spacing:-0.03em;white-space:nowrap}
+.e12-mark svg{flex:none;width:44px;height:44px}
+.e12-nav-links{display:flex;gap:2px}
+.e12-nav-links a{display:inline-flex;align-items:center;min-height:44px;padding:0 13px;border-radius:1000px;font-size:14px;font-weight:500;text-decoration:none}
+.e12-nav-links a:hover{background:var(--char)}
+.e12-nav-sep{width:1px;height:24px;background:#4A4A4A;margin:0 6px}
+.e12-nav-tel{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap}
+.e12-navwrap .e12-btn{min-height:58px;font-size:15px;padding:0 24px;border-width:2px;border-style:solid;border-color:var(--pitch);background:var(--lime);color:var(--pitch)}
+/* hero */
+.e12-hero{position:relative;padding:0 20px 20px;overflow:hidden}
+.e12-head{position:relative;max-width:1240px;margin:0 auto;padding-top:46px}
+.e12-h1{margin:0;font-weight:inherit;font-size:inherit}
+.e12-h1-a{display:block;font-family:'Red Hat Display',sans-serif;font-weight:400;font-size:clamp(34px,4.6vw,60px);letter-spacing:-0.025em;line-height:1.05;padding-left:6px}
+.e12-h1-a i{font-style:normal;display:inline-block;background:var(--sun);padding:0 .14em;border-radius:.12em;transform:rotate(-2deg)}
+.e12-h1-b{position:relative;z-index:3;display:block;font-family:'Red Hat Display',sans-serif;font-weight:900;font-size:min(19.7vw,252px);letter-spacing:-0.045em;line-height:.8;margin:112px 0 0 -4px;white-space:nowrap}
+.e12-side{position:absolute;top:52px;right:0;width:auto;display:flex;flex-direction:column;align-items:flex-end}
+.e12-intro{position:absolute;left:6px;top:128px;width:600px;margin:0;font-size:18px;line-height:1.5}
+.e12-side p{margin:0 0 20px;font-size:17px;line-height:1.5}
+.e12-side-row{display:flex;align-items:center;flex-wrap:wrap;gap:16px}
+.e12-tel{display:inline-flex;align-items:center;min-height:52px;padding:0 4px;font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:22px;letter-spacing:-0.02em;text-decoration:none;border-bottom:3px solid var(--pitch)}
+.e12-rating{display:flex;align-items:center;gap:12px;margin:16px 0 0;font-size:14px;line-height:1.4;text-align:left}
+.e12-rating b{font-weight:700}
+.e12-rating .e12-st{letter-spacing:2px}
+.e12-tiles{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;max-width:1240px;margin:-44px auto 0}
+.e12-tile{position:relative;aspect-ratio:1/1;overflow:hidden}
+.e12-tile img{display:block;width:100%;height:100%}
+.e12-tile svg.e12-scene{display:block;width:100%;height:100%}
+.e12-logo-sq{position:absolute;left:50%;top:56%;transform:translate(-50%,-50%);width:118px;height:118px;background:#fff;display:flex;align-items:center;justify-content:center}
+.e12-toggle{position:absolute;right:16px;bottom:16px;z-index:4;display:inline-flex;align-items:center;gap:10px;background:var(--pitch);color:var(--cream);border-radius:1000px;padding:6px 6px 6px 16px;font-size:13px;font-weight:500}
+.e12-toggle span{display:inline-flex;align-items:center;justify-content:flex-end;width:52px;height:32px;border-radius:1000px;background:var(--lime);padding:3px}
+.e12-toggle span::after{content:"";width:26px;height:26px;border-radius:50%;background:var(--pitch)}
+.e12-hi{position:absolute;left:22px;top:84px;z-index:2;background:var(--lime);color:var(--pitch);font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:20px;letter-spacing:-0.02em;padding:10px 18px;border-radius:1000px;transform:rotate(-6deg)}
+/* chalkboard services */
+.e12-board{background:var(--pitch);color:var(--cream);padding:84px 0 76px}
+.e12-board-h{text-align:center}
+.e12-board-h .e12-eyebrow{color:var(--cream)}
+.e12-board h2{margin:0;font-size:clamp(56px,9.4vw,124px);color:var(--cream)}
+.e12-board-sub{margin:26px auto 0;max-width:560px;font-size:17px;color:#D7D3CA}
+.e12-five{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px;margin-top:52px}
+.e12-stk{display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;color:var(--cream)}
+.e12-stk svg{display:block;width:100%;max-width:204px;height:auto;transition:transform .2s ease}
+.e12-stk:hover svg{transform:rotate(-4deg) scale(1.03)}
+.e12-stk b{margin-top:20px;font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:22px;letter-spacing:-0.02em;line-height:1.1}
+.e12-stk small{margin-top:6px;font-size:13px;color:var(--mute)}
+.e12-stk span{margin-top:10px;font-size:15px;font-weight:700;color:var(--lime)}
+.e12-sheet{position:relative;display:grid;grid-template-columns:auto repeat(3,minmax(0,1fr));gap:22px;align-items:center;margin-top:50px;padding:24px 30px;border:2px dashed #4A4A4A;border-radius:25px}
+.e12-sheet-l{font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:20px;letter-spacing:-0.02em;line-height:1.1;color:var(--cream)}
+.e12-sheet-l small{display:block;margin-top:4px;font-family:'DM Sans',sans-serif;font-weight:400;font-size:13px;letter-spacing:0;color:var(--mute)}
+.e12-mini{display:flex;align-items:center;gap:14px;background:var(--cream);color:var(--pitch);text-decoration:none;border-radius:22px;padding:12px 18px 12px 12px;outline:5px solid var(--cream);outline-offset:3px;box-shadow:0 0 0 8px var(--pitch);transition:transform .2s ease}
+.e12-mini:nth-child(2){transform:rotate(-2deg)}
+.e12-mini:nth-child(3){transform:rotate(1.5deg)}
+.e12-mini:nth-child(4){transform:rotate(-1deg)}
+.e12-mini:hover{transform:rotate(0) translateY(-3px)}
+.e12-mini svg{flex:none;width:58px;height:58px}
+.e12-mini b{display:block;font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:18px;letter-spacing:-0.02em;line-height:1.15}
+.e12-mini small{display:block;font-size:12.5px;color:#4A4740}
+.e12-mini em{display:block;font-style:normal;font-size:14px;font-weight:700;margin-top:2px}
+/* work tiles */
+.e12-work{padding:76px 20px 20px}
+.e12-work-h{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;max-width:1240px;margin:0 auto 28px;padding:0 6px}
+.e12-work-h h2{margin:0;font-size:clamp(28px,3vw,38px);max-width:620px}
+.e12-work-h p{margin:0;max-width:400px;font-size:15.5px;color:#3D3B37}
+.e12-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;max-width:1240px;margin:0 auto}
+.e12-cell{position:relative;height:300px;overflow:hidden}
+.e12-cell img{display:block;width:100%;height:100%}
+.e12-num{display:flex;flex-direction:column;justify-content:space-between;padding:28px 30px 30px}
+.e12-num b{font-family:'Red Hat Display',sans-serif;font-weight:900;font-size:clamp(84px,9.6vw,132px);letter-spacing:-0.05em;line-height:.8}
+.e12-num p{margin:0;font-family:'Red Hat Display',sans-serif;font-weight:400;font-size:22px;letter-spacing:-0.015em;line-height:1.25;max-width:330px}
+/* price panel */
+.e12-prices{background:var(--cream);padding:80px 0}
+.e12-prices-grid{display:grid;grid-template-columns:minmax(0,1fr) 640px;gap:56px;align-items:center}
+.e12-prices h2{margin:0 0 26px;font-size:clamp(52px,6.6vw,86px)}
+.e12-prices-copy p{margin:0 0 16px;font-size:17px;max-width:440px}
+.e12-panel{background:#D6D9DF;border-radius:25px;padding:20px;transform:rotate(1deg)}
+.e12-panel-top{display:flex;justify-content:space-between;align-items:center;padding:4px 12px 16px;font-size:12.5px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#2D2F34}
+.e12-screw{display:inline-block;width:14px;height:14px;border-radius:50%;background:#9CA1AA;box-shadow:inset 0 0 0 3px #B8BCC4}
+.e12-panel-in{background:var(--char);border-radius:16px;padding:18px}
+.e12-main{display:flex;align-items:center;gap:16px;padding:6px 6px 18px;border-bottom:2px solid #3A3A3A;margin-bottom:12px;color:var(--cream)}
+.e12-main b{font-family:'Red Hat Display',sans-serif;font-weight:900;font-size:22px;letter-spacing:-0.02em}
+.e12-main span{font-size:13.5px;color:#C9C5BC}
+.e12-brk{flex:none;position:relative;display:inline-block;width:46px;height:30px;border-radius:7px;background:#0B0B0B;box-shadow:inset 0 0 0 2px #3A3A3A}
+.e12-brk i{position:absolute;left:6px;top:6px;width:20px;height:18px;border-radius:4px}
+.e12-brk-main{width:72px;height:40px}
+.e12-brk-main i{width:34px;height:26px;left:8px;top:7px;background:var(--lime)}
+.e12-circuits{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0;padding:0;list-style:none}
+.e12-circuits a{display:flex;align-items:center;gap:12px;min-height:58px;padding:8px 12px 8px 8px;background:#1A1A1A;border-radius:10px;text-decoration:none;color:var(--cream);transition:background-color .15s ease}
+.e12-circuits a:hover{background:#2E2E2E}
+.e12-cn{flex:none;width:22px;font-size:12px;font-weight:700;color:var(--mute);text-align:right}
+.e12-tape{display:block;min-width:0}
+.e12-tape b{display:block;font-size:14.5px;font-weight:700;line-height:1.2}
+.e12-tape span{display:block;margin-top:2px;font-size:13.5px;color:var(--lime);font-weight:500}
+.e12-panel-foot{margin:14px 6px 2px;font-size:12.5px;color:#C9C5BC}
+/* meter reviews */
+.e12-meterband{background:var(--sun);padding:88px 0 96px}
+.e12-meter-grid{display:grid;grid-template-columns:440px minmax(0,1fr);gap:64px;align-items:center}
+.e12-meter{position:relative;width:440px;height:440px;border-radius:50%;background:var(--cream);border:18px solid var(--pitch);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px}
+.e12-meter::before{content:"";position:absolute;inset:12px;border-radius:50%;border:2px solid #CFCAB9}
+.e12-dials{display:flex;gap:12px;margin-bottom:16px}
+.e12-dials svg{width:46px;height:46px}
+.e12-meter small{font-size:11.5px;font-weight:700;letter-spacing:0.16em;color:#4A4740}
+.e12-readout{margin:8px 0 10px;background:var(--pitch);color:var(--lime);border-radius:12px;padding:10px 22px 8px;font-family:'Red Hat Display',sans-serif;font-weight:900;font-size:52px;letter-spacing:-0.02em;line-height:1}
+.e12-meter p{margin:0;font-size:15px;font-weight:700}
+.e12-meter p+p{font-weight:400;font-size:13.5px;margin-top:2px;color:#3D3B37}
+.e12-seal{position:absolute;left:50%;bottom:-92px;transform:translateX(-50%) rotate(-6deg);display:flex;flex-direction:column;align-items:center}
+.e12-seal i{display:block;width:3px;height:36px;background:var(--pitch)}
+.e12-seal span{display:block;background:var(--coral);color:var(--pitch);font-size:12px;font-weight:700;letter-spacing:0.08em;padding:10px 14px;border-radius:8px 8px 8px 8px;text-transform:uppercase;white-space:nowrap}
+.e12-meterband h2{margin:0;font-size:clamp(48px,6.2vw,83px)}
+.e12-meterband .e12-lede{margin:20px 0 28px;font-size:17px;max-width:520px}
+.e12-revs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+.e12-rev{margin:0;background:var(--white);border:2px solid var(--pitch);border-radius:25px;padding:22px 22px 18px;display:flex;flex-direction:column;gap:12px}
+.e12-rev q{quotes:none;font-family:'Red Hat Display',sans-serif;font-weight:500;font-size:19px;letter-spacing:-0.015em;line-height:1.25}
+.e12-rev span{font-size:13.5px;color:#3D3B37}
+/* towns cartogram */
+.e12-towns{padding:80px 0 76px;background:var(--white)}
+.e12-towns-h{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:40px;align-items:end;margin-bottom:40px}
+.e12-towns-h h2{margin:0;font-size:clamp(48px,6.4vw,83px)}
+.e12-towns-h p{margin:0;font-size:16px;color:#3D3B37}
+.e12-carto{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:104px;gap:10px}
+.e12-town{display:flex;flex-direction:column;justify-content:space-between;padding:14px 16px 13px;text-decoration:none;color:var(--pitch);transition:transform .15s ease}
+.e12-town:hover{transform:translateY(-3px)}
+.e12-town b{font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:20px;letter-spacing:-0.025em;line-height:1.05}
+.e12-town small{font-size:12.5px;font-weight:500}
+.e12-town-home{background:var(--pitch);color:var(--cream)}
+.e12-town-home b{font-size:44px;font-weight:900;letter-spacing:-0.04em}
+.e12-town-home small{color:var(--lime)}
+.e12-key{grid-column:5/7;grid-row:3/5;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;padding:18px;border:2px solid var(--pitch)}
+.e12-key b{font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:19px;letter-spacing:-0.02em;line-height:1.15}
+.e12-key span{font-size:13.5px;color:#3D3B37}
+.e12-compass{position:absolute;right:0;top:-6px;width:56px;height:56px}
+/* door hanger faq */
+.e12-faq{background:var(--orange);padding:80px 0 92px}
+.e12-faq-h{text-align:center}
+.e12-faq-h h2{margin:0;font-size:clamp(56px,8.4vw,108px)}
+.e12-hangers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin-top:46px;align-items:start}
+.e12-hanger{position:relative;margin:0;padding:112px 22px 22px;border-radius:120px 120px 25px 25px;color:var(--pitch);min-height:440px;display:flex;flex-direction:column}
+.e12-hanger:nth-child(1){transform:rotate(-2deg)}
+.e12-hanger:nth-child(2){transform:rotate(1.5deg);margin-top:18px}
+.e12-hanger:nth-child(3){transform:rotate(-1deg)}
+.e12-hanger:nth-child(4){transform:rotate(2deg);margin-top:14px}
+.e12-hole{position:absolute;left:50%;top:26px;width:62px;height:62px;margin-left:-31px;border-radius:50%;background:var(--orange)}
+.e12-hole::after{content:"";position:absolute;left:50%;top:-30px;width:6px;height:36px;margin-left:-3px;background:var(--orange)}
+.e12-hanger-k{margin:0 0 10px;font-size:12.5px;font-weight:700;letter-spacing:0.14em}
+.e12-hanger h3{margin:0 0 12px;font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:22px;letter-spacing:-0.025em;line-height:1.12}
+.e12-hanger p.e12-a{margin:0;font-size:14.5px;line-height:1.5}
+.e12-hanger-f{margin-top:auto;padding-top:12px;border-top:2px solid var(--pitch);font-size:12.5px;font-weight:700;overflow-wrap:anywhere}
+/* closing */
+.e12-close{background:var(--white);padding:76px 0 0;overflow:hidden}
+.e12-close-grid{display:grid;grid-template-columns:260px minmax(0,1fr);gap:56px;align-items:center}
+.e12-switch{position:relative;width:240px;height:360px;background:var(--cream);border:3px solid var(--pitch);border-radius:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;transform:rotate(-3deg)}
+.e12-switch::before,.e12-switch::after{content:"";position:absolute;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:#C9C5BC;box-shadow:inset 0 0 0 3px #A9A59B}
+.e12-switch::before{top:22px}
+.e12-switch::after{bottom:22px}
+.e12-sw-slot{width:84px;height:168px;border-radius:16px;background:var(--pitch);padding:8px;display:flex;flex-direction:column}
+.e12-sw-tog{height:86px;border-radius:12px;background:var(--lime);display:flex;align-items:center;justify-content:center;font-family:'Red Hat Display',sans-serif;font-weight:900;font-size:22px;letter-spacing:-0.02em;color:var(--pitch)}
+.e12-switch small{font-size:12px;font-weight:700;letter-spacing:0.14em}
+.e12-close h2{margin:0;font-size:clamp(56px,8.4vw,112px)}
+.e12-close-copy p{margin:22px 0 28px;font-size:18px;max-width:520px}
+.e12-close-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.e12-bigtel{position:relative;z-index:2;display:block;margin:56px auto 0;padding:0 20px;text-align:center;font-family:'Red Hat Display',sans-serif;font-weight:900;font-size:min(14.6vw,190px);letter-spacing:-0.05em;line-height:.8;text-decoration:none;color:var(--pitch);white-space:nowrap}
+.e12-strip{position:relative;z-index:1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px;padding:0 20px;margin-top:-50px}
+.e12-strip span{display:block;height:150px}
+/* footer */
+.e12-foot{background:var(--pitch);color:#D7D3CA;padding:56px 0 34px}
+.e12-foot-top{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;flex-wrap:wrap}
+.e12-foot-nap{font-size:14.5px;line-height:1.7}
+.e12-foot-nap b{display:block;font-family:'Red Hat Display',sans-serif;font-weight:900;font-size:24px;letter-spacing:-0.03em;color:var(--cream);margin-bottom:6px}
+.e12-foot-nap a{color:var(--lime);display:inline-flex;align-items:center;min-height:44px}
+.e12-foot-q{display:flex;gap:8px}
+.e12-foot-q span{width:36px;height:36px}
+.e12-foot-row{display:flex;flex-wrap:wrap;gap:0 2px;margin-top:22px}
+.e12-foot-row a{display:inline-flex;align-items:center;min-height:44px;padding:0 10px;font-size:14px;text-decoration:none;color:#EDE9DF}
+.e12-foot-row a:hover{color:var(--lime)}
+.e12-credit{margin:26px 0 0;font-size:12px;color:#8F8B83}
+@media (max-width:1100px){
+.e12-nav-links{display:none}
+.e12-side{position:static;width:auto;max-width:560px;margin-top:18px;align-items:flex-start}
+.e12-intro{position:static;width:auto;max-width:560px;margin-top:18px}
+.e12-h1-b{margin-top:30px}
+.e12-five{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:44px}
+.e12-sheet{grid-template-columns:1fr 1fr}
+.e12-prices-grid,.e12-meter-grid{grid-template-columns:1fr}
+.e12-panel{transform:none}
+.e12-hangers{grid-template-columns:1fr 1fr;row-gap:30px}
+.e12-close-grid{grid-template-columns:1fr}
+.e12-towns-h{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+.e12-in{padding:0 20px}
+.e12-navwrap{padding:14px 12px 0;gap:8px}
+.e12-nav-sep,.e12-nav-tel{display:none}
+.e12-mark{font-size:15px;padding-right:6px;gap:8px}
+.e12-mark svg{width:40px;height:40px}
+.e12-navwrap .e12-btn{min-height:52px;padding:0 18px;font-size:14px}
+.e12-hero{padding:0 12px 12px}
+.e12-head{padding-top:28px}
+.e12-h1-b{font-size:18.4vw;margin-top:22px}
+.e12-rating{flex-direction:column;align-items:flex-start;gap:4px}
+.e12-meter{margin:0 auto}
+.e12-towns-h h2{font-size:42px}
+.e12-towns-h h2 br{display:none}
+.e12-switch{width:150px;height:220px;border-radius:20px;gap:8px}
+.e12-sw-slot{width:56px;height:108px;border-radius:12px;padding:6px}
+.e12-sw-tog{height:54px;font-size:16px}
+.e12-switch small{font-size:9.5px}
+.e12-switch::before{top:12px}
+.e12-switch::after{bottom:12px}
+.e12-tiles{grid-template-columns:1fr;gap:12px;margin-top:-18px}
+.e12-tile{aspect-ratio:4/3}
+.e12-board{padding:76px 0 72px}
+.e12-five{grid-template-columns:1fr 1fr;gap:34px 18px}
+.e12-stk b{font-size:19px}
+.e12-sheet{grid-template-columns:1fr;padding:22px 18px}
+.e12-work{padding:72px 12px 12px}
+.e12-work-h{flex-direction:column;align-items:flex-start}
+.e12-grid{grid-template-columns:1fr;gap:12px}
+.e12-cell{height:260px}
+.e12-prices{padding:76px 0}
+.e12-panel{padding:12px}
+.e12-panel-in{padding:12px}
+.e12-circuits{grid-template-columns:1fr}
+.e12-meterband{padding:76px 0 130px}
+.e12-meter{width:330px;height:330px;max-width:100%;border-width:14px;padding:18px}
+.e12-dials svg{width:34px;height:34px}
+.e12-readout{font-size:38px}
+.e12-meter-grid{gap:120px}
+.e12-meterband .e12-meter-grid>div:last-child{order:-1}
+.e12-revs{grid-template-columns:1fr}
+.e12-towns{padding:76px 0}
+.e12-carto{grid-template-columns:1fr 1fr;grid-auto-rows:auto}
+.e12-carto>a,.e12-carto>div{grid-column:auto !important;grid-row:auto !important;min-height:96px}
+.e12-town-home{grid-column:1/-1 !important}
+.e12-key{grid-column:1/-1 !important}
+.e12-faq{padding:76px 0}
+.e12-hangers{grid-template-columns:1fr;row-gap:22px}
+.e12-hanger{min-height:0;margin-top:0 !important}
+.e12-close{padding-top:76px}
+.e12-switch{width:200px;height:300px}
+.e12-strip{gap:8px;padding:0 12px;margin-top:-16px}
+.e12-strip span{height:70px}
+}
+</style>
+</helmet>
+<div class="e12">
+
+  <!-- HERO: tiles swallowed by the town name -->
+  <section class="e12-hero" aria-label="Good Sparks Electric Co., electricians in Brandon">
+    <div class="e12-navwrap">
+      <header class="e12-nav">
+        <a class="e12-mark" href="/" aria-label="Good Sparks Electric Co. home">
+          <svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#FF6D38"></rect><path d="M25 7L12 25h9l-3 12 14-19h-9z" fill="#141414"></path></svg>
+          Good Sparks
+        </a>
+        <nav class="e12-nav-links" aria-label="Main">
+          <a href="#e12-services">Services</a>
+          <a href="#e12-prices">Prices</a>
+          <a href="#e12-towns">Towns</a>
+          <a href="#e12-faq">Questions</a>
+        </nav>
+        <span class="e12-nav-sep" aria-hidden="true"></span>
+        <a class="e12-nav-tel" href="tel:+18135550172">(813) 555-0172</a>
+      </header>
+      <a class="e12-btn" href="/book">Book an Electrician</a>
+    </div>
+
+    <div class="e12-head">
+      <h1 class="e12-h1"><span class="e12-h1-a">Licensed <i>electricians</i> in</span><span class="e12-h1-b">BRANDON</span></h1>
+      <p class="e12-intro">Panels, EV chargers, lighting and generators for Brandon homes. A licensed electrician prices the job in writing before a single wire moves.</p>
+      <div class="e12-side">
+        <div class="e12-side-row">
+          <a class="e12-btn e12-btn-lime" href="/book" style="border:2px solid #141414;">Book an Electrician</a>
+          <a class="e12-tel" href="tel:+18135550172">(813) 555-0172</a>
+        </div>
+        <p class="e12-rating"><span class="e12-st" aria-hidden="true">★★★★★</span><span><b>[RATING]</b> from [COUNT] Google reviews<br>Newest review [DAYS] days ago</span></p>
+      </div>
+    </div>
+
+    <div class="e12-tiles">
+      <div class="e12-tile" style="background:#FF5A46;">
+        <img src="img/elec/04.jpg" alt="Good Sparks electrician wiring an outdoor panel on a Brandon home" width="1600" height="900" style="object-fit: cover; object-position: 38% 50%;">
+        <span class="e12-logo-sq" aria-hidden="true"><svg width="70" height="70" viewBox="0 0 44 44"><path d="M25 5L10 25h10l-3 14 16-21H23z" fill="#141414"></path></svg></span>
+      </div>
+      <div class="e12-tile" style="background:#E3C7FF;">
+        <svg class="e12-scene" viewBox="0 0 400 400" role="img" aria-label="Illustration of a Brandon house charging an electric car at night">
+          <rect width="400" height="400" fill="#E3C7FF"></rect>
+          <circle cx="132" cy="112" r="74" fill="#FF6D38"></circle>
+          <circle cx="160" cy="98" r="58" fill="#1E2340"></circle>
+          <circle cx="290" cy="64" r="8" fill="#FFE100"></circle>
+          <circle cx="330" cy="104" r="5" fill="#FFE100"></circle>
+          <rect x="0" y="268" width="400" height="132" fill="#00A652"></rect>
+          <path d="M60 400L150 268H178L92 400ZM180 400L232 268H256L214 400ZM300 400L318 268H340L336 400Z" fill="#141414" opacity=".55"></path>
+          <path d="M150 268V196L222 146L294 196V268Z" fill="#478BFF"></path>
+          <path d="M140 202L222 140L304 202L294 210L222 156L150 210Z" fill="#FF9EC7"></path>
+          <rect x="176" y="214" width="34" height="54" fill="#141414"></rect>
+          <rect x="230" y="208" width="44" height="34" fill="#FFE100"></rect>
+          <rect x="300" y="222" width="18" height="30" rx="4" fill="#141414"></rect>
+          <rect x="305" y="228" width="8" height="8" rx="2" fill="#C7FF69"></rect>
+          <path d="M309 252C309 300 284 296 276 300" stroke="#141414" stroke-width="6" fill="none" stroke-linecap="round"></path>
+          <path d="M224 312Q228 280 262 276H330Q358 278 366 312Z" fill="#C7FF69"></path>
+          <rect x="214" y="306" width="162" height="30" rx="14" fill="#C7FF69"></rect>
+          <path d="M268 284H322L334 306H256Z" fill="#141414"></path>
+          <circle cx="248" cy="338" r="17" fill="#141414"></circle>
+          <circle cx="344" cy="338" r="17" fill="#141414"></circle>
+          <path d="M40 268L70 186L100 268Z" fill="#2B4BCF"></path>
+          <rect x="66" y="252" width="8" height="24" fill="#FF6D38"></rect>
+          <path d="M96 268L118 210L140 268Z" fill="#2B4BCF"></path>
+          <rect x="114" y="256" width="8" height="18" fill="#FF6D38"></rect>
+        </svg>
+      </div>
+      <div class="e12-tile" style="background:#33D6F2;">
+        <svg class="e12-scene" viewBox="0 0 400 400" role="img" aria-label="Watt, the Good Sparks lightbulb mascot">
+          <rect width="400" height="400" fill="#33D6F2"></rect>
+          <path d="M400 150L400 400L120 400Z" fill="#FFE100"></path>
+          <circle cx="214" cy="178" r="104" fill="#FDF9F0"></circle>
+          <path d="M162 262H266L256 296H172Z" fill="#FDF9F0"></path>
+          <rect x="170" y="298" width="88" height="20" rx="8" fill="#141414"></rect>
+          <rect x="176" y="322" width="76" height="18" rx="8" fill="#141414"></rect>
+          <rect x="190" y="344" width="48" height="16" rx="8" fill="#141414"></rect>
+          <circle cx="180" cy="170" r="13" fill="#141414"></circle>
+          <circle cx="248" cy="170" r="13" fill="#141414"></circle>
+          <path d="M184 214Q214 244 244 214" stroke="#141414" stroke-width="11" fill="none" stroke-linecap="round"></path>
+          <circle cx="158" cy="206" r="13" fill="#FF5A46" opacity=".75"></circle>
+          <circle cx="272" cy="206" r="13" fill="#FF5A46" opacity=".75"></circle>
+          <path d="M214 46V18M300 86L322 64M128 86L106 64M336 168H364M92 168H64" stroke="#141414" stroke-width="10" stroke-linecap="round"></path>
+        </svg>
+        <span class="e12-hi">Hi. I'm Watt.</span>
+        <span class="e12-toggle">Lights on<span aria-hidden="true"></span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHALKBOARD: sticker pack of services -->
+  <section class="e12-board" id="e12-services" aria-label="Electrical services">
+    <div class="e12-in">
+      <div class="e12-board-h">
+        <p class="e12-eyebrow">Services · each sticker opens its own page</p>
+        <h2 class="e12-disp">Panels to<br>porch lights.</h2>
+        <p class="e12-board-sub">Eight jobs we do every week in Brandon, each with its own page, photos and the going rate. One licensed electrician on every job, start to finish.</p>
+      </div>
+      <div class="e12-five">
+        <a class="e12-stk" href="/panel-upgrade">
+          <svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="100" fill="#7A78FF"></circle><rect x="60" y="40" width="80" height="120" rx="14" fill="#141414"></rect><rect x="72" y="54" width="56" height="12" rx="4" fill="#C7FF69"></rect><rect x="72" y="76" width="24" height="12" rx="3" fill="#7A78FF"></rect><rect x="104" y="76" width="24" height="12" rx="3" fill="#7A78FF"></rect><rect x="72" y="96" width="24" height="12" rx="3" fill="#7A78FF"></rect><rect x="104" y="96" width="24" height="12" rx="3" fill="#7A78FF"></rect><rect x="72" y="116" width="24" height="12" rx="3" fill="#7A78FF"></rect><rect x="104" y="116" width="24" height="12" rx="3" fill="#7A78FF"></rect><rect x="72" y="136" width="24" height="12" rx="3" fill="#7A78FF"></rect><rect x="104" y="136" width="24" height="12" rx="3" fill="#7A78FF"></rect></svg>
+          <b>Panel upgrades</b><small>/panel-upgrade</small><span>$[LOW]–$[HIGH]</span>
+        </a>
+        <a class="e12-stk" href="/ev-charger-installation">
+          <svg viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" rx="34" fill="#00A652"></rect><rect x="76" y="34" width="14" height="34" rx="5" fill="#141414"></rect><rect x="110" y="34" width="14" height="34" rx="5" fill="#141414"></rect><rect x="54" y="62" width="92" height="66" rx="22" fill="#141414"></rect><path d="M106 74L86 100H100L94 118L116 90H102Z" fill="#00A652"></path><path d="M100 128V144Q100 168 126 168H162" stroke="#141414" stroke-width="16" fill="none" stroke-linecap="round"></path></svg>
+          <b>EV chargers</b><small>/ev-charger-installation</small><span>$[LOW]–$[HIGH]</span>
+        </a>
+        <a class="e12-stk" href="/lighting-installation">
+          <svg viewBox="0 0 200 200" aria-hidden="true"><path d="M28 0H140Q154 0 162 12L196 88Q201 100 196 112L162 188Q154 200 140 200H28Q0 200 0 172V28Q0 0 28 0Z" fill="#FF6D38"></path><circle cx="86" cy="80" r="44" fill="#141414"></circle><rect x="62" y="114" width="48" height="18" rx="5" fill="#141414"></rect><rect x="66" y="136" width="40" height="12" rx="5" fill="#141414"></rect><rect x="72" y="152" width="28" height="12" rx="5" fill="#141414"></rect><path d="M68 86L78 70L88 86L98 70L106 84" stroke="#FF6D38" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <b>Lighting</b><small>/lighting-installation</small><span>from $[PRICE] a fixture</span>
+        </a>
+        <a class="e12-stk" href="/generator-installation">
+          <svg viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" rx="34" fill="#FFC412"></rect><path d="M66 70V52H134V70" stroke="#141414" stroke-width="14" fill="none" stroke-linejoin="round"></path><rect x="40" y="66" width="120" height="80" rx="16" fill="#141414"></rect><path d="M108 78L84 110H100L92 134L120 98H104Z" fill="#FFC412"></path><circle cx="64" cy="152" r="16" fill="#141414"></circle><circle cx="136" cy="152" r="16" fill="#141414"></circle></svg>
+          <b>Generators</b><small>/generator-installation</small><span>$[LOW]–$[HIGH]</span>
+        </a>
+        <a class="e12-stk" href="/outlets-and-wiring">
+          <svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="100" fill="#478BFF"></circle><rect x="58" y="38" width="84" height="124" rx="24" fill="#141414"></rect><rect x="80" y="64" width="10" height="30" rx="4" fill="#478BFF"></rect><rect x="110" y="64" width="10" height="30" rx="4" fill="#478BFF"></rect><path d="M90 128V120A10 10 0 0 1 110 120V128Z" fill="#478BFF"></path></svg>
+          <b>Outlets and wiring</b><small>/outlets-and-wiring</small><span>from $[PRICE]</span>
+        </a>
+      </div>
+      <div class="e12-sheet">
+        <p class="e12-sheet-l" style="margin:0;">Also on<br>the sheet<small>Three more pages</small></p>
+        <a class="e12-mini" href="/ceiling-fan-installation">
+          <svg viewBox="0 0 58 58" aria-hidden="true"><rect width="58" height="58" rx="16" fill="#E3C7FF"></rect><circle cx="29" cy="29" r="6" fill="#141414"></circle><path d="M29 23C24 12 30 8 34 10C38 13 34 20 29 23ZM35 31C46 30 48 37 45 40C41 43 37 37 35 31ZM24 33C18 42 12 39 12 35C13 31 20 31 24 33Z" fill="#141414"></path></svg>
+          <span><b>Ceiling fans</b><small>/ceiling-fan-installation</small><em>from $[PRICE]</em></span>
+        </a>
+        <a class="e12-mini" href="/whole-home-surge-protection">
+          <svg viewBox="0 0 58 58" aria-hidden="true"><rect width="58" height="58" rx="16" fill="#C7FF69"></rect><path d="M29 8L46 14V28C46 39 38 46 29 50C20 46 12 39 12 28V14Z" fill="#141414"></path><path d="M32 16L22 31H29L26 42L36 27H29Z" fill="#C7FF69"></path></svg>
+          <span><b>Surge protection</b><small>/whole-home-surge-protection</small><em>from $[PRICE]</em></span>
+        </a>
+        <a class="e12-mini" href="/electrical-repair">
+          <svg viewBox="0 0 58 58" aria-hidden="true"><rect width="58" height="58" rx="16" fill="#FF5A46"></rect><rect x="16" y="8" width="26" height="42" rx="6" fill="#141414"></rect><rect x="20" y="13" width="18" height="10" rx="2" fill="#FF5A46"></rect><circle cx="29" cy="36" r="6" fill="#FF5A46"></circle></svg>
+          <span><b>Repairs and troubleshooting</b><small>/electrical-repair</small><em>$[PRICE] visit</em></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TILE GRID: recent work and big numbers -->
+  <section class="e12-work" aria-label="Recent electrical work around Brandon">
+    <div class="e12-work-h">
+      <h2 class="e12-norm">Recent work around Brandon, and three numbers people ask about.</h2>
+      <p>Panels in Valrico, chargers in FishHawk, can lights in Riverview. Every job here has its own write-up on the project page.</p>
+    </div>
+    <div class="e12-grid">
+      <div class="e12-cell"><img src="img/elec/07.jpg" alt="Electrician drilling through a wood-sided wall to mount an exterior fixture" width="1600" height="1067" loading="lazy" style="object-fit: cover; object-position: 55% 50%;"></div>
+      <div class="e12-cell e12-num" style="background:#FFE100;"><b>200 A</b><p>The service size most Brandon homes move to when they add an EV charger or a bigger AC.</p></div>
+      <div class="e12-cell"><img src="img/elec/05.jpg" alt="Close-up of a new breaker panel with neatly dressed wires" width="1600" height="1067" loading="lazy" style="object-fit: cover; object-position: 50% 50%;"></div>
+      <div class="e12-cell e12-num" style="background:#FF5A46;"><b>25 mi</b><p>Range a Level 2 charger adds to most EVs in about an hour, plugged in at your garage.</p></div>
+      <div class="e12-cell"><img src="img/elec/06.jpg" alt="Electrician on a ladder hanging a cluster of warm pendant lights" width="1000" height="1500" loading="lazy" style="object-fit: cover; object-position: 50% 30%;"></div>
+      <div class="e12-cell e12-num" style="background:#33D6F2;"><b>1 day</b><p>Most panel swaps, power off to power back on, with the county inspection booked for you.</p></div>
+    </div>
+  </section>
+
+  <!-- CREAM: price directory on a breaker panel -->
+  <section class="e12-prices" id="e12-prices" aria-label="Electrical prices in Brandon">
+    <div class="e12-in e12-prices-grid">
+      <div class="e12-prices-copy">
+        <p class="e12-eyebrow">Prices · Brandon and east Hillsborough</p>
+        <h2 class="e12-disp">Prices on<br>the panel<br>door.</h2>
+        <p>Every circuit on this panel opens a page with what's included. These are the going ranges in Brandon. Your number comes in writing before the power goes off.</p>
+        <p>Permit and inspection fees are in the price. Florida license [LICENSE NO.], insured, [CERTIFICATION].</p>
+      </div>
+      <div class="e12-panel">
+        <div class="e12-panel-top"><span class="e12-screw" aria-hidden="true"></span><span>Good Sparks · price directory</span><span class="e12-screw" aria-hidden="true"></span></div>
+        <div class="e12-panel-in">
+          <div class="e12-main"><span class="e12-brk e12-brk-main" aria-hidden="true"><i></i></span><span><b>MAIN · 200 A</b><br><span>Written price before any breaker gets flipped.</span></span></div>
+          <ol class="e12-circuits">
+            <li><a href="/panel-upgrade"><span class="e12-cn">1</span><span class="e12-brk" aria-hidden="true"><i style="background:#7A78FF;"></i></span><span class="e12-tape"><b>Panel upgrade, 100 to 200 A</b><span>$[LOW]–$[HIGH]</span></span></a></li>
+            <li><a href="/ev-charger-installation"><span class="e12-cn">2</span><span class="e12-brk" aria-hidden="true"><i style="background:#00A652;"></i></span><span class="e12-tape"><b>Level 2 EV charger, installed</b><span>$[LOW]–$[HIGH]</span></span></a></li>
+            <li><a href="/lighting-installation"><span class="e12-cn">3</span><span class="e12-brk" aria-hidden="true"><i style="background:#FF6D38;"></i></span><span class="e12-tape"><b>Recessed lights, per light</b><span>from $[PRICE]</span></span></a></li>
+            <li><a href="/ceiling-fan-installation"><span class="e12-cn">4</span><span class="e12-brk" aria-hidden="true"><i style="background:#E3C7FF;"></i></span><span class="e12-tape"><b>Ceiling fan, swap or new</b><span>from $[PRICE]</span></span></a></li>
+            <li><a href="/generator-installation"><span class="e12-cn">5</span><span class="e12-brk" aria-hidden="true"><i style="background:#FFC412;"></i></span><span class="e12-tape"><b>Generator inlet and interlock</b><span>$[LOW]–$[HIGH]</span></span></a></li>
+            <li><a href="/generator-installation#standby"><span class="e12-cn">6</span><span class="e12-brk" aria-hidden="true"><i style="background:#FFC412;"></i></span><span class="e12-tape"><b>Standby generator, installed</b><span>$[LOW]–$[HIGH]</span></span></a></li>
+            <li><a href="/whole-home-surge-protection"><span class="e12-cn">7</span><span class="e12-brk" aria-hidden="true"><i style="background:#C7FF69;"></i></span><span class="e12-tape"><b>Whole-home surge protector</b><span>from $[PRICE]</span></span></a></li>
+            <li><a href="/outlets-and-wiring"><span class="e12-cn">8</span><span class="e12-brk" aria-hidden="true"><i style="background:#478BFF;"></i></span><span class="e12-tape"><b>GFCI or USB outlet, each</b><span>from $[PRICE]</span></span></a></li>
+            <li><a href="/outlets-and-wiring#dedicated"><span class="e12-cn">9</span><span class="e12-brk" aria-hidden="true"><i style="background:#478BFF;"></i></span><span class="e12-tape"><b>Dedicated circuit, hot tub or shop</b><span>$[LOW]–$[HIGH]</span></span></a></li>
+            <li><a href="/electrical-repair"><span class="e12-cn">10</span><span class="e12-brk" aria-hidden="true"><i style="background:#FF5A46;"></i></span><span class="e12-tape"><b>Troubleshooting visit</b><span>$[PRICE], credited to the repair</span></span></a></li>
+          </ol>
+          <p class="e12-panel-foot">Prices for a typical Brandon single-family home. Two-story attic runs and TECO meter work can add to it, and we say so before you sign.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLAR YELLOW: the review meter -->
+  <section class="e12-meterband" aria-label="Google reviews">
+    <div class="e12-in e12-meter-grid">
+      <div class="e12-meter">
+        <div class="e12-dials" aria-hidden="true">
+          <svg viewBox="0 0 46 46"><circle cx="23" cy="23" r="20" fill="#FFFFFF" stroke="#141414" stroke-width="3"></circle><path d="M23 23L14 12" stroke="#FF5A46" stroke-width="4" stroke-linecap="round"></path><circle cx="23" cy="23" r="4" fill="#141414"></circle></svg>
+          <svg viewBox="0 0 46 46"><circle cx="23" cy="23" r="20" fill="#FFFFFF" stroke="#141414" stroke-width="3"></circle><path d="M23 23L35 18" stroke="#FF5A46" stroke-width="4" stroke-linecap="round"></path><circle cx="23" cy="23" r="4" fill="#141414"></circle></svg>
+          <svg viewBox="0 0 46 46"><circle cx="23" cy="23" r="20" fill="#FFFFFF" stroke="#141414" stroke-width="3"></circle><path d="M23 23L26 36" stroke="#FF5A46" stroke-width="4" stroke-linecap="round"></path><circle cx="23" cy="23" r="4" fill="#141414"></circle></svg>
+          <svg viewBox="0 0 46 46"><circle cx="23" cy="23" r="20" fill="#FFFFFF" stroke="#141414" stroke-width="3"></circle><path d="M23 23L23 9" stroke="#FF5A46" stroke-width="4" stroke-linecap="round"></path><circle cx="23" cy="23" r="4" fill="#141414"></circle></svg>
+        </div>
+        <small>GOOGLE RATING · READ MONTHLY</small>
+        <span class="e12-readout">[RATING]</span>
+        <p>from [COUNT] Google reviews</p>
+        <p>Newest review [DAYS] days ago</p>
+        <span class="e12-seal" aria-hidden="true"><i></i><span>Sealed · no reviews of our own</span></span>
+      </div>
+      <div>
+        <p class="e12-eyebrow">Google reviews · Brandon, Valrico, Riverview</p>
+        <h2 class="e12-disp">Brandon reads<br>the meter.</h2>
+        <p class="e12-lede">We never write our own reviews. These are pulled from Google when the page is built, newest first, with the reviewer's town.</p>
+        <div class="e12-revs">
+          <figure class="e12-rev"><span aria-hidden="true">★★★★★</span><q>[Google review, pulled at build time]</q><span>[Reviewer], [Town] · Google review</span></figure>
+          <figure class="e12-rev"><span aria-hidden="true">★★★★★</span><q>[Google review, pulled at build time]</q><span>[Reviewer], [Town] · Google review</span></figure>
+        </div>
+        <a class="e12-btn e12-btn-dark" href="/reviews" style="margin-top:22px;">Read All [COUNT] Reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHITE: tile cartogram of towns -->
+  <section class="e12-towns" id="e12-towns" aria-label="Towns we serve">
+    <div class="e12-in">
+      <div class="e12-towns-h">
+        <h2 class="e12-disp">Brandon and the<br>12 towns around it.</h2>
+        <p>Each tile is a town page with recent jobs and local prices. The map is roughly to scale: north is up, Tampa is off to the left.</p>
+      </div>
+      <div class="e12-carto">
+        <a class="e12-town" href="/areas/temple-terrace" style="grid-column:1;grid-row:1;background:#E3C7FF;"><b>Temple Terrace</b><small>/areas/temple-terrace</small></a>
+        <a class="e12-town" href="/areas/thonotosassa" style="grid-column:3;grid-row:1;background:#33D6F2;"><b>Thonotosassa</b><small>/areas/thonotosassa</small></a>
+        <a class="e12-town" href="/areas/mango" style="grid-column:1;grid-row:2;background:#FFC412;"><b>Mango</b><small>/areas/mango</small></a>
+        <a class="e12-town" href="/areas/seffner" style="grid-column:2;grid-row:2;background:#FF5A46;"><b>Seffner</b><small>/areas/seffner</small></a>
+        <a class="e12-town" href="/areas/dover" style="grid-column:4;grid-row:2;background:#7A78FF;"><b>Dover</b><small>/areas/dover</small></a>
+        <a class="e12-town" href="/areas/plant-city" style="grid-column:5/7;grid-row:2;background:#00A652;"><b>Plant City</b><small>/areas/plant-city</small></a>
+        <a class="e12-town" href="/areas/riverview" style="grid-column:1;grid-row:3;background:#478BFF;"><b>Riverview</b><small>/areas/riverview</small></a>
+        <a class="e12-town e12-town-home" href="/areas/brandon" style="grid-column:2/4;grid-row:3;"><b>Brandon</b><small>/areas/brandon · home base</small></a>
+        <a class="e12-town" href="/areas/valrico" style="grid-column:4;grid-row:3;background:#FFE100;"><b>Valrico</b><small>/areas/valrico</small></a>
+        <a class="e12-town" href="/areas/gibsonton" style="grid-column:1;grid-row:4;background:#FF6D38;"><b>Gibsonton</b><small>/areas/gibsonton</small></a>
+        <a class="e12-town" href="/areas/fishhawk" style="grid-column:3;grid-row:4;background:#C7FF69;"><b>FishHawk</b><small>/areas/fishhawk</small></a>
+        <a class="e12-town" href="/areas/lithia" style="grid-column:4;grid-row:4;background:#E3C7FF;"><b>Lithia</b><small>/areas/lithia</small></a>
+        <a class="e12-town" href="/areas/apollo-beach" style="grid-column:2;grid-row:4;background:#33D6F2;"><b>Apollo Beach</b><small>/areas/apollo-beach</small></a>
+        <div class="e12-key" style="position:relative;">
+          <svg class="e12-compass" style="right:14px;top:14px;" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26" fill="#141414"></circle><path d="M28 18L36 40L28 35L20 40Z" fill="#C7FF69"></path><text x="28" y="15" text-anchor="middle" font-family="DM Sans, sans-serif" font-weight="700" font-size="10" fill="#FDF9F0">N</text></svg>
+          <b>Not on a tile?</b>
+          <span>If you are between Brandon and the county line, you are probably on our route. Call (813) 555-0172 and ask.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORANGE WALL: door hanger FAQ -->
+  <section class="e12-faq" id="e12-faq" aria-label="Electrical questions from Brandon homeowners">
+    <div class="e12-in">
+      <div class="e12-faq-h">
+        <p class="e12-eyebrow">Questions · left on Brandon doorknobs</p>
+        <h2 class="e12-disp">Asked at<br>the door.</h2>
+      </div>
+      <div class="e12-hangers">
+        <article class="e12-hanger" style="background:#FDF9F0;">
+          <span class="e12-hole" aria-hidden="true"></span>
+          <p class="e12-hanger-k">QUESTION 01</p>
+          <h3>How much does a panel upgrade cost in Brandon, FL?</h3>
+          <p class="e12-a">Most 100 A to 200 A upgrades here land between $[LOW] and $[HIGH], with the Hillsborough County permit and inspection inside that number. If TECO needs to move the meter, we tell you before you sign.</p>
+          <span class="e12-hanger-f">More on /panel-upgrade</span>
+        </article>
+        <article class="e12-hanger" style="background:#FFE100;">
+          <span class="e12-hole" aria-hidden="true"></span>
+          <p class="e12-hanger-k">QUESTION 02</p>
+          <h3>Can my panel handle a Level 2 EV charger?</h3>
+          <p class="e12-a">Often, yes. A Level 2 charger needs its own 240 V circuit, usually 40 to 60 A. We run a load calculation first. If the panel is full, a load-sharing charger or an upgrade solves it.</p>
+          <span class="e12-hanger-f">More on /ev-charger-installation</span>
+        </article>
+        <article class="e12-hanger" style="background:#E3C7FF;">
+          <span class="e12-hole" aria-hidden="true"></span>
+          <p class="e12-hanger-k">QUESTION 03</p>
+          <h3>Do I need a permit for electrical work in Hillsborough County?</h3>
+          <p class="e12-a">For panels, new circuits, generators and EV chargers, yes. Swapping a light fixture or a switch usually does not. We pull the permit, book the inspection and meet the inspector.</p>
+          <span class="e12-hanger-f">Good Sparks · (813) 555-0172</span>
+        </article>
+        <article class="e12-hanger" style="background:#33D6F2;">
+          <span class="e12-hole" aria-hidden="true"></span>
+          <p class="e12-hanger-k">QUESTION 04</p>
+          <h3>What size generator does a Brandon house need?</h3>
+          <p class="e12-a">To keep central AC running through a summer outage, most 3-bed homes need a 20 to 24 kW standby unit. A portable generator with an inlet and interlock covers the fridge, lights and fans for far less.</p>
+          <span class="e12-hanger-f">More on /generator-installation</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHITE: flip the switch, giant phone swallowing tiles -->
+  <section class="e12-close" aria-label="Book an electrician">
+    <div class="e12-in e12-close-grid">
+      <div class="e12-switch" aria-hidden="true">
+        <small>GOOD SPARKS</small>
+        <span class="e12-sw-slot"><span class="e12-sw-tog">ON</span></span>
+        <small>BRANDON, FL</small>
+      </div>
+      <div class="e12-close-copy">
+        <h2 class="e12-disp">Flip it on.</h2>
+        <p>Tell us what is dead, buzzing or on the wish list. A licensed electrician calls back with a written price, and a time window you can plan around.</p>
+        <div class="e12-close-row">
+          <a class="e12-btn e12-btn-lime" href="/book" style="border:2px solid #141414;">Book an Electrician</a>
+          <a class="e12-btn e12-btn-line" href="tel:+18135550172">Call (813) 555-0172</a>
+        </div>
+      </div>
+    </div>
+    <a class="e12-bigtel" href="tel:+18135550172" aria-label="Call Good Sparks at (813) 555-0172">813·555·0172</a>
+    <div class="e12-strip" aria-hidden="true"><span style="background:#7A78FF;"></span><span style="background:#00A652;"></span><span style="background:#FF6D38;"></span><span style="background:#FFC412;"></span><span style="background:#478BFF;"></span></div>
+  </section>
+
+  <footer class="e12-foot" aria-label="Footer">
+    <div class="e12-in">
+      <div class="e12-foot-top">
+        <div class="e12-foot-nap">
+          <b>Good Sparks Electric Co.</b>
+          Service-area business · Brandon, FL 33511<br>
+          <a href="tel:+18135550172">(813) 555-0172</a> · [HOURS]<br>
+          Florida license [LICENSE NO.] · Owner [OWNER NAME] · [YEARS] years wiring Brandon
+        </div>
+        <div class="e12-foot-q" aria-hidden="true"><span style="background:#7A78FF;border-radius:50%;"></span><span style="background:#00A652;border-radius:9px;"></span><span style="background:#FF6D38;border-radius:9px 18px 18px 9px;"></span><span style="background:#FFC412;border-radius:9px;"></span><span style="background:#478BFF;border-radius:50%;"></span></div>
+      </div>
+      <nav class="e12-foot-row" aria-label="Services">
+        <a href="/panel-upgrade">Panel upgrades</a>
+        <a href="/ev-charger-installation">EV chargers</a>
+        <a href="/lighting-installation">Lighting</a>
+        <a href="/generator-installation">Generators</a>
+        <a href="/outlets-and-wiring">Outlets and wiring</a>
+        <a href="/ceiling-fan-installation">Ceiling fans</a>
+        <a href="/whole-home-surge-protection">Surge protection</a>
+        <a href="/electrical-repair">Repairs</a>
+        <a href="/privacy">Privacy</a>
+      </nav>
+      <p class="e12-credit">Avenue Vision · E12 · Saturated Tiles · style refs withheld</p>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":7100}}'>class Component extends DCLogic { renderVals() { return {}; } }</script>
+</body>
+</html>

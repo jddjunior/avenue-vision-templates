@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Daylight Savings Solar home page</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Oswald:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.e08{--ink:#000000;--paper:#ffffff;--flare:#ff5a1f;--lemon:#fff07a;--lime:#d4e84b;--lilac:#cdb0fa;--cream:#faefdc;--salmon:#f2a295;--plum:#42185f;--forest:#183428;--fog:#eff2f5;width:100%;background:var(--paper);color:var(--ink);font-family:Inter,'Helvetica Neue',Arial,sans-serif;font-size:17px;line-height:1.5;letter-spacing:-0.011em;overflow-x:hidden}
+.e08 *{box-sizing:border-box}
+:where(.e08) a{color:inherit}
+.e08 a:focus-visible,.e08 button:focus-visible,.e08 input:focus-visible{outline:3px solid var(--flare);outline-offset:3px}
+.e08-in{max-width:1200px;margin:0 auto;padding:0 40px;position:relative}
+.e08-disp{font-family:Oswald,'Arial Narrow',sans-serif;font-weight:600;text-transform:uppercase;line-height:0.88;letter-spacing:-0.01em;margin:0;text-wrap:balance}
+.e08-kick{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;letter-spacing:0;margin:0 0 18px}
+.e08-kick::before{content:'';width:10px;height:10px;background:var(--flare);border:1px solid #000;flex:none}
+.e08-sec{padding:72px 0;position:relative}
+.e08-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:4px;border:1px solid #000;background:var(--flare);color:#000;font-family:Inter,sans-serif;font-weight:600;font-size:17px;letter-spacing:-0.01em;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color .15s ease,color .15s ease}
+:where(.e08) .e08-btn{color:#000}
+.e08 .e08-btn:hover{background:#000;color:var(--flare)}
+.e08-sup{font-size:0.32em;vertical-align:top;position:relative;top:0.2em;margin-left:2px;text-decoration:none}
+.e08-tag{display:inline-block;border:1px solid #000;border-radius:4px;padding:3px 8px;font-size:12px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;line-height:1.2}
+/* nav */
+.e08-nav{display:flex;align-items:center;gap:36px;padding:20px 40px;max-width:1280px;margin:0 auto}
+.e08-logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;flex:none}
+.e08-logo b{font-family:Oswald,sans-serif;font-weight:700;font-size:28px;line-height:1;text-transform:uppercase;letter-spacing:-0.01em}
+.e08-links{display:flex;gap:30px;font-weight:500;font-size:16px}
+.e08-links a{text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.e08-links a:hover{text-decoration:underline;text-underline-offset:5px}
+.e08-navr{margin-left:auto;display:flex;align-items:center;gap:22px}
+.e08-tel{font-weight:600;font-size:16px;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.e08-tel:hover{text-decoration:underline}
+.e08-navr .e08-btn{min-height:48px;font-size:16px;padding:0 22px}
+/* hero */
+.e08-hero{padding:40px 0 70px}
+.e08-hero-g{display:grid;grid-template-columns:minmax(0,1.14fr) minmax(0,0.86fr);gap:52px;align-items:center}
+.e08-h1{font-size:clamp(50px,7.4vw,96px)}
+.e08-h1 span{display:block;text-wrap:nowrap}
+.e08-lede{font-size:21px;line-height:1.42;letter-spacing:-0.015em;margin:26px 0 0;max-width:560px}
+.e08-form{margin-top:30px;max-width:580px}
+.e08-form label{display:block;font-size:14px;font-weight:600;margin-bottom:8px}
+.e08-row{display:flex;gap:12px}
+.e08-field{flex:1;display:flex;align-items:center;border:1px solid #000;border-radius:4px;background:#fff;min-height:54px;padding:0 16px;gap:6px}
+.e08-field span{font-weight:600;font-size:18px}
+.e08-field input{border:0;outline:0;font:inherit;font-size:17px;width:100%;background:transparent;min-height:50px;color:#000}
+.e08-field input::placeholder{color:#6b6b6b}
+.e08-field:focus-within{border-color:var(--flare);box-shadow:0 0 0 1px var(--flare)}
+.e08-hint{font-size:13px;color:#4d4d4d;margin:10px 0 0}
+.e08-callrow{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;margin-top:22px;font-size:15px}
+.e08-callrow a{font-weight:700;font-size:17px;text-decoration:underline;text-underline-offset:4px;min-height:44px;display:inline-flex;align-items:center}
+.e08-stars{display:inline-flex;gap:2px;vertical-align:-2px;margin-right:6px}
+.e08-art{position:relative;height:600px}
+.e08-art-bg{position:absolute;left:34px;top:0;right:0;bottom:46px;background:var(--lilac);border:1px solid #000;border-radius:4px}
+.e08-art img{position:absolute;left:0;top:34px;width:calc(100% - 34px);height:500px;object-fit:cover;object-position:46% 50%;border:1px solid #000;border-radius:4px;display:block}
+.e08-note{position:absolute;left:-30px;bottom:0;width:236px;background:var(--lemon);border:1px solid #000;border-radius:4px;padding:18px 18px 20px;transform:rotate(-5deg)}
+.e08-note small{display:block;font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase}
+.e08-note b{display:block;font-family:Oswald,sans-serif;font-weight:600;font-size:30px;line-height:0.95;text-transform:uppercase;margin-top:8px}
+.e08-seal{position:absolute;right:-24px;top:-10px;width:150px;height:150px;transform:rotate(12deg)}
+/* ticker */
+.e08-tick{background:var(--forest);color:var(--lemon);border-top:1px solid #000;border-bottom:1px solid #000;overflow:hidden;padding:22px 0}
+.e08-track{display:flex;width:max-content;animation:e08-roll 48s linear infinite}
+.e08-track span{font-family:Oswald,sans-serif;font-weight:600;font-size:52px;line-height:1;text-transform:uppercase;white-space:nowrap;display:inline-flex;align-items:center;gap:30px;padding-right:30px}
+.e08-track i{display:inline-block;width:18px;height:18px;border-radius:50%;background:var(--flare)}
+@keyframes e08-roll{to{transform:translateX(-50%)}}
+/* statement */
+.e08-cream{background:var(--cream);border-bottom:1px solid #000}
+.e08-st-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:start}
+.e08-h2{font-size:clamp(46px,6.6vw,88px)}
+.e08-st-l p{font-size:18px;line-height:1.5;margin:24px 0 0;max-width:500px}
+.e08-mini{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:36px;border-top:1px solid #000}
+.e08-mini div{padding:16px 16px 0 0}
+.e08-mini div + div{padding-left:16px;border-left:1px solid #000}
+.e08-mini b{display:block;font-family:Oswald,sans-serif;font-weight:700;font-size:64px;line-height:0.85}
+.e08-mini span{display:block;font-size:14px;line-height:1.4;margin-top:10px}
+.e08-stmt{position:relative;background:#fff;border:1px solid #000;border-radius:4px;padding:28px 30px 24px;transform:rotate(1.4deg);margin-top:8px}
+.e08-stmt-h{display:flex;align-items:center;gap:14px;padding-bottom:14px;border-bottom:2px solid #000}
+.e08-stmt-h img{width:64px;height:64px;object-fit:cover;object-position:62% 40%;border:1px solid #000;border-radius:4px;flex:none;display:block}
+.e08-stmt-h div{flex:1;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.e08-stmt-h b{font-family:Oswald,sans-serif;font-weight:700;font-size:24px;line-height:1;text-transform:uppercase}
+.e08-stmt-h span{font-size:13px;font-weight:600;text-align:right;line-height:1.35}
+.e08-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:12px 0;border-bottom:1px solid #000;font-size:13px;line-height:1.35}
+.e08-meta small{display:block;font-size:11px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase}
+.e08-lines{list-style:none;margin:0;padding:0}
+.e08-lines li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px dashed #000;font-size:16px}
+.e08-lines li b{font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.e08-lines li span small{display:block;font-size:13px;color:#4d4d4d}
+.e08-net{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding:18px 0 6px}
+.e08-net span{font-size:15px;font-weight:600;max-width:150px;line-height:1.3}
+.e08-net b{font-family:Oswald,sans-serif;font-weight:700;font-size:clamp(56px,7vw,92px);line-height:0.82;letter-spacing:-0.01em;white-space:nowrap}
+.e08-net b a{text-decoration:none}
+.e08-stamp{position:absolute;right:-14px;top:-20px;border:3px solid var(--plum);color:var(--plum);border-radius:4px;padding:4px 10px;font-family:Oswald,sans-serif;font-weight:700;font-size:26px;letter-spacing:0.06em;text-transform:uppercase;transform:rotate(-12deg);background:rgba(255,255,255,0.86)}
+.e08-tear{display:flex;align-items:center;gap:10px;margin-top:16px;font-size:12px;font-weight:600}
+.e08-tear::after{content:'';flex:1;border-top:2px dashed #000}
+.e08-fine{font-size:13px;line-height:1.45;margin:10px 0 0;color:#2b2b2b}
+/* accounts */
+.e08-plum{background:var(--plum);color:#fff}
+.e08-ac-head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,0.8fr);gap:40px;align-items:end}
+.e08-plum .e08-kick{color:#fff}
+.e08-ac-head p{font-size:18px;margin:0;color:#fff}
+.e08-ac{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:44px}
+.e08-card{display:flex;flex-direction:column;min-height:300px;padding:20px 20px 18px;border:1px solid #000;border-radius:4px;background:var(--c);color:#000;text-decoration:none;transition:transform .15s ease}
+.e08-card:hover{transform:translateY(-4px)}
+.e08-card-t{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.e08-card-t small{font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding-top:2px}
+.e08-card h3{font-family:Oswald,sans-serif;font-weight:600;font-size:38px;line-height:0.9;text-transform:uppercase;margin:18px 0 0;letter-spacing:-0.01em}
+.e08-card p{font-size:15px;line-height:1.42;margin:10px 0 0}
+.e08-card-p{margin-top:auto;padding-top:14px}
+.e08-card-p b{display:block;font-family:Oswald,sans-serif;font-weight:600;font-size:26px;line-height:1;letter-spacing:-0.005em}
+.e08-card-p small{display:block;font-size:12px;font-weight:600;margin-top:4px}
+.e08-slug{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:14px;padding-top:12px;border-top:1px solid currentColor;font-size:14px;font-weight:600}
+.e08-card.e08-dark{color:var(--lemon)}
+.e08-card.e08-dark p{color:#fff}
+/* history */
+.e08-hi-g{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:56px;align-items:start}
+.e08-hi-l p{font-size:17px;margin:20px 0 0}
+.e08-cut{position:relative;margin-top:34px;transform:rotate(-2.5deg)}
+.e08-cut img{display:block;width:100%;height:300px;object-fit:cover;object-position:50% 40%;border:1px solid #000;border-radius:4px}
+.e08-tape{position:absolute;top:-12px;left:36%;width:96px;height:26px;background:var(--lemon);border:1px solid #000;transform:rotate(4deg);opacity:0.95}
+.e08-cap{position:absolute;right:-12px;bottom:-16px;background:#fff;border:1px solid #000;border-radius:4px;padding:6px 10px;font-size:13px;font-weight:600;transform:rotate(3deg)}
+.e08-tx{border:1px solid #000;border-radius:4px;overflow:hidden}
+.e08-tx-h,.e08-tx-r{display:grid;grid-template-columns:92px minmax(0,1fr) 108px 112px;gap:16px;align-items:center;padding:0 18px}
+.e08-tx-h{background:#000;color:#fff;font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;min-height:40px}
+.e08-tx-r{min-height:70px;border-top:1px solid #000;padding-top:12px;padding-bottom:12px}
+.e08-tx-r:nth-child(even){background:var(--fog)}
+.e08-tx-d{font-family:Oswald,sans-serif;font-weight:600;font-size:20px;line-height:1;text-transform:uppercase}
+.e08-tx-r p{margin:0;font-size:15px;line-height:1.4}
+.e08-tx-r p b{display:block;font-size:16px}
+.e08-tx-a{text-align:right;font-weight:600;font-size:15px;font-variant-numeric:tabular-nums}
+.e08-tx-foot{display:flex;justify-content:space-between;gap:16px;padding:14px 18px;border-top:2px solid #000;background:var(--lemon);font-weight:700;font-size:15px}
+/* reviews */
+.e08-lime{background:var(--lime);border-top:1px solid #000;border-bottom:1px solid #000}
+.e08-rv-g{display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);gap:56px;align-items:center}
+.e08-big{font-family:Oswald,sans-serif;font-weight:700;font-size:clamp(76px,10.6vw,136px);line-height:0.82;letter-spacing:-0.01em;margin:0;white-space:nowrap}
+.e08-rv-l p{font-size:20px;line-height:1.4;margin:26px 0 0;font-weight:500}
+.e08-rv-l .e08-sm{font-size:15px;font-weight:500;margin-top:10px}
+.e08-cheques{display:grid;gap:22px}
+.e08-chq{position:relative;background:#fff;border:1px solid #000;border-radius:4px;padding:18px 22px 14px;margin:0}
+.e08-chq:nth-child(1){transform:rotate(-1.6deg)}
+.e08-chq:nth-child(2){transform:rotate(1.2deg);margin-left:28px}
+.e08-chq-h{display:flex;justify-content:space-between;gap:10px;font-size:12px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase}
+.e08-chq-pay{display:flex;align-items:center;gap:12px;margin-top:12px;font-size:12px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase}
+.e08-chq-pay span{flex:1;border-bottom:1px solid #000;font-size:15px;font-weight:500;text-transform:none;letter-spacing:-0.01em;padding-bottom:2px}
+.e08-chq-amt{border:1px solid #000;border-radius:4px;padding:4px 8px;display:inline-flex;gap:2px;background:var(--lemon)}
+.e08-chq blockquote{margin:14px 0 0;font-family:Oswald,sans-serif;font-weight:500;font-size:26px;line-height:1.1;text-transform:uppercase}
+.e08-chq-f{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;margin-top:14px;font-size:12px}
+.e08-chq-f code{font-family:Inter,sans-serif;font-weight:600;letter-spacing:0.12em}
+.e08-chq-f figcaption{border-top:1px solid #000;padding-top:4px;font-size:14px;font-style:italic;min-width:190px;text-align:right}
+.e08-more{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:700;text-decoration:underline;text-underline-offset:5px;margin-top:22px}
+/* branches */
+.e08-br-g{display:grid;grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr);gap:56px;align-items:center}
+.e08-map{border:1px solid #000;border-radius:4px;overflow:hidden;background:#fff}
+.e08-map svg{display:block;width:100%;height:auto}
+.e08-loc{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid #000;display:grid;grid-template-columns:1fr 1fr;column-gap:28px}
+.e08-loc a{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:2px 10px;min-height:62px;padding:8px 0;border-bottom:1px solid #000;text-decoration:none}
+.e08-loc b{font-family:Oswald,sans-serif;font-weight:500;font-size:24px;line-height:1;text-transform:uppercase}
+.e08-loc small{grid-column:1;font-size:13px;font-weight:500}
+.e08-loc em{grid-row:1 / span 2;grid-column:2;font-style:normal;font-family:Oswald,sans-serif;font-weight:500;font-size:20px}
+.e08-loc a:hover b{text-decoration:underline;text-underline-offset:4px}
+/* fine print */
+.e08-lemon{background:var(--lemon);border-top:1px solid #000;border-bottom:1px solid #000}
+.e08-fp{margin-top:40px;border-top:2px solid #000}
+.e08-fn{display:grid;grid-template-columns:96px minmax(0,0.9fr) minmax(0,1.1fr);gap:28px;padding:26px 0;border-bottom:1px solid #000;scroll-margin-top:20px}
+.e08-fn-n{font-family:Oswald,sans-serif;font-weight:700;font-size:84px;line-height:0.8}
+.e08-fn h3{font-family:Oswald,sans-serif;font-weight:500;font-size:34px;line-height:0.98;text-transform:uppercase;margin:0;letter-spacing:-0.005em}
+.e08-fn p{margin:0;font-size:17px;line-height:1.55}
+/* close */
+.e08-close{position:relative;background:var(--plum);color:#fff;overflow:hidden}
+.e08-close-ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 70%;filter:grayscale(0.2)}
+.e08-close-tint{position:absolute;inset:0;background:rgba(66,24,95,0.8)}
+.e08-close-g{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,0.85fr);gap:56px;align-items:center;padding:76px 40px}
+.e08-close h2{color:var(--lemon);font-size:clamp(44px,5.8vw,74px)}
+.e08-bigtel{display:inline-block;margin-top:24px;font-family:Oswald,sans-serif;font-weight:600;font-size:clamp(46px,6vw,76px);line-height:1;color:#fff;text-decoration:none;border-bottom:4px solid var(--flare);padding-bottom:4px}
+.e08-close p{font-size:17px;margin:18px 0 0;max-width:520px}
+.e08-fcard{background:#fff;color:#000;border:1px solid #000;border-radius:4px;padding:28px 28px 24px}
+.e08-fcard h3{font-family:Oswald,sans-serif;font-weight:600;font-size:34px;line-height:0.95;text-transform:uppercase;margin:0}
+.e08-fcard label{display:block;font-size:14px;font-weight:600;margin:16px 0 6px}
+.e08-fcard .e08-field{min-height:52px}
+.e08-fcard .e08-btn{width:100%;margin-top:18px}
+.e08-fcard .e08-hint{margin-top:12px}
+/* footer */
+.e08-foot{padding:64px 0 28px}
+.e08-foot-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px}
+.e08-acct{border:1px solid #000;border-radius:4px;overflow:hidden}
+.e08-acct-h{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#000;color:#fff;padding:12px 18px;font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase}
+.e08-acct dl{margin:0;display:grid;grid-template-columns:150px minmax(0,1fr)}
+.e08-acct dt,.e08-acct dd{margin:0;padding:10px 18px;border-top:1px solid #000;font-size:15px}
+.e08-acct dt{font-weight:600;background:var(--fog);border-right:1px solid #000}
+.e08-fl b{display:block;font-family:Oswald,sans-serif;font-weight:600;font-size:22px;text-transform:uppercase;line-height:1}
+.e08-fl p{font-size:14px;line-height:2;margin:10px 0 22px}
+.e08-fl a{text-underline-offset:3px}
+.e08-credit{font-size:13px;color:#555555;margin:34px 0 0;padding-top:16px;border-top:1px solid #000}
+@media (max-width:1100px){
+  .e08-links{display:none}
+  .e08-ac{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .e08-hero-g,.e08-st-g,.e08-hi-g,.e08-rv-g,.e08-br-g,.e08-close-g,.e08-foot-g,.e08-ac-head{grid-template-columns:1fr}
+  .e08-art{height:470px;max-width:520px;margin:10px 18px 0}
+  .e08-art img{height:390px}
+  .e08-fn{grid-template-columns:72px minmax(0,1fr)}
+  .e08-fn p{grid-column:2}
+  .e08-chq:nth-child(2){margin-left:0}
+}
+@media (max-width:640px){
+  .e08-in{padding:0 16px}
+  .e08-sec{padding:60px 0}
+  .e08-nav{padding:14px 16px;gap:10px}
+  .e08-logo b{font-size:22px}
+  .e08-logo svg{width:28px;height:28px}
+  .e08-tel{display:none}
+  .e08-navr .e08-btn{min-height:44px;padding:0 14px;font-size:15px}
+  .e08-hero{padding:22px 0 60px}
+  .e08-lede{font-size:18px}
+  .e08-row{flex-direction:column}
+  .e08-row .e08-btn{width:100%}
+  .e08-art{height:400px;margin:10px 10px 0 18px}
+  .e08-art img{height:320px}
+  .e08-note{left:-14px;width:200px;padding:14px}
+  .e08-note b{font-size:24px}
+  .e08-seal{width:110px;height:110px;right:-6px}
+  .e08-track span{font-size:36px}
+  .e08-mini b{font-size:44px}
+  .e08-mini span{font-size:13px}
+  .e08-mini div{padding-right:10px}
+  .e08-mini div + div{padding-left:10px}
+  .e08-stmt{padding:20px 16px 18px;transform:rotate(0.8deg)}
+  .e08-meta{grid-template-columns:1fr 1fr}
+  .e08-stamp{top:auto;bottom:-14px;right:8px;font-size:20px}
+  .e08-stmt{padding-bottom:30px}
+  .e08-chq-pay{flex-wrap:wrap;gap:6px 12px}
+  .e08-chq-pay > span:not(.e08-chq-amt){flex:1 1 100%}
+  .e08-lines li{font-size:15px}
+  .e08-net{flex-wrap:wrap}
+  .e08-ac{grid-template-columns:1fr;gap:12px}
+  .e08-card{min-height:0}
+  .e08-tx-h{display:none}
+  .e08-tx-r{grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;padding:14px 14px}
+  .e08-tx-d{grid-column:1}
+  .e08-tx-r .e08-tag{grid-column:2;grid-row:1;justify-self:end}
+  .e08-tx-r p{grid-column:1 / -1}
+  .e08-tx-a{grid-column:1 / -1;text-align:left}
+  .e08-tx-foot{flex-direction:column;gap:4px}
+  .e08-cut{margin:28px 10px 0}
+  .e08-cut img{height:230px}
+  .e08-cap{right:-4px}
+  .e08-big{font-size:68px}
+  .e08-chq{padding:14px 14px 12px}
+  .e08-chq blockquote{font-size:21px}
+  .e08-chq-f{flex-direction:column;align-items:flex-start}
+  .e08-chq-f figcaption{text-align:left;min-width:0}
+  .e08-loc{grid-template-columns:1fr}
+  .e08-fn{grid-template-columns:52px minmax(0,1fr);gap:8px 16px;padding:22px 0}
+  .e08-fn-n{font-size:56px}
+  .e08-fn h3{font-size:26px}
+  .e08-fn p{font-size:16px}
+  .e08-close-g{padding:60px 16px}
+  .e08-bigtel{font-size:44px}
+  .e08-fcard{padding:22px 18px}
+  .e08-acct dl{grid-template-columns:1fr}
+  .e08-acct dt{border-right:0}
+}
+@media (prefers-reduced-motion:reduce){.e08-track{animation:none}.e08-card,.e08-btn{transition:none}}
+</style>
+</helmet>
+<div class="e08">
+
+  <!-- NAV -->
+  <header class="e08-nav">
+    <a class="e08-logo" href="/" aria-label="Daylight Savings Solar home">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect x="0.5" y="0.5" width="33" height="33" rx="4" fill="#ff5a1f" stroke="#000"></rect><path d="M7 23a10 10 0 0 1 20 0z" fill="#fff07a" stroke="#000" stroke-width="1.5"></path><path d="M17 6v4M8.5 9.5l2.8 2.8M25.5 9.5l-2.8 2.8M4 17h3.5M26.5 17H30" stroke="#000" stroke-width="2" stroke-linecap="round"></path><path d="M5 27h24" stroke="#000" stroke-width="2"></path></svg>
+      <b>Daylight Savings</b>
+    </a>
+    <nav class="e08-links" aria-label="Main">
+      <a href="#e08-accounts">Accounts</a>
+      <a href="#e08-statement">The math</a>
+      <a href="#e08-branches">Branches</a>
+      <a href="#e08-fine">Fine print</a>
+    </nav>
+    <div class="e08-navr">
+      <a class="e08-tel" href="tel:+13215550168"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="#000"></path></svg>(321) 555-0168</a>
+      <a class="e08-btn" href="#e08-run">Run My Numbers</a>
+    </div>
+  </header>
+
+  <!-- HERO: bank-style split, compressed display -->
+  <section class="e08-hero" aria-labelledby="e08-h1">
+    <div class="e08-in e08-hero-g">
+      <div>
+        <p class="e08-kick">Solar installation &amp; financing · Palm Bay, FL</p>
+        <h1 class="e08-disp e08-h1" id="e08-h1"><span>Solar panel</span><span>installation</span><span>in Palm Bay, FL.</span></h1>
+        <p class="e08-lede">Panels, batteries and financing for Space Coast homes. You see the whole statement, line by line, before anyone asks you to sign a thing.</p>
+        <form class="e08-form" action="/estimate" method="get">
+          <label for="e08-bill">Your average monthly power bill</label>
+          <div class="e08-row">
+            <div class="e08-field"><span aria-hidden="true">$</span><input id="e08-bill" name="bill" inputmode="numeric" placeholder="Monthly amount"></div>
+            <button class="e08-btn" type="submit">Run My Numbers</button>
+          </div>
+          <p class="e08-hint">We use it to start your example statement. No account, no spam calls.</p>
+        </form>
+        <div class="e08-callrow">
+          <span>Rather talk it through? <a href="tel:+13215550168">(321) 555-0168</a></span>
+          <span><span class="e08-stars" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6L1.3 7.7l6.1-.6z" fill="#000"></path></svg><svg width="15" height="15" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6L1.3 7.7l6.1-.6z" fill="#000"></path></svg><svg width="15" height="15" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6L1.3 7.7l6.1-.6z" fill="#000"></path></svg><svg width="15" height="15" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6L1.3 7.7l6.1-.6z" fill="#000"></path></svg><svg width="15" height="15" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6L1.3 7.7l6.1-.6z" fill="#000"></path></svg></span>[RATING] from [COUNT] Google reviews · Newest [DAYS] days ago</span>
+        </div>
+      </div>
+      <div class="e08-art">
+        <div class="e08-art-bg"></div>
+        <img src="img/solar/05.jpg" alt="Daylight Savings installer bolting a solar panel to a shingle roof in Palm Bay" width="560" height="500">
+        <div class="e08-note">
+          <small>Note to self</small>
+          <b>The sun has never once mailed us a bill.</b>
+        </div>
+        <svg class="e08-seal" viewBox="0 0 160 160" aria-hidden="true">
+          <defs><path id="e08-ring" d="M80 80m-56 0a56 56 0 1 1 112 0a56 56 0 1 1-112 0"></path></defs>
+          <circle cx="80" cy="80" r="76" fill="#42185f" stroke="#000" stroke-width="1.5"></circle>
+          <circle cx="80" cy="80" r="44" fill="#fff07a" stroke="#000" stroke-width="1.5"></circle>
+          <text font-family="Oswald, sans-serif" font-size="15" font-weight="600" letter-spacing="2.2" fill="#fff07a"><textPath href="#e08-ring">SPACE COAST INSTALLER · LICENSED · </textPath></text>
+          <path d="M80 50c9 8 12 20 9 34H71c-3-14 0-26 9-34z" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"></path>
+          <circle cx="80" cy="67" r="4" fill="#ff5a1f" stroke="#000" stroke-width="1.5"></circle>
+          <path d="M71 78l-7 10h8M89 78l7 10h-8" fill="#ff5a1f" stroke="#000" stroke-width="1.5" stroke-linejoin="round"></path>
+          <path d="M76 86l4 12 4-12" fill="#ff5a1f" stroke="#000" stroke-width="1.5" stroke-linejoin="round"></path>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="e08-tick" aria-label="The math before the pitch. Permits filed for you. No door-knocking. [YEARS] years on the Space Coast.">
+    <div class="e08-track" aria-hidden="true">
+      <span>The math before the pitch <i></i> Permits filed for you <i></i> No door-knocking, ever <i></i> [YEARS] years on the Space Coast <i></i></span>
+      <span>The math before the pitch <i></i> Permits filed for you <i></i> No door-knocking, ever <i></i> [YEARS] years on the Space Coast <i></i></span>
+    </div>
+  </div>
+
+  <!-- STATEMENT: savings math -->
+  <section class="e08-sec e08-cream" id="e08-statement" aria-labelledby="e08-st-h">
+    <div class="e08-in e08-st-g">
+      <div class="e08-st-l">
+        <p class="e08-kick">Savings math, in plain print</p>
+        <h2 class="e08-disp e08-h2" id="e08-st-h">Here's the math. All of it.</h2>
+        <p>Solar is a trade. You swap part of a power bill you don't control for a loan payment you do. Whether that's a good trade depends on your roof, your shade and how much power you use, so we show the whole statement before anyone talks about signing.</p>
+        <div class="e08-mini">
+          <div><b>12</b><span>months of your bills read, not one hot August</span></div>
+          <div><b>1</b><span>roof visit to measure, check shade and photograph</span></div>
+          <div><b>0</b><span>pressure. If the net line doesn't help you, we say so</span></div>
+        </div>
+      </div>
+      <div class="e08-stmt" role="group" aria-label="Example monthly solar statement">
+        <div class="e08-stmt-h"><img src="img/solar/06.jpg" alt="Example two-story home with rooftop solar panels" width="64" height="64" loading="lazy"><div><b>Monthly statement</b><span>Daylight Savings Solar<br>Example home · Palm Bay</span></div></div>
+        <div class="e08-meta">
+          <div><small>System</small>[SIZE] kW, [PANELS] panels</div>
+          <div><small>Roof</small>Shingle, south and west</div>
+          <div><small>Period</small>[MONTH] [YEAR]</div>
+        </div>
+        <span class="e08-stamp" aria-hidden="true">Example</span>
+        <ul class="e08-lines">
+          <li><span>Your power bill today<small>12-month average</small></span><b>$[BILL]/mo</b></li>
+          <li><span>Power bill with solar<small>estimate from your roof and usage</small></span><b>$[NEW BILL]/mo</b></li>
+          <li><span>Solar loan payment<small>[TERM] years at [APR]% APR, on approved credit</small></span><b>$[PAYMENT]/mo</b></li>
+          <li><span>Battery backup<small>optional, shown only if you ask</small></span><b>$[AMOUNT]/mo</b></li>
+        </ul>
+        <div class="e08-net"><span>Net change each month, example only</span><b>$[NET]<a class="e08-sup" href="#e08-fn1" aria-label="Footnote 1">¹</a></b></div>
+        <div class="e08-tear">Your version</div>
+        <p class="e08-fine">Every figure here is an example, not a promise. Your statement uses your own bills, roof measurements and shade data. Results depend on usage, utility rates and weather.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCOUNTS: services -->
+  <section class="e08-sec e08-plum" id="e08-accounts" aria-labelledby="e08-ac-h">
+    <div class="e08-in">
+      <div class="e08-ac-head">
+        <div>
+          <p class="e08-kick">What we install and fix</p>
+          <h2 class="e08-disp e08-h2" id="e08-ac-h" style="color:#fff07a">Eight accounts. One crew.</h2>
+        </div>
+        <p>Every one has its own page with photos, what's included and the going rate on the Space Coast. Prices are ranges until we see your roof.</p>
+      </div>
+      <div class="e08-ac">
+        <a class="e08-card" href="/solar-panel-installation" style="--c:#fff07a">
+          <span class="e08-card-t"><small>Acct 01</small><svg width="46" height="40" viewBox="0 0 46 40" aria-hidden="true"><path d="M10 6h32l-6 28H4z" fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"></path><path d="M20.7 6l-5.4 28M31.3 6l-5.4 28M7 20h32" stroke="#000" stroke-width="2"></path></svg></span>
+          <h3>Rooftop solar</h3>
+          <p>Panels, racking, inverter, permits and the utility paperwork.</p>
+          <span class="e08-card-p"><b>$[LOW]–$[HIGH]<span class="e08-sup">²</span></b><small>typical [SIZE] kW system</small></span>
+          <span class="e08-slug">/solar-panel-installation <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="e08-card" href="/solar-battery-storage" style="--c:#d4e84b">
+          <span class="e08-card-t"><small>Acct 02</small><svg width="46" height="40" viewBox="0 0 46 40" aria-hidden="true"><rect x="3" y="9" width="36" height="24" rx="3" fill="none" stroke="#000" stroke-width="2"></rect><path d="M39 16h4v10h-4" fill="none" stroke="#000" stroke-width="2"></path><path d="M23 13l-7 9h6l-2 8 8-10h-6z" fill="#000"></path></svg></span>
+          <h3>Battery backup</h3>
+          <p>Keeps the fridge, lights and Wi-Fi on when the grid goes down.</p>
+          <span class="e08-card-p"><b>from $[PRICE]<span class="e08-sup">⁴</span></b><small>installed with existing or new panels</small></span>
+          <span class="e08-slug">/solar-battery-storage <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="e08-card" href="/solar-financing" style="--c:#cdb0fa">
+          <span class="e08-card-t"><small>Acct 03</small><svg width="46" height="40" viewBox="0 0 46 40" aria-hidden="true"><ellipse cx="23" cy="10" rx="14" ry="5" fill="none" stroke="#000" stroke-width="2"></ellipse><path d="M9 10v8c0 2.8 6.3 5 14 5s14-2.2 14-5v-8M9 18v8c0 2.8 6.3 5 14 5s14-2.2 14-5v-8" fill="none" stroke="#000" stroke-width="2"></path></svg></span>
+          <h3>Solar financing</h3>
+          <p>Loans through [LENDER] on approved credit. The payment sits on your statement.</p>
+          <span class="e08-card-p"><b>$[PAYMENT]/mo</b><small>example, [TERM] yrs at [APR]% APR</small></span>
+          <span class="e08-slug">/solar-financing <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="e08-card" href="/ev-charger-installation" style="--c:#faefdc">
+          <span class="e08-card-t"><small>Acct 04</small><svg width="46" height="40" viewBox="0 0 46 40" aria-hidden="true"><rect x="6" y="4" width="22" height="32" rx="3" fill="none" stroke="#000" stroke-width="2"></rect><path d="M18 11l-5 8h5l-2 7 6-9h-5z" fill="#000"></path><path d="M28 14h6a4 4 0 0 1 4 4v10a3 3 0 0 0 6 0V12" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"></path></svg></span>
+          <h3>EV charger</h3>
+          <p>A Level 2 charger wired to your panel and sized to your car.</p>
+          <span class="e08-card-p"><b>$[LOW]–$[HIGH]</b><small>most garages, permit included</small></span>
+          <span class="e08-slug">/ev-charger-installation <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="e08-card" href="/solar-roof-check" style="--c:#f2a295">
+          <span class="e08-card-t"><small>Acct 05</small><svg width="46" height="40" viewBox="0 0 46 40" aria-hidden="true"><path d="M3 20L21 5l18 15" fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"></path><path d="M8 17v18h14" fill="none" stroke="#000" stroke-width="2"></path><circle cx="32" cy="27" r="6" fill="none" stroke="#000" stroke-width="2"></circle><path d="M36.5 31.5L43 38" stroke="#000" stroke-width="2.4" stroke-linecap="round"></path></svg></span>
+          <h3>Roof check</h3>
+          <p>If your roof has less life left than the panels, we say so first.</p>
+          <span class="e08-card-p"><b>from $[PRICE]</b><small>credited if you install with us</small></span>
+          <span class="e08-slug">/solar-roof-check <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="e08-card" href="/solar-panel-removal-reinstall" style="--c:#ffffff">
+          <span class="e08-card-t"><small>Acct 06</small><svg width="46" height="40" viewBox="0 0 46 40" aria-hidden="true"><path d="M8 18a15 15 0 0 1 27-8M38 22a15 15 0 0 1-27 8" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"></path><path d="M36 3v8h-8M10 37v-8h8" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+          <h3>Remove &amp; reinstall</h3>
+          <p>Panels off for a re-roof, stored safely, then back up and tested.</p>
+          <span class="e08-card-p"><b>$[LOW]–$[HIGH]</b><small>priced per panel</small></span>
+          <span class="e08-slug">/solar-panel-removal-reinstall <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="e08-card" href="/solar-panel-repair" style="--c:#eff2f5">
+          <span class="e08-card-t"><small>Acct 07</small><svg width="46" height="40" viewBox="0 0 46 40" aria-hidden="true"><path d="M33 4a8 8 0 0 0-8 10.5L7 32.5a3 3 0 0 0 4.2 4.2L29.5 18.5A8 8 0 0 0 40 11l-5 3-4-1.5-1.5-4 3-5z" fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"></path></svg></span>
+          <h3>Repair &amp; monitoring</h3>
+          <p>A dead inverter, a panel that stopped posting, an app gone quiet.</p>
+          <span class="e08-card-p"><b>from $[PRICE]</b><small>diagnostic visit</small></span>
+          <span class="e08-slug">/solar-panel-repair <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="e08-card e08-dark" href="/solar-storm-inspection" style="--c:#183428">
+          <span class="e08-card-t"><small>Acct 08</small><svg width="46" height="40" viewBox="0 0 46 40" aria-hidden="true"><path d="M12 26h22a7 7 0 0 0 0-14 10 10 0 0 0-19-2A8 8 0 0 0 12 26z" fill="none" stroke="#fff07a" stroke-width="2" stroke-linejoin="round"></path><path d="M6 32h20M14 37h22" stroke="#fff07a" stroke-width="2" stroke-linecap="round"></path></svg></span>
+          <h3>Storm check</h3>
+          <p>After a named storm: racking, wiring and roof seals, with photos.</p>
+          <span class="e08-card-p"><b>from $[PRICE]<span class="e08-sup">³</span></b><small>free for systems we installed</small></span>
+          <span class="e08-slug">/solar-storm-inspection <span aria-hidden="true">→</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSACTION HISTORY: process -->
+  <section class="e08-sec" aria-labelledby="e08-hi-h">
+    <div class="e08-in e08-hi-g">
+      <div class="e08-hi-l">
+        <p class="e08-kick">Transaction history</p>
+        <h2 class="e08-disp e08-h2" id="e08-hi-h" style="font-size:clamp(46px,5.6vw,76px)">How it posts, call to switch-on.</h2>
+        <p>Most Palm Bay homes go from first call to live panels in [WEEKS] weeks. The slow part is paperwork, and that part is ours.</p>
+        <div class="e08-cut">
+          <span class="e08-tape" aria-hidden="true"></span>
+          <img src="img/solar/04.jpg" alt="Installer lifting a black solar panel into place on a Palm Bay roof" width="380" height="300" loading="lazy">
+          <span class="e08-cap">Install day: panel [N] of [PANELS]</span>
+        </div>
+      </div>
+      <div class="e08-tx" role="table" aria-label="Steps from first call to switch-on">
+        <div class="e08-tx-h" role="row"><span role="columnheader">Date</span><span role="columnheader">Description</span><span role="columnheader">Status</span><span role="columnheader" style="text-align:right">Amount</span></div>
+        <div class="e08-tx-r" role="row"><span class="e08-tx-d" role="cell">Day 1</span><p role="cell"><b>Bill review</b>Send one power bill. We pull 12 months of usage from it.</p><span role="cell"><span class="e08-tag" style="background:#d4e84b">Posted</span></span><span class="e08-tx-a" role="cell">$0.00</span></div>
+        <div class="e08-tx-r" role="row"><span class="e08-tx-d" role="cell">Day 3</span><p role="cell"><b>Roof visit</b>Measure, shade check, attic and electrical panel. About an hour.</p><span role="cell"><span class="e08-tag" style="background:#d4e84b">Posted</span></span><span class="e08-tx-a" role="cell">$0.00</span></div>
+        <div class="e08-tx-r" role="row"><span class="e08-tx-d" role="cell">Day 5</span><p role="cell"><b>Your statement</b>The example above, filled in with your numbers, in writing.</p><span role="cell"><span class="e08-tag" style="background:#d4e84b">Posted</span></span><span class="e08-tx-a" role="cell">$0.00</span></div>
+        <div class="e08-tx-r" role="row"><span class="e08-tx-d" role="cell">Wk 2–5</span><p role="cell"><b>Permits</b>Filed with the City of Palm Bay or Brevard County, plus any HOA forms.</p><span role="cell"><span class="e08-tag" style="background:#fff07a">Pending</span></span><span class="e08-tx-a" role="cell">Included</span></div>
+        <div class="e08-tx-r" role="row"><span class="e08-tx-d" role="cell">Install</span><p role="cell"><b>Install day</b>A [CREW SIZE]-person crew. Most roofs are done in one day.</p><span role="cell"><span class="e08-tag" style="background:#fff07a">Pending</span></span><span class="e08-tx-a" role="cell">Per contract</span></div>
+        <div class="e08-tx-r" role="row"><span class="e08-tx-d" role="cell">+[N] wk</span><p role="cell"><b>Inspection &amp; utility OK</b>City inspection, then the utility approves the hookup.</p><span role="cell"><span class="e08-tag" style="background:#fff07a">Pending</span></span><span class="e08-tx-a" role="cell">Included</span></div>
+        <div class="e08-tx-r" role="row"><span class="e08-tx-d" role="cell">Live</span><p role="cell"><b>Switch-on</b>The app shows what your roof makes, every day.</p><span role="cell"><span class="e08-tag" style="background:#cdb0fa">Scheduled</span></span><span class="e08-tx-a" role="cell">[KWH] kWh/mo est.</span></div>
+        <div class="e08-tx-foot"><span>Fees charged before your statement: $0.00</span><span>Door-knocks: 0</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS AS CHEQUES -->
+  <section class="e08-sec e08-lime" aria-labelledby="e08-rv-h">
+    <div class="e08-in e08-rv-g">
+      <div class="e08-rv-l">
+        <p class="e08-kick">Deposits from neighbors</p>
+        <h2 class="e08-big" id="e08-rv-h">[RATING]</h2>
+        <p>Google rating from [COUNT] reviews across Brevard County.</p>
+        <p class="e08-sm">Newest review [DAYS] days ago. Every review is a real deposit; we don't edit them.</p>
+        <a class="e08-more" href="/reviews">Read all [COUNT] reviews <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="e08-cheques">
+        <figure class="e08-chq">
+          <div class="e08-chq-h"><span>Daylight Savings Solar</span><span>No. 0001 · [DATE]</span></div>
+          <div class="e08-chq-pay">Pay to the order of <span>Daylight Savings Solar</span><span class="e08-chq-amt" aria-label="Five stars"><svg width="13" height="13" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6L1.3 7.7l6.1-.6z" fill="#000"></path></svg><svg width="13" height="13" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6L1.3 7.7l6.1-.6z" fill="#000"></path></svg><svg width="13" height="13" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6L1.3 7.7l6.1-.6z" fill="#000"></path></svg><svg width="13" height="13" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6L1.3 7.7l6.1-.6z" fill="#000"></path></svg><svg width="13" height="13" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6L1.3 7.7l6.1-.6z" fill="#000"></path></svg></span></div>
+          <blockquote>“[Google review, pulled at build time]”</blockquote>
+          <div class="e08-chq-f"><code>|: GOOGLE REVIEW :| [DAYS] DAYS AGO</code><figcaption>[Reviewer], [Town]</figcaption></div>
+        </figure>
+        <figure class="e08-chq">
+          <div class="e08-chq-h"><span>Daylight Savings Solar</span><span>No. 0002 · [DATE]</span></div>
+          <div class="e08-chq-pay">Pay to the order of <span>Daylight Savings Solar</span><span class="e08-chq-amt" aria-label="Five stars"><svg width="13" height="13" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6L1.3 7.7l6.1-.6z" fill="#000"></path></svg><svg width="13" height="13" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6L1.3 7.7l6.1-.6z" fill="#000"></path></svg><svg width="13" height="13" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6L1.3 7.7l6.1-.6z" fill="#000"></path></svg><svg width="13" height="13" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6L1.3 7.7l6.1-.6z" fill="#000"></path></svg><svg width="13" height="13" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6L1.3 7.7l6.1-.6z" fill="#000"></path></svg></span></div>
+          <blockquote>“[Google review, pulled at build time]”</blockquote>
+          <div class="e08-chq-f"><code>|: GOOGLE REVIEW :| [DAYS] DAYS AGO</code><figcaption>[Reviewer], [Town]</figcaption></div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANCH LOCATOR: towns -->
+  <section class="e08-sec" id="e08-branches" aria-labelledby="e08-br-h">
+    <div class="e08-in e08-br-g">
+      <div class="e08-map">
+        <svg viewBox="0 0 460 520" role="img" aria-label="Map of the Palm Bay and Melbourne area with the Indian River Lagoon and the towns Daylight Savings serves">
+          <rect width="460" height="520" fill="#ffffff"></rect>
+          <path d="M318 0h142v520H392c-8-60-14-120-26-180S330 200 324 120 314 40 318 0z" fill="#cdb0fa" stroke="#000" stroke-width="1.5"></path>
+          <path d="M350 0h32c-2 50 6 110 16 170s22 140 34 220 18 100 20 130h-30c-4-40-10-80-20-130S386 260 376 190 352 60 350 0z" fill="#faefdc" stroke="#000" stroke-width="1.5"></path>
+          <path d="M0 60h160M0 250h220M0 400h300" stroke="#000" stroke-width="1" stroke-dasharray="3 5"></path>
+          <path d="M120 0c6 80 20 160 30 260s24 180 30 260" fill="none" stroke="#000" stroke-width="3"></path>
+          <text x="128" y="114" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#000" transform="rotate(84 128 114)">I-95</text>
+          <path d="M300 0c4 80 14 160 26 260s26 180 40 260" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="7 4"></path>
+          <text x="420" y="40" font-family="Oswald, sans-serif" font-size="15" font-weight="600" fill="#000" transform="rotate(90 420 40)">ATLANTIC</text>
+          <text x="342" y="300" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#000" transform="rotate(80 342 300)">INDIAN RIVER LAGOON</text>
+          <g font-family="Inter, sans-serif" font-size="12.5" font-weight="600" fill="#000">
+            <circle cx="232" cy="300" r="12" fill="#ff5a1f" stroke="#000" stroke-width="1.5"></circle><circle cx="232" cy="300" r="4" fill="#000"></circle>
+            <rect x="160" y="318" width="96" height="26" rx="4" fill="#000"></rect><text x="208" y="336" text-anchor="middle" fill="#fff07a" font-family="Oswald, sans-serif" font-size="15">PALM BAY</text>
+            <circle cx="268" cy="54" r="5" fill="#ff5a1f" stroke="#000" stroke-width="1.5"></circle><rect x="200" y="40" width="58" height="22" rx="4" fill="#fff" stroke="#000"></rect><text x="229" y="55" text-anchor="middle">Viera</text>
+            <circle cx="290" cy="196" r="5" fill="#ff5a1f" stroke="#000" stroke-width="1.5"></circle><rect x="196" y="184" width="86" height="22" rx="4" fill="#fff" stroke="#000"></rect><text x="239" y="199" text-anchor="middle">Melbourne</text>
+            <circle cx="196" cy="232" r="5" fill="#ff5a1f" stroke="#000" stroke-width="1.5"></circle><rect x="40" y="220" width="146" height="22" rx="4" fill="#fff" stroke="#000"></rect><text x="113" y="235" text-anchor="middle">West Melbourne</text>
+            <circle cx="304" cy="370" r="5" fill="#ff5a1f" stroke="#000" stroke-width="1.5"></circle><rect x="230" y="378" width="66" height="22" rx="4" fill="#fff" stroke="#000"></rect><text x="263" y="393" text-anchor="middle">Malabar</text>
+            <circle cx="314" cy="438" r="5" fill="#ff5a1f" stroke="#000" stroke-width="1.5"></circle><rect x="176" y="428" width="128" height="22" rx="4" fill="#fff" stroke="#000"></rect><text x="240" y="443" text-anchor="middle">Grant-Valkaria</text>
+            <circle cx="350" cy="502" r="5" fill="#ff5a1f" stroke="#000" stroke-width="1.5"></circle><rect x="262" y="490" width="78" height="22" rx="4" fill="#fff" stroke="#000"></rect><text x="301" y="505" text-anchor="middle">Sebastian</text>
+            <circle cx="372" cy="120" r="5" fill="#ff5a1f" stroke="#000" stroke-width="1.5"></circle><rect x="232" y="108" width="128" height="22" rx="4" fill="#fff" stroke="#000"></rect><text x="296" y="123" text-anchor="middle">Satellite Beach</text>
+            <circle cx="380" cy="214" r="5" fill="#ff5a1f" stroke="#000" stroke-width="1.5"></circle><rect x="388" y="226" width="68" height="22" rx="4" fill="#fff" stroke="#000"></rect><text x="422" y="241" text-anchor="middle">Indialantic</text>
+            <circle cx="388" cy="262" r="5" fill="#ff5a1f" stroke="#000" stroke-width="1.5"></circle><rect x="330" y="270" width="124" height="22" rx="4" fill="#fff" stroke="#000"></rect><text x="392" y="285" text-anchor="middle">Melbourne Beach</text>
+          </g>
+          <g transform="translate(40 470)"><circle r="20" fill="#fff" stroke="#000" stroke-width="1.5"></circle><path d="M0-15l5 15-5 15-5-15z" fill="#000"></path><text y="-24" text-anchor="middle" font-family="Oswald, sans-serif" font-size="12" font-weight="600" fill="#000">N</text></g>
+        </svg>
+      </div>
+      <div>
+        <p class="e08-kick">Branch locator</p>
+        <h2 class="e08-disp e08-h2" id="e08-br-h" style="font-size:clamp(46px,5.6vw,76px)">Branches? No. One truck, ten towns.</h2>
+        <p style="font-size:17px;margin:20px 0 0;max-width:560px">Each town has its own page with installs nearby, permit notes for that city and HOA tips. Miles are approximate drive distance from Palm Bay.</p>
+        <ul class="e08-loc">
+          <li><a href="/areas/palm-bay"><b>Palm Bay</b><small>/areas/palm-bay</small><em>Home</em></a></li>
+          <li><a href="/areas/malabar"><b>Malabar</b><small>/areas/malabar</small><em>~5 mi</em></a></li>
+          <li><a href="/areas/west-melbourne"><b>West Melbourne</b><small>/areas/west-melbourne</small><em>~7 mi</em></a></li>
+          <li><a href="/areas/melbourne"><b>Melbourne</b><small>/areas/melbourne</small><em>~8 mi</em></a></li>
+          <li><a href="/areas/grant-valkaria"><b>Grant-Valkaria</b><small>/areas/grant-valkaria</small><em>~10 mi</em></a></li>
+          <li><a href="/areas/indialantic"><b>Indialantic</b><small>/areas/indialantic</small><em>~12 mi</em></a></li>
+          <li><a href="/areas/melbourne-beach"><b>Melbourne Beach</b><small>/areas/melbourne-beach</small><em>~13 mi</em></a></li>
+          <li><a href="/areas/satellite-beach"><b>Satellite Beach</b><small>/areas/satellite-beach</small><em>~17 mi</em></a></li>
+          <li><a href="/areas/sebastian"><b>Sebastian</b><small>/areas/sebastian</small><em>~17 mi</em></a></li>
+          <li><a href="/areas/viera"><b>Viera</b><small>/areas/viera</small><em>~18 mi</em></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINE PRINT: FAQ as footnotes -->
+  <section class="e08-sec e08-lemon" id="e08-fine" aria-labelledby="e08-fp-h">
+    <div class="e08-in">
+      <p class="e08-kick">Questions Palm Bay asks first</p>
+      <h2 class="e08-disp e08-h2" id="e08-fp-h">The fine print, in big print.</h2>
+      <div class="e08-fp">
+        <article class="e08-fn" id="e08-fn1">
+          <span class="e08-fn-n" aria-hidden="true">¹</span>
+          <h3>Will solar panels lower my power bill in Palm Bay?</h3>
+          <p>It depends on your roof, your shade and how much power you use. Some homes see a big drop, some a small one, and a few aren't a fit. We run your last 12 bills through the math and hand you a statement like the example above. If the net line doesn't help you, we say so and leave it there.</p>
+        </article>
+        <article class="e08-fn" id="e08-fn2">
+          <span class="e08-fn-n" aria-hidden="true">²</span>
+          <h3>How much do solar panels cost in Palm Bay?</h3>
+          <p>Most Palm Bay homes we quote land between $[LOW] and $[HIGH] for a [SIZE] kW system before any incentive. Price moves with roof size, panel count, battery choice and how far your electrical panel sits from the array. Every line is on your written proposal.</p>
+        </article>
+        <article class="e08-fn" id="e08-fn3">
+          <span class="e08-fn-n" aria-hidden="true">³</span>
+          <h3>Do solar panels hold up in a Florida hurricane?</h3>
+          <p>The panels and racking we install are rated for [WIND RATING] mph winds and attached to Florida Building Code for your roof. We seal and photograph every roof attachment for your file. After a named storm, we offer a storm check from $[PRICE].</p>
+        </article>
+        <article class="e08-fn" id="e08-fn4">
+          <span class="e08-fn-n" aria-hidden="true">⁴</span>
+          <h3>Do solar panels work when the power goes out?</h3>
+          <p>Not on their own. Grid-tied systems shut off in an outage by design, so line crews stay safe. To keep the lights and fridge on, you need a battery. We show it as its own line on your statement, so you can decide with the number in front of you.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSE: dark photo + floating form card -->
+  <section class="e08-close" id="e08-run" aria-labelledby="e08-close-h">
+    <img class="e08-close-ph" src="img/solar/07.jpg" alt="" width="1280" height="640" loading="lazy">
+    <div class="e08-close-tint"></div>
+    <div class="e08-close-g" style="max-width:1200px;margin:0 auto">
+      <div>
+        <p class="e08-kick" style="color:#fff">Open your statement</p>
+        <h2 class="e08-disp" id="e08-close-h">Bring one power bill. We'll bring the math.</h2>
+        <a class="e08-bigtel" href="tel:+13215550168">(321) 555-0168</a>
+        <p>Call or text [HOURS]. A person in Palm Bay answers, and your example statement comes back in writing within [DAYS] business days.</p>
+      </div>
+      <form class="e08-fcard" action="/estimate" method="post">
+        <h3>Run your numbers</h3>
+        <label for="e08-bill2">Average monthly power bill</label>
+        <div class="e08-field"><span aria-hidden="true">$</span><input id="e08-bill2" name="bill" inputmode="numeric" placeholder="Monthly amount"></div>
+        <label for="e08-zip">ZIP code</label>
+        <div class="e08-field"><input id="e08-zip" name="zip" inputmode="numeric" placeholder="32905"></div>
+        <label for="e08-ph">Mobile number</label>
+        <div class="e08-field"><input id="e08-ph" name="phone" type="tel" placeholder="For your statement by text"></div>
+        <button class="e08-btn" type="submit">Run My Numbers</button>
+        <p class="e08-hint">We text your example statement. One person follows up, once.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER: account details -->
+  <footer class="e08-foot">
+    <div class="e08-in">
+      <div class="e08-foot-g">
+        <div class="e08-acct">
+          <div class="e08-acct-h"><span>Account details</span><span>Daylight Savings Solar</span></div>
+          <dl>
+            <dt>Business</dt><dd>Daylight Savings Solar</dd>
+            <dt>Address</dt><dd>Service-area business, Palm Bay, FL · [STREET ADDRESS]</dd>
+            <dt>Phone</dt><dd><a href="tel:+13215550168">(321) 555-0168</a></dd>
+            <dt>Hours</dt><dd>[HOURS]</dd>
+            <dt>License</dt><dd>Florida solar contractor [LICENSE NO.] · [CERTIFICATION]</dd>
+            <dt>Owner</dt><dd>[OWNER NAME], on the Space Coast [YEARS] years</dd>
+          </dl>
+        </div>
+        <div class="e08-fl">
+          <b>Accounts</b>
+          <p><a href="/solar-panel-installation">Rooftop solar</a> · <a href="/solar-battery-storage">Battery backup</a> · <a href="/solar-financing">Financing</a> · <a href="/ev-charger-installation">EV chargers</a> · <a href="/solar-roof-check">Roof check</a> · <a href="/solar-panel-removal-reinstall">Remove &amp; reinstall</a> · <a href="/solar-panel-repair">Repair</a> · <a href="/solar-storm-inspection">Storm check</a></p>
+          <b>Branches</b>
+          <p><a href="/areas/palm-bay">Palm Bay</a> · <a href="/areas/malabar">Malabar</a> · <a href="/areas/west-melbourne">West Melbourne</a> · <a href="/areas/melbourne">Melbourne</a> · <a href="/areas/grant-valkaria">Grant-Valkaria</a> · <a href="/areas/indialantic">Indialantic</a> · <a href="/areas/melbourne-beach">Melbourne Beach</a> · <a href="/areas/satellite-beach">Satellite Beach</a> · <a href="/areas/sebastian">Sebastian</a> · <a href="/areas/viera">Viera</a></p>
+          <p style="margin:0"><a href="/reviews">Reviews</a> · <a href="/privacy">Privacy</a> · <a href="/financing-terms">Financing terms</a></p>
+        </div>
+      </div>
+      <p class="e08-credit">Savings figures on this site are examples, not promises. Financing on approved credit through [LENDER]; terms vary.</p>
+      <p class="e08-credit" style="border-top:0;margin-top:0;padding-top:6px">Avenue Vision · E08 · Neon Bank · style refs withheld</p>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":7200}}'>class Component extends DCLogic { renderVals() { return {}; } }</script>
+</body>
+</html>

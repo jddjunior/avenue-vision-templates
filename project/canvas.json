@@ -1,0 +1,1018 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Audit.dc.html": {
+      "expand": "fill",
+      "h": 1900,
+      "is_interactive": true,
+      "page": "earlier",
+      "title": "Findings",
+      "w": 1440,
+      "x": 4560,
+      "y": 0
+    },
+    "D09.dc.html": {
+      "expand": "fill",
+      "h": 3600,
+      "page": "dirC",
+      "title": "D09 Bento Grid: Tidy Citrus Co., Orlando · style refs withheld",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "D10.dc.html": {
+      "expand": "fill",
+      "h": 4900,
+      "page": "dirC",
+      "title": "D10 Map Console: Marsh & Pine Pest Control, Jacksonville · style refs withheld",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "D11.dc.html": {
+      "expand": "fill",
+      "h": 7900,
+      "page": "dirC",
+      "title": "D11 Friendly Fintech: Breezly Air Co., Fort Myers · style refs withheld",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "D12.dc.html": {
+      "expand": "fill",
+      "h": 7600,
+      "page": "dirC",
+      "title": "D12 Performance Lab: Turfstat Lawn Care, Lakeland · style refs withheld",
+      "w": 1280,
+      "x": 4080,
+      "y": 0
+    },
+    "D13.dc.html": {
+      "expand": "fill",
+      "h": 7300,
+      "page": "dirD",
+      "title": "D13 Poster Stack: Saltline Wash & Window Co., Sarasota · style refs withheld",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "D14.dc.html": {
+      "expand": "fill",
+      "h": 7200,
+      "page": "dirD",
+      "title": "D14 Retro Soda Shop: Tillman's Fix-It Co., Ocala · style refs withheld",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "D15.dc.html": {
+      "expand": "fill",
+      "h": 7700,
+      "page": "dirD",
+      "title": "D15 Field Guide: Canopy Road Arborists, Tallahassee · style refs withheld",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "D16.dc.html": {
+      "expand": "fill",
+      "h": 4700,
+      "page": "dirD",
+      "title": "D16 Building-Scale Type: Palafox Concrete & Paving, Pensacola · style refs withheld",
+      "w": 1280,
+      "x": 4080,
+      "y": 0
+    },
+    "Deposit.dc.html": {
+      "expand": "fill",
+      "h": 1800,
+      "page": "earlier",
+      "title": "Deposit receipt",
+      "w": 1440,
+      "x": 1520,
+      "y": 2500
+    },
+    "Editor.dc.html": {
+      "expand": "fill",
+      "h": 1000,
+      "is_interactive": true,
+      "page": "build",
+      "title": "Editor",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "Main.dc.html": {
+      "expand": "fill",
+      "h": 2080,
+      "is_interactive": true,
+      "page": "earlier",
+      "title": "Dashboard (earlier draft)",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "NewAudit.dc.html": {
+      "expand": "fill",
+      "h": 1100,
+      "is_interactive": true,
+      "page": "earlier",
+      "title": "New audit",
+      "w": 1440,
+      "x": 1520,
+      "y": 0
+    },
+    "PA1-Home.dc.html": {
+      "expand": "fill",
+      "h": 5800,
+      "page": "packA",
+      "title": "A1 Home (Clearday Window & Wash)",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "PA2-Location.dc.html": {
+      "expand": "fill",
+      "h": 5400,
+      "page": "packA",
+      "title": "A2 Location home /st-petersburg (Clearday Window & Wash)",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "PA3-Service.dc.html": {
+      "expand": "fill",
+      "h": 4800,
+      "page": "packA",
+      "title": "A3 Local service page /st-petersburg/window-cleaning (Clearday Window & Wash)",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "PA4-Franchise.dc.html": {
+      "expand": "fill",
+      "h": 4800,
+      "page": "packA",
+      "title": "A4 Franchise opportunity /franchise (Clearday Window & Wash)",
+      "w": 1280,
+      "x": 4080,
+      "y": 0
+    },
+    "PB1-Home.dc.html": {
+      "expand": "fill",
+      "h": 4750,
+      "page": "packB",
+      "title": "B1 National home + ZIP finder (Northstar Electric)",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "PB2-Location.dc.html": {
+      "expand": "fill",
+      "h": 5000,
+      "page": "packB",
+      "title": "B2 Location home /tampa (Northstar Electric)",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "PB3-Service.dc.html": {
+      "expand": "fill",
+      "h": 4900,
+      "page": "packB",
+      "title": "B3 Local service page /tampa/services/panel-upgrades (Northstar Electric)",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "PB4-Membership.dc.html": {
+      "expand": "fill",
+      "h": 4800,
+      "page": "packB",
+      "title": "B4 Membership + guarantees /tampa/membership (Northstar Electric)",
+      "w": 1280,
+      "x": 4080,
+      "y": 0
+    },
+    "PC1-Home.dc.html": {
+      "expand": "fill",
+      "h": 4950,
+      "page": "packC",
+      "title": "C1 National home + ZIP finder (Plumbline Plumbing)",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "PC2-Location.dc.html": {
+      "expand": "fill",
+      "h": 5000,
+      "page": "packC",
+      "title": "C2 Location home /orlando (Plumbline Plumbing)",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "PC3-Service.dc.html": {
+      "expand": "fill",
+      "h": 4650,
+      "page": "packC",
+      "title": "C3 Fixture service page /orlando/services/bidets (Plumbline Plumbing)",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "PC4-Town.dc.html": {
+      "expand": "fill",
+      "h": 4600,
+      "page": "packC",
+      "title": "C4 Town page /orlando/areas/winter-park-fl (Plumbline Plumbing)",
+      "w": 1280,
+      "x": 4080,
+      "y": 0
+    },
+    "PalmettoSite.dc.html": {
+      "expand": "fill",
+      "h": 3300,
+      "page": "build",
+      "title": "Built site: Palmetto Pool Care home page",
+      "w": 1280,
+      "x": 1520,
+      "y": 0
+    },
+    "Preview.dc.html": {
+      "expand": "fill",
+      "h": 3000,
+      "is_interactive": true,
+      "page": "earlier",
+      "title": "Prospect preview",
+      "w": 1440,
+      "x": 0,
+      "y": 2500
+    },
+    "Review.dc.html": {
+      "expand": "fill",
+      "h": 2000,
+      "is_interactive": true,
+      "page": "earlier",
+      "title": "Review gate",
+      "w": 1440,
+      "x": 6080,
+      "y": 0
+    },
+    "Run.dc.html": {
+      "expand": "fill",
+      "h": 1500,
+      "page": "earlier",
+      "title": "Run in progress",
+      "w": 1440,
+      "x": 3040,
+      "y": 0
+    },
+    "T01-Dispatch.dc.html": {
+      "expand": "fill",
+      "h": 6100,
+      "page": "templates",
+      "title": "01 Dispatch: emergency first (Bayline Plumbing, Tampa)",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "T02-ComfortClub.dc.html": {
+      "expand": "fill",
+      "h": 6900,
+      "page": "templates",
+      "title": "02 Comfort Club: membership led (Coolwater Air, Brandon)",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "T03-InstantEstimate.dc.html": {
+      "expand": "fill",
+      "h": 6100,
+      "page": "templates",
+      "title": "03 Instant Estimate: price online (Sandhill Fence, Lakeland)",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "T04-ProofMap.dc.html": {
+      "expand": "fill",
+      "h": 6800,
+      "page": "templates",
+      "title": "04 Proof Map: jobs on a map (Brightline Painting, St. Petersburg)",
+      "w": 1280,
+      "x": 4080,
+      "y": 0
+    },
+    "T05-RecurringRoute.dc.html": {
+      "expand": "fill",
+      "h": 6100,
+      "page": "templates",
+      "title": "05 Recurring Route: plans and visits (Greenline Lawn & Pest, Wesley Chapel)",
+      "w": 1280,
+      "x": 5440,
+      "y": 0
+    },
+    "T06-HometownPro.dc.html": {
+      "expand": "fill",
+      "h": 6000,
+      "page": "templates",
+      "title": "06 Hometown Pro: owner-operator (Rivera Electric, Kissimmee)",
+      "w": 1280,
+      "x": 0,
+      "y": 7400
+    },
+    "T07-FranchiseLocator.dc.html": {
+      "expand": "fill",
+      "h": 5700,
+      "page": "templates",
+      "title": "07 Franchise Locator: multi-location (Tidewell Home Cleaning)",
+      "w": 1280,
+      "x": 1360,
+      "y": 7400
+    },
+    "T08-StormClaims.dc.html": {
+      "expand": "fill",
+      "h": 6000,
+      "page": "templates",
+      "title": "08 Storm & Claims: inspection led (Keystone Roofing, Sarasota)",
+      "w": 1280,
+      "x": 2720,
+      "y": 7400
+    },
+    "T09-CraftStudio.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "page": "templates",
+      "title": "09 Craft Studio: high-ticket remodel (Hollis & Pine, Tampa)",
+      "w": 1280,
+      "x": 4080,
+      "y": 7400
+    },
+    "T10-Commercial.dc.html": {
+      "expand": "fill",
+      "h": 7700,
+      "page": "templates",
+      "title": "10 Commercial Capabilities: B2B (Meridian Mechanical, Orlando)",
+      "w": 1280,
+      "x": 5440,
+      "y": 7400
+    },
+    "V01.dc.html": {
+      "expand": "fill",
+      "h": 5000,
+      "page": "variations",
+      "title": "V01 Callback Coupon Board: studied a plumbing franchise (Cedar Point Plumbing, Jacksonville)",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "V02.dc.html": {
+      "expand": "fill",
+      "h": 5000,
+      "page": "variations",
+      "title": "V02 All-Hours Tile Grid: studied a plumbing franchise (New River Plumbing & Drain, Fort Lauderdale)",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "V03.dc.html": {
+      "expand": "fill",
+      "h": 5500,
+      "page": "variations",
+      "title": "V03 Arrival Window: studied an HVAC franchise (Kestrel Heating & Air, Ocala)",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "V04.dc.html": {
+      "expand": "fill",
+      "h": 5400,
+      "page": "variations",
+      "title": "V04 Upfront Price Board: studied an HVAC franchise (Caloosa Air Co., Fort Myers)",
+      "w": 1280,
+      "x": 4080,
+      "y": 0
+    },
+    "V05.dc.html": {
+      "expand": "fill",
+      "h": 5400,
+      "page": "variations",
+      "title": "V05 Offer Code Desk: studied an electrical franchise (Sweetwater Electric, Gainesville)",
+      "w": 1280,
+      "x": 5440,
+      "y": 0
+    },
+    "V06.dc.html": {
+      "expand": "fill",
+      "h": 5900,
+      "page": "variations",
+      "title": "V06 Inspection-First Bold: studied a roofing franchise (Seville Ridge Roofing, Pensacola)",
+      "w": 1280,
+      "x": 0,
+      "y": 6700
+    },
+    "V07.dc.html": {
+      "expand": "fill",
+      "h": 5400,
+      "page": "variations",
+      "title": "V07 Rapid Response Grid: studied a restoration franchise (Red Hills Restoration, Tallahassee)",
+      "w": 1280,
+      "x": 1360,
+      "y": 6700
+    },
+    "V08.dc.html": {
+      "expand": "fill",
+      "h": 5500,
+      "page": "variations",
+      "title": "V08 Swatch & Seal: studied a painting franchise (Banyan Painting Co., Naples)",
+      "w": 1280,
+      "x": 2720,
+      "y": 6700
+    },
+    "V09.dc.html": {
+      "expand": "fill",
+      "h": 5200,
+      "page": "variations",
+      "title": "V09 Work-Order Grid: studied a garage-door franchise (Causeway Garage Door Co., Clearwater)",
+      "w": 1280,
+      "x": 4080,
+      "y": 6700
+    },
+    "V10.dc.html": {
+      "expand": "fill",
+      "h": 5400,
+      "page": "variations",
+      "title": "V10 Room-by-Room Checklist: studied a cleaning franchise (Fernway Home Cleaning, Winter Park)",
+      "w": 1280,
+      "x": 5440,
+      "y": 6700
+    },
+    "V11.dc.html": {
+      "expand": "fill",
+      "h": 5300,
+      "page": "variations",
+      "title": "V11 Offer Tile Board: studied a window franchise (Lido Window & Wash, Sarasota)",
+      "w": 1280,
+      "x": 0,
+      "y": 13400
+    },
+    "V12.dc.html": {
+      "expand": "fill",
+      "h": 5400,
+      "page": "variations",
+      "title": "V12 Backyard Season Pass: studied a pest franchise (Savannas Yard Guard, Port St. Lucie)",
+      "w": 1280,
+      "x": 1360,
+      "y": 13400
+    },
+    "V13.dc.html": {
+      "expand": "fill",
+      "h": 5500,
+      "page": "variations",
+      "title": "V13 Entry Point Map: studied a wildlife franchise (Halifax Wildlife and Exclusion, Daytona Beach)",
+      "w": 1280,
+      "x": 2720,
+      "y": 13400
+    },
+    "V14.dc.html": {
+      "expand": "fill",
+      "h": 5100,
+      "page": "variations",
+      "title": "V14 Treatment Calendar: studied a lawn franchise (Swan City Lawn Co., Lakeland)",
+      "w": 1280,
+      "x": 4080,
+      "y": 13400
+    },
+    "V15.dc.html": {
+      "expand": "fill",
+      "h": 5100,
+      "page": "variations",
+      "title": "V15 Seasonal Yard Plan: studied a lawn franchise (Fieldmark Lawn & Landscape, Palm Beach Gardens)",
+      "w": 1280,
+      "x": 5440,
+      "y": 13400
+    },
+    "V16.dc.html": {
+      "expand": "fill",
+      "h": 5100,
+      "page": "variations",
+      "title": "V16 Truckload Price Board: studied a moving franchise (Liftgate Junk Removal & Moving, Orlando)",
+      "w": 1280,
+      "x": 0,
+      "y": 20100
+    },
+    "V17.dc.html": {
+      "expand": "fill",
+      "h": 5000,
+      "page": "variations",
+      "title": "V17 Toolbox Index: studied a handyman franchise (Ironwood Home Repair, Bradenton)",
+      "w": 1280,
+      "x": 1360,
+      "y": 20100
+    },
+    "V18.dc.html": {
+      "expand": "fill",
+      "h": 5100,
+      "page": "variations",
+      "title": "V18 Showroom Consult: studied a bath franchise (Seagrape Bath Studio, Boca Raton)",
+      "w": 1280,
+      "x": 2720,
+      "y": 20100
+    },
+    "V19.dc.html": {
+      "expand": "fill",
+      "h": 5300,
+      "page": "variations",
+      "title": "V19 Driveway Showroom: studied a flooring franchise (Eau Gallie Floor Studio, Melbourne)",
+      "w": 1280,
+      "x": 4080,
+      "y": 20100
+    },
+    "V20.dc.html": {
+      "expand": "fill",
+      "h": 5200,
+      "page": "variations",
+      "title": "V20 Swatch and Slab: studied a concrete franchise (Caloosa Surfaceworks, Cape Coral)",
+      "w": 1280,
+      "x": 5440,
+      "y": 20100
+    },
+    "E01.dc.html": {
+      "expand": "fill",
+      "h": 7500,
+      "page": "favA",
+      "title": "E01 Cereal Arcade: Cannonball Pool Co., Clearwater · style refs withheld",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "E02.dc.html": {
+      "expand": "fill",
+      "h": 6400,
+      "page": "favA",
+      "title": "E02 Aperitivo Label: Bellini Painting Co., Delray Beach · style refs withheld",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "E03.dc.html": {
+      "expand": "fill",
+      "h": 7400,
+      "page": "favA",
+      "title": "E03 Ice Cream Parlor: Cherry Top Appliance Repair, Port Charlotte · style refs withheld",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "E04.dc.html": {
+      "expand": "fill",
+      "h": 7300,
+      "page": "favA",
+      "title": "E04 Honey Label: Fair & Square Fence Co., Vero Beach · style refs withheld",
+      "w": 1280,
+      "x": 4080,
+      "y": 0
+    },
+    "E05.dc.html": {
+      "expand": "fill",
+      "h": 7100,
+      "page": "favB",
+      "title": "E05 Sticker Pack: Haulsome Moving Co., Kissimmee · style refs withheld",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "E06.dc.html": {
+      "expand": "fill",
+      "h": 7000,
+      "page": "favB",
+      "title": "E06 Paper-Cut Shapes: Softspot Carpet & Rug Co., Daytona Beach · style refs withheld",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "E07.dc.html": {
+      "expand": "fill",
+      "h": 7100,
+      "page": "favB",
+      "title": "E07 Storybook: Tidy Tap Plumbing Co., Bradenton · style refs withheld",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "E08.dc.html": {
+      "expand": "fill",
+      "h": 7200,
+      "page": "favB",
+      "title": "E08 Neon Bank: Daylight Savings Solar, Palm Bay · style refs withheld",
+      "w": 1280,
+      "x": 4080,
+      "y": 0
+    },
+    "E09.dc.html": {
+      "expand": "fill",
+      "h": 7500,
+      "page": "favC",
+      "title": "E09 Chat Lounge: Heydoor Garage Co., Panama City · style refs withheld",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "E10.dc.html": {
+      "expand": "fill",
+      "h": 7000,
+      "page": "favC",
+      "title": "E10 Mascot Classroom: Bitewise Pest Co., Boca Raton · style refs withheld",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "E11.dc.html": {
+      "expand": "fill",
+      "h": 7000,
+      "page": "favC",
+      "title": "E11 Diner Counter: Blue Plate Cleaning Co., Sanford · style refs withheld",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "E12.dc.html": {
+      "expand": "fill",
+      "h": 7100,
+      "page": "favC",
+      "title": "E12 Saturated Tiles: Good Sparks Electric Co., Brandon · style refs withheld",
+      "w": 1280,
+      "x": 4080,
+      "y": 0
+    },
+    "H01.dc.html": {
+      "expand": "fill",
+      "h": 6000,
+      "page": "src",
+      "title": "H01 Ledger Utility: Saguaro Comfort Co., Mesa · studied [study site]",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "H02.dc.html": {
+      "expand": "fill",
+      "h": 6000,
+      "page": "src",
+      "title": "H02 Desert Sunrise: Ocotillo Heat & Air, Gilbert · studied [study site]",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "H03.dc.html": {
+      "expand": "fill",
+      "h": 5900,
+      "page": "src",
+      "title": "H03 Membership Card: Mesquite Mechanical Co., Chandler · studied [study site]",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "H04.dc.html": {
+      "expand": "fill",
+      "h": 6000,
+      "page": "src",
+      "title": "H04 Field Notes: Red Mesa Air & Electric, Peoria · studied [study site]",
+      "w": 1280,
+      "x": 4080,
+      "y": 0
+    },
+    "H05.dc.html": {
+      "expand": "fill",
+      "h": 5800,
+      "page": "src",
+      "title": "H05 Route Map: Catalina Cool Co., Tucson · studied [study site]",
+      "w": 1280,
+      "x": 5440,
+      "y": 0
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-06T22:59:19Z",
+    "v": 1
+  },
+  "designSystems": [
+    {
+      "artifact": "https://claude.ai/artifact/UNgshcCfp6DgtCo9ZofomR",
+      "copiedAt": "2026-10-06T22:59:19Z",
+      "namespace": "ledger",
+      "title": "Ledger",
+      "version": "1791007151-1857"
+    }
+  ],
+  "launch": {
+    "page": "src",
+    "view": "canvas"
+  },
+  "notes": {
+    "buildRow": {
+      "kind": "title1",
+      "maxW": 2800,
+      "page": "build",
+      "text": "Branch Vision builder: edit a generated site",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "dirCTitle": {
+      "kind": "title1",
+      "maxW": 5360,
+      "page": "dirC",
+      "text": "D09–D12: product and app style.",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "dirDTitle": {
+      "kind": "title1",
+      "maxW": 5360,
+      "page": "dirD",
+      "text": "D13–D16: bold and expressive.",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "packATitle": {
+      "kind": "title1",
+      "maxW": 5360,
+      "page": "packA",
+      "text": "Pack A: Crew Brand (studied a window-cleaning franchise): 4 page templates for Clearday Window & Wash. Their structure and conversion mechanics, our own brand, plus the SEO gaps fixed.",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "packBTitle": {
+      "kind": "title1",
+      "maxW": 5360,
+      "page": "packB",
+      "text": "Pack B: On-Time Electric (studied an electrical franchise): 4 page templates for Northstar Electric. Their structure and conversion mechanics, our own brand, plus the SEO gaps fixed.",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "packCTitle": {
+      "kind": "title1",
+      "maxW": 5360,
+      "page": "packC",
+      "text": "Pack C: Right-on-Time Plumbing (studied a plumbing franchise): 4 page templates for Plumbline Plumbing. Their structure and conversion mechanics, our own brand, plus the SEO gaps fixed.",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "row1": {
+      "kind": "title1",
+      "maxW": 7520,
+      "page": "earlier",
+      "text": "Earlier draft: the proposal pipeline",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "row2": {
+      "kind": "title1",
+      "maxW": 2960,
+      "page": "earlier",
+      "text": "Earlier draft: what the prospect sees",
+      "w": 240,
+      "x": 0,
+      "y": 2200
+    },
+    "tplRow1": {
+      "kind": "title1",
+      "maxW": 6720,
+      "page": "templates",
+      "text": "Avenue Vision site templates 01–05: one structure each, any contractor's colors",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "tplRow2": {
+      "kind": "title1",
+      "maxW": 6720,
+      "page": "templates",
+      "text": "Avenue Vision site templates 06–10",
+      "w": 240,
+      "x": 0,
+      "y": 7100
+    },
+    "varRow1": {
+      "kind": "title1",
+      "maxW": 6720,
+      "page": "variations",
+      "text": "20 franchise-style variations. V01–V05: plumbing, HVAC and electrical. Each one borrows a top franchise site's structure, mechanics and design language, with an original brand and the SEO gaps fixed.",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "varRow2": {
+      "kind": "title1",
+      "maxW": 6720,
+      "page": "variations",
+      "text": "V06–V10: roofing, restoration, painting, garage doors and cleaning",
+      "w": 240,
+      "x": 0,
+      "y": 6400
+    },
+    "varRow3": {
+      "kind": "title1",
+      "maxW": 6720,
+      "page": "variations",
+      "text": "V11–V15: exterior cleaning, pest, wildlife, lawn and landscape",
+      "w": 240,
+      "x": 0,
+      "y": 13100
+    },
+    "varRow4": {
+      "kind": "title1",
+      "maxW": 6720,
+      "page": "variations",
+      "text": "V16–V20: junk removal, handyman, bath, flooring and concrete",
+      "w": 240,
+      "x": 0,
+      "y": 19800
+    },
+    "favATitle": {
+      "kind": "title1",
+      "maxW": 5360,
+      "page": "favA",
+      "text": "E01–E04: more in the family of D11, D13 and D14. Warm, bold, consumer-brand pages that turn content into playful objects.",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "favBTitle": {
+      "kind": "title1",
+      "maxW": 5360,
+      "page": "favB",
+      "text": "E05–E08",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "favCTitle": {
+      "kind": "title1",
+      "maxW": 5360,
+      "page": "favC",
+      "text": "E09–E12",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "srcTitle": {
+      "kind": "title1",
+      "maxW": 5360,
+      "page": "src",
+      "text": "H01–H05: five templates built from the [study site] study.",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "T01-Dispatch.dc.html",
+    "T02-ComfortClub.dc.html",
+    "T03-InstantEstimate.dc.html",
+    "T04-ProofMap.dc.html",
+    "T05-RecurringRoute.dc.html",
+    "T06-HometownPro.dc.html",
+    "T07-FranchiseLocator.dc.html",
+    "T08-StormClaims.dc.html",
+    "T09-CraftStudio.dc.html",
+    "T10-Commercial.dc.html",
+    "Editor.dc.html",
+    "PalmettoSite.dc.html",
+    "NewAudit.dc.html",
+    "Run.dc.html",
+    "Audit.dc.html",
+    "Review.dc.html",
+    "Preview.dc.html",
+    "Deposit.dc.html",
+    "PA1-Home.dc.html",
+    "PA2-Location.dc.html",
+    "PA3-Service.dc.html",
+    "PA4-Franchise.dc.html",
+    "PB1-Home.dc.html",
+    "PB2-Location.dc.html",
+    "PB3-Service.dc.html",
+    "PB4-Membership.dc.html",
+    "PC1-Home.dc.html",
+    "PC2-Location.dc.html",
+    "PC3-Service.dc.html",
+    "PC4-Town.dc.html",
+    "V01.dc.html",
+    "V02.dc.html",
+    "V03.dc.html",
+    "V04.dc.html",
+    "V05.dc.html",
+    "V06.dc.html",
+    "V07.dc.html",
+    "V08.dc.html",
+    "V09.dc.html",
+    "V10.dc.html",
+    "V11.dc.html",
+    "V12.dc.html",
+    "V13.dc.html",
+    "V14.dc.html",
+    "V15.dc.html",
+    "V16.dc.html",
+    "V17.dc.html",
+    "V18.dc.html",
+    "V19.dc.html",
+    "V20.dc.html",
+    "D09.dc.html",
+    "D10.dc.html",
+    "D11.dc.html",
+    "D12.dc.html",
+    "D13.dc.html",
+    "D14.dc.html",
+    "D15.dc.html",
+    "D16.dc.html",
+    "E01.dc.html",
+    "E02.dc.html",
+    "E03.dc.html",
+    "E04.dc.html",
+    "E05.dc.html",
+    "E06.dc.html",
+    "E07.dc.html",
+    "E08.dc.html",
+    "E09.dc.html",
+    "E10.dc.html",
+    "E11.dc.html",
+    "E12.dc.html",
+    "H01.dc.html",
+    "H02.dc.html",
+    "H03.dc.html",
+    "H04.dc.html",
+    "H05.dc.html"
+  ],
+  "pages": [
+    {
+      "id": "src",
+      "name": "From [study site]: H01–H05"
+    },
+    {
+      "id": "favA",
+      "name": "More like 11·13·14: E01–E04"
+    },
+    {
+      "id": "favB",
+      "name": "More like 11·13·14: E05–E08"
+    },
+    {
+      "id": "favC",
+      "name": "More like 11·13·14: E09–E12"
+    },
+    {
+      "id": "dirA",
+      "name": "Directions 1–4: editorial & print"
+    },
+    {
+      "id": "dirB",
+      "name": "Directions 5–8: luxury & craft"
+    },
+    {
+      "id": "dirC",
+      "name": "Directions 9–12: app-style"
+    },
+    {
+      "id": "dirD",
+      "name": "Directions 13–16: bold"
+    },
+    {
+      "id": "variations",
+      "name": "20 franchise-style variations"
+    },
+    {
+      "id": "packA",
+      "name": "Pack A: Crew Brand (studied a window-cleaning franchise)"
+    },
+    {
+      "id": "packB",
+      "name": "Pack B: On-Time Electric (studied an electrical franchise)"
+    },
+    {
+      "id": "packC",
+      "name": "Pack C: Right-on-Time Plumbing (studied a plumbing franchise)"
+    },
+    {
+      "id": "templates",
+      "name": "10 site templates"
+    },
+    {
+      "id": "build",
+      "name": "Builder: editor"
+    },
+    {
+      "id": "earlier",
+      "name": "Earlier draft: proposal pipeline"
+    }
+  ],
+  "title": "Branch Vision"
+}

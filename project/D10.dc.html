@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Marsh &amp; Pine Pest Control in Jacksonville</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.d10{--void:#0e130b;--land:#121a0d;--panel:#161e11;--panel2:#1c2616;--line:#2a3622;--lichen:#64754b;--fern:#3d521e;--white:#ffffff;--body:#c3cbb6;--muted:#97a387;--amber:#e0914a;--amberdk:#c97a33;--parch:#eeeeec;--char:#2b2f27;--green:#1d7a4b;--water:#0b1415;background:var(--void);color:var(--body);font-family:'DM Sans','Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:1.5;letter-spacing:.01em;overflow:hidden}
+.d10 *{box-sizing:border-box}
+:where(.d10) a{color:inherit}
+:where(.d10) h1,:where(.d10) h2,:where(.d10) h3,:where(.d10) p,:where(.d10) ul,:where(.d10) ol,:where(.d10) figure,:where(.d10) fieldset{margin:0}
+:where(.d10) ul,:where(.d10) ol{padding:0;list-style:none}
+.d10 a:focus-visible,.d10 button:focus-visible,.d10 input:focus-visible,.d10 select:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.d10-serif{font-family:Fraunces,'Times New Roman',serif;font-weight:300;letter-spacing:-0.035em}
+.d10-caps{font-size:11px;line-height:1.3;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+.d10-badge{display:inline-flex;align-items:center;gap:6px;border-radius:4px;padding:4px 7px;font-size:10.5px;line-height:1;font-weight:700;letter-spacing:.13em;text-transform:uppercase;background:var(--green);color:#ffffff}
+.d10-badge i{width:6px;height:6px;border-radius:50%;background:#ffffff;display:block;animation:d10blink 1.6s ease-in-out infinite}
+@keyframes d10blink{50%{opacity:.25}}
+.d10-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;border-radius:100px;border:1px solid transparent;font:500 16px/1 'DM Sans',Arial,sans-serif;letter-spacing:.01em;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background .15s ease,border-color .15s ease}
+.d10-btn-amber{background:var(--amber);color:#1a1206}
+.d10-btn-amber:hover{background:#eba25f}
+.d10-btn-line{border-color:#c3cbb6;color:#ffffff;background:transparent}
+.d10-btn-line:hover{border-color:#ffffff}
+
+/* nav */
+.d10-nav{position:absolute;z-index:6;top:0;left:0;right:0;height:72px;display:flex;align-items:center;gap:28px;padding:0 40px;background:linear-gradient(to bottom,rgba(14,19,11,.92),rgba(14,19,11,0))}
+.d10-logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:#ffffff}
+.d10-logo b{font-family:Fraunces,serif;font-weight:400;font-size:25px;letter-spacing:-0.03em;line-height:1}
+.d10-navlinks{display:flex;gap:4px}
+.d10-navlinks a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;text-decoration:none;color:#ffffff;font-size:12px;font-weight:500;letter-spacing:.11em;text-transform:uppercase}
+.d10-navlinks a:hover{color:var(--amber)}
+.d10-navend{margin-left:auto;display:flex;align-items:center;gap:8px}
+.d10-navtel{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;color:#ffffff;text-decoration:none;font-size:15px;font-weight:500;letter-spacing:.02em}
+.d10-navtel:hover{color:var(--amber)}
+.d10-nav .d10-btn{min-height:44px;padding:0 20px;font-size:15px}
+
+/* hero map console */
+.d10-hero{position:relative;height:880px;background:var(--land);overflow:hidden}
+.d10-map{position:absolute;inset:0}
+.d10-canvas{position:absolute;left:50%;top:50%;width:max(100%,1280px);aspect-ratio:1280/880;transform:translate(-50%,-50%)}
+.d10-canvas svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.d10-pulse{transform-origin:606px 588px;animation:d10pulse 2.2s ease-out infinite}
+@keyframes d10pulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(3.2);opacity:0}}
+.d10-truck{animation:d10truck 3s ease-in-out infinite alternate}
+@keyframes d10truck{from{opacity:.55}to{opacity:1}}
+.d10-lbl{position:absolute;z-index:2;display:inline-flex;align-items:center;min-height:24px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#e3e8d9;text-decoration:none;white-space:nowrap;text-shadow:0 0 3px #0e130b,0 0 6px #0e130b,0 0 10px #0e130b;transform:translate(0,-50%)}
+.d10-lbl::after{content:"";position:absolute;left:-6px;right:-6px;top:-10px;bottom:-10px}
+.d10-lbl:hover{color:var(--amber)}
+.d10-lbl.d10-l{transform:translate(-100%,-50%)}
+.d10-lbl.d10-c{transform:translate(-50%,-50%)}
+.d10-lbl small{font-size:9.5px;letter-spacing:.12em;color:var(--amber);margin-left:8px}
+.d10-lbl.d10-town{color:#c3cbb6;font-weight:500}
+.d10-down{position:absolute;z-index:2;transform:translate(-50%,-50%);font-size:10px;font-weight:700;letter-spacing:.16em;color:#97a387;text-transform:uppercase;text-shadow:0 0 4px #0e130b,0 0 8px #0e130b}
+.d10-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(120% 90% at 0% 18%,rgba(14,19,11,.94) 0%,rgba(14,19,11,.82) 34%,rgba(14,19,11,0) 62%)}
+.d10-copy{position:absolute;z-index:3;left:40px;top:100px;width:680px;display:flex;flex-direction:column;gap:20px}
+.d10-eyerow{display:flex;align-items:center;gap:12px;color:#c3cbb6}
+.d10-h1{font-family:Fraunces,'Times New Roman',serif;font-weight:300;font-size:80px;line-height:.9;letter-spacing:-0.042em;color:#ffffff;margin:0}
+.d10-h1 em{font-style:italic;color:var(--amber)}
+.d10-lede{font-size:18px;line-height:1.5;color:#c9d0bd;max-width:31em}
+.d10-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px}
+
+.d10-side{position:absolute;z-index:3;right:40px;top:84px;width:320px;display:flex;flex-direction:column;gap:10px}
+.d10-book{background:var(--parch);color:var(--char);border-radius:12px;box-shadow:rgba(0,0,0,.35) 0 2px 5px;overflow:hidden}
+.d10-bookhead{display:flex;align-items:center;justify-content:space-between;padding:12px 16px 10px;border-bottom:1px solid #d8dcd2}
+.d10-bookhead h2{font-size:16px;font-weight:700;letter-spacing:0;color:#1d211a}
+.d10-bookhead span{font-size:12px;color:#55594f}
+.d10-form{padding:12px 16px 14px;display:flex;flex-direction:column;gap:10px}
+.d10-two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.d10-in{display:flex;flex-direction:column;gap:5px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#4a4f44;min-width:0}
+.d10-in input,.d10-in select{min-height:44px;border:1px solid #b9beb2;border-radius:6px;background:#ffffff;color:#1d211a;font:400 15px 'DM Sans',Arial,sans-serif;letter-spacing:0;padding:0 11px;width:100%}
+.d10-win{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;border:0;padding:0;margin:0}
+.d10-win legend{padding:0;margin-bottom:5px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#4a4f44}
+.d10-win label{position:relative;display:block}
+.d10-win input{position:absolute;opacity:0;width:1px;height:1px}
+.d10-win span{display:flex;align-items:center;justify-content:center;min-height:44px;border:1px solid #b9beb2;border-radius:6px;background:#ffffff;font-size:13px;color:#1d211a;cursor:pointer;letter-spacing:0}
+.d10-win input:checked + span{background:#1d211a;color:#ffffff;border-color:#1d211a}
+.d10-win input:focus-visible + span{outline:2px solid var(--amberdk);outline-offset:2px}
+.d10-form .d10-btn{width:100%}
+.d10-formnote{font-size:12.5px;color:#4a4f44;text-align:center}
+.d10-formnote a{font-weight:700;color:#1d211a}
+
+.d10-status{background:rgba(22,30,17,.94);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.d10-stathead{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 14px;border-bottom:1px solid var(--line)}
+.d10-stathead b{color:#ffffff;font-size:14px;font-weight:700;letter-spacing:.01em}
+.d10-stops li{display:grid;grid-template-columns:42px 14px 1fr auto;align-items:center;gap:8px;padding:5px 14px;border-bottom:1px solid #212b1a;font-size:13px;line-height:1.25}
+.d10-stops li:last-child{border-bottom:0}
+.d10-stops time{font-variant-numeric:tabular-nums;color:#97a387;font-size:12.5px}
+.d10-stops b{display:block;color:#ffffff;font-weight:500;font-size:13.5px}
+.d10-stops span span{color:#97a387;font-size:12px}
+.d10-dot{width:10px;height:10px;border-radius:50%;display:block}
+.d10-done{background:var(--lichen)}
+.d10-now{background:var(--amber);box-shadow:0 0 0 3px rgba(224,145,74,.3)}
+.d10-next{background:#ffffff}
+.d10-later{border:1.5px solid #ffffff}
+.d10-st{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#97a387;white-space:nowrap}
+.d10-st.d10-st-now{color:var(--amber)}
+.d10-statfoot{padding:8px 14px 9px;font-size:12px;line-height:1.35;color:#97a387;border-top:1px solid var(--line)}
+
+.d10-chrome{position:absolute;z-index:4;left:0;right:0;bottom:0;height:44px;display:flex;align-items:center;gap:22px;padding:0 40px;background:rgba(14,19,11,.9);border-top:1px solid var(--line);font-size:12px;color:#97a387;letter-spacing:.04em}
+.d10-chrome .d10-leg{display:flex;align-items:center;gap:14px}
+.d10-chrome .d10-leg span{display:inline-flex;align-items:center;gap:6px}
+.d10-scale{display:inline-flex;align-items:center;gap:8px}
+.d10-scale i{display:block;width:72px;height:6px;border:1px solid #97a387;border-top:0}
+.d10-chrome .d10-r{margin-left:auto}
+
+/* sections */
+.d10-sec{max-width:1200px;margin:0 auto;padding:110px 40px 0}
+.d10-center{text-align:center;max-width:760px;margin:0 auto 44px;display:flex;flex-direction:column;align-items:center;gap:16px}
+.d10-eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#97a387}
+.d10-h2{font-family:Fraunces,'Times New Roman',serif;font-weight:300;font-size:52px;line-height:.96;letter-spacing:-0.035em;color:#ffffff;text-wrap:balance}
+.d10-sub{font-size:18px;line-height:1.5;color:#c3cbb6;max-width:36em}
+
+.d10-app{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:rgba(0,0,0,.2) 0 2px 5px}
+.d10-appbar{display:flex;align-items:center;gap:14px;padding:12px 18px;border-bottom:1px solid var(--line);font-size:13px;color:#97a387}
+.d10-appbar b{color:#ffffff;font-weight:500}
+.d10-appbar .d10-sep{color:#55604a}
+.d10-search{margin-left:auto;display:flex;align-items:center;gap:8px;min-width:220px;height:34px;padding:0 12px;border:1px solid var(--line);border-radius:6px;background:var(--void);color:#97a387;font-size:13px}
+.d10-appbody{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+.d10-layers{border-right:1px solid var(--line)}
+.d10-layer{display:grid;grid-template-columns:44px 34px minmax(0,1fr) auto;align-items:center;gap:10px;padding:12px 18px 12px 12px;border-bottom:1px solid #212b1a}
+.d10-layer:last-child{border-bottom:0}
+.d10-sw{position:relative;display:block;width:44px;height:44px;cursor:pointer}
+.d10-sw input{position:absolute;opacity:0;width:1px;height:1px}
+.d10-sw span{position:absolute;left:5px;top:12px;width:34px;height:20px;border-radius:100px;background:#2a3622;transition:background .15s}
+.d10-sw span::after{content:"";position:absolute;top:3px;left:3px;width:14px;height:14px;border-radius:50%;background:#97a387;transition:transform .15s,background .15s}
+.d10-sw input:checked + span{background:var(--amber)}
+.d10-sw input:checked + span::after{transform:translateX(14px);background:#1a1206}
+.d10-sw input:focus-visible + span{outline:2px solid var(--amber);outline-offset:3px}
+.d10-layer a{text-decoration:none;display:flex;flex-direction:column;gap:2px;min-width:0;min-height:44px;justify-content:center}
+.d10-layer a b{color:#ffffff;font-weight:500;font-size:16px;line-height:1.25}
+.d10-layer a:hover b{color:var(--amber)}
+.d10-layer a small{font-size:12.5px;color:#97a387;letter-spacing:.01em}
+.d10-price{text-align:right;color:#ffffff;font-size:15px;font-weight:500;white-space:nowrap;font-variant-numeric:tabular-nums}
+.d10-price small{display:block;font-size:11px;color:#97a387;font-weight:400;letter-spacing:.06em;text-transform:uppercase}
+.d10-layer:has(input:checked){background:rgba(224,145,74,.05)}
+.d10-preview{position:relative;min-height:100%;margin:0;background:#1a1f16}
+.d10-preview img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.75) brightness(.8)}
+.d10-preview::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(14,19,11,.96) 0%,rgba(14,19,11,.72) 26%,rgba(14,19,11,0) 58%);pointer-events:none}
+.d10-pv-top{position:absolute;z-index:2;top:16px;left:16px;right:16px;display:flex;gap:8px;flex-wrap:wrap}
+.d10-chip{display:inline-flex;align-items:center;gap:6px;border-radius:4px;padding:5px 8px;background:rgba(14,19,11,.82);color:#ffffff;font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;border:1px solid rgba(255,255,255,.18)}
+.d10-preview figcaption{position:absolute;z-index:2;left:22px;right:22px;bottom:20px;color:#e3e8d9;font-size:15px;line-height:1.45}
+.d10-preview figcaption b{display:block;font-family:Fraunces,serif;font-weight:300;font-size:30px;line-height:1;letter-spacing:-0.03em;color:#ffffff;margin-bottom:8px}
+
+.d10-how{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:start}
+.d10-howl{display:flex;flex-direction:column;gap:18px}
+.d10-media{position:relative;border-radius:24px;overflow:hidden;margin:10px 0 0;background:#1a1f16}
+.d10-media img{display:block;width:100%;height:auto;object-fit:cover}
+.d10-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(14,19,11,.94) 0%,rgba(14,19,11,.55) 28%,rgba(14,19,11,0) 55%);pointer-events:none}
+.d10-media figcaption{position:absolute;z-index:2;left:20px;bottom:18px;right:20px;font-size:13px;color:#c9d0bd}
+.d10-route{position:relative;padding-left:56px}
+.d10-route::before{content:"";position:absolute;left:21px;top:22px;bottom:40px;width:0;border-left:3px dashed var(--amber)}
+.d10-stop{position:relative;padding:0 0 38px}
+.d10-stop:last-child{padding-bottom:0}
+.d10-pin{position:absolute;left:-56px;top:4px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--void);border:1px solid var(--line)}
+.d10-pin i{display:block;width:16px;height:16px;border-radius:50%;background:var(--amber);border:2px solid #ffffff}
+.d10-stop .d10-caps{color:var(--amber);margin-bottom:6px}
+.d10-stop h3{font-family:Fraunces,serif;font-weight:300;font-size:30px;line-height:1.05;letter-spacing:-0.03em;color:#ffffff;margin-bottom:8px}
+.d10-stop p{font-size:16px;color:#c3cbb6;max-width:34em}
+.d10-thumbs{display:flex;gap:10px;margin-top:14px}
+.d10-thumbs img{width:150px;height:100px;border-radius:12px;object-fit:cover;display:block;filter:saturate(.75) brightness(.85)}
+.d10-thumbs span{display:flex;align-items:flex-end;padding:10px;width:150px;height:100px;border-radius:12px;border:1px dashed #3a4730;font-size:11.5px;color:#97a387;line-height:1.3}
+
+.d10-signal{position:relative;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);background:var(--panel);border:1px solid var(--line);border-radius:24px;overflow:hidden}
+.d10-sigl{padding:44px 40px;display:flex;flex-direction:column;gap:14px;justify-content:center}
+.d10-rating{font-family:Fraunces,serif;font-weight:300;font-size:92px;line-height:.9;letter-spacing:-0.045em;color:#ffffff}
+.d10-stars{display:flex;gap:4px}
+.d10-sigl p{font-size:16px}
+.d10-sigl p b{color:#ffffff;font-weight:500}
+.d10-sigmap{position:relative;align-self:stretch;min-height:100%;border-left:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column;justify-content:center;background:#121a0d}
+.d10-sigframe{position:relative;width:100%;aspect-ratio:560/360}
+.d10-sigframe svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.d10-sigmap::after{content:"";position:absolute;inset:0;box-shadow:rgb(22,30,17) 0 -120px 120px -60px inset;pointer-events:none}
+.d10-pop{position:absolute;z-index:2;width:260px;background:var(--parch);color:var(--char);border-radius:10px;padding:14px 16px;box-shadow:rgba(0,0,0,.35) 0 2px 5px}
+.d10-pop::after{content:"";position:absolute;left:28px;bottom:-8px;width:16px;height:16px;background:var(--parch);transform:rotate(45deg)}
+.d10-pop blockquote{margin:0 0 8px;font-size:15px;line-height:1.4;color:#1d211a}
+.d10-pop figcaption{font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#4a4f44}
+
+.d10-notes{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;align-items:start}
+.d10-faqhead{display:flex;flex-direction:column;gap:14px;margin-bottom:30px}
+.d10-qa{padding:26px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:72px minmax(0,1fr);gap:4px 18px}
+.d10-qa:last-child{border-bottom:1px solid var(--line)}
+.d10-qa .d10-caps{color:#97a387;padding-top:9px}
+.d10-qa h3{font-family:Fraunces,serif;font-weight:300;font-size:30px;line-height:1.06;letter-spacing:-0.03em;color:#ffffff;margin-bottom:10px}
+.d10-qa p{grid-column:2;font-size:16px;color:#c3cbb6}
+.d10-qa div{min-width:0}
+
+.d10-place{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.d10-placehead{padding:22px 22px 16px;border-bottom:1px solid var(--line)}
+.d10-placehead h2{font-family:Fraunces,serif;font-weight:300;font-size:32px;line-height:1;letter-spacing:-0.03em;color:#ffffff;margin-bottom:8px}
+.d10-placehead p{font-size:14px;color:#97a387}
+.d10-placehead p b{color:#ffffff;font-weight:500}
+.d10-facts li{display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start;padding:12px 22px;border-bottom:1px solid #212b1a;font-size:14.5px;line-height:1.4}
+.d10-facts svg{margin-top:1px}
+.d10-facts a{color:#ffffff;font-weight:500;text-decoration:none;display:inline-flex;min-height:44px;align-items:center;margin:-12px 0}
+.d10-facts a:hover{color:var(--amber)}
+.d10-placecta{display:flex;gap:10px;padding:16px 22px 20px;flex-wrap:wrap}
+.d10-placecta .d10-btn{flex:1 1 auto}
+.d10-rightcol{display:flex;flex-direction:column;gap:20px}
+.d10-rightcol .d10-media{margin:0}
+
+.d10-nextwrap{max-width:1200px;margin:110px auto 0;padding:0 40px}
+.d10-nextbar{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding:22px 26px;border-radius:100px;background:var(--panel2);border:1px solid var(--line)}
+.d10-nextbar p{font-size:17px;color:#ffffff}
+.d10-nextbar p span{color:#97a387}
+.d10-nextbar .d10-ctas{margin:0 0 0 auto}
+
+.d10-foot{margin-top:72px;border-top:1px solid var(--line);padding:22px 40px 26px}
+.d10-footin{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:#97a387;align-items:center}
+.d10-footin a{text-decoration:none;color:#c3cbb6;display:inline-flex;align-items:center;min-height:44px}
+.d10-footin a:hover{color:var(--amber)}
+.d10-credit{max-width:1200px;margin:14px auto 0;font-size:11.5px;color:#7d8870;letter-spacing:.03em}
+
+.d10-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+@media (max-width:1180px){
+.d10-nav{position:relative;background:var(--void);padding:0 16px;gap:10px;height:64px}
+.d10-navlinks{display:none}
+.d10-hero{height:auto;display:flex;flex-direction:column;background:var(--void);overflow:visible}
+.d10-scrim{display:none}
+.d10-copy{position:static;width:auto;padding:28px 16px 26px;order:1}
+.d10-map{position:relative;order:2;height:300px;overflow:hidden;margin:0 16px;border-radius:24px;border:1px solid var(--line);background:var(--land)}
+.d10-canvas{width:864px;height:594px;left:-262px;top:-284px;transform:none;aspect-ratio:auto}
+.d10-lbl{font-size:9.5px;letter-spacing:.1em;min-height:20px}
+.d10-lbl small{display:none}
+.d10-down{font-size:8.5px}
+.d10-chrome{position:static;order:3;margin:10px 16px 0;height:auto;padding:8px 0;flex-wrap:wrap;gap:8px 14px;background:none;border:0}
+.d10-chrome .d10-r,.d10-scale{display:none}
+.d10-side{position:static;order:4;width:auto;padding:16px 16px 0}
+.d10-sec{padding:76px 16px 0}
+.d10-appbody{grid-template-columns:1fr}
+.d10-layers{border-right:0}
+.d10-preview{min-height:340px}
+.d10-how,.d10-notes{grid-template-columns:1fr;gap:36px}
+.d10-signal{grid-template-columns:1fr}
+.d10-sigmap{border-left:0;border-top:1px solid var(--line)}
+.d10-nextwrap{padding:0 16px;margin-top:76px}
+.d10-foot{padding:22px 16px 26px}
+}
+@media (max-width:640px){
+.d10-logo b{font-size:20px}
+.d10-logo svg{width:26px;height:26px}
+.d10-navtel span{display:none}
+.d10-navtel{width:44px;justify-content:center;border:1px solid #c3cbb6;border-radius:100px;padding:0}
+.d10-nav .d10-btn{padding:0 16px}
+.d10-h1{font-size:50px;line-height:.92}
+.d10-lede{font-size:17px}
+.d10-ctas .d10-btn{flex:1 1 100%}
+.d10-h2{font-size:38px}
+.d10-sub{font-size:16.5px}
+.d10-center{text-align:left;align-items:flex-start}
+.d10-appbar{flex-wrap:wrap}
+.d10-search{display:none}
+.d10-layer{grid-template-columns:44px minmax(0,1fr) auto;padding:12px 14px 12px 8px}
+.d10-layer > svg{display:none}
+.d10-price{font-size:14px}
+.d10-sigl{padding:30px 22px}
+.d10-rating{font-size:72px}
+.d10-sigmap{min-height:0}
+.d10-sigframe .d10-pop{position:static;width:auto;margin:12px 14px 0}
+.d10-pop::after{display:none}
+.d10-sigframe{aspect-ratio:auto;display:flex;flex-direction:column;padding-bottom:16px}
+.d10-sigframe svg{position:relative;inset:auto;height:auto;aspect-ratio:560/360}
+.d10-sigmap::after{display:none}
+.d10-pop{width:230px}
+.d10-qa{grid-template-columns:1fr}
+.d10-qa p{grid-column:1}
+.d10-qa .d10-caps{padding-top:0}
+.d10-qa h3{font-size:26px}
+.d10-stop h3{font-size:26px}
+.d10-route{padding-left:52px}
+.d10-thumbs img,.d10-thumbs span{width:120px;height:86px}
+.d10-nextbar{border-radius:24px;padding:20px}
+.d10-nextbar .d10-ctas{margin:0;width:100%}
+}
+</style>
+</helmet>
+<div class="d10">
+
+  <section class="d10-hero" aria-labelledby="d10-h1">
+    <nav class="d10-nav" aria-label="Main">
+      <a class="d10-logo" href="#">
+        <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="13.5" fill="none" stroke="#ffffff" stroke-width="1.5"></circle><path d="M5 19c3-1 5-4 10-4s7 3 10 4M7 23c3-1 5-3 8-3s5 2 8 3" fill="none" stroke="#64754b" stroke-width="1.5"></path><path d="M15 4l4 8h-2.5l3 5h-9l3-5H11z" fill="#ffffff"></path><circle cx="15" cy="15" r="2.2" fill="#e0914a"></circle></svg>
+        <b>Marsh &amp; Pine</b>
+      </a>
+      <div class="d10-navlinks">
+        <a href="#d10-services">Services</a>
+        <a href="#d10-services">Prices</a>
+        <a href="#d10-how">How it works</a>
+        <a href="#d10-faq">FAQ</a>
+      </div>
+      <div class="d10-navend">
+        <a class="d10-navtel" href="tel:+19045550150" aria-label="Call (904) 555-0150"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3h3l1.6 4.4-2.1 1.4a11 11 0 0 0 6.1 6.1l1.4-2.1L21 13.4v3c0 1.2-1 2.2-2.2 2.1C10.5 18 6 13.5 4.5 5.2 4.4 4 5.4 3 6.6 3z" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round"></path></svg><span>(904) 555-0150</span></a>
+        <a class="d10-btn d10-btn-amber" href="#d10-book">Book a Visit</a>
+      </div>
+    </nav>
+
+    <div class="d10-map" role="img" aria-label="Map of Jacksonville showing a pest control route from Orange Park through Ortega, Riverside and San Marco to Southside and Jacksonville Beach">
+      <div class="d10-canvas">
+        <svg viewBox="0 20 1280 880" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <g id="d10-base">
+              <rect x="-20" y="-20" width="1320" height="960" fill="#121a0d"></rect>
+              <path d="M0 216 9 193 26 175 113 129 150 103 166 84 172 64 167 45 157 32 138 19 109 9 84 4 51 4 26 8 0 17M0 268 30 219 51 196 77 179 150 142 182 122 207 103 223 84 231 64 231 51 227 39 213 19 187 0M0 299 18 283 58 239 84 219 129 196 265 135 288 122 309 106 330 77 337 58 338 45 336 32 330 19 312 0M0 309 17 296 64 251 96 229 154 201 289 148 322 129 347 101 376 51 382 32 383 19 375 0M0 317 23 302 77 257 109 237 174 210 296 166 328 149 347 132 367 106 421 26 430 0M0 325 27 309 84 266 116 248 180 222 306 180 334 166 360 142 394 90 418 60 481 0M0 338 33 322 90 287 129 268 187 248 322 209 344 199 367 178 407 109 437 75 457 61 476 50 547 22 557 13 564 0M952 751 940 766 933 779 926 798 922 817 923 830 927 843 933 849 946 854 958 852 973 843 984 828 987 811 983 785 971 756 965 749 958 748 952 751M0 344 32 330 96 294 135 278 199 257 328 225 354 214 373 194 410 122 437 88 457 73 482 59 566 36 579 26 586 13 589 0M971 668 965 669 952 687 908 778 891 823 886 856 889 875 901 894 913 901 933 903 952 898 978 884 1001 862 1014 843 1017 830 1016 817 994 753 978 676 971 668M0 350 32 337 103 302 148 285 212 267 341 242 360 235 372 225 379 214 412 135 425 115 441 97 463 80 489 67 515 61 566 56 585 50 592 45 601 32 609 0M979 920 1055 849 1060 843 1060 836 1029 800 1012 766 1002 721 1000 637 997 626 991 617 978 611 958 616 945 630 937 650 915 721 861 830 853 856 851 875 851 901 855 920M0 356 32 344 109 310 180 288 283 268 360 265 373 262 380 257 388 244 404 180 415 148 429 122 444 105 470 86 502 73 534 70 585 71 598 68 610 58 617 45 625 0M1017 920 1047 888 1087 859 1094 849 1094 836 1085 823 1042 795 1029 778 1023 766 1017 746 1013 721 1016 643 1013 611 1009 598 1000 585 991 580 978 577 958 581 939 589 927 598 920 610 916 624 909 682 903 708 882 753 844 811 831 836 821 869 817 920M843 506 823 521 814 540 813 553 815 560 820 566 830 570 843 570 856 566 864 560 870 547 871 528 868 515 862 507 855 504 843 506M0 366 103 332 148 320 219 307 283 301 315 304 341 313 354 322 386 356 405 367 425 368 444 360 462 341 467 328 468 315 461 296 433 257 422 225 420 206 422 180 427 161 437 138 450 120 471 103 495 92 521 88 547 91 568 97 595 109 630 132 637 130 644 103 653 0M1075 920 1113 873 1120 856 1121 843 1118 830 1109 817 1055 781 1042 766 1033 746 1029 708 1036 630 1037 592 1032 547 1023 509 1016 492 1003 471 972 444 933 425 907 419 888 417 862 421 843 428 823 441 804 460 785 487 769 515 755 547 746 579 742 624 745 643 753 654 765 658 817 646 843 647 855 654 862 661 867 682 863 708 849 733 830 753 797 778 785 798 779 823 774 888 769 920M643 183 637 192 630 210 621 244 624 260 630 265 637 266 650 261 656 253 662 232 656 198 650 186 643 183M0 372 96 343 142 332 212 321 270 318 302 320 328 328 347 340 379 367 399 377 418 379 444 373 461 360 478 341 488 322 490 309 485 296 450 257 436 232 430 199 433 167 444 142 463 118 482 105 508 98 540 99 566 108 592 127 605 148 610 167 609 193 603 219 583 270 583 283 586 290 598 298 624 303 643 302 663 296 672 290 681 277 685 264 688 244 684 206 668 135 663 103 662 51 667 0M1098 920 1124 875 1130 856 1130 843 1127 830 1119 817 1104 804 1061 777 1047 759 1039 740 1036 708 1045 618 1047 528 1046 489 1040 463 1034 450 1023 437 991 416 940 399 894 394 862 396 836 404 817 415 798 434 778 462 753 511 733 559 719 605 707 656 707 695 714 721 742 772 753 811 759 869 757 894 752 920M0 377 135 344 206 336 264 334 289 336 315 341 334 350 379 380 399 387 418 389 437 385 460 373 515 323 534 313 547 313 598 322 637 325 669 322 686 315 695 308 702 296 707 264 701 212 680 116 675 84 674 39 680 0M1119 920 1137 869 1139 849 1134 830 1127 817 1114 804 1074 779 1059 766 1048 746 1043 727 1043 695 1052 624 1064 495 1063 470 1059 450 1048 432 1036 418 1017 405 997 395 946 379 888 374 855 376 823 383 804 392 785 411 765 445 733 518 683 656 677 695 682 727 694 753 728 804 741 843 744 881 737 920M1171 23 1164 28 1160 39 1164 49 1171 54 1184 56 1190 54 1196 49 1200 39 1198 32 1190 24 1177 22 1171 23M495 109 508 106 527 106 544 109 560 116 582 135 589 148 595 167 593 199 579 234 553 268 540 278 527 283 515 283 502 278 470 257 450 234 440 206 440 174 450 146 470 123 495 109M1280 0 1275 39 1280 73M0 382 129 356 193 351 251 350 283 353 309 358 328 365 379 392 399 396 418 397 437 393 455 386 508 349 534 338 566 336 675 346 701 345 719 341 726 335 730 328 731 302 720 238 688 84 686 39 693 0M1137 920 1147 862 1145 843 1142 830 1135 817 1123 804 1068 766 1055 746 1049 727 1049 688 1078 483 1078 457 1074 437 1062 418 1049 405 1029 391 1003 379 978 369 946 361 881 356 798 361 778 365 765 373 758 386 744 444 729 489 659 669 653 701 657 733 671 759 714 813 722 830 729 849 731 888 722 920M1164 12 1151 24 1148 39 1152 51 1165 64 1184 69 1202 64 1216 51 1220 39 1216 26 1202 13 1184 8 1164 12M502 115 527 114 553 124 572 142 582 167 583 180 580 199 569 225 547 249 534 256 521 260 502 259 476 246 458 225 449 199 449 174 458 148 476 128 502 115M1143 0 1133 13 1129 26 1130 45 1136 58 1146 71 1164 82 1184 88 1222 93 1235 100 1248 120 1280 200M0 392 96 379 161 378 302 397 379 413 405 414 431 410 450 404 521 369 540 365 560 364 592 367 630 376 659 386 680 399 695 416 702 437 703 463 697 495 685 534 669 573 614 676 607 695 605 714 609 740 623 766 635 778 682 818 701 846 706 862 707 881 703 901 694 920M1170 920 1163 856 1152 823 1132 798 1077 759 1065 740 1060 721 1060 688 1076 585 1105 463 1106 437 1099 412 1087 394 1068 377 1040 360 1003 344 946 328 855 323 823 318 798 309 774 290 757 264 744 232 713 103 709 71 710 45 714 19 721 0M502 134 521 133 540 140 553 154 559 167 559 187 552 206 540 220 521 229 502 229 489 224 476 212 468 193 467 174 475 154 487 142 502 134M1126 0 1120 13 1117 26 1120 45 1126 58 1136 71 1151 84 1171 94 1209 107 1222 117 1233 135 1261 208 1280 245M0 397 77 388 129 388 187 397 277 420 392 424 437 416 515 382 534 377 553 376 579 378 611 386 637 395 656 406 674 425 683 444 685 470 679 508 667 547 650 583 586 682 579 701 577 721 583 746 598 772 619 791 669 825 688 849 694 869 694 888 688 904 678 920M1187 920 1167 843 1155 817 1132 792 1093 766 1081 755 1071 740 1065 721 1066 688 1082 585 1118 450 1119 425 1111 399 1096 380 1074 362 1042 344 1003 327 971 317 946 312 862 308 836 305 804 293 784 277 769 257 755 225 725 103 721 71 722 45 728 19 738 0M502 146 515 144 527 147 537 154 545 167 547 180 544 193 534 207 521 214 508 215 495 211 488 206 481 193 478 180 481 167 489 154 502 146M1107 0 1104 26 1109 45 1116 58 1131 77 1145 89 1193 116 1208 129 1221 154 1252 244 1267 270 1280 285M0 402 84 396 116 398 148 404 199 422 264 461 283 467 296 465 347 443 437 424 508 395 534 389 560 388 592 394 622 405 643 418 659 437 668 463 668 495 660 528 644 566 624 599 552 682 543 701 542 714 545 733 553 753 566 775 579 791 598 805 656 834 666 843 675 856 680 869 679 888 669 907 656 920M1204 920 1190 888 1172 836 1162 817 1139 791 1086 753 1077 740 1071 721 1071 688 1088 585 1098 547 1125 470 1132 437 1133 412 1126 386 1109 367 1087 351 1042 327 997 307 965 297 939 293 868 294 843 291 817 282 791 264 777 244 763 212 744 142 736 97 734 64 737 39 746 16 758 0M502 166 515 162 524 167 528 180 521 192 508 195 502 192 498 187 497 174 502 166M1080 0 1090 32 1114 71 1138 95 1178 122 1195 142 1208 174 1227 251 1237 277 1254 300 1280 316M0 407 71 404 116 409 161 424 192 444 210 463 223 489 229 515 235 592 242 618 251 636 264 651 280 663 302 670 328 672 383 669 402 663 407 656 407 650 401 637 357 566 341 528 338 508 341 489 347 476 358 463 382 450 444 430 502 407 527 400 553 400 584 405 611 416 630 430 642 444 649 457 653 489 646 528 629 566 605 600 579 625 547 648 493 676 485 682 482 688 488 708 560 819 579 831 637 845 650 853 657 862 661 875 656 894 641 907 609 920M123 920 103 909 77 904 45 903 0 909M1222 920 1203 888 1179 836 1164 811 1145 790 1093 753 1083 740 1076 721 1077 682 1094 585 1106 543 1139 457 1147 425 1149 392 1143 373 1132 359 1106 341 1036 306 978 282 939 273 875 278 849 277 823 269 798 251 785 232 772 200 753 124 747 84 749 58 757 32 771 13 789 0M0 417 58 419 96 426 134 444 149 457 160 470 170 489 177 515 185 656 195 714 199 730 206 740 212 744 225 745 309 725 354 722 399 728 437 742 457 754 476 770 489 785 500 804 528 881 531 901 528 920M179 920 155 894 129 854 116 842 103 839 90 841 0 862M1259 920 1222 876 1183 817 1167 798 1145 778 1108 753 1096 740 1087 721 1085 701 1097 618 1110 566 1129 521 1187 399 1203 378 1222 365 1248 359 1280 360M978 19 1010 21 1029 28 1048 40 1087 72 1140 122 1156 142 1166 161 1171 180 1175 225 1169 264 1163 277 1151 288 1138 293 1126 294 1087 287 1029 264 965 229 946 223 926 223 881 242 855 245 843 243 830 237 811 219 800 193 781 116 781 84 785 69 791 57 804 45 823 37 843 34 907 33 978 19M515 424 534 423 553 425 574 431 592 440 605 452 616 470 620 483 621 502 617 522 607 547 593 566 579 581 560 594 540 603 521 607 502 608 482 605 463 598 444 587 427 573 410 553 399 534 394 515 393 502 400 483 420 463 473 437 515 424M0 423 45 425 77 431 103 440 128 457 144 476 154 495 161 521 163 560 159 708 152 740 142 764 124 785 95 804 58 821 0 839M197 920 167 888 153 862 151 836 161 815 174 805 219 785 257 761 283 749 322 738 354 736 392 741 425 752 450 767 475 791 491 817 505 856 513 894 510 920M1278 920 1229 867 1174 798 1158 782 1116 753 1103 740 1093 721 1090 701 1101 624 1114 573 1132 528 1177 442 1197 412 1222 388 1248 378 1280 376M991 45 1023 49 1061 68 1103 103 1122 122 1137 142 1149 174 1151 206 1143 238 1134 251 1126 257 1113 261 1100 262 1081 260 1055 253 1016 237 958 201 939 195 920 198 881 219 862 225 843 221 826 206 817 184 802 122 802 97 813 77 823 69 836 65 913 63 971 47 991 45M515 437 547 438 565 444 579 452 591 463 598 475 603 502 600 521 595 534 585 549 572 563 560 573 540 582 508 586 476 579 457 569 444 559 424 534 417 515 416 502 423 483 445 463 482 445 515 437M0 429 39 432 71 438 96 449 116 463 132 483 141 502 147 528 149 560 138 682 130 714 118 740 98 766 73 785 39 803 0 818M1280 903 1235 859 1175 791 1110 740 1099 721 1096 701 1105 630 1117 579 1136 534 1171 471 1196 432 1222 407 1248 395 1280 391M212 920 180 884 171 869 168 849 177 830 193 818 225 803 283 763 315 752 354 747 386 751 418 762 444 777 465 798 481 823 493 856 499 888 496 920M984 69 1010 67 1042 75 1074 95 1104 122 1121 148 1128 174 1126 199 1120 212 1113 222 1100 230 1087 233 1068 233 1042 227 1010 212 952 171 933 164 913 167 881 187 868 193 855 192 848 187 838 167 832 135 834 116 843 104 862 98 901 100 920 98 984 69M495 455 521 451 547 455 566 466 578 483 582 502 579 521 566 542 547 556 521 564 508 564 489 561 463 547 446 528 440 508 444 489 463 470 495 455M0 434 32 438 60 444 84 454 103 467 117 483 127 502 134 528 136 553 133 598 123 656 113 695 101 721 84 745 64 763 39 779 0 797M1280 887 1235 845 1176 785 1117 740 1105 721 1101 695 1109 630 1120 585 1136 547 1164 496 1196 449 1222 423 1248 409 1280 404M225 920 186 869 184 856 189 843 199 833 232 815 269 785 289 772 322 760 354 757 386 761 412 770 437 785 457 804 473 830 484 862 488 894 484 920M997 90 1016 88 1042 93 1068 109 1087 128 1099 148 1103 167 1099 187 1088 199 1068 206 1055 206 1036 202 1006 187 978 161 965 142 962 122 974 103 997 90M495 475 521 472 534 475 545 483 553 495 553 508 548 521 542 528 527 536 508 538 489 532 476 521 470 508 472 495 482 483 495 475M0 447 47 457 64 464 84 478 96 492 106 508 112 528 114 553 111 585 104 618 91 656 77 687 63 708 45 727 26 742 0 756M1280 857 1185 778 1127 733 1115 714 1112 688 1118 637 1126 598 1142 560 1164 521 1196 476 1222 450 1248 435 1280 428M245 920 228 875 227 862 233 849 267 811 289 792 322 777 354 773 379 776 405 785 426 798 445 817 460 843 468 869 469 894 464 920M0 453 45 465 64 475 77 485 90 500 98 515 103 534 104 553 102 579 95 605 84 638 69 669 57 688 39 710 19 725 0 737M1280 844 1135 733 1122 714 1118 688 1121 643 1130 605 1144 566 1164 532 1196 488 1222 462 1248 446 1280 440M254 920 243 888 241 869 245 856 256 836 278 811 302 793 328 783 354 780 379 783 405 793 425 806 441 823 452 843 460 869 461 894 455 920M0 460 39 471 58 481 71 492 84 508 90 521 95 553 93 573 86 598 60 656 32 693 0 718M1280 832 1144 733 1129 714 1125 701 1123 682 1127 637 1137 598 1150 566 1170 534 1203 493 1229 469 1254 456 1280 451M262 920 253 894 251 875 255 856 266 836 282 817 302 801 328 790 354 787 379 791 399 798 418 811 436 830 447 849 453 875 452 901 447 920M0 468 39 480 64 498 79 521 83 534 85 553 83 573 78 592 58 634 32 671 0 699M1280 820 1209 775 1146 727 1133 708 1129 676 1132 637 1140 605 1151 576 1171 543 1203 504 1229 481 1254 467 1280 463M269 920 261 894 260 875 264 856 275 836 289 819 309 805 328 797 354 794 379 797 399 805 418 819 432 836 441 856 446 875 445 901 439 920M0 485 28 495 46 508 60 528 65 553 60 579 47 605 26 635 0 661M1280 798 1216 763 1164 727 1152 714 1145 701 1140 669 1142 637 1150 605 1162 579 1178 553 1203 525 1229 503 1254 490 1280 486M284 920 276 901 274 881 277 862 286 843 297 830 315 816 334 809 354 806 373 809 392 817 410 830 420 843 429 862 432 881 430 901 423 920M0 495 19 503 39 516 50 534 54 553 50 573 39 596 19 622 0 641M1280 788 1216 755 1184 734 1167 721 1156 708 1150 695 1146 663 1149 630 1156 605 1168 579 1184 556 1209 529 1235 510 1254 501 1280 498M291 920 283 901 281 881 284 862 290 849 302 833 315 823 334 815 354 813 373 815 391 823 405 834 416 849 424 869 425 888 421 907 415 920M0 506 17 515 32 528 39 540 40 553 38 566 30 585 0 621M1280 778 1222 751 1177 721 1165 708 1158 695 1152 676 1151 656 1154 630 1162 605 1175 579 1190 558 1209 539 1235 520 1261 511 1280 510M299 920 292 907 288 888 289 869 294 856 302 843 317 830 334 822 354 819 373 822 389 830 404 843 412 856 417 869 419 888 414 907 407 920M0 522 16 534 20 540 23 553 18 573 0 598M1280 767 1222 743 1184 717 1171 703 1164 692 1159 676 1157 656 1160 630 1168 605 1178 585 1196 561 1216 543 1241 528 1261 522 1280 522M307 920 300 907 295 888 296 869 302 856 311 843 322 835 334 829 354 826 373 829 386 836 399 847 405 857 411 875 411 888 406 907 398 920M1280 747 1229 730 1194 708 1183 695 1176 682 1172 669 1170 650 1172 630 1178 611 1190 590 1205 573 1222 559 1241 549 1261 545 1280 546M330 920 316 907 310 894 309 881 312 869 319 856 328 847 341 842 354 840 367 842 380 849 391 862 396 875 396 888 393 901 386 911 375 920M1280 736 1235 724 1203 705 1184 682 1179 669 1177 650 1179 630 1186 611 1196 594 1209 580 1222 570 1241 560 1261 557 1280 559M347 849 360 849 373 855 381 862 387 875 387 888 382 901 373 911 360 917 347 917 334 913 322 901 318 888 319 875 325 862 334 853 347 849M1280 725 1241 717 1209 699 1198 688 1190 676 1185 650 1187 630 1191 618 1203 598 1216 585 1229 577 1248 570 1261 568 1280 572M341 862 347 860 360 860 373 871 376 888 367 902 360 905 347 906 337 901 331 894 329 888 330 875 341 862M1280 713 1248 708 1219 695 1201 676 1195 663 1193 650 1196 630 1201 618 1209 605 1222 593 1235 585 1248 582 1261 581 1280 585M1280 679 1267 683 1254 683 1235 676 1222 663 1217 643 1225 624 1241 613 1261 612 1280 621" fill="none" stroke="#64754b" stroke-opacity=".26" stroke-width="1"></path>
+              <path d="M0 286 45 230 71 208 103 189 223 129 253 109 274 90 285 71 287 58 286 45 276 26 252 0M0 332 30 315 84 279 122 258 180 236 315 194 341 182 360 164 404 97 431 66 463 42 515 13 529 0M0 361 103 322 154 307 232 291 296 284 328 286 354 294 373 309 390 335 402 347 418 353 431 350 444 337 447 322 443 309 420 277 414 264 409 225 410 199 415 174 430 135 444 116 458 103 476 91 495 84 534 79 598 91 611 90 617 87 624 81 630 64 640 0M1047 920 1064 901 1100 869 1108 856 1110 843 1107 830 1096 817 1061 797 1046 785 1036 771 1027 753 1021 714 1027 618 1025 592 1019 573 1010 555 997 545 984 542 946 543 933 537 923 521 917 483 912 470 900 457 888 452 875 450 855 454 843 460 815 483 788 521 774 560 773 585 777 598 783 605 798 611 849 613 868 618 877 624 886 637 891 663 888 695 875 731 855 760 818 804 804 830 798 858 790 920M1163 0 1146 13 1139 26 1139 45 1145 58 1158 70 1177 78 1203 78 1235 70 1248 74 1261 95 1280 148M0 387 116 367 161 365 212 366 296 374 322 381 373 401 392 405 412 406 431 403 450 396 521 357 553 351 592 354 650 364 682 373 701 382 714 395 721 412 723 437 719 470 691 553 638 669 631 695 629 714 633 733 641 753 656 772 695 811 713 843 718 862 719 881 716 901 708 920M1154 920 1155 856 1146 823 1126 799 1084 772 1070 759 1058 740 1054 721 1055 688 1071 579 1092 470 1092 444 1087 425 1074 405 1055 388 1023 369 991 356 933 343 810 335 785 327 765 312 753 292 739 257 703 109 697 51 700 26 706 0M495 126 521 123 541 129 560 143 566 154 571 167 570 193 560 217 540 236 521 244 502 243 482 235 467 219 459 199 458 174 464 154 476 139 495 126M1038 0 1107 77 1165 129 1179 148 1187 167 1194 193 1199 232 1204 296 1210 315 1217 322 1230 328 1280 340M0 412 61 412 103 418 140 431 168 450 184 470 195 495 200 521 203 592 207 624 219 662 232 686 244 697 264 704 360 703 405 709 437 719 463 734 489 757 506 778 517 798 540 851 559 881 561 901 554 920M157 920 122 886 109 878 96 874 58 875 0 885M1240 920 1209 877 1171 811 1146 785 1108 759 1094 746 1086 733 1081 714 1082 682 1098 592 1111 547 1149 457 1164 412 1173 373 1173 360 1169 347 1152 335 1087 310 978 260 952 250 926 250 868 263 836 258 821 251 806 238 797 225 788 206 768 135 763 103 763 71 772 45 788 26 810 14 836 9 888 5 920 0M527 411 553 412 579 418 598 426 617 441 630 457 636 476 638 495 635 515 627 540 612 566 592 591 572 608 553 619 527 629 502 633 476 630 457 624 437 613 418 598 399 577 383 553 374 534 369 515 370 495 378 476 392 463 403 457 495 419 527 411M0 440 53 450 71 457 90 470 107 489 116 505 122 528 125 553 121 592 112 637 101 676 89 701 72 727 52 746 26 764 0 776M1280 871 1177 778 1125 740 1111 721 1107 695 1112 643 1121 598 1136 560 1158 519 1190 471 1221 437 1248 422 1280 416M236 920 206 869 205 856 209 849 270 796 289 782 322 769 354 765 379 768 405 776 431 791 451 811 466 836 475 862 478 894 474 920M1016 114 1029 113 1042 117 1055 125 1065 135 1072 154 1069 167 1062 174 1048 177 1036 175 1019 167 1006 154 1000 142 1000 129 1003 121 1016 114M0 476 36 489 58 506 71 528 75 553 69 585 51 621 26 656 0 680M1280 809 1216 771 1155 727 1144 714 1138 701 1134 669 1137 637 1145 605 1158 575 1177 544 1203 514 1229 492 1254 478 1280 474M277 920 270 901 267 881 270 862 279 843 294 823 309 813 328 804 354 800 373 802 392 809 412 823 425 837 434 856 439 875 438 901 431 920M1280 757 1229 738 1190 714 1178 701 1170 688 1166 676 1164 656 1165 637 1172 611 1184 588 1196 571 1216 553 1235 541 1261 534 1280 534M317 920 307 907 303 894 302 875 306 862 315 849 328 839 341 834 354 832 367 834 379 840 391 849 400 862 404 875 403 894 398 907 388 920M1280 698 1248 696 1222 684 1209 669 1205 656 1204 643 1209 623 1218 611 1229 602 1241 596 1254 594 1267 596 1280 601" fill="none" stroke="#64754b" stroke-opacity=".5" stroke-width="1.5"></path>
+              <g fill="none" stroke="#202b18" stroke-linecap="round">
+                <path d="M610 -10C600 200 585 420 582 520S600 760 640 930" stroke-width="4"></path>
+                <path d="M-10 520C200 522 420 525 575 528" stroke-width="4"></path>
+                <path d="M330 -10C300 200 290 420 300 560S350 800 520 830S680 800 720 720S800 560 800 420S760 200 700 -10" stroke-width="4"></path>
+                <path d="M590 640C680 640 780 630 905 625M596 590C700 585 800 580 905 590M640 520C720 515 820 505 905 500M560 560C520 620 470 700 440 830M600 560C590 650 585 760 590 930" stroke-width="2.5"></path>
+              </g>
+              <g fill="none" stroke="#2c3a23" stroke-linecap="round">
+                <path d="M928 -10C918 140 916 300 920 425S912 640 906 760S898 880 896 940" stroke-width="3"></path>
+                <path d="M520 690C490 690 460 700 430 720S390 740 360 760" stroke-width="16"></path>
+                <path d="M705 478C712 505 725 525 740 560" stroke-width="13"></path>
+                <path d="M872 -10C870 120 868 300 872 432S884 700 890 930" stroke-width="12"></path>
+              </g>
+              <path d="M546 954 546 950 546 946 546 941 546 936 547 930 547 924 547 917 547 910 548 904 548 897 548 890 549 884 549 878 549 871 549 864 550 858 550 851 550 844 550 837 551 830 551 824 551 817 551 811 552 805 552 798 552 792 553 786 553 780 554 775 554 769 554 763 555 757 555 752 556 746 556 741 557 735 557 730 557 725 558 720 558 715 558 710 558 705 559 700 559 696 559 691 560 686 560 682 561 677 561 672 561 667 561 663 562 658 562 654 562 649 563 645 563 640 563 636 564 632 564 628 565 624 566 620 567 616 568 612 569 608 570 604 571 600 573 597 574 593 575 590 576 587 578 584 579 581 581 578 583 576 584 574 586 572 588 570 590 568 593 566 595 563 598 561 601 559 604 557 607 554 610 552 614 549 618 546 622 543 626 541 630 538 635 535 639 532 644 530 648 527 652 525 657 522 661 520 665 518 668 516 672 515 676 513 680 511 684 509 688 508 692 506 696 504 700 503 705 501 709 500 714 498 719 497 723 495 728 494 733 492 738 491 743 489 748 488 753 486 759 485 764 483 770 482 775 480 781 479 787 477 793 476 799 474 805 473 811 471 817 470 823 468 828 467 834 466 839 465 843 464 848 463 852 462 856 461 860 460 864 459 867 459 871 458 875 457 879 456 884 456 888 455 893 455 899 455 904 454 909 454 915 454 920 454 925 453 930 453 934 453 937 453 940 454 930 402 927 404 924 405 920 407 916 408 911 410 906 412 901 413 896 415 891 417 886 419 881 421 876 422 872 424 868 425 864 426 860 427 856 428 852 429 848 430 844 431 840 433 836 434 831 435 826 436 821 438 816 439 810 440 804 442 798 443 792 445 786 447 780 448 773 450 767 451 762 453 756 455 750 456 745 458 740 459 735 461 730 463 724 464 719 466 714 468 709 470 705 471 700 473 695 475 691 477 686 478 682 480 677 482 673 484 669 485 665 487 661 489 656 491 652 493 648 495 643 498 639 500 634 502 630 505 625 508 620 510 615 513 611 516 606 519 601 522 597 524 593 527 589 530 586 532 582 535 579 537 576 540 573 542 570 545 567 547 564 550 561 553 558 556 555 559 553 563 550 567 547 570 545 574 543 578 540 582 538 587 536 591 534 595 532 599 530 603 529 608 527 612 525 616 523 621 521 626 520 630 518 635 516 639 515 644 513 649 512 653 510 658 509 662 507 667 506 671 505 676 503 681 502 685 501 690 499 695 498 700 497 705 495 710 494 715 493 720 491 725 490 730 489 736 488 741 486 747 485 753 484 759 482 764 481 770 480 777 479 783 477 789 476 795 475 802 474 809 473 815 472 822 471 829 469 836 468 843 467 850 466 857 465 863 464 870 463 876 462 882 461 889 461 896 460 903 459 910 458 916 457 923 457 929 456 934 455 939 455 943 454 946Z" fill="#0b1415" stroke="#2c3a23" stroke-width="3" stroke-linejoin="round"></path>
+              <path d="M928 -10C918 140 916 300 920 425S912 640 906 760S898 880 896 940L1300 940L1300 -10Z" fill="#0b1415"></path>
+              <g fill="none" stroke="#0b1415" stroke-linecap="round">
+                <path d="M520 690C490 690 460 700 430 720S390 740 360 760" stroke-width="12"></path>
+                <path d="M705 478C712 505 725 525 740 560" stroke-width="9"></path>
+                <path d="M872 -10C870 120 868 300 872 432S884 700 890 930" stroke-width="8"></path>
+              </g>
+              <g fill="none" stroke="#1f2a33" stroke-opacity=".7" stroke-width="1">
+                <path d="M960 0C952 300 950 600 940 930M1010 0C1004 300 1000 600 990 930M1070 0C1066 300 1062 600 1052 930"></path>
+              </g>
+              <g fill="none" stroke="#2b3822" stroke-width="3">
+                <path d="M590 512L606 548M660 492L668 508M784 452L796 470M520 560L560 566M500 805L540 805"></path>
+              </g>
+            </g>
+          </defs>
+          <use href="#d10-base"></use>
+          <g font-family="DM Sans, Arial, sans-serif" font-size="9" font-weight="700" fill="#97a387" text-anchor="middle">
+            <rect x="285" y="515" width="28" height="15" rx="3" fill="#1a2314" stroke="#3a4730"></rect><text x="299" y="526">I-10</text>
+            <rect x="288" y="600" width="34" height="15" rx="3" fill="#1a2314" stroke="#3a4730"></rect><text x="305" y="611">I-295</text>
+            <rect x="582" y="700" width="28" height="15" rx="3" fill="#1a2314" stroke="#3a4730"></rect><text x="596" y="711">I-95</text>
+          </g>
+          <text x="0" y="0" transform="translate(497 845) rotate(-84)" font-family="Fraunces, serif" font-style="italic" font-weight="300" font-size="15" letter-spacing="1.5" fill="#7d9a8f">St. Johns River</text>
+          <text x="770" y="447" transform="rotate(-8 770 447)" font-family="Fraunces, serif" font-style="italic" font-weight="300" font-size="13" letter-spacing="1" fill="#7d9a8f">St. Johns River</text>
+          <g font-family="DM Sans, Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="2.4" fill="#8a977a"><text x="170" y="690">WESTSIDE</text><text x="205" y="790">CECIL</text></g>
+          <rect x="551" y="502" width="18" height="18" rx="3" fill="none" stroke="#97a387" stroke-width="1.5" transform="rotate(45 560 511)"></rect>
+          <path d="M452 812C460 760 478 720 488 672S492 620 494 590C530 585 570 590 606 588" fill="none" stroke="#e0914a" stroke-opacity=".18" stroke-width="12" stroke-linecap="round"></path>
+          <path d="M452 812C460 760 478 720 488 672S492 620 494 590C530 585 570 590 606 588" fill="none" stroke="#e0914a" stroke-width="3.5" stroke-linecap="round"></path>
+          <path d="M606 588S690 640 722 668S850 615 904 604" fill="none" stroke="#e0914a" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round"></path>
+          <g stroke="#ffffff" stroke-width="2">
+            <circle cx="452" cy="812" r="9" fill="#3d521e"></circle>
+            <circle cx="488" cy="672" r="9" fill="#3d521e"></circle>
+            <circle cx="494" cy="590" r="9" fill="#3d521e"></circle>
+          </g>
+          <g fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M448 812l3 3 5-6M484 672l3 3 5-6M490 590l3 3 5-6"></path>
+          </g>
+          <circle class="d10-pulse" cx="606" cy="588" r="11" fill="#e0914a"></circle>
+          <circle class="d10-truck" cx="606" cy="588" r="11" fill="#e0914a" stroke="#ffffff" stroke-width="2.5"></circle>
+          <circle cx="722" cy="668" r="7" fill="#ffffff" stroke="#e0914a" stroke-width="3"></circle>
+          <circle cx="904" cy="604" r="7" fill="#0e130b" stroke="#ffffff" stroke-width="2"></circle>
+          <g fill="#c3cbb6">
+            <circle cx="596" cy="790" r="3.5"></circle>
+            <circle cx="745" cy="520" r="3.5"></circle>
+            <circle cx="910" cy="462" r="3.5"></circle>
+            <circle cx="908" cy="540" r="3.5"></circle>
+            <circle cx="902" cy="760" r="3.5"></circle>
+          </g>
+        </svg>
+        <div class="d10-labels">
+          <a class="d10-lbl d10-l" href="/areas/riverside" style="left:37.50%;top:64.77%">Riverside</a>
+          <a class="d10-lbl d10-l" href="/areas/ortega" style="left:37.03%;top:74.09%">Ortega</a>
+          <a class="d10-lbl" href="/areas/orange-park" style="left:36.41%;top:90.00%">Orange Park</a>
+          <a class="d10-lbl" href="/areas/san-marco" style="left:48.59%;top:64.55%">San Marco<small>on site</small></a>
+          <a class="d10-lbl" href="/areas/southside" style="left:57.50%;top:73.64%">Southside<small>next</small></a>
+          <a class="d10-lbl d10-l" href="/areas/jacksonville-beach" style="left:69.53%;top:66.36%">Jacksonville Beach</a>
+          <a class="d10-lbl d10-town" href="/areas/mandarin" style="left:47.34%;top:87.50%">Mandarin</a>
+          <a class="d10-lbl d10-c d10-town" href="/areas/arlington" style="left:58.20%;top:54.77%">Arlington</a>
+          <a class="d10-lbl d10-l d10-town" href="/areas/atlantic-beach" style="left:70.16%;top:50.23%">Atlantic Beach</a>
+          <a class="d10-lbl d10-l d10-town" href="/areas/neptune-beach" style="left:70.00%;top:59.09%">Neptune Beach</a>
+          <a class="d10-lbl d10-l d10-town" href="/areas/ponte-vedra-beach" style="left:69.53%;top:84.09%">Ponte Vedra Beach</a>
+          <span class="d10-down" style="left:43.75%;top:52.95%">Downtown</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="d10-scrim"></div>
+
+    <div class="d10-copy">
+      <div class="d10-eyerow"><span class="d10-badge"><i></i>Live routes</span><span class="d10-caps">Duval · Clay · St. Johns County</span></div>
+      <h1 id="d10-h1" class="d10-h1">Pest control in Jacksonville, <em>on the map.</em></h1>
+      <p class="d10-lede">Our trucks run the same neighborhoods every week, so a tech is usually a few streets away. Book a 2-hour window, get your tech’s name the night before, and watch the truck come up your road.</p>
+      <div class="d10-ctas">
+        <a class="d10-btn d10-btn-amber" href="#d10-book">Book a Visit <svg width="12" height="14" viewBox="0 0 12 14" aria-hidden="true"><path d="M1 1l10 6-10 6z" fill="#1a1206"></path></svg></a>
+        <a class="d10-btn d10-btn-line" href="tel:+19045550150">Call (904) 555-0150</a>
+      </div>
+    </div>
+
+    <div class="d10-side">
+      <aside id="d10-book" class="d10-book" aria-labelledby="d10-book-h">
+        <div class="d10-bookhead"><h2 id="d10-book-h">Book a visit</h2><span>Same or next day, most ZIPs</span></div>
+        <form class="d10-form" action="#">
+          <div class="d10-two">
+            <label class="d10-in">ZIP code<input type="text" inputmode="numeric" autocomplete="postal-code" placeholder="32207"></label>
+            <label class="d10-in">Mobile<input type="tel" autocomplete="tel" placeholder="(904)"></label>
+          </div>
+          <label class="d10-in">What are you seeing?<select><option>Roaches</option><option>Ants</option><option>Termites or swarmers</option><option>Mosquitoes</option><option>Rats or mice</option><option>Bed bugs</option><option>Wasps or hornets</option><option>Not sure yet</option></select></label>
+          <fieldset class="d10-win">
+            <legend>Window</legend>
+            <label><input type="radio" name="d10-win" checked><span>8–10</span></label>
+            <label><input type="radio" name="d10-win"><span>10–12</span></label>
+            <label><input type="radio" name="d10-win"><span>12–2</span></label>
+            <label><input type="radio" name="d10-win"><span>2–4</span></label>
+          </fieldset>
+          <button class="d10-btn d10-btn-amber" type="button">Book a Visit</button>
+          <p class="d10-formnote">Or call <a href="tel:+19045550150">(904) 555-0150</a> · [HOURS]</p>
+        </form>
+      </aside>
+
+      <aside class="d10-status" aria-labelledby="d10-stat-h">
+        <div class="d10-stathead"><b id="d10-stat-h">Truck 3 · route view</b><span class="d10-badge"><i></i>Live</span></div>
+        <ol class="d10-stops">
+          <li><time>8:10</time><i class="d10-dot d10-done"></i><span><b>Orange Park</b><span>Quarterly pest</span></span><em class="d10-st">Done</em></li>
+          <li><time>9:05</time><i class="d10-dot d10-done"></i><span><b>Ortega</b><span>Termite inspection</span></span><em class="d10-st">Done</em></li>
+          <li><time>9:50</time><i class="d10-dot d10-done"></i><span><b>Riverside</b><span>Rodent exclusion</span></span><em class="d10-st">Done</em></li>
+          <li><time>10:40</time><i class="d10-dot d10-now"></i><span><b>San Marco</b><span>Mosquito yard</span></span><em class="d10-st d10-st-now">On site</em></li>
+          <li><time>11:30</time><i class="d10-dot d10-next"></i><span><b>Southside</b><span>Ant treatment</span></span><em class="d10-st">Next</em></li>
+          <li><time>1:15</time><i class="d10-dot d10-later"></i><span><b>Jax Beach</b><span>Quarterly pest</span></span><em class="d10-st">Booked</em></li>
+        </ol>
+        <p class="d10-statfoot">Sample of the route view sent by text. Open on this route: 2–4 pm.</p>
+      </aside>
+    </div>
+
+    <div class="d10-chrome">
+      <span>30.33° N, 81.66° W</span>
+      <span class="d10-scale"><i></i>2 mi</span>
+      <span class="d10-leg"><span><i class="d10-dot d10-done"></i>Done</span><span><i class="d10-dot d10-now"></i>On site</span><span><i class="d10-dot d10-next"></i>Next</span><span><i class="d10-dot d10-later"></i>Booked</span></span>
+      <span class="d10-r">Illustrated map, not to scale</span>
+    </div>
+  </section>
+
+  <section id="d10-services" class="d10-sec" aria-labelledby="d10-svc-h">
+    <div class="d10-center">
+      <p class="d10-eyebrow">Layers · 7 services</p>
+      <h2 id="d10-svc-h" class="d10-h2">Turn on what is bugging you. Every layer has a price.</h2>
+      <p class="d10-sub">Each service has its own page with the products we use, how long a treatment lasts and what the warranty covers. Prices are for homes under 3,000 sq ft.</p>
+    </div>
+    <div class="d10-app">
+      <div class="d10-appbar">
+        <span>Marsh &amp; Pine</span><span class="d10-sep">/</span><span>Jacksonville</span><span class="d10-sep">/</span><b>Service layers</b>
+        <span class="d10-search"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="7" fill="none" stroke="#97a387" stroke-width="2"></circle><path d="M15 15l6 6" stroke="#97a387" stroke-width="2"></path></svg>Search pests</span>
+      </div>
+      <div class="d10-appbody">
+        <ul class="d10-layers">
+          <li class="d10-layer">
+            <label class="d10-sw"><input type="checkbox" checked><span></span><i class="d10-sr">Show general pest control layer</i></label>
+            <svg width="34" height="20" viewBox="0 0 34 20" aria-hidden="true"><path d="M3 10h28" stroke="#e0914a" stroke-width="3.5" stroke-linecap="round"></path></svg>
+            <a href="/general-pest-control"><b>General pest control</b><small>/general-pest-control · every 3 months</small></a>
+            <span class="d10-price">from $[PRICE]<small>per visit</small></span>
+          </li>
+          <li class="d10-layer">
+            <label class="d10-sw"><input type="checkbox" checked><span></span><i class="d10-sr">Show termite inspection and treatment layer</i></label>
+            <svg width="34" height="20" viewBox="0 0 34 20" aria-hidden="true"><rect x="5" y="2" width="24" height="16" rx="2" fill="none" stroke="#e0914a" stroke-width="1.5"></rect><path d="M9 18l10-16M15 18l10-16M3 14l7-12" stroke="#e0914a" stroke-width="1.2"></path></svg>
+            <a href="/termite-control"><b>Termite inspection and treatment</b><small>/termite-control · inspection first</small></a>
+            <span class="d10-price">$[LOW]–$[HIGH]<small>per home</small></span>
+          </li>
+          <li class="d10-layer">
+            <label class="d10-sw"><input type="checkbox"><span></span><i class="d10-sr">Show mosquito yard treatment layer</i></label>
+            <svg width="34" height="20" viewBox="0 0 34 20" aria-hidden="true"><g fill="#ffffff"><circle cx="6" cy="6" r="2"></circle><circle cx="17" cy="6" r="2"></circle><circle cx="28" cy="6" r="2"></circle><circle cx="11" cy="14" r="2"></circle><circle cx="22" cy="14" r="2"></circle></g></svg>
+            <a href="/mosquito-control"><b>Mosquito yard treatment</b><small>/mosquito-control · monthly, March to November</small></a>
+            <span class="d10-price">from $[PRICE]<small>per month</small></span>
+          </li>
+          <li class="d10-layer">
+            <label class="d10-sw"><input type="checkbox"><span></span><i class="d10-sr">Show rodent exclusion layer</i></label>
+            <svg width="34" height="20" viewBox="0 0 34 20" aria-hidden="true"><rect x="7" y="3" width="20" height="14" rx="2" fill="none" stroke="#ffffff" stroke-width="2"></rect></svg>
+            <a href="/rodent-control"><b>Rodent exclusion</b><small>/rodent-control · seal, trap, recheck</small></a>
+            <span class="d10-price">$[LOW]–$[HIGH]<small>per home</small></span>
+          </li>
+          <li class="d10-layer">
+            <label class="d10-sw"><input type="checkbox"><span></span><i class="d10-sr">Show bed bug heat treatment layer</i></label>
+            <svg width="34" height="20" viewBox="0 0 34 20" aria-hidden="true"><circle cx="17" cy="10" r="7" fill="#64754b" stroke="#ffffff" stroke-width="1.5"></circle></svg>
+            <a href="/bed-bug-treatment"><b>Bed bug heat treatment</b><small>/bed-bug-treatment · one-day heat</small></a>
+            <span class="d10-price">$[LOW]–$[HIGH]<small>per home</small></span>
+          </li>
+          <li class="d10-layer">
+            <label class="d10-sw"><input type="checkbox"><span></span><i class="d10-sr">Show lawn insects layer</i></label>
+            <svg width="34" height="20" viewBox="0 0 34 20" aria-hidden="true"><path d="M3 10h28" stroke="#c3cbb6" stroke-width="2.5" stroke-dasharray="5 4"></path></svg>
+            <a href="/lawn-pest-control"><b>Lawn insects</b><small>/lawn-pest-control · chinch bugs, mole crickets</small></a>
+            <span class="d10-price">from $[PRICE]<small>per visit</small></span>
+          </li>
+          <li class="d10-layer">
+            <label class="d10-sw"><input type="checkbox"><span></span><i class="d10-sr">Show wasp and hornet nests layer</i></label>
+            <svg width="34" height="20" viewBox="0 0 34 20" aria-hidden="true"><path d="M17 3l8 14H9z" fill="none" stroke="#e0914a" stroke-width="2"></path></svg>
+            <a href="/wasp-nest-removal"><b>Wasp and hornet nests</b><small>/wasp-nest-removal · same week</small></a>
+            <span class="d10-price">from $[PRICE]<small>per nest</small></span>
+          </li>
+        </ul>
+        <figure class="d10-preview">
+          <img src="img/pest/09.jpg" alt="Technician spraying the foundation band of a house beside the shrubs" width="1600" height="1067" loading="lazy" style="object-fit: cover; object-position: 60% 50%;">
+          <div class="d10-pv-top"><span class="d10-chip"><svg width="18" height="6" viewBox="0 0 18 6" aria-hidden="true"><path d="M1 3h16" stroke="#e0914a" stroke-width="3"></path></svg>Layer: General pest</span><span class="d10-chip">Every 3 months</span></div>
+          <figcaption><b>The perimeter band</b>Three feet up the wall and three feet out on the ground, plus every door, weep hole and pipe that enters the house. That band is what keeps roaches outside in August.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="d10-how" class="d10-sec" aria-labelledby="d10-how-h">
+    <div class="d10-how">
+      <div class="d10-howl">
+        <p class="d10-eyebrow">How a visit runs</p>
+        <h2 id="d10-how-h" class="d10-h2">Five stops, from your first call to a quiet kitchen.</h2>
+        <p class="d10-sub">The same route model that gets a truck to you fast also means the same tech comes back each quarter. [OWNER NAME] has run it this way for [YEARS] years.</p>
+        <figure class="d10-media">
+          <img src="img/pest/05.jpg" alt="Tech holding a yellow hand sprayer misting a fine spray in low light" width="1600" height="1067" loading="lazy" style="object-fit: cover;">
+          <figcaption>Low-odor products, applied where pests travel, not across your floors.</figcaption>
+        </figure>
+      </div>
+      <ol class="d10-route">
+        <li class="d10-stop"><span class="d10-pin"><i></i></span><p class="d10-caps">Stop 1 · the day you book</p><h3>Pick a window</h3><p>Choose a 2-hour window online or call (904) 555-0150. Most Jacksonville ZIP codes get a same-day or next-day slot because a truck already works your area.</p></li>
+        <li class="d10-stop"><span class="d10-pin"><i></i></span><p class="d10-caps">Stop 2 · the night before</p><h3>Your tech, by name</h3><p>A text with your tech’s name, photo and state license number, so you know who is at the door.</p></li>
+        <li class="d10-stop"><span class="d10-pin"><i></i></span><p class="d10-caps">Stop 3 · 30 minutes out</p><h3>The truck on your map</h3><p>A live link shows the truck working the route, and a heads-up text lands 30 minutes before arrival.</p></li>
+        <li class="d10-stop"><span class="d10-pin"><i></i></span><p class="d10-caps">Stop 4 · on site, 45 to 60 minutes</p><h3>Inside and out</h3><p>The first visit treats inside and the outside perimeter. You get photos of every bait station and entry point we sealed.</p>
+          <div class="d10-thumbs"><img src="img/pest/04.jpg" alt="Tech spraying the edge of a front porch" width="1600" height="1067" loading="lazy" style="object-fit: cover;"><span>Your photo report arrives by text and email</span></div></li>
+        <li class="d10-stop"><span class="d10-pin"><i></i></span><p class="d10-caps">Stop 5 · any time between visits</p><h3>Free re-service</h3><p>If pests come back between quarterly visits, we come back at no charge. No new appointment fee, no argument.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="d10-sec" aria-labelledby="d10-sig-h">
+    <div class="d10-signal">
+      <div class="d10-sigl">
+        <p class="d10-eyebrow">Signal · Google reviews</p>
+        <h2 id="d10-sig-h" class="d10-rating">[RATING]</h2>
+        <div class="d10-stars" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z" fill="#e0914a"></path></svg><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z" fill="#e0914a"></path></svg><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z" fill="#e0914a"></path></svg><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z" fill="#e0914a"></path></svg><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z" fill="#e0914a"></path></svg></div>
+        <p><b>[RATING] from [COUNT] Google reviews</b><br>Newest review [DAYS] days ago</p>
+        <div><a class="d10-btn d10-btn-line" href="#">Read them on Google</a></div>
+      </div>
+      <div class="d10-sigmap">
+        <div class="d10-sigframe">
+          <svg viewBox="400 520 560 360" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <use href="#d10-base"></use>
+            <circle cx="488" cy="672" r="9" fill="#e0914a" stroke="#ffffff" stroke-width="2.5"></circle>
+            <circle cx="596" cy="790" r="9" fill="#e0914a" stroke="#ffffff" stroke-width="2.5"></circle>
+            <circle cx="904" cy="604" r="9" fill="#e0914a" stroke="#ffffff" stroke-width="2.5"></circle>
+            <circle cx="722" cy="668" r="9" fill="#e0914a" stroke="#ffffff" stroke-width="2.5"></circle>
+          </svg>
+          <figure class="d10-pop" style="left:calc(15.7% - 36px);bottom:calc(57.8% + 14px)">
+            <blockquote>[Google review, pulled at build time]</blockquote>
+            <figcaption>[Reviewer], Ortega</figcaption>
+          </figure>
+          <figure class="d10-pop" style="left:calc(35% - 36px);bottom:calc(25% + 14px)">
+            <blockquote>[Google review, pulled at build time]</blockquote>
+            <figcaption>[Reviewer], Mandarin</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="d10-faq" class="d10-sec" aria-labelledby="d10-faq-h">
+    <div class="d10-notes">
+      <div>
+        <div class="d10-faqhead">
+          <p class="d10-eyebrow">Field notes</p>
+          <h2 id="d10-faq-h" class="d10-h2">What Jacksonville homeowners ask us</h2>
+        </div>
+        <div class="d10-qa"><span class="d10-caps">Q.01</span><div><h3>How much does pest control cost in Jacksonville?</h3></div><p>Quarterly general pest service runs $[LOW]–$[HIGH] per visit for most homes under 3,000 sq ft. The first visit costs more because we treat inside and out. Termite and bed bug work is quoted after an inspection, in writing.</p></div>
+        <div class="d10-qa"><span class="d10-caps">Q.02</span><div><h3>How often should I spray for bugs in Florida?</h3></div><p>Every three months for most Jacksonville homes. Heat and humidity keep roaches and ants active all year, so a quarterly perimeter band is the standard. Mosquito yard treatments run monthly from March to November.</p></div>
+        <div class="d10-qa"><span class="d10-caps">Q.03</span><div><h3>When do termites swarm in Jacksonville?</h3></div><p>Native subterranean termites swarm on warm days after rain, February to May. Formosan termites swarm on late-spring evenings near lights. Wings on a windowsill mean call us; save a few in a bag.</p></div>
+        <div class="d10-qa"><span class="d10-caps">Q.04</span><div><h3>Is pest control safe for kids and pets?</h3></div><p>Yes, once the product dries, usually 30 to 60 minutes. After each visit we text what we applied, where, and how long to keep pets off treated areas.</p></div>
+      </div>
+      <div class="d10-rightcol">
+        <div class="d10-place" aria-labelledby="d10-place-h">
+          <div class="d10-placehead">
+            <h2 id="d10-place-h">Marsh &amp; Pine Pest Control</h2>
+            <p><b>[RATING]</b> · [COUNT] Google reviews · Pest control service</p>
+          </div>
+          <ul class="d10-facts">
+            <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-7.2 7-12.5A7 7 0 0 0 5 9.5C5 14.8 12 22 12 22z" fill="none" stroke="#e0914a" stroke-width="1.8"></path><circle cx="12" cy="9.5" r="2.5" fill="#e0914a"></circle></svg><span>Service-area business, Jacksonville, FL. Duval, Clay and St. Johns County.</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3h3l1.6 4.4-2.1 1.4a11 11 0 0 0 6.1 6.1l1.4-2.1L21 13.4v3c0 1.2-1 2.2-2.2 2.1C10.5 18 6 13.5 4.5 5.2 4.4 4 5.4 3 6.6 3z" fill="none" stroke="#e0914a" stroke-width="1.8" stroke-linejoin="round"></path></svg><a href="tel:+19045550150">(904) 555-0150</a></li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="#e0914a" stroke-width="1.8"></circle><path d="M12 7v5l3 2" fill="none" stroke="#e0914a" stroke-width="1.8"></path></svg><span>[HOURS]</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z" fill="none" stroke="#e0914a" stroke-width="1.8"></path></svg><span>FDACS pest control license [LICENSE NO.] · [CERTIFICATION]</span></li>
+          </ul>
+          <div class="d10-placecta">
+            <a class="d10-btn d10-btn-amber" href="#d10-book">Book a Visit</a>
+            <a class="d10-btn d10-btn-line" href="tel:+19045550150">Call</a>
+          </div>
+        </div>
+        <figure class="d10-media">
+          <img src="img/pest/08.jpg" alt="Paper wasp nest tucked into a wooden eave corner" width="1600" height="1200" loading="lazy" style="object-fit: cover;">
+          <figcaption>Paper wasp nest in an eave corner. Removed and treated in one visit.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="d10-nextwrap">
+    <div class="d10-nextbar">
+      <span class="d10-badge"><i></i>Open</span>
+      <p>Next open window near you <span>· [DAY], [TIME]</span></p>
+      <div class="d10-ctas">
+        <a class="d10-btn d10-btn-amber" href="#d10-book">Book a Visit</a>
+        <a class="d10-btn d10-btn-line" href="tel:+19045550150">(904) 555-0150</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="d10-foot">
+    <div class="d10-footin">
+      <span style="color:#ffffff">Marsh &amp; Pine Pest Control</span>
+      <span>Service-area business · Jacksonville, FL</span>
+      <a href="tel:+19045550150">(904) 555-0150</a>
+      <span>[HOURS]</span>
+      <span>FDACS license [LICENSE NO.]</span>
+      <a href="#d10-services">Services</a>
+      <a href="#d10-faq">FAQ</a>
+    </div>
+    <p class="d10-credit">Avenue Vision · D10 · Map Console · style refs withheld</p>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":4900}}'>class Component extends DCLogic { renderVals() { return {}; } }</script>
+</body>
+</html>

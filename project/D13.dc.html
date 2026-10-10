@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Saltline Wash and Window Co. home page</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..900&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.d13{--ink:#14172B;--sun:#FFD83D;--ultra:#2947E0;--mangrove:#0F3B2C;--coral:#FF7F8F;--pink:#FFB3D6;--concrete:#E5E7EB;--tide:#101E52;--sky:#38C6F4;--green:#23B96F;--paper:#FFFFFF;--mute:#4A4F63;width:100%;background:var(--ink);color:var(--ink);font-family:Inter,'Helvetica Neue',Arial,sans-serif;font-size:17px;line-height:1.5;letter-spacing:-0.01em;font-optical-sizing:auto}
+.d13 *{box-sizing:border-box}
+:where(.d13) a{color:inherit}
+.d13-wall{position:relative;overflow:hidden}
+.d13-in{position:relative;max-width:1200px;margin:0 auto;padding:0 40px}
+.d13-mono{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:0;font-weight:500}
+.d13-kick{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:13px;font-weight:500;letter-spacing:0.04em;text-transform:uppercase}
+.d13-h2{margin:0;font-weight:800;font-size:clamp(40px,5.2vw,64px);line-height:1.02;letter-spacing:-0.035em;text-wrap:balance}
+.d13-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 28px;border-radius:9999px;font-weight:700;font-size:17px;letter-spacing:-0.01em;text-decoration:none;white-space:nowrap;transition:transform .15s ease,background-color .15s ease}
+.d13-btn:hover{transform:translateY(-2px)}
+.d13-btn:focus-visible,.d13 a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.d13-btn-ink{background:var(--ink);color:var(--sun)}
+.d13-btn-sun{background:var(--sun);color:var(--ink)}
+.d13-btn-line{border:2px solid var(--ink);color:var(--ink);background:transparent}
+.d13-cf{position:absolute;display:block}
+.d13-dots{background-image:radial-gradient(rgba(20,23,43,.38) 1.1px,transparent 1.6px);background-size:12px 12px}
+/* nav */
+.d13-nav{position:relative;z-index:3;margin:24px auto 0;max-width:1200px;background:var(--paper);border-radius:9999px;min-height:76px;padding:10px 10px 10px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.d13-logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:23px;letter-spacing:-0.05em}
+.d13-links{display:flex;gap:4px;font-size:15px;font-weight:500}
+.d13-links a{text-decoration:none;padding:12px 14px;border-radius:9999px;min-height:44px;display:inline-flex;align-items:center}
+.d13-links a:hover{background:#F1F1EE}
+.d13-navr{display:flex;align-items:center;gap:8px}
+.d13-navtel{font-weight:700;font-size:15px;text-decoration:none;padding:0 14px;min-height:48px;display:inline-flex;align-items:center;border-radius:9999px;background:#F1F1EE}
+.d13-navcta{min-height:56px;padding:0 24px;font-size:16px}
+/* hero */
+.d13-hero{background:var(--sun);padding:0 0 104px}
+.d13-herogrid{display:grid;grid-template-columns:1.26fr 0.74fr;gap:56px;align-items:center;padding-top:64px}
+.d13-h1{margin:18px 0 0;font-weight:800;font-size:clamp(44px,6.1vw,78px);line-height:0.98;letter-spacing:-0.048em}
+.d13-lede{margin:26px 0 0;font-size:19px;line-height:1.5;max-width:520px;color:var(--ink)}
+.d13-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.d13-proof{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:28px;font-size:15px;font-weight:600}
+.d13-stars{display:inline-flex;gap:2px}
+.d13-photo{position:relative}
+.d13-photo img{display:block;width:100%;object-fit:cover}
+.d13-cap{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);background:var(--paper);color:var(--ink);font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12.5px;line-height:1.3;padding:8px 14px;border-radius:9999px;white-space:nowrap;letter-spacing:0}
+/* services */
+.d13-svc{background:var(--ultra);color:var(--paper);padding:112px 0}
+.d13-svcgrid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:start}
+.d13-svc .d13-h2{color:var(--sun)}
+.d13-stack{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.d13-grp{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:13px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:#E3E8FF;margin:14px 0 2px 8px}
+.d13-pill{display:grid;grid-template-columns:44px 1fr auto 28px;align-items:center;gap:16px;min-height:78px;padding:12px 22px 12px 14px;background:var(--paper);color:var(--ink);border-radius:9999px;text-decoration:none;transition:background-color .15s ease,transform .15s ease}
+.d13-pill:hover{background:var(--sun);transform:translateX(4px)}
+.d13-pill b{display:block;font-size:19px;font-weight:700;letter-spacing:-0.02em;line-height:1.2}
+.d13-pill .d13-slug{display:block;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:13px;color:var(--mute);letter-spacing:0;margin-top:3px}
+.d13-price{font-weight:700;font-size:16px;white-space:nowrap;text-align:right}
+.d13-price small{display:block;font-family:'IBM Plex Mono',ui-monospace,monospace;font-weight:400;font-size:11.5px;color:var(--mute);letter-spacing:0.02em}
+/* glass */
+.d13-glass{background:var(--concrete);padding:72px 0 112px}
+.d13-giant{display:block;width:100%;height:auto;overflow:visible}
+.d13-glassgrid{display:grid;grid-template-columns:4.6fr 4.6fr 2.8fr;gap:36px;align-items:start;margin-top:40px}
+.d13-card{background:var(--paper);border:1px solid #D5D8DE;border-radius:6px;padding:24px}
+.d13-card ul{margin:0;padding:0;list-style:none}
+.d13-card li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:12px 0;border-top:1px solid var(--concrete);font-size:16px}
+.d13-card li b{white-space:nowrap}
+.d13-card li:first-child{border-top:0;padding-top:0}
+.d13-mark{background:var(--pink);padding:0 4px}
+.d13-arch{border-radius:9999px 9999px 0 0;overflow:hidden;aspect-ratio:3/4}
+.d13-arch img{width:100%;height:100%;object-fit:cover;display:block}
+/* proof */
+.d13-rev{background:var(--mangrove);color:var(--paper);padding:104px 0 112px}
+.d13-big{margin:0;font-weight:800;color:var(--pink);font-size:clamp(76px,15vw,200px);line-height:0.86;letter-spacing:-0.06em}
+.d13-revgrid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:56px}
+.d13-sticker{margin:0;border:2px solid var(--pink);border-radius:40px;padding:36px 36px 32px;display:flex;flex-direction:column;gap:22px;min-height:200px;justify-content:space-between}
+.d13-sticker blockquote{margin:0;font-size:24px;line-height:1.3;font-weight:500;letter-spacing:-0.02em}
+.d13-sticker figcaption{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:14px;color:var(--pink);letter-spacing:0}
+.d13-tilt1{transform:rotate(-1.6deg)}
+.d13-tilt2{transform:rotate(1.4deg) translateY(28px)}
+/* steps */
+.d13-steps{background:var(--coral);padding:112px 0}
+.d13-stepgrid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:72px;align-items:center}
+.d13-circle{border-radius:50%;overflow:hidden;aspect-ratio:1/1}
+.d13-circle img{width:100%;height:100%;object-fit:cover;display:block}
+.d13-ol{list-style:none;margin:40px 0 0;padding:0;display:flex;flex-direction:column;gap:28px}
+.d13-ol li{display:grid;grid-template-columns:76px 1fr;gap:22px;align-items:start}
+.d13-ol h3{margin:4px 0 6px;font-size:24px;font-weight:800;letter-spacing:-0.03em;line-height:1.15}
+.d13-ol p{margin:0;font-size:17px}
+.d13-num{width:76px;height:76px;display:grid;place-items:center;font-weight:800;font-size:30px;color:var(--paper);letter-spacing:-0.04em}
+/* towns */
+.d13-towns{background:var(--sun);padding:112px 0}
+.d13-townhead{display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:end;margin-bottom:48px}
+.d13-towngrid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.d13-map{background:var(--paper);border-radius:40px;overflow:hidden}
+.d13-map svg{display:block;width:100%;height:auto}
+.d13-tlist{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.d13-tlist li{border-bottom:2px solid var(--ink)}
+.d13-tlist a{display:flex;align-items:baseline;justify-content:space-between;gap:16px;min-height:60px;padding:10px 4px;text-decoration:none;font-weight:800;font-size:clamp(24px,2.9vw,34px);letter-spacing:-0.04em;line-height:1.1;transition:padding .15s ease}
+.d13-tlist a:hover{padding-left:14px}
+.d13-tlist span{font-family:'IBM Plex Mono',ui-monospace,monospace;font-weight:400;font-size:13px;letter-spacing:0;white-space:nowrap}
+/* faq */
+.d13-faq{background:var(--tide);color:var(--paper);padding:112px 0}
+.d13-faq .d13-h2{color:var(--sun);text-align:center}
+.d13-qs{max-width:880px;margin:48px auto 0;display:flex;flex-direction:column;gap:14px}
+.d13-q{background:#1B2C6B;border:1px solid var(--pink);border-radius:32px;padding:28px 34px}
+.d13-q h3{margin:0;font-size:21px;font-weight:700;letter-spacing:-0.02em;line-height:1.3}
+.d13-q p{margin:10px 0 0;color:#E4E8F7;font-size:17px}
+/* close */
+.d13-close{background:var(--sun);padding:104px 0 40px}
+.d13-tel{display:block;text-decoration:none;font-weight:800;font-size:clamp(40px,10.4vw,138px);letter-spacing:0.005em;line-height:0.95;white-space:nowrap}
+.d13-nap{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px;padding-top:28px;border-top:2px solid var(--ink)}
+.d13-nap h3{margin:0 0 6px;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:13px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase}
+.d13-nap p{margin:0;font-size:16px}
+.d13-foot{display:flex;flex-wrap:wrap;gap:0 4px;margin-top:40px}
+.d13-foot a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border-radius:9999px;font-size:14px;font-weight:600;text-decoration:none;background:rgba(20,23,43,.07)}
+.d13-foot a:hover{background:var(--ink);color:var(--sun)}
+.d13-credit{margin-top:40px;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;color:#5C5420;letter-spacing:0}
+@media (max-width:1000px){
+.d13-herogrid,.d13-svcgrid,.d13-stepgrid,.d13-towngrid,.d13-townhead{grid-template-columns:1fr;gap:40px}
+.d13-glassgrid{grid-template-columns:1fr 1fr}
+.d13-links{display:none}
+}
+@media (max-width:640px){
+.d13-in{padding:0 18px}
+.d13-nav{margin:14px 12px 0;padding:8px 8px 8px 18px;min-height:64px}
+.d13-navtel{display:none}
+.d13-navcta{min-height:48px;padding:0 18px;font-size:15px}
+.d13-logo{font-size:20px}
+.d13-hero{padding-bottom:64px}
+.d13-herogrid{padding-top:44px}
+.d13-lede{font-size:17px}
+.d13-svc,.d13-steps,.d13-towns,.d13-faq{padding:72px 0}
+.d13-rev{padding:72px 0 88px}
+.d13-glass{padding:48px 0 72px}
+.d13-glassgrid{grid-template-columns:1fr}
+.d13-pill{grid-template-columns:34px 1fr 22px;gap:12px;padding:12px 18px 12px 12px;border-radius:32px}
+.d13-pill .d13-price{grid-column:2;grid-row:2;text-align:left}
+.d13-pill .d13-arr{grid-column:3;grid-row:1 / span 2}
+.d13-revgrid{grid-template-columns:1fr;gap:20px}
+.d13-revdeco{display:none}
+.d13-pill > svg:first-child{width:34px;height:34px}
+.d13-arch{max-width:300px}
+.d13-tilt2{transform:rotate(1.2deg)}
+.d13-sticker{padding:26px;border-radius:32px;min-height:0}
+.d13-sticker blockquote{font-size:20px}
+.d13-q{padding:22px 22px;border-radius:26px}
+.d13-q h3{font-size:19px}
+.d13-nap{grid-template-columns:1fr;gap:20px}
+.d13-ol li{grid-template-columns:56px 1fr;gap:16px}
+.d13-num{width:56px;height:56px;font-size:24px}
+.d13-cap{font-size:11.5px;bottom:14px}
+.d13-btn{min-height:52px;padding:0 22px}
+.d13-close{padding-top:72px}
+}
+</style>
+</helmet>
+<div class="d13">
+
+  <!-- POSTER 1 · HERO · sun wall -->
+  <section class="d13-wall d13-hero" aria-label="Saltline Wash and Window Co., Sarasota">
+    <span class="d13-cf d13-dots" style="left:0;top:0;width:50px;height:50px;background-color:var(--pink);" aria-hidden="true"></span>
+    <span class="d13-cf" style="left:50px;top:50px;width:50px;height:50px;background:var(--green);" aria-hidden="true"></span>
+    <span class="d13-cf d13-dots" style="right:0;bottom:0;width:150px;height:100px;background-color:var(--sky);" aria-hidden="true"></span>
+    <span class="d13-cf" style="right:150px;bottom:0;width:100px;height:50px;background:var(--pink);" aria-hidden="true"></span>
+    <div class="d13-in">
+      <nav class="d13-nav" aria-label="Main">
+        <a class="d13-logo" href="/">
+          <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect x="0" y="17" width="34" height="17" fill="#2947E0"></rect><path d="M1 17a16 16 0 0 1 32 0z" fill="#FF7F8F"></path><rect x="0" y="0" width="34" height="34" rx="0" fill="none"></rect></svg>
+          <span>saltline</span>
+        </a>
+        <div class="d13-links">
+          <a href="#d13-services">Services</a>
+          <a href="#d13-prices">Window cleaning</a>
+          <a href="#d13-areas">Towns</a>
+          <a href="#d13-faq">Questions</a>
+        </div>
+        <div class="d13-navr">
+          <a class="d13-navtel" href="tel:+19415550153">(941) 555-0153</a>
+          <a class="d13-btn d13-btn-ink d13-navcta" href="/quote">Get My Price</a>
+        </div>
+      </nav>
+
+      <div class="d13-herogrid">
+        <div>
+          <p class="d13-kick" style="margin:0;">Saltline Wash &amp; Window Co. · Sarasota, FL</p>
+          <h1 class="d13-h1">Pressure washing &amp; window cleaning in Sarasota.</h1>
+          <p class="d13-lede">Driveways, roofs, lanais and pool cages washed at the right pressure for each surface. Gulf salt film taken off your glass by hand. A written price before we unroll a hose.</p>
+          <div class="d13-ctas">
+            <a class="d13-btn d13-btn-ink" href="/quote">Get My Price
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="#FFD83D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </a>
+            <a class="d13-btn d13-btn-line" href="tel:+19415550153">Call (941) 555-0153</a>
+          </div>
+          <p class="d13-proof">
+            <span class="d13-stars" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.2l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z" fill="#14172B"></path></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.2l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z" fill="#14172B"></path></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.2l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z" fill="#14172B"></path></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.2l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z" fill="#14172B"></path></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.2l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z" fill="#14172B"></path></svg>
+            </span>
+            <span>[RATING] from [COUNT] Google reviews</span>
+            <span class="d13-mono" style="font-size:13px;font-weight:400;">Newest review [DAYS] days ago</span>
+          </p>
+        </div>
+
+        <div class="d13-photo">
+          <span class="d13-cf" style="left:-50px;top:-50px;width:150px;height:150px;background:var(--ultra);border-radius:0 0 150px 0;" aria-hidden="true"></span>
+          <span class="d13-cf" style="right:-34px;top:38%;width:92px;height:92px;border-radius:50%;background:var(--coral);z-index:2;" aria-hidden="true"></span>
+          <span class="d13-cf d13-dots" style="left:-50px;bottom:-50px;width:200px;height:100px;background-color:var(--green);" aria-hidden="true"></span>
+          <div style="position:relative;z-index:1;border-radius:44px;overflow:hidden;">
+            <img src="img/wash/09.jpg" alt="Technician in a hi-vis vest running a yellow rotary surface cleaner on a palm-lined sidewalk" width="1000" height="1499" style="aspect-ratio:4/5.4;height:auto;object-fit:cover;object-position:50% 60%;">
+            <span class="d13-cap">Rotary surface cleaner. No zebra stripes.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSTER 2 · SERVICES · ultramarine wall -->
+  <section class="d13-wall d13-svc" id="d13-services" aria-label="Services and prices">
+    <span class="d13-cf" style="right:0;top:0;width:100px;height:100px;background:var(--sun);border-radius:0 0 0 100px;" aria-hidden="true"></span>
+    <div class="d13-in">
+      <div class="d13-svcgrid">
+        <div>
+          <p class="d13-kick" style="margin:0 0 18px;color:#E3E8FF;">Services · prices in writing</p>
+          <h2 class="d13-h2">Seven jobs. One crew. Prices you see first.</h2>
+          <p style="margin:24px 0 0;max-width:470px;font-size:18px;">Every service has its own page with photos, what's included and the price range. Tap one. If your job isn't on the list, call and describe it; most quotes take under 5 minutes on the phone.</p>
+          <div class="d13-photo" style="margin-top:44px;">
+            <div style="border-radius:40px;overflow:hidden;">
+              <img src="img/wash/05.jpg" alt="Crew member in hi-vis gear pressure washing a brick sidewalk behind safety tape" width="1600" height="1066" loading="lazy" style="aspect-ratio:3/2;height:auto;">
+              <span class="d13-cap">Taped off. Plants rinsed first.</span>
+            </div>
+          </div>
+        </div>
+
+        <ul class="d13-stack" aria-label="Services">
+          <li class="d13-grp" aria-hidden="true">Pressure &amp; soft washing</li>
+          <li><a class="d13-pill" href="/driveway-cleaning">
+            <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" fill="#FFD83D"></rect><rect x="0" y="22" width="44" height="22" fill="#14172B"></rect></svg>
+            <span><b>Driveway &amp; paver cleaning</b><span class="d13-slug">/driveway-cleaning</span></span>
+            <span class="d13-price">$[LOW]–$[HIGH]<small>2-car drive</small></span>
+            <svg class="d13-arr" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="#14172B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </a></li>
+          <li><a class="d13-pill" href="/house-washing">
+            <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><path d="M0 44V22L22 0l22 22v22z" fill="#FF7F8F"></path></svg>
+            <span><b>House soft washing</b><span class="d13-slug">/house-washing</span></span>
+            <span class="d13-price">from $[PRICE]<small>1-story home</small></span>
+            <svg class="d13-arr" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="#14172B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </a></li>
+          <li><a class="d13-pill" href="/roof-cleaning">
+            <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><path d="M0 44A44 44 0 0 1 44 0v44z" fill="#2947E0"></path></svg>
+            <span><b>Roof soft washing</b><span class="d13-slug">/roof-cleaning</span></span>
+            <span class="d13-price">from $[PRICE]<small>shingle or tile</small></span>
+            <svg class="d13-arr" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="#14172B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </a></li>
+          <li><a class="d13-pill" href="/pool-cage-cleaning">
+            <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="22" fill="#23B96F"></circle><circle cx="22" cy="22" r="9" fill="#FFFFFF"></circle></svg>
+            <span><b>Lanai &amp; pool cage cleaning</b><span class="d13-slug">/pool-cage-cleaning</span></span>
+            <span class="d13-price">$[LOW]–$[HIGH]<small>by cage size</small></span>
+            <svg class="d13-arr" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="#14172B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </a></li>
+          <li><a class="d13-pill" href="/paver-sealing">
+            <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="20" height="20" fill="#14172B"></rect><rect x="24" width="20" height="20" fill="#FFD83D"></rect><rect y="24" width="20" height="20" fill="#FFD83D"></rect><rect x="24" y="24" width="20" height="20" fill="#14172B"></rect></svg>
+            <span><b>Paver sealing</b><span class="d13-slug">/paver-sealing</span></span>
+            <span class="d13-price">$[LOW]–$[HIGH]<small>per 100 sq ft</small></span>
+            <svg class="d13-arr" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="#14172B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </a></li>
+          <li class="d13-grp" aria-hidden="true">Glass</li>
+          <li><a class="d13-pill" href="/window-cleaning">
+            <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" fill="#38C6F4"></rect><rect x="20" width="4" height="44" fill="#FFFFFF"></rect><rect y="20" width="44" height="4" fill="#FFFFFF"></rect></svg>
+            <span><b>Window cleaning, inside &amp; out</b><span class="d13-slug">/window-cleaning</span></span>
+            <span class="d13-price">from $[PRICE]<small>per window</small></span>
+            <svg class="d13-arr" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="#14172B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </a></li>
+          <li><a class="d13-pill" href="/hard-water-stain-removal">
+            <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><path d="M22 0C22 0 6 18 6 28a16 16 0 0 0 32 0C38 18 22 0 22 0z" fill="#FFB3D6"></path></svg>
+            <span><b>Hard-water spot removal</b><span class="d13-slug">/hard-water-stain-removal</span></span>
+            <span class="d13-price">from $[PRICE]<small>per pane</small></span>
+            <svg class="d13-arr" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="#14172B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSTER 3 · GLASS · concrete wall with confetti -->
+  <section class="d13-wall d13-glass" id="d13-prices" aria-label="Window cleaning">
+    <div class="d13-in">
+      <svg class="d13-giant" viewBox="0 0 1120 400" role="img" aria-label="Glass">
+        <defs>
+          <pattern id="d13dot" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.3" fill="#14172B" fill-opacity="0.32"></circle></pattern>
+          <clipPath id="d13c1"><rect x="200" y="150" width="400" height="100"></rect></clipPath>
+          <clipPath id="d13c2"><rect x="550" y="250" width="250" height="100"></rect></clipPath>
+          <clipPath id="d13c3"><rect x="0" y="0" width="250" height="150"></rect></clipPath>
+        </defs>
+        <rect x="0" y="0" width="250" height="150" fill="#23B96F"></rect>
+        <rect x="0" y="0" width="250" height="150" fill="url(#d13dot)"></rect>
+        <rect x="200" y="150" width="400" height="100" fill="#FFB3D6"></rect>
+        <rect x="200" y="150" width="400" height="100" fill="url(#d13dot)"></rect>
+        <rect x="550" y="250" width="250" height="100" fill="#38C6F4"></rect>
+        <rect x="900" y="50" width="200" height="200" fill="#2947E0"></rect>
+        <rect x="900" y="250" width="100" height="100" fill="#FFD83D"></rect>
+        <rect x="900" y="250" width="100" height="100" fill="url(#d13dot)"></rect>
+        <rect x="1000" y="350" width="100" height="50" fill="#FF7F8F"></rect>
+        <text x="-6" y="338" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="800" font-size="318" letter-spacing="3" fill="#14172B">Glass.</text>
+        <g clip-path="url(#d13c3)"><text x="-6" y="338" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="800" font-size="318" letter-spacing="3" fill="#0B5A35">Glass.</text></g>
+        <g clip-path="url(#d13c1)"><text x="-6" y="338" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="800" font-size="318" letter-spacing="3" fill="#D1124F">Glass.</text></g>
+        <g clip-path="url(#d13c2)"><text x="-6" y="338" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="800" font-size="318" letter-spacing="3" fill="#1530B0">Glass.</text></g>
+      </svg>
+
+      <div class="d13-glassgrid">
+        <div>
+          <h2 class="d13-h2" style="font-size:clamp(32px,3.6vw,44px);letter-spacing:-0.03em;">Window cleaning that holds up to Gulf salt air.</h2>
+          <p style="margin:20px 0 0;font-size:18px;max-width:500px;">Salt film and sprinkler spots build up fast on west-facing glass. We hand-wash every pane inside and out, wipe the frames and sills, and <span class="d13-mark">clean screens and tracks at no extra charge</span>. Most homes take 2 to 4 hours.</p>
+          <a class="d13-btn d13-btn-ink" href="/quote" style="margin-top:28px;">Get My Price
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="#FFD83D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </a>
+        </div>
+        <div class="d13-card">
+          <p class="d13-kick" style="margin:0 0 16px;color:var(--mute);">Glass price guide</p>
+          <ul>
+            <li><span>Standard window, in &amp; out</span><b>from $[PRICE]</b></li>
+            <li><span>Exterior only</span><b>from $[PRICE]</b></li>
+            <li><span>Sliding glass door</span><b>$[LOW]–$[HIGH]</b></li>
+            <li><span>Hard-water spot removal</span><b>from $[PRICE]</b></li>
+            <li><span>Screens &amp; tracks</span><b>included</b></li>
+          </ul>
+          <p class="d13-mono" style="margin:16px 0 0;font-size:12.5px;font-weight:400;color:var(--mute);">Exact number in writing after a photo or a 10-minute look.</p>
+        </div>
+        <div class="d13-arch">
+          <img src="img/wash/04.jpg" alt="Storefront glass and sidewalk being cleaned with a rotary surface cleaner under palm trees" width="1000" height="1617" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSTER 4 · PROOF · mangrove wall -->
+  <section class="d13-wall d13-rev" aria-label="Google reviews">
+    <span class="d13-cf d13-revdeco" style="right:-120px;top:-120px;width:340px;height:340px;border-radius:50%;border:2px solid var(--pink);" aria-hidden="true"></span>
+    <span class="d13-cf d13-revdeco" style="right:60px;top:60px;width:100px;height:100px;border-radius:50%;background:var(--pink);" aria-hidden="true"></span>
+    <div class="d13-in">
+      <p class="d13-kick" style="margin:0 0 20px;color:var(--pink);">Google rating · Saltline Wash &amp; Window Co.</p>
+      <p class="d13-big">[RATING]</p>
+      <h2 class="d13-h2" style="margin-top:22px;color:var(--paper);font-size:clamp(28px,3.4vw,42px);max-width:760px;">From [COUNT] Google reviews across Sarasota County.</h2>
+      <p class="d13-mono" style="margin:14px 0 0;font-size:14px;font-weight:400;color:#D9E7DF;">Newest review [DAYS] days ago · pulled from Google at build time</p>
+      <div class="d13-revgrid">
+        <figure class="d13-sticker d13-tilt1">
+          <blockquote>[Google review, pulled at build time]</blockquote>
+          <figcaption>[Reviewer], [Town] · Google</figcaption>
+        </figure>
+        <figure class="d13-sticker d13-tilt2" style="background:var(--pink);color:var(--ink);">
+          <blockquote>[Google review, pulled at build time]</blockquote>
+          <figcaption style="color:var(--ink);">[Reviewer], [Town] · Google</figcaption>
+        </figure>
+      </div>
+      <a class="d13-btn d13-btn-sun" href="/reviews" style="margin-top:64px;">Read All Reviews</a>
+    </div>
+  </section>
+
+  <!-- POSTER 5 · HOW A WASH GOES · coral wall -->
+  <section class="d13-wall d13-steps" aria-label="How a wash goes">
+    <div class="d13-in">
+      <div class="d13-stepgrid">
+        <div style="position:relative;">
+          <span class="d13-cf" style="left:-24px;bottom:-24px;width:46%;aspect-ratio:1/1;background:var(--sun);" aria-hidden="true"></span>
+          <div class="d13-circle" style="position:relative;">
+            <img src="img/wash/08.jpg" alt="Worker in orange boots washing marble steps beside a steel handrail" width="1600" height="1067" loading="lazy" style="object-position:62% 50%;">
+          </div>
+        </div>
+        <div>
+          <p class="d13-kick" style="margin:0 0 18px;">From first call to final walk</p>
+          <h2 class="d13-h2">How a wash goes.</h2>
+          <ol class="d13-ol">
+            <li>
+              <span class="d13-num" style="background:var(--ink);border-radius:50%;">1</span>
+              <div><h3>Send a photo, get a price</h3><p>Text a photo to (941) 555-0153 or we stop by. You get a written price within 1 business day. No deposit.</p></div>
+            </li>
+            <li>
+              <span class="d13-num" style="background:var(--ultra);">2</span>
+              <div><h3>Right pressure for each surface</h3><p>Concrete gets the surface cleaner. Roofs, stucco and screens get a soft wash under 500 PSI. Plants are rinsed before and after.</p></div>
+            </li>
+            <li>
+              <span class="d13-num" style="background:var(--mangrove);clip-path:polygon(50% 0,100% 100%,0 100%);padding-top:22px;">3</span>
+              <div><h3>Walk it before we leave</h3><p>We check every area with you. If we missed a spot, it gets redone that day. Crew trained in [CERTIFICATION].</p></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSTER 6 · TOWNS · sun wall with Bauhaus map -->
+  <section class="d13-wall d13-towns" id="d13-areas" aria-label="Towns served">
+    <div class="d13-in">
+      <div class="d13-townhead">
+        <div>
+          <p class="d13-kick" style="margin:0 0 18px;">Service area · Sarasota &amp; Manatee</p>
+          <h2 class="d13-h2">Nine towns, Bradenton to North Port.</h2>
+        </div>
+        <p style="margin:0;font-size:18px;max-width:460px;">Each town has its own page with recent jobs and local prices. Barrier-island homes get a salt-glass rinse added at no charge.</p>
+      </div>
+      <div class="d13-towngrid">
+        <div class="d13-map">
+          <svg viewBox="0 0 560 620" role="img" aria-label="Map of the nine towns Saltline serves, from Bradenton south to North Port">
+            <rect width="560" height="620" fill="#FFFFFF"></rect>
+            <rect x="0" y="0" width="170" height="620" fill="#2947E0"></rect>
+            <path d="M170 0h70v120h-30v130h-20v150h-20z" fill="#38C6F4"></path>
+            <rect x="182" y="96" width="14" height="110" fill="#FFD83D"></rect>
+            <rect x="172" y="222" width="14" height="38" fill="#FFD83D"></rect>
+            <rect x="168" y="290" width="14" height="120" fill="#FFD83D"></rect>
+            <rect x="156" y="430" width="12" height="80" fill="#FFD83D"></rect>
+            <path d="M560 470A150 150 0 0 0 410 620H560z" fill="#23B96F"></path>
+            <circle cx="300" cy="66" r="15" fill="#14172B"></circle>
+            <circle cx="189" cy="146" r="9" fill="#14172B"></circle>
+            <circle cx="290" cy="236" r="26" fill="#FF7F8F"></circle>
+            <circle cx="420" cy="170" r="15" fill="#14172B"></circle>
+            <circle cx="179" cy="336" r="9" fill="#14172B"></circle>
+            <circle cx="248" cy="372" r="12" fill="#14172B"></circle>
+            <circle cx="230" cy="452" r="12" fill="#14172B"></circle>
+            <circle cx="232" cy="522" r="15" fill="#14172B"></circle>
+            <circle cx="400" cy="572" r="15" fill="#14172B"></circle>
+            <g font-family="Inter, Helvetica, Arial, sans-serif" font-weight="700" font-size="17" fill="#14172B" letter-spacing="-0.3">
+              <text x="324" y="72">Bradenton</text>
+              <text x="210" y="150">Longboat Key</text>
+              <text x="326" y="243" font-size="22" font-weight="800">Sarasota</text>
+              <text x="444" y="176">Lakewood</text><text x="444" y="196">Ranch</text>
+              <text x="196" y="324">Siesta Key</text>
+              <text x="270" y="378">Osprey</text>
+              <text x="252" y="458">Nokomis</text>
+              <text x="256" y="528">Venice</text>
+              <text x="424" y="578" fill="#14172B">North Port</text>
+            </g>
+            <g font-family="IBM Plex Mono, monospace" font-size="12" fill="#FFFFFF" letter-spacing="1.5">
+              <text x="22" y="596">GULF OF MEXICO</text>
+            </g>
+          </svg>
+        </div>
+        <div>
+          <ul class="d13-tlist">
+            <li><a href="/areas/sarasota">Sarasota <span>/areas/sarasota</span></a></li>
+            <li><a href="/areas/siesta-key">Siesta Key <span>/areas/siesta-key</span></a></li>
+            <li><a href="/areas/longboat-key">Longboat Key <span>/areas/longboat-key</span></a></li>
+            <li><a href="/areas/lakewood-ranch">Lakewood Ranch <span>/areas/lakewood-ranch</span></a></li>
+            <li><a href="/areas/bradenton">Bradenton <span>/areas/bradenton</span></a></li>
+            <li><a href="/areas/osprey">Osprey <span>/areas/osprey</span></a></li>
+            <li><a href="/areas/nokomis">Nokomis <span>/areas/nokomis</span></a></li>
+            <li><a href="/areas/venice">Venice <span>/areas/venice</span></a></li>
+            <li><a href="/areas/north-port">North Port <span>/areas/north-port</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSTER 7 · FAQ · tide wall -->
+  <section class="d13-wall d13-faq" id="d13-faq" aria-label="Questions">
+    <span class="d13-cf d13-revdeco" style="left:0;top:0;width:100px;height:100px;background:var(--sun);border-radius:0 0 100px 0;" aria-hidden="true"></span>
+    <span class="d13-cf" style="right:0;bottom:0;width:150px;height:150px;background:var(--ultra);" aria-hidden="true"></span>
+    <span class="d13-cf" style="right:150px;bottom:0;width:50px;height:50px;background:var(--pink);" aria-hidden="true"></span>
+    <div class="d13-in">
+      <p class="d13-kick" style="margin:0 0 18px;text-align:center;color:var(--pink);">Asked at the door, answered here</p>
+      <h2 class="d13-h2">Questions Sarasota asks us.</h2>
+      <div class="d13-qs">
+        <div class="d13-q">
+          <h3>How much does it cost to pressure wash a driveway in Sarasota?</h3>
+          <p>A standard 2-car driveway runs $[LOW]–$[HIGH]. Pavers that need re-sanding or sealing are priced on their own, from $[PRICE] per 100 sq ft. You get the number in writing before we start.</p>
+        </div>
+        <div class="d13-q">
+          <h3>Is pressure washing safe for a shingle or tile roof?</h3>
+          <p>High pressure isn't. Roofs get a soft wash: low pressure under 500 PSI and a cleaning solution that kills the black algae streaks at the root, so they stay off longer. Shingle makers warn against high-pressure washing for this reason.</p>
+        </div>
+        <div class="d13-q">
+          <h3>How often should I clean windows near the beach?</h3>
+          <p>Gulf-facing glass on Siesta Key and Longboat Key collects salt film fast, so most owners book every 3 months. Inland homes in Lakewood Ranch and North Port usually book twice a year.</p>
+        </div>
+        <div class="d13-q">
+          <h3>Do I need to be home during a pressure washing visit?</h3>
+          <p>Not for outdoor work, as long as the gate is open and we can reach a spigot. Yes for inside windows. We text when we're 30 minutes out and again when we finish.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSTER 8 · CALL · sun wall -->
+  <footer class="d13-wall d13-close" aria-label="Contact Saltline Wash and Window Co.">
+    <span class="d13-cf" style="right:0;top:0;width:200px;height:100px;background:var(--ultra);border-radius:0 0 0 100px;" aria-hidden="true"></span>
+    <span class="d13-cf d13-dots" style="right:200px;top:0;width:50px;height:50px;background-color:var(--coral);" aria-hidden="true"></span>
+    <div class="d13-in">
+      <p class="d13-kick" style="margin:0 0 22px;">Call or text · [HOURS]</p>
+      <a class="d13-tel" href="tel:+19415550153">(941) 555-0153</a>
+      <div class="d13-ctas" style="margin-top:36px;">
+        <a class="d13-btn d13-btn-ink" href="/quote">Get My Price
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="#FFD83D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </a>
+      </div>
+      <div class="d13-nap">
+        <div>
+          <h3>Business</h3>
+          <p><b>Saltline Wash &amp; Window Co.</b><br>Service-area business, Sarasota, FL<br><a href="tel:+19415550153" style="font-weight:700;">(941) 555-0153</a></p>
+        </div>
+        <div>
+          <h3>Hours &amp; license</h3>
+          <p>[HOURS]<br>License [LICENSE NO.]<br>Insured · owner [OWNER NAME]</p>
+        </div>
+        <div>
+          <h3>Since</h3>
+          <p>Washing Sarasota for [YEARS] years.<br>[RATING] from [COUNT] Google reviews.</p>
+        </div>
+      </div>
+      <nav class="d13-foot" aria-label="Footer">
+        <a href="/driveway-cleaning">Driveways</a>
+        <a href="/house-washing">House washing</a>
+        <a href="/roof-cleaning">Roofs</a>
+        <a href="/pool-cage-cleaning">Pool cages</a>
+        <a href="/paver-sealing">Paver sealing</a>
+        <a href="/window-cleaning">Windows</a>
+        <a href="/hard-water-stain-removal">Hard-water spots</a>
+        <a href="/privacy">Privacy</a>
+      </nav>
+      <p class="d13-credit">Avenue Vision · D13 · Poster Stack · style refs withheld</p>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":7300}}'>class Component extends DCLogic { renderVals() { return {}; } }</script>
+</body>
+</html>

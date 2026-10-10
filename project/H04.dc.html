@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Red Mesa Air &amp; Electric home page</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=IBM+Plex+Sans+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.h04{width:100%;background:#F3EFE4;color:#1E2A32;font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.h04 *{box-sizing:border-box}
+.h04 a{color:#2D4F7C;text-underline-offset:4px}
+.h04 :focus-visible{outline:3px solid #2D4F7C;outline-offset:3px}
+:where(.h04) h1,:where(.h04) h2,:where(.h04) h3,:where(.h04) p,:where(.h04) ul,:where(.h04) ol,:where(.h04) figure{margin:0;padding:0}
+.h04 ul,.h04 ol{list-style:none}
+.h04 img{display:block;max-width:100%;height:auto}
+.h04 svg{flex:none}
+.h04-in{max-width:1200px;margin:0 auto;padding:0 40px}
+.h04 h1{font-family:'IBM Plex Sans Condensed',sans-serif;font-weight:700;font-size:68px;line-height:.98;letter-spacing:-.01em}
+.h04 h2{font-family:'IBM Plex Sans Condensed',sans-serif;font-weight:700;font-size:46px;line-height:1.02;letter-spacing:-.005em}
+.h04 h3{font-family:'IBM Plex Sans Condensed',sans-serif;font-weight:700;font-size:28px;line-height:1.1}
+.h04-mono{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:13px;line-height:1.4;letter-spacing:.06em;text-transform:uppercase;font-weight:500}
+.h04 .h04-kicker{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:13px;line-height:1.4;letter-spacing:.06em;text-transform:uppercase;font-weight:500;color:#2D4F7C}
+.h04-sec{padding:64px 0}
+.h04-head{padding-bottom:18px;margin-bottom:36px;border-bottom:2px solid #1E2A32}
+.h04-head-g{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px}
+.h04-head-g h2{margin-top:12px}
+.h04-note{max-width:440px;font-size:16px}
+.h04 .h04-btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;background:#B23A2E;color:#FFFFFF;font-family:'IBM Plex Sans',sans-serif;font-weight:500;font-size:17px;line-height:1.2;text-decoration:none;border:2px solid #B23A2E;border-radius:2px;cursor:pointer}
+.h04 .h04-btn:hover{background:#912E24;border-color:#912E24;color:#FFFFFF}
+.h04 .h04-btn-full{width:100%}
+.h04 .h04-btn-sm{min-height:44px;padding:0 18px;font-size:16px}
+.h04 .h04-more{color:#2D4F7C;font-weight:500;min-height:44px;display:inline-flex;align-items:center}
+
+/* promo bar */
+.h04-promo{background:#1E2A32;color:#F3EFE4;font-size:15px}
+.h04-promo-g{display:flex;justify-content:space-between;align-items:center;gap:12px 24px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
+.h04 .h04-promo a{color:#F3EFE4;font-weight:500;min-height:44px;display:inline-flex;align-items:center;white-space:nowrap}
+
+/* header */
+.h04-hdr{background:#F3EFE4;border-bottom:2px solid #1E2A32}
+.h04-hdr-g{display:flex;align-items:center;justify-content:space-between;gap:16px 24px;flex-wrap:wrap;min-height:88px;padding-top:12px;padding-bottom:12px}
+.h04 .h04-brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#1E2A32}
+.h04-brand b{display:block;font-family:'IBM Plex Sans Condensed',sans-serif;font-weight:700;font-size:24px;line-height:1}
+.h04-brand small{display:block;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-top:4px;color:#2D4F7C}
+.h04-nav{display:flex;gap:6px 22px;flex-wrap:wrap}
+.h04 .h04-nav a{color:#1E2A32;text-decoration:none;font-weight:500;font-size:16px;min-height:44px;display:inline-flex;align-items:center;border-bottom:2px solid transparent}
+.h04 .h04-nav a:hover{border-bottom-color:#2D4F7C}
+.h04-hdr-cta{display:flex;align-items:center;gap:18px}
+.h04 .h04-tel{color:#1E2A32;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:16px;text-decoration:none;white-space:nowrap;min-height:44px;display:inline-flex;align-items:center}
+
+/* hero */
+.h04-hero{padding:56px 0 72px}
+.h04-hero-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:56px;align-items:center}
+.h04-hero-copy h1{margin-top:18px}
+.h04-lede{font-size:19px;max-width:520px;margin-top:24px}
+.h04-proof{display:flex;align-items:center;gap:8px 14px;flex-wrap:wrap;margin-top:28px}
+.h04-proof b{font-weight:500}
+.h04-stars{display:inline-flex;gap:2px;align-items:center}
+.h04-line{margin-top:12px;font-size:16px}
+
+/* job ticket (the one booking form) */
+.h04 .h04-ticket{background:#FBF9F3;border:2px solid #1E2A32;padding:24px 24px 22px;box-shadow:8px 8px 0 #1E2A32}
+.h04-ticket-top{display:flex;justify-content:space-between;gap:12px;border-bottom:2px dashed #1E2A32;padding-bottom:12px;margin-bottom:16px}
+.h04 .h04-ticket-h{font-size:30px;margin-bottom:16px}
+.h04 .h04-step{border:0;padding:0;margin:0 0 16px;min-width:0}
+.h04-pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:0 12px}
+.h04 .h04-step legend{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:500;padding:0;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.h04-num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:#1E2A32;color:#F3EFE4;border-radius:50%;font-family:'IBM Plex Mono',monospace;font-size:13px;flex:none}
+.h04 .h04-ticket label{display:block;font-size:15px;font-weight:500;margin:0 0 6px}
+.h04 .h04-ticket input,.h04 .h04-ticket select{display:block;width:100%;min-height:48px;padding:10px 12px;border:2px solid #1E2A32;background:#FFFFFF;color:#1E2A32;font:inherit;font-size:16px;border-radius:0;margin:0 0 10px}
+.h04 .h04-ticket input:focus-visible,.h04 .h04-ticket select:focus-visible{outline:3px solid #2D4F7C;outline-offset:2px}
+.h04-fine{font-size:14px;margin-top:12px;text-align:center}
+
+/* trust row */
+.h04-trust{background:#E8E1CF;border-top:2px solid #1E2A32;border-bottom:2px solid #1E2A32}
+.h04-trust-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:0}
+.h04-trust-g li{display:flex;gap:14px;align-items:flex-start;padding:18px 20px;border-right:1px solid #1E2A32}
+.h04-trust-g li:first-child{padding-left:0}
+.h04-trust-g li:last-child{border-right:0}
+.h04-trust-g b{display:block;font-weight:500;font-size:17px;line-height:1.3}
+.h04-trust-g span{display:block;font-size:15px;line-height:1.45;margin-top:4px}
+
+/* field guide */
+.h04-trades-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:24px}
+.h04-entry{background:#FBF9F3;border:2px solid #1E2A32;display:flex;flex-direction:column}
+.h04-entry-img{position:relative;border-bottom:2px solid #1E2A32}
+.h04-entry-img img{width:100%;height:auto;aspect-ratio:4 / 3;object-fit:cover}
+.h04-entry-no{position:absolute;left:0;top:0;background:#1E2A32;color:#F3EFE4;font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:500;padding:6px 10px}
+.h04-entry-body{padding:20px 20px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.h04 .h04-slug{font-family:'IBM Plex Mono',monospace;font-size:13px;color:#2D4F7C;overflow-wrap:anywhere}
+.h04-fix{font-size:15px;line-height:1.5;border-top:1px dashed #1E2A32;padding-top:10px}
+.h04-fix b{font-weight:500}
+.h04-entry-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-top:12px}
+.h04-price{font-family:'IBM Plex Sans Condensed',sans-serif;font-weight:700;font-size:30px;line-height:1}
+
+/* specials: rubber-stamp coupon */
+.h04-coupon{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:40px;align-items:center;background:#FBF9F3;border:2px dashed #1E2A32;padding:36px}
+.h04-stamp{justify-self:center;border:6px double #B23A2E;color:#B23A2E;padding:20px 30px 18px;transform:rotate(-7deg);text-align:center;font-family:'IBM Plex Sans Condensed',sans-serif;font-weight:700;text-transform:uppercase;line-height:.95;background:#FBF9F3}
+.h04-stamp-big{display:block;font-size:92px;letter-spacing:.01em}
+.h04-stamp-small{display:block;font-size:38px;letter-spacing:.12em;margin-top:6px}
+.h04-coupon-copy{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.h04-coupon-copy h3{font-size:34px}
+.h04 .h04-qual{font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:1.5;border:1px solid #1E2A32;padding:8px 10px}
+
+/* membership band */
+.h04 .h04-plan{background:#2D4F7C;color:#F3EFE4}
+.h04-plan-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));gap:48px;align-items:center}
+.h04 .h04-plan .h04-kicker{color:#F3EFE4}
+.h04 .h04-plan h2{margin-top:12px}
+.h04 .h04-plan a{color:#F3EFE4;font-weight:500;min-height:44px;display:inline-flex;align-items:center}
+.h04-plan-price{display:flex;align-items:baseline;gap:8px;margin-top:26px}
+.h04-price-big{font-family:'IBM Plex Sans Condensed',sans-serif;font-weight:700;font-size:86px;line-height:1}
+.h04-per{font-family:'IBM Plex Mono',monospace;font-size:16px;text-transform:uppercase;letter-spacing:.06em}
+.h04-plan-copy{margin-top:14px;max-width:460px}
+.h04-benefits{background:#FBF9F3;color:#1E2A32;border:2px solid #1E2A32}
+.h04-benefits-h{padding:16px 22px;border-bottom:2px solid #1E2A32;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:500;color:#2D4F7C}
+.h04-benefits li{display:flex;gap:16px;align-items:center;padding:18px 22px;border-bottom:1px dashed #1E2A32}
+.h04-benefits li:last-child{border-bottom:0}
+.h04-benefits li span{font-size:17px;line-height:1.4}
+
+/* reviews */
+.h04-rating{display:flex;flex-direction:column;gap:8px;align-items:flex-start;font-size:16px}
+.h04-rating b{font-weight:500;font-size:18px}
+.h04-rev-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:24px}
+.h04-rev{background:#FBF9F3;border:2px solid #1E2A32;padding:24px;display:flex;flex-direction:column;gap:14px}
+.h04-rev-q{font-size:17px;line-height:1.5;font-family:'IBM Plex Mono',monospace;font-size:14px;background:#F3EFE4;padding:12px;border-left:4px solid #1E2A32}
+.h04-rev figcaption{font-size:15px;color:#1E2A32}
+
+/* service area */
+.h04-area-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:48px;align-items:start}
+.h04-area-g h2{margin-top:12px}
+.h04-lead{margin-top:16px;max-width:520px}
+.h04-sheet{border-top:2px solid #1E2A32;margin-top:28px}
+.h04-sheet li{border-bottom:1px solid #1E2A32}
+.h04 .h04-sheet a{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:46px;padding:8px 4px;color:#1E2A32;text-decoration:none;font-weight:500;font-size:19px}
+.h04 .h04-sheet a:hover{background:#E8E1CF}
+.h04 .h04-sheet span{font-family:'IBM Plex Mono',monospace;font-size:13px;color:#2D4F7C;text-align:right}
+.h04-zip{background:#FBF9F3;border:2px solid #1E2A32;padding:28px}
+.h04-zip h3{font-size:30px}
+.h04-zip p{margin-top:8px}
+.h04-zip-row{display:flex;gap:12px;flex-wrap:wrap;align-items:stretch;margin-top:12px}
+.h04 .h04-zip label{display:block;font-size:15px;font-weight:500;margin-top:18px}
+.h04 .h04-zip input{flex:1 1 180px;min-width:0;min-height:52px;padding:10px 12px;border:2px solid #1E2A32;background:#FFFFFF;color:#1E2A32;font:inherit;font-size:17px;border-radius:0}
+.h04 .h04-zip .h04-btn{flex:0 0 auto}
+.h04-zip-fine{font-size:14px;margin-top:12px}
+
+/* faq */
+.h04-faq-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:24px}
+.h04-q{background:#FBF9F3;border:2px solid #1E2A32;padding:26px 28px;display:flex;flex-direction:column;gap:10px}
+.h04-q h3{font-size:26px}
+.h04-q p:last-child{font-size:16px;line-height:1.6}
+
+/* visit steps */
+.h04-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:28px}
+.h04-step3{border-top:6px solid #1E2A32;padding-top:22px;display:flex;flex-direction:column;gap:10px}
+.h04-step3-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.h04-step3 h3{margin-top:6px}
+
+/* footer */
+.h04-foot{background:#1E2A32;color:#F3EFE4;padding:56px 0 24px}
+.h04 .h04-foot .h04-kicker{color:#B9B4A6}
+.h04-foot-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:40px}
+.h04-foot-g h3{font-size:22px;color:#F3EFE4;margin-bottom:8px}
+.h04-foot-g p{font-size:16px;line-height:1.6}
+.h04 .h04-foot a{color:#F3EFE4}
+.h04-foot-tel{font-family:'IBM Plex Sans Condensed',sans-serif;font-weight:700;font-size:44px;line-height:1;margin-top:14px}
+.h04 .h04-foot .h04-foot-tel a{color:#F3EFE4;text-decoration:none}
+.h04-flinks{display:flex;flex-wrap:wrap;gap:4px 22px;margin-top:44px;padding-top:24px;border-top:1px solid #4F5B63}
+.h04 .h04-foot .h04-flinks a{min-height:44px;display:inline-flex;align-items:center;font-size:16px}
+.h04-legal{margin-top:20px;font-size:14px;color:#B9B4A6}
+.h04 .h04-foot .h04-legal a{color:#F3EFE4;font-size:14px}
+.h04-foot-line{margin-top:28px;padding-top:18px;border-top:1px solid #4F5B63;color:#B9B4A6;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.02em;line-height:1.5}
+
+@media (max-width:900px){
+ .h04-nav{display:none}
+ .h04 h1{font-size:56px}
+ .h04 h2{font-size:38px}
+ .h04-price-big{font-size:68px}
+}
+@media (max-width:600px){
+ .h04-in{padding:0 16px}
+ .h04 h1{font-size:44px}
+ .h04 h2{font-size:34px}
+ .h04-hero{padding:48px 0 64px}
+ .h04-sec{padding:60px 0}
+ .h04-hdr-cta{width:100%;justify-content:space-between}
+ .h04 .h04-ticket{padding:22px 18px;box-shadow:5px 5px 0 #1E2A32}
+ .h04-coupon{padding:24px 18px}
+ .h04-stamp-big{font-size:68px}
+ .h04-stamp-small{font-size:30px}
+ .h04-zip{padding:22px 18px}
+ .h04-q{padding:22px 18px}
+ .h04-trust-g li{padding:20px 6px}
+}
+</style>
+</helmet>
+<div class="h04">
+
+<div class="h04-promo" role="region" aria-label="Financing offer">
+ <div class="h04-in h04-promo-g">
+  <p>Financing on new systems through [LENDER]. Approved credit only. With qualifying system install. One per household. Expires 12/31/2026.</p>
+  <a href="#book">Apply for Financing</a>
+ </div>
+</div>
+
+<header class="h04-hdr">
+ <div class="h04-in h04-hdr-g">
+  <a class="h04-brand" href="#" aria-label="Red Mesa Air and Electric home">
+   <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="5" fill="#1E2A32"/><path d="M6 28L13 18L18 23L25 12L34 28Z" fill="#B23A2E"/><path d="M6 32H34" stroke="#F3EFE4" stroke-width="2"/></svg>
+   <span><b>Red Mesa</b><small>Air &amp; Electric</small></span>
+  </a>
+  <nav class="h04-nav" aria-label="Main">
+   <a href="#trades">Services</a>
+   <a href="#specials">Specials</a>
+   <a href="#plan">Membership</a>
+   <a href="#reviews">Reviews</a>
+   <a href="#areas">Areas</a>
+   <a href="#faq">FAQ</a>
+  </nav>
+  <div class="h04-hdr-cta">
+   <a class="h04-tel" href="tel:+16235550124">(623) 555-0124</a>
+   <a class="h04-btn h04-btn-sm" href="#book">Book Online</a>
+  </div>
+ </div>
+</header>
+
+<section class="h04-hero" aria-labelledby="h04-h1">
+ <div class="h04-in h04-hero-g">
+  <div class="h04-hero-copy">
+   <p class="h04-kicker">Peoria, AZ &#183; Local since [YEAR]</p>
+   <h1 id="h04-h1">Peoria Heating, Cooling, Plumbing &amp; Electrical</h1>
+   <p class="h04-lede">Repairs and tune-ups from one crew that writes the price on the ticket before any work starts, and explains the fix while it is done.</p>
+   <p class="h04-proof">
+    <span class="h04-stars" aria-hidden="true">
+     <svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg>
+    </span>
+    <b>[RATING] from [COUNT] Google reviews</b>
+   </p>
+   <p class="h04-line">Newest review [DAYS] days ago. Prefer the phone? <a href="tel:+16235550124">Call (623) 555-0124</a></p>
+  </div>
+
+  <form class="h04-ticket" id="book" action="#" method="post" aria-labelledby="book-h">
+   <div class="h04-ticket-top"><span class="h04-mono">Job ticket</span><span class="h04-mono">Peoria, AZ</span></div>
+   <h2 id="book-h" class="h04-ticket-h">Book a visit in three steps</h2>
+
+   <fieldset class="h04-step">
+    <legend><span class="h04-num">1</span>The job</legend>
+    <label for="h04-svc">Service type</label>
+    <select id="h04-svc" name="service">
+     <option>Heating repair</option>
+     <option>Cooling repair</option>
+     <option>Plumbing repair</option>
+     <option>Electrical repair</option>
+     <option>Tune-up or maintenance</option>
+     <option>Something else</option>
+    </select>
+   </fieldset>
+
+   <fieldset class="h04-step">
+    <legend><span class="h04-num">2</span>When</legend>
+    <div class="h04-pair">
+     <div>
+      <label for="h04-day">Preferred day</label>
+      <select id="h04-day" name="day">
+       <option>Today</option>
+       <option>Tomorrow</option>
+       <option>This week</option>
+       <option>Next week</option>
+      </select>
+     </div>
+     <div>
+      <label for="h04-win">Preferred window</label>
+      <select id="h04-win" name="window">
+       <option>Morning, 8 to 11 am</option>
+       <option>Midday, 11 to 2 pm</option>
+       <option>Afternoon, 2 to 5 pm</option>
+      </select>
+     </div>
+    </div>
+   </fieldset>
+
+   <fieldset class="h04-step">
+    <legend><span class="h04-num">3</span>You</legend>
+    <div class="h04-pair">
+     <div>
+      <label for="h04-name">Name</label>
+      <input id="h04-name" name="name" type="text" autocomplete="name">
+     </div>
+     <div>
+      <label for="h04-phone">Phone</label>
+      <input id="h04-phone" name="phone" type="tel" autocomplete="tel">
+     </div>
+    </div>
+    <label for="h04-addr">Service address</label>
+    <input id="h04-addr" name="address" type="text" autocomplete="street-address">
+   </fieldset>
+
+   <button class="h04-btn h04-btn-full" type="button">Book Online</button>
+   <p class="h04-fine">Booking is free. We text a confirmed window before we leave the shop.</p>
+  </form>
+ </div>
+</section>
+
+<section class="h04-trust" aria-label="Credentials and guarantees">
+ <div class="h04-in">
+  <ul class="h04-trust-g">
+   <li><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E2A32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 9.5-4-1.3-7-5-7-9.5V6z"/><path d="M9 12l2 2 4-4"/></svg><div><b>Licensed</b><span>Arizona contractor license [LICENSE NO.]</span></div></li>
+   <li><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E2A32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 18 0"/><path d="M12 12v6a2 2 0 0 1-4 0"/></svg><div><b>Insured</b><span>Liability and workers comp on every crew</span></div></li>
+   <li><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E2A32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg><div><b>[WARRANTY YEARS]-year labor warranty</b><span>In writing, on every repair we do</span></div></li>
+   <li><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E2A32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M9 13.5L7 21l5-2 5 2-2-7.5"/></svg><div><b>100% satisfaction guarantee</b><span>If the fix does not hold, we come back at no charge</span></div></li>
+   <li><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E2A32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><div><b>Since [YEAR]</b><span>[YEARS] years on Peoria homes and shops</span></div></li>
+  </ul>
+ </div>
+</section>
+
+<section id="trades" class="h04-sec" aria-labelledby="trades-h">
+ <div class="h04-in">
+  <div class="h04-head h04-head-g">
+   <div>
+    <p class="h04-kicker">Field guide &#183; Services</p>
+    <h2 id="trades-h">Heating, cooling, plumbing and electrical in Peoria</h2>
+   </div>
+   <p class="h04-note">Each trade has its own service page, with the slug shown below. The range is the normal span for that job. You get the exact number in writing first.</p>
+  </div>
+
+  <div class="h04-trades-g">
+   <article class="h04-entry">
+    <div class="h04-entry-img">
+     <img src="img/ac/01.jpg" alt="Copper lines and fan units on a rooftop heating and cooling system" width="1000" height="1500" loading="lazy" style="object-fit: cover; aspect-ratio: 3 / 2; width: 100%; height: auto;">
+     <span class="h04-entry-no">01</span>
+    </div>
+    <div class="h04-entry-body">
+     <h3>Heating</h3>
+     <a class="h04-slug" href="/furnace-repair-peoria">/furnace-repair-peoria</a>
+     <p>Furnace short-cycling, not lighting, or blowing cool air? We start with a safety check.</p>
+     <p class="h04-fix"><b>Common fix:</b> a dirty flame sensor or a worn igniter, cleaned and tested in one visit.</p>
+     <div class="h04-entry-foot"><span class="h04-price">$[LOW]&#8211;$[HIGH]</span><a class="h04-more" href="/furnace-repair-peoria">View Service</a></div>
+    </div>
+   </article>
+
+   <article class="h04-entry">
+    <div class="h04-entry-img">
+     <img src="img/ac/04.jpg" alt="A technician in a face mask standing in front of an outdoor condenser" width="1600" height="1067" loading="lazy" style="object-fit: cover; aspect-ratio: 3 / 2; width: 100%; height: auto;">
+     <span class="h04-entry-no">02</span>
+    </div>
+    <div class="h04-entry-body">
+     <h3>Cooling</h3>
+     <a class="h04-slug" href="/ac-repair-peoria">/ac-repair-peoria</a>
+     <p>Warm air from the vents, or a unit that runs and never gets cold? We find the cause before we touch a part.</p>
+     <p class="h04-fix"><b>Common fix:</b> a failed run capacitor or a clogged condensate drain, measured and cleared on site.</p>
+     <div class="h04-entry-foot"><span class="h04-price">$[LOW]&#8211;$[HIGH]</span><a class="h04-more" href="/ac-repair-peoria">View Service</a></div>
+    </div>
+   </article>
+
+   <article class="h04-entry">
+    <div class="h04-entry-img">
+     <img src="img/plumb/03.jpg" alt="A plumber's hands tightening a drain under a sink, lit by a blue work light" width="1600" height="1200" loading="lazy" style="object-fit: cover; aspect-ratio: 3 / 2; width: 100%; height: auto;">
+     <span class="h04-entry-no">03</span>
+    </div>
+    <div class="h04-entry-body">
+     <h3>Plumbing</h3>
+     <a class="h04-slug" href="/water-heater-repair-peoria">/water-heater-repair-peoria</a>
+     <p>No hot water, or water pooling at the base of the tank? We test the element and the tank before we quote.</p>
+     <p class="h04-fix"><b>Common fix:</b> a failed heating element or a sediment-clogged tank, flushed and retested.</p>
+     <div class="h04-entry-foot"><span class="h04-price">$[LOW]&#8211;$[HIGH]</span><a class="h04-more" href="/water-heater-repair-peoria">View Service</a></div>
+    </div>
+   </article>
+
+   <article class="h04-entry">
+    <div class="h04-entry-img">
+     <img src="img/elec/02.jpg" alt="An electrician in a yellow hard hat working at a breaker panel" width="1600" height="1068" loading="lazy" style="object-fit: cover; aspect-ratio: 3 / 2; width: 100%; height: auto;">
+     <span class="h04-entry-no">04</span>
+    </div>
+    <div class="h04-entry-body">
+     <h3>Electrical</h3>
+     <a class="h04-slug" href="/electrical-panel-repair-peoria">/electrical-panel-repair-peoria</a>
+     <p>A breaker that trips again and again, or a warm panel cover? We check the connections first.</p>
+     <p class="h04-fix"><b>Common fix:</b> a loose lug or a failed breaker, found with a torque check and a load test.</p>
+     <div class="h04-entry-foot"><span class="h04-price">$[LOW]&#8211;$[HIGH]</span><a class="h04-more" href="/electrical-panel-repair-peoria">View Service</a></div>
+    </div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="specials" class="h04-sec" aria-labelledby="specials-h">
+ <div class="h04-in">
+  <div class="h04-head h04-head-g">
+   <div>
+    <p class="h04-kicker">Specials &#183; This season</p>
+    <h2 id="specials-h">Fall tune-up and duct check, with the price in writing</h2>
+   </div>
+  </div>
+
+  <div class="h04-coupon">
+   <div class="h04-stamp">
+    <span class="h04-stamp-big">$[PRICE]</span>
+    <span class="h04-stamp-small">Off</span>
+   </div>
+   <div class="h04-coupon-copy">
+    <p class="h04-mono">Whole-home tune-up and duct check</p>
+    <h3>Both systems checked in one visit</h3>
+    <p>We test heating and cooling, clean the flame sensor or coil as needed, and leave a written report with the readings. The price on the ticket is the price on the invoice.</p>
+    <p class="h04-qual">With completed service. One per household. Expires 12/31/2026.</p>
+    <a class="h04-btn" href="#book">Claim This Offer</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="plan" class="h04-sec h04-plan" aria-labelledby="plan-h">
+ <div class="h04-in h04-plan-g">
+  <div>
+   <p class="h04-kicker">Membership</p>
+   <h2 id="plan-h">Maintenance Plan for Peoria homes</h2>
+   <p class="h04-plan-price"><span class="h04-price-big">$[PRICE]</span><span class="h04-per">/month</span></p>
+   <p class="h04-plan-copy">Billed monthly. The full terms sit in the plan agreement, and we walk through it with you before you sign.</p>
+   <p style="margin-top:20px"><a href="/maintenance-plan">See Plan Details</a></p>
+  </div>
+  <div class="h04-benefits">
+   <p class="h04-benefits-h">Maintenance Plan</p>
+   <ul>
+    <li><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E2A32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg><span>Two tune-ups a year, spring and fall</span></li>
+    <li><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E2A32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg><span>Priority scheduling when a system goes down</span></li>
+    <li><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E2A32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.2"/></svg><span>[DISCOUNT]% off repairs and parts</span></li>
+    <li><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E2A32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h8l4 4v14H7z"/><path d="M10 12h6M10 16h6"/></svg><span>A written report after every visit</span></li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section id="reviews" class="h04-sec" aria-labelledby="reviews-h">
+ <div class="h04-in">
+  <div class="h04-head h04-head-g">
+   <div>
+    <p class="h04-kicker">Reviews</p>
+    <h2 id="reviews-h">Reviews from Peoria homes and shops</h2>
+   </div>
+   <div class="h04-rating">
+    <span class="h04-stars" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg></span>
+    <b>[RATING] from [COUNT] Google reviews</b>
+    <span>Newest review [DAYS] days ago</span>
+   </div>
+  </div>
+
+  <div class="h04-rev-g">
+   <figure class="h04-rev">
+    <span class="h04-stars" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg></span>
+    <blockquote class="h04-rev-q" style="margin:0">[Google review, pulled at build time]</blockquote>
+    <figcaption>[Reviewer], [Town]</figcaption>
+   </figure>
+   <figure class="h04-rev">
+    <span class="h04-stars" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg></span>
+    <blockquote class="h04-rev-q" style="margin:0">[Google review, pulled at build time]</blockquote>
+    <figcaption>[Reviewer], [Town]</figcaption>
+   </figure>
+   <figure class="h04-rev">
+    <span class="h04-stars" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.6l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z" fill="#B23A2E"/></svg></span>
+    <blockquote class="h04-rev-q" style="margin:0">[Google review, pulled at build time]</blockquote>
+    <figcaption>[Reviewer], [Town]</figcaption>
+   </figure>
+  </div>
+ </div>
+</section>
+
+<section id="areas" class="h04-sec" aria-labelledby="areas-h">
+ <div class="h04-in h04-area-g">
+  <div>
+   <p class="h04-kicker">Service area</p>
+   <h2 id="areas-h">Peoria and nearby towns</h2>
+   <p class="h04-lead">Trucks run out from the Peoria shop. Each town page lists the services and the same written price.</p>
+   <ul class="h04-sheet">
+    <li><a href="/areas/peoria">Peoria <span>/areas/peoria</span></a></li>
+    <li><a href="/areas/glendale">Glendale <span>/areas/glendale</span></a></li>
+    <li><a href="/areas/surprise">Surprise <span>/areas/surprise</span></a></li>
+    <li><a href="/areas/sun-city">Sun City <span>/areas/sun-city</span></a></li>
+    <li><a href="/areas/el-mirage">El Mirage <span>/areas/el-mirage</span></a></li>
+    <li><a href="/areas/sun-city-west">Sun City West <span>/areas/sun-city-west</span></a></li>
+    <li><a href="/areas/litchfield-park">Litchfield Park <span>/areas/litchfield-park</span></a></li>
+   </ul>
+  </div>
+  <form class="h04-zip" action="#" method="get" aria-labelledby="zip-h">
+   <h3 id="zip-h">Check Your ZIP</h3>
+   <p>Enter your ZIP to see if we serve your street.</p>
+   <label for="h04-zip">ZIP code</label>
+   <div class="h04-zip-row">
+    <input id="h04-zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" placeholder="85345">
+    <button class="h04-btn" type="button">Check My ZIP</button>
+   </div>
+   <p class="h04-zip-fine">Service in every town on this list.</p>
+  </form>
+ </div>
+</section>
+
+<section id="faq" class="h04-sec" aria-labelledby="faq-h">
+ <div class="h04-in">
+  <div class="h04-head h04-head-g">
+   <div>
+    <p class="h04-kicker">FAQ</p>
+    <h2 id="faq-h">Questions Peoria homeowners ask</h2>
+   </div>
+  </div>
+  <div class="h04-faq-g">
+   <div class="h04-q">
+    <h3>How much does AC repair cost in Peoria?</h3>
+    <p>Most AC repairs fall between $[LOW]&#8211;$[HIGH] once the failed part is named. We diagnose first, quote the repair in writing, and do not start work until you say yes.</p>
+   </div>
+   <div class="h04-q">
+    <h3>How soon can you get to a Peoria home?</h3>
+    <p>We book by the window you pick and text a confirmed window before the truck leaves the shop. Office hours are [HOURS].</p>
+   </div>
+   <div class="h04-q">
+    <h3>Do you offer financing on a new furnace or AC?</h3>
+    <p>Yes. Financing runs through [LENDER] on approved credit. The rate, term and monthly payment appear on the quote before you sign anything.</p>
+   </div>
+   <div class="h04-q">
+    <h3>Are you licensed and insured for Arizona work?</h3>
+    <p>Yes. We hold Arizona contractor license [LICENSE NO.], carry liability and workers comp insurance, and back every repair with a [WARRANTY YEARS]-year labor warranty.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="visit" class="h04-sec" aria-labelledby="visit-h">
+ <div class="h04-in">
+  <div class="h04-head h04-head-g">
+   <div>
+    <p class="h04-kicker">Booking &#183; What happens next</p>
+    <h2 id="visit-h">From ticket to visit in three steps</h2>
+   </div>
+   <a class="h04-btn" href="#book">Start My Ticket</a>
+  </div>
+  <ol class="h04-steps">
+   <li class="h04-step3">
+    <div class="h04-step3-top"><span class="h04-mono">Step 1</span><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1E2A32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg></div>
+    <h3>Send the ticket</h3>
+    <p>Pick the service, a day and a window. It takes about a minute, and booking itself costs nothing.</p>
+   </li>
+   <li class="h04-step3">
+    <div class="h04-step3-top"><span class="h04-mono">Step 2</span><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1E2A32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></div>
+    <h3>We text your window</h3>
+    <p>A dispatcher confirms the arrival window by text before the truck leaves the shop.</p>
+   </li>
+   <li class="h04-step3">
+    <div class="h04-step3-top"><span class="h04-mono">Step 3</span><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1E2A32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></div>
+    <h3>Price first, then the work</h3>
+    <p>The tech writes the price on the ticket and waits for your OK before anything changes in the home.</p>
+   </li>
+  </ol>
+ </div>
+</section>
+
+<footer class="h04-foot" aria-label="Contact and business details">
+ <div class="h04-in">
+  <div class="h04-foot-g">
+   <div>
+    <p class="h04-kicker">Call or text &#183; [HOURS]</p>
+    <p class="h04-foot-tel"><a href="tel:+16235550124">(623) 555-0124</a></p>
+    <p style="margin-top:18px"><a class="h04-btn" href="tel:+16235550124">Call (623) 555-0124</a></p>
+   </div>
+   <div>
+    <h3>Business</h3>
+    <p><b>Red Mesa Air &amp; Electric</b><br>[STREET ADDRESS], Peoria, AZ [ZIP]<br><a href="tel:+16235550124">(623) 555-0124</a></p>
+   </div>
+   <div>
+    <h3>Hours and license</h3>
+    <p>[HOURS]<br>Arizona contractor license [LICENSE NO.]<br>Insured &#183; [CERTIFICATION]</p>
+   </div>
+   <div>
+    <h3>Towns served</h3>
+    <p>Peoria, Glendale, Surprise, Sun City, El Mirage, Sun City West and Litchfield Park</p>
+   </div>
+  </div>
+  <ul class="h04-flinks">
+   <li><a href="/furnace-repair-peoria">Furnace Repair</a></li>
+   <li><a href="/ac-repair-peoria">AC Repair</a></li>
+   <li><a href="/water-heater-repair-peoria">Water Heater Repair</a></li>
+   <li><a href="/electrical-panel-repair-peoria">Electrical Panel Repair</a></li>
+   <li><a href="/maintenance-plan">Maintenance Plan</a></li>
+   <li><a href="/privacy">Privacy</a></li>
+  </ul>
+  <p class="h04-legal">Red Mesa Air &amp; Electric. Licensed in Arizona and fully insured. <a href="/privacy">Privacy</a> &#183; <a href="/terms">Terms</a></p>
+  <p class="h04-foot-line">Avenue Vision &#183; H04 &#183; Field Notes &#183; studied: [study site] homepage and Kingman page</p>
+ </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":6000}}'>class Component extends DCLogic { renderVals() { return {}; } }</script>
+</body>
+</html>
